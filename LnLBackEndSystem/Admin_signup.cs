@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace LnLBackEndSystem
 {
-    public partial class Admin_login : Form
+    public partial class Admin_signup : Form
     {
-        public Admin_login()
+        public Admin_signup()
         {
             InitializeComponent();
-        }
-
-        private void btnSignup_Click(object sender, EventArgs e)
-        {
         }
     }
 }

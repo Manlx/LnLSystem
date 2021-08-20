@@ -52,6 +52,12 @@
     <Compile Include="Admin_login.Designer.cs">
       <DependentUpon>Admin_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_signup.Designer.cs">
+      <DependentUpon>Admin_signup.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <EmbeddedResource Include="Admin_login.resx">
       <DependentUpon>Admin_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_signup.resx">
+      <DependentUpon>Admin_signup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
