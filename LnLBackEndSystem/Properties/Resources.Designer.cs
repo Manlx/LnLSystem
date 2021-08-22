@@ -59,15 +59,5 @@ namespace LnLBackEndSystem.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WordDelegation {
-            get {
-                object obj = ResourceManager.GetObject("WordDelegation", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

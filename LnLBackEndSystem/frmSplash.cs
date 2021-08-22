@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Datamodule;
+
 
 namespace LnLBackEndSystem
 {
@@ -15,6 +17,12 @@ namespace LnLBackEndSystem
         public frmSplash()
         {
             InitializeComponent();
+        }
+
+        private void frmSplash_Load(object sender, EventArgs e)
+        {
+            if (DataModule.OpenConnection())
+                MessageBox.Show("Connection Successful");
         }
     }
 }

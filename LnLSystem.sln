@@ -7,10 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LnLBackEndSystem", "LnLBack
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LnLWebEndSystem", "LnLWebEndSystem\LnLWebEndSystem.csproj", "{2EF064B8-E28A-4ACD-82CF-0D018ADCA114}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DCCBF3FB-4E05-49DC-BE6B-A35192027183}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BD2AF261-300C-4F59-AA87-6512106B2D2C}"
 	ProjectSection(SolutionItems) = preProject
-		LLDB.mdf = LLDB.mdf
-		LLDB_log.ldf = LLDB_log.ldf
+		Libraries\ReleaseDataModule\DataModuleNetFramework.dll = Libraries\ReleaseDataModule\DataModuleNetFramework.dll
 	EndProjectSection
 EndProject
 Global
