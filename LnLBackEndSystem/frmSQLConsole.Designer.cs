@@ -32,6 +32,8 @@ namespace LnLBackEndSystem
             this.redSqlOut = new System.Windows.Forms.RichTextBox();
             this.edtSqlInput = new System.Windows.Forms.TextBox();
             this.btnGOSQL = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // redSqlOut
@@ -39,12 +41,13 @@ namespace LnLBackEndSystem
             this.redSqlOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.redSqlOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.redSqlOut.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.redSqlOut.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.redSqlOut.Location = new System.Drawing.Point(0, 0);
             this.redSqlOut.Name = "redSqlOut";
-            this.redSqlOut.Size = new System.Drawing.Size(910, 306);
+            this.redSqlOut.Size = new System.Drawing.Size(986, 258);
             this.redSqlOut.TabIndex = 0;
-            this.redSqlOut.Text = "";
+            this.redSqlOut.Text = "asd";
             // 
             // edtSqlInput
             // 
@@ -54,39 +57,63 @@ namespace LnLBackEndSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.edtSqlInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.edtSqlInput.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.edtSqlInput.Location = new System.Drawing.Point(0, 305);
+            this.edtSqlInput.Location = new System.Drawing.Point(0, 256);
             this.edtSqlInput.Multiline = true;
             this.edtSqlInput.Name = "edtSqlInput";
-            this.edtSqlInput.Size = new System.Drawing.Size(910, 148);
+            this.edtSqlInput.Size = new System.Drawing.Size(986, 125);
             this.edtSqlInput.TabIndex = 1;
             // 
             // btnGOSQL
             // 
             this.btnGOSQL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGOSQL.Location = new System.Drawing.Point(0, 453);
+            this.btnGOSQL.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnGOSQL.Location = new System.Drawing.Point(0, 381);
             this.btnGOSQL.Name = "btnGOSQL";
-            this.btnGOSQL.Size = new System.Drawing.Size(910, 49);
+            this.btnGOSQL.Size = new System.Drawing.Size(773, 41);
             this.btnGOSQL.TabIndex = 2;
             this.btnGOSQL.Text = "GO";
             this.btnGOSQL.UseVisualStyleBackColor = true;
             this.btnGOSQL.Click += new System.EventHandler(this.btnGOSQL_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnClear.Location = new System.Drawing.Point(899, 381);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(87, 41);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Location = new System.Drawing.Point(773, 381);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(128, 41);
+            this.btnSettings.TabIndex = 4;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            // 
             // frmSQLConsole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.ClientSize = new System.Drawing.Size(910, 502);
+            this.ClientSize = new System.Drawing.Size(986, 422);
+            this.Controls.Add(this.btnSettings);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnGOSQL);
             this.Controls.Add(this.edtSqlInput);
             this.Controls.Add(this.redSqlOut);
-            this.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSQLConsole";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SQL Console";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSQLConsole_FormClosed);
             this.Load += new System.EventHandler(this.frmSQLConsole_Load);
@@ -100,5 +127,7 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.RichTextBox redSqlOut;
         private System.Windows.Forms.TextBox edtSqlInput;
         private System.Windows.Forms.Button btnGOSQL;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
