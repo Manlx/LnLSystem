@@ -45,6 +45,7 @@ namespace LnLBackEndSystem
             this.btnApply.TabIndex = 0;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // chkClearOnLoad
             // 
@@ -73,9 +74,9 @@ namespace LnLBackEndSystem
             this.chkClearAfterSuccessOnly.AutoSize = true;
             this.chkClearAfterSuccessOnly.Location = new System.Drawing.Point(12, 82);
             this.chkClearAfterSuccessOnly.Name = "chkClearAfterSuccessOnly";
-            this.chkClearAfterSuccessOnly.Size = new System.Drawing.Size(208, 29);
+            this.chkClearAfterSuccessOnly.Size = new System.Drawing.Size(175, 29);
             this.chkClearAfterSuccessOnly.TabIndex = 3;
-            this.chkClearAfterSuccessOnly.Text = "Clear After Execution";
+            this.chkClearAfterSuccessOnly.Text = "Clear On Success";
             this.ttHints.SetToolTip(this.chkClearAfterSuccessOnly, "\"Displays Damage\"");
             this.chkClearAfterSuccessOnly.UseVisualStyleBackColor = true;
             // 
@@ -90,7 +91,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.btnApply);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmConsoleSettings";

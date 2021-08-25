@@ -84,6 +84,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libraries\ReleaseDataModule\DataModuleNetFramework.dll</HintPath>
     </Reference>
+    <Reference Include="SerializationClass">
+      <HintPath>..\Libraries\ReleaseSerializer\SerializationClass.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
