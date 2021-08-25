@@ -109,6 +109,12 @@
     <Compile Include="Admin_signup.Designer.cs">
       <DependentUpon>Admin_signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsoleSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsoleSettings.Designer.cs">
+      <DependentUpon>frmConsoleSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDataBaseMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_signup.resx">
       <DependentUpon>Admin_signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsoleSettings.resx">
+      <DependentUpon>frmConsoleSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDataBaseMaintenance.resx">
       <DependentUpon>frmDataBaseMaintenance.cs</DependentUpon>

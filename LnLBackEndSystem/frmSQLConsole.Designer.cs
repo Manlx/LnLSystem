@@ -78,6 +78,7 @@ namespace LnLBackEndSystem
             // 
             // btnClear
             // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnClear.Location = new System.Drawing.Point(899, 381);
             this.btnClear.Name = "btnClear";
@@ -89,12 +90,14 @@ namespace LnLBackEndSystem
             // 
             // btnSettings
             // 
+            this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSettings.Location = new System.Drawing.Point(773, 381);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(128, 41);
             this.btnSettings.TabIndex = 4;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // frmSQLConsole
             // 

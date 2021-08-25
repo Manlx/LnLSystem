@@ -39,25 +39,24 @@ namespace LnLBackEndSystem
             else
                 redSqlOut.Text += "Connection failed please try again later.\n";        
         }
-        private void ExecuteAndReturn(string SQL)
-        {
-            try
-            {
-            }
-            catch (Exception e)
-            {
-                redSqlOut.Text += e.ToString()+"\n";
-            }
-        }
         //Executes Code on run
         private void btnGOSQL_Click(object sender, EventArgs e)
         {
             string temp = edtSqlInput.Text.Substring(0,10).ToUpper() ;
-            if (temp.IndexOf("SELECT") >=0 || temp.IndexOf("SHOW") >= 0)
+            if (temp.IndexOf("SELECT") >=0 || temp.IndexOf("SHOW") >= 0) //Checks if Table should be returned
             {
                 string[] TableTemps = DataModule.GenerateTable(edtSqlInput.Text);
+                redSqlOut.Text += "\n";
                 foreach (var x in TableTemps)
                     redSqlOut.Text += $"{x}\n";
+            }
+            else
+            {//Executes if code should not return a table
+                if (temp.IndexOf("DELETE") >= 0)
+                    if (MessageBox.Show("Are you sure you want to execute delete code","Delete Command",MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                        return;
+                int x = DataModule.ExecuteSQL(edtSqlInput.Text);
+                redSqlOut.Text += $"{x} Lines where effected";
             }
         }
 
@@ -65,11 +64,15 @@ namespace LnLBackEndSystem
         {
             frmOwner.Show();
         }
-
-
         private void btnClear_Click(object sender, EventArgs e)
         {//Clears Console Output Screen
             redSqlOut.Clear();
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            frmConsoleSettings frmTest = new frmConsoleSettings();
+            frmTest.Show();
         }
     }
 }
