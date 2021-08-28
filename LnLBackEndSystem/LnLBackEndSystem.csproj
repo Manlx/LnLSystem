@@ -136,6 +136,12 @@
     <Compile Include="frmSQLConsole.Designer.cs">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTableSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTableSelect.Designer.cs">
+      <DependentUpon>frmTableSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guest_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSQLConsole.resx">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTableSelect.resx">
+      <DependentUpon>frmTableSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guest_login.resx">
       <DependentUpon>Guest_login.cs</DependentUpon>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using NSDataModule;
 /*
  SELECT tblStaff.Name, tblStaff.Surname, tblBank.BankName from tblStaff
@@ -21,6 +22,7 @@ namespace LnLBackEndSystem
         public frmSQLConsole()
         {
             InitializeComponent();
+            frmTableSelect.Creator = this;
         }
         //Can be changed in settings
         public static bool ClearOnLoad = true;
@@ -73,6 +75,20 @@ namespace LnLBackEndSystem
         {
             frmConsoleSettings frmTest = new frmConsoleSettings();
             frmTest.Show();
+        }
+
+        private void btnSelectAllShort_Click(object sender, EventArgs e)
+        {
+            edtSqlInput.Text = "SELECT * FROM ";
+            frmTableSelect SelectTab = new frmTableSelect();
+            SelectTab.ShowDialog();
+        }
+
+        private void btnShowTableInfo_Click(object sender, EventArgs e)
+        {
+            edtSqlInput.Text = "SHOW COLUMNS FROM ";
+            frmTableSelect SelectTab = new frmTableSelect();
+            SelectTab.ShowDialog();
         }
     }
 }

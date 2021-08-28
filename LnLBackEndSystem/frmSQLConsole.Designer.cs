@@ -34,6 +34,8 @@ namespace LnLBackEndSystem
             this.btnGOSQL = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.btnSelectAllShort = new System.Windows.Forms.Button();
+            this.btnShowTableInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // redSqlOut
@@ -70,7 +72,7 @@ namespace LnLBackEndSystem
             this.btnGOSQL.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnGOSQL.Location = new System.Drawing.Point(0, 381);
             this.btnGOSQL.Name = "btnGOSQL";
-            this.btnGOSQL.Size = new System.Drawing.Size(773, 41);
+            this.btnGOSQL.Size = new System.Drawing.Size(330, 41);
             this.btnGOSQL.TabIndex = 2;
             this.btnGOSQL.Text = "GO";
             this.btnGOSQL.UseVisualStyleBackColor = true;
@@ -99,12 +101,36 @@ namespace LnLBackEndSystem
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
+            // btnSelectAllShort
+            // 
+            this.btnSelectAllShort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelectAllShort.Location = new System.Drawing.Point(544, 381);
+            this.btnSelectAllShort.Name = "btnSelectAllShort";
+            this.btnSelectAllShort.Size = new System.Drawing.Size(230, 41);
+            this.btnSelectAllShort.TabIndex = 5;
+            this.btnSelectAllShort.Text = "Select All Short";
+            this.btnSelectAllShort.UseVisualStyleBackColor = true;
+            this.btnSelectAllShort.Click += new System.EventHandler(this.btnSelectAllShort_Click);
+            // 
+            // btnShowTableInfo
+            // 
+            this.btnShowTableInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShowTableInfo.Location = new System.Drawing.Point(330, 381);
+            this.btnShowTableInfo.Name = "btnShowTableInfo";
+            this.btnShowTableInfo.Size = new System.Drawing.Size(215, 41);
+            this.btnShowTableInfo.TabIndex = 6;
+            this.btnShowTableInfo.Text = "Show Table Info";
+            this.btnShowTableInfo.UseVisualStyleBackColor = true;
+            this.btnShowTableInfo.Click += new System.EventHandler(this.btnShowTableInfo_Click);
+            // 
             // frmSQLConsole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.ClientSize = new System.Drawing.Size(986, 422);
+            this.Controls.Add(this.btnShowTableInfo);
+            this.Controls.Add(this.btnSelectAllShort);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnGOSQL);
@@ -128,9 +154,11 @@ namespace LnLBackEndSystem
         #endregion
 
         private System.Windows.Forms.RichTextBox redSqlOut;
-        private System.Windows.Forms.TextBox edtSqlInput;
+        public System.Windows.Forms.TextBox edtSqlInput;
         private System.Windows.Forms.Button btnGOSQL;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnSelectAllShort;
+        private System.Windows.Forms.Button btnShowTableInfo;
     }
 }
