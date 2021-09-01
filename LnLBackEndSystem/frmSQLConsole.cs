@@ -44,6 +44,8 @@ namespace LnLBackEndSystem
         //Executes Code on run
         private void btnGOSQL_Click(object sender, EventArgs e)
         {
+            if (edtSqlInput.Text.Length == 0)
+                return;
             string temp = edtSqlInput.Text.Substring(0,10).ToUpper() ;
             if (temp.IndexOf("SELECT") >=0 || temp.IndexOf("SHOW") >= 0) //Checks if Table should be returned
             {

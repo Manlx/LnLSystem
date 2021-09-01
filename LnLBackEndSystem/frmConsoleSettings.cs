@@ -17,16 +17,20 @@ namespace LnLBackEndSystem
         {
             InitializeComponent();
         }
-
+        public static string SettingsPath = "Settings.bin";
         private void frmConsoleSettings_Load(object sender, EventArgs e)
         {
             ttHints.SetToolTip(chkClearOnLoad, "If the window is open and closed and open again will it remember the data previously entered");
             ttHints.SetToolTip(btnApply, "Applies changes to storage");
             ttHints.SetToolTip(chkClearSQLAfterExecution, "After SQL is executed it will clear.");
             ttHints.SetToolTip(chkClearAfterSuccessOnly, "Only clear input area after SQL executed successfully");
-
+            object temp;
+            if (!Serializer.DeserializeFromBin(SettingsPath, out temp))
+                return;
+            Compdata CompTemp = (Compdata)temp;
+            CompTemp.LoadToComps(ref chkClearOnLoad,ref chkClearSQLAfterExecution, ref chkClearAfterSuccessOnly);
         }
-        public static string SettingsPath = "Settings.bin";
+        
         private void btnApply_Click(object sender, EventArgs e)
         {
             Compdata Settings = new Compdata(chkClearOnLoad,chkClearSQLAfterExecution,chkClearAfterSuccessOnly);
