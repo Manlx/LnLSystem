@@ -1,31 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿//Manuel A Nunes 34551875 - 2021-09-02
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using NSDataModule;
-/*
- SELECT tblStaff.Name, tblStaff.Surname, tblBank.BankName from tblStaff
-LEFT JOIN tblStaffBank on tblStaff.StaffID = tblStaffBank.StaffID
-LEFT JOIN tblBank on tblStaffBank.BankID = tblBank.BankID
- */
+
 namespace LnLBackEndSystem
 {
     public partial class frmSQLConsole : Form
     {
         public static Form frmOwner;
+        frmConsoleSettings frmConsoleSetting = new frmConsoleSettings();
         public frmSQLConsole()
         {
             InitializeComponent();
             frmTableSelect.Creator = this;
+            frmConsoleSettings.Creator = this;
         }
         //Can be changed in settings
         public static bool ClearOnLoad = true;
+        
         private void frmSQLConsole_Load(object sender, EventArgs e)
         {
 
@@ -33,13 +26,14 @@ namespace LnLBackEndSystem
             //Sets Button Color
             btnClear.BackColor = Color.FromArgb(12,12,12);
             btnGOSQL.BackColor = btnClear.BackColor;
-            if (ClearOnLoad)
+            if (frmConsoleSetting.chkClearOnLoad.Checked)
                 redSqlOut.Clear();
             //Test SQL Connection
             if (btnGOSQL.Enabled = DataModule.OpenConnection())
                 redSqlOut.Text += "Connection to DB successfull\n";
             else
-                redSqlOut.Text += "Connection failed please try again later.\n";        
+                redSqlOut.Text += "Connection failed please try again later.\n";
+            
         }
         //Executes Code on run
         private void btnGOSQL_Click(object sender, EventArgs e)
@@ -53,6 +47,8 @@ namespace LnLBackEndSystem
                 redSqlOut.Text += "\n";
                 foreach (var x in TableTemps)
                     redSqlOut.Text += $"{x}\n";
+                if (frmConsoleSetting.chkClearAfterSuccessOnly.Checked)
+                    edtSqlInput.Clear();
             }
             else
             {//Executes if code should not return a table
@@ -61,7 +57,11 @@ namespace LnLBackEndSystem
                         return;
                 int x = DataModule.ExecuteSQL(edtSqlInput.Text);
                 redSqlOut.Text += $"{x} Lines where effected";
+                if (frmConsoleSetting.chkClearAfterSuccessOnly.Checked)
+                    edtSqlInput.Clear();
             }
+            if (frmConsoleSetting.chkClearSQLAfterExecution.Checked)
+                edtSqlInput.Clear();
         }
 
         private void frmSQLConsole_FormClosed(object sender, FormClosedEventArgs e)
@@ -75,8 +75,8 @@ namespace LnLBackEndSystem
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            frmConsoleSettings frmTest = new frmConsoleSettings();
-            frmTest.Show();
+            
+            frmConsoleSetting.ShowDialog();
         }
 
         private void btnSelectAllShort_Click(object sender, EventArgs e)

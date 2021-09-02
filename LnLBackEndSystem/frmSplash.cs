@@ -19,7 +19,7 @@ namespace LnLBackEndSystem
 
         private void tmrSplash_Tick(object sender, EventArgs e)
         {
-            frmDataBaseMaintenance DbEditor = new frmDataBaseMaintenance();
+            frmMain DbEditor = new frmMain();
             this.Hide();
             tmrSplash.Enabled = false;
             DbEditor.Show();
@@ -27,9 +27,11 @@ namespace LnLBackEndSystem
         private static bool HasShow = false;
         private void frmSplash_Load(object sender, EventArgs e)
         {
+            imgBack.Width = this.Width;
+            imgBack.Height = this.Height;
             tmrSplash.Enabled = true;
             tmrSplash.Interval = 1000;
-            frmDataBaseMaintenance.FormOwner = this;
+            frmMain.FormOwner = this;
             //if (DataModule.OpenConnection())
             //    MessageBox.Show("Success");
             //else

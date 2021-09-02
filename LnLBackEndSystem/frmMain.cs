@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace LnLBackEndSystem
 {
-    public partial class frmDataBaseMaintenance : Form
+    public partial class frmMain : Form
     {
         public static frmSplash FormOwner;
-        public frmDataBaseMaintenance()
+        frmDatabaseManagement DataBaseManagement = new frmDatabaseManagement();
+        public frmMain()
         {
             InitializeComponent();
             frmSQLConsole.frmOwner = this;
+            frmDatabaseManagement.Creator = this;
         }
 
         private void frmDataBaseMaintenance_FormClosed(object sender, FormClosedEventArgs e)
@@ -29,6 +31,12 @@ namespace LnLBackEndSystem
             frmSQLConsole myCons = new frmSQLConsole();
             this.Hide();
             myCons.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataBaseManagement.Show();
+            this.Hide();
         }
     }
 }

@@ -39,7 +39,7 @@ namespace LnLBackEndSystem
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(243, 177);
+            this.btnApply.Location = new System.Drawing.Point(245, 63);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(110, 48);
             this.btnApply.TabIndex = 0;
@@ -84,7 +84,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 227);
+            this.ClientSize = new System.Drawing.Size(354, 113);
             this.Controls.Add(this.chkClearAfterSuccessOnly);
             this.Controls.Add(this.chkClearSQLAfterExecution);
             this.Controls.Add(this.chkClearOnLoad);
@@ -96,8 +96,9 @@ namespace LnLBackEndSystem
             this.MinimizeBox = false;
             this.Name = "frmConsoleSettings";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
-            this.Load += new System.EventHandler(this.frmConsoleSettings_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConsoleSettings_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,10 +106,10 @@ namespace LnLBackEndSystem
 
         #endregion
 
-        private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.CheckBox chkClearOnLoad;
-        private System.Windows.Forms.ToolTip ttHints;
-        private System.Windows.Forms.CheckBox chkClearSQLAfterExecution;
-        private System.Windows.Forms.CheckBox chkClearAfterSuccessOnly;
+        public System.Windows.Forms.Button btnApply;
+        public System.Windows.Forms.CheckBox chkClearOnLoad;
+        public System.Windows.Forms.ToolTip ttHints;
+        public System.Windows.Forms.CheckBox chkClearSQLAfterExecution;
+        public System.Windows.Forms.CheckBox chkClearAfterSuccessOnly;
     }
 }
