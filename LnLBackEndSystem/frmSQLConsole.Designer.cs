@@ -48,7 +48,8 @@ namespace LnLBackEndSystem
             this.redSqlOut.Location = new System.Drawing.Point(0, 0);
             this.redSqlOut.Name = "redSqlOut";
             this.redSqlOut.Size = new System.Drawing.Size(986, 258);
-            this.redSqlOut.TabIndex = 0;
+            this.redSqlOut.TabIndex = 6;
+            this.redSqlOut.TabStop = false;
             this.redSqlOut.Text = "asd";
             // 
             // edtSqlInput
@@ -63,7 +64,7 @@ namespace LnLBackEndSystem
             this.edtSqlInput.Multiline = true;
             this.edtSqlInput.Name = "edtSqlInput";
             this.edtSqlInput.Size = new System.Drawing.Size(986, 125);
-            this.edtSqlInput.TabIndex = 1;
+            this.edtSqlInput.TabIndex = 0;
             // 
             // btnGOSQL
             // 
@@ -73,7 +74,7 @@ namespace LnLBackEndSystem
             this.btnGOSQL.Location = new System.Drawing.Point(0, 381);
             this.btnGOSQL.Name = "btnGOSQL";
             this.btnGOSQL.Size = new System.Drawing.Size(330, 41);
-            this.btnGOSQL.TabIndex = 2;
+            this.btnGOSQL.TabIndex = 1;
             this.btnGOSQL.Text = "GO";
             this.btnGOSQL.UseVisualStyleBackColor = true;
             this.btnGOSQL.Click += new System.EventHandler(this.btnGOSQL_Click);
@@ -85,7 +86,7 @@ namespace LnLBackEndSystem
             this.btnClear.Location = new System.Drawing.Point(899, 381);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(87, 41);
-            this.btnClear.TabIndex = 3;
+            this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -107,7 +108,7 @@ namespace LnLBackEndSystem
             this.btnSelectAllShort.Location = new System.Drawing.Point(544, 381);
             this.btnSelectAllShort.Name = "btnSelectAllShort";
             this.btnSelectAllShort.Size = new System.Drawing.Size(230, 41);
-            this.btnSelectAllShort.TabIndex = 5;
+            this.btnSelectAllShort.TabIndex = 3;
             this.btnSelectAllShort.Text = "Select All Short";
             this.btnSelectAllShort.UseVisualStyleBackColor = true;
             this.btnSelectAllShort.Click += new System.EventHandler(this.btnSelectAllShort_Click);
@@ -118,7 +119,7 @@ namespace LnLBackEndSystem
             this.btnShowTableInfo.Location = new System.Drawing.Point(330, 381);
             this.btnShowTableInfo.Name = "btnShowTableInfo";
             this.btnShowTableInfo.Size = new System.Drawing.Size(215, 41);
-            this.btnShowTableInfo.TabIndex = 6;
+            this.btnShowTableInfo.TabIndex = 2;
             this.btnShowTableInfo.Text = "Show Table Info";
             this.btnShowTableInfo.UseVisualStyleBackColor = true;
             this.btnShowTableInfo.Click += new System.EventHandler(this.btnShowTableInfo_Click);

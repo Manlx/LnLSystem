@@ -118,11 +118,17 @@
     <Compile Include="frmConsoleSettings.Designer.cs">
       <DependentUpon>frmConsoleSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDataBaseMaintenance.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDataBaseMaintenance.Designer.cs">
-      <DependentUpon>frmDataBaseMaintenance.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatabaseManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatabaseManagement.Designer.cs">
+      <DependentUpon>frmDatabaseManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
@@ -189,8 +195,11 @@
     <EmbeddedResource Include="frmConsoleSettings.resx">
       <DependentUpon>frmConsoleSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDataBaseMaintenance.resx">
-      <DependentUpon>frmDataBaseMaintenance.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatabaseManagement.resx">
+      <DependentUpon>frmDatabaseManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
@@ -238,12 +247,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Unblock.ps1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_xaL_icon.ico" />
+    <Content Include="WordDelegation.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
