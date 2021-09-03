@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LnLBackEndSystem
 {
-    public partial class Secretary_login : Form
+    public partial class Guest_form : Form
     {
-        public Secretary_login()
+        public Guest_form()
         {
             InitializeComponent();
         }
