@@ -40,14 +40,15 @@ namespace LnLBackEndSystem
             // 
             // redSqlOut
             // 
-            this.redSqlOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.redSqlOut.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.redSqlOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.redSqlOut.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.redSqlOut.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.redSqlOut.Location = new System.Drawing.Point(0, 0);
             this.redSqlOut.Name = "redSqlOut";
-            this.redSqlOut.Size = new System.Drawing.Size(986, 258);
+            this.redSqlOut.Size = new System.Drawing.Size(1202, 244);
             this.redSqlOut.TabIndex = 6;
             this.redSqlOut.TabStop = false;
             this.redSqlOut.Text = "asd";
@@ -55,15 +56,14 @@ namespace LnLBackEndSystem
             // edtSqlInput
             // 
             this.edtSqlInput.AcceptsReturn = true;
-            this.edtSqlInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.edtSqlInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.edtSqlInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.edtSqlInput.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.edtSqlInput.Location = new System.Drawing.Point(0, 256);
+            this.edtSqlInput.Location = new System.Drawing.Point(0, 242);
             this.edtSqlInput.Multiline = true;
             this.edtSqlInput.Name = "edtSqlInput";
-            this.edtSqlInput.Size = new System.Drawing.Size(986, 125);
+            this.edtSqlInput.Size = new System.Drawing.Size(1202, 203);
             this.edtSqlInput.TabIndex = 0;
             // 
             // btnGOSQL
@@ -71,9 +71,9 @@ namespace LnLBackEndSystem
             this.btnGOSQL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGOSQL.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnGOSQL.Location = new System.Drawing.Point(0, 381);
+            this.btnGOSQL.Location = new System.Drawing.Point(0, 445);
             this.btnGOSQL.Name = "btnGOSQL";
-            this.btnGOSQL.Size = new System.Drawing.Size(330, 41);
+            this.btnGOSQL.Size = new System.Drawing.Size(546, 41);
             this.btnGOSQL.TabIndex = 1;
             this.btnGOSQL.Text = "GO";
             this.btnGOSQL.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@ namespace LnLBackEndSystem
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnClear.Location = new System.Drawing.Point(899, 381);
+            this.btnClear.Location = new System.Drawing.Point(1115, 445);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(87, 41);
             this.btnClear.TabIndex = 5;
@@ -94,7 +94,7 @@ namespace LnLBackEndSystem
             // btnSettings
             // 
             this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSettings.Location = new System.Drawing.Point(773, 381);
+            this.btnSettings.Location = new System.Drawing.Point(989, 445);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(128, 41);
             this.btnSettings.TabIndex = 4;
@@ -105,7 +105,7 @@ namespace LnLBackEndSystem
             // btnSelectAllShort
             // 
             this.btnSelectAllShort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelectAllShort.Location = new System.Drawing.Point(544, 381);
+            this.btnSelectAllShort.Location = new System.Drawing.Point(760, 445);
             this.btnSelectAllShort.Name = "btnSelectAllShort";
             this.btnSelectAllShort.Size = new System.Drawing.Size(230, 41);
             this.btnSelectAllShort.TabIndex = 3;
@@ -116,7 +116,7 @@ namespace LnLBackEndSystem
             // btnShowTableInfo
             // 
             this.btnShowTableInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShowTableInfo.Location = new System.Drawing.Point(330, 381);
+            this.btnShowTableInfo.Location = new System.Drawing.Point(546, 445);
             this.btnShowTableInfo.Name = "btnShowTableInfo";
             this.btnShowTableInfo.Size = new System.Drawing.Size(215, 41);
             this.btnShowTableInfo.TabIndex = 2;
@@ -129,7 +129,7 @@ namespace LnLBackEndSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.ClientSize = new System.Drawing.Size(986, 422);
+            this.ClientSize = new System.Drawing.Size(1202, 486);
             this.Controls.Add(this.btnShowTableInfo);
             this.Controls.Add(this.btnSelectAllShort);
             this.Controls.Add(this.btnSettings);

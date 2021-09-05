@@ -29,21 +29,22 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbTable = new System.Windows.Forms.ComboBox();
+            this.cbbTable = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // cmbTable
+            // cbbTable
             // 
-            this.cmbTable.FormattingEnabled = true;
-            this.cmbTable.Items.AddRange(new object[] {
+            this.cbbTable.FormattingEnabled = true;
+            this.cbbTable.Items.AddRange(new object[] {
             "Hi",
             "Gamer"});
-            this.cmbTable.Location = new System.Drawing.Point(132, 635);
-            this.cmbTable.Name = "cmbTable";
-            this.cmbTable.Size = new System.Drawing.Size(944, 31);
-            this.cmbTable.TabIndex = 1;
-            this.cmbTable.SelectedIndexChanged += new System.EventHandler(this.cmbTable_SelectedIndexChanged);
+            this.cbbTable.Location = new System.Drawing.Point(132, 635);
+            this.cbbTable.Name = "cbbTable";
+            this.cbbTable.Size = new System.Drawing.Size(944, 31);
+            this.cbbTable.TabIndex = 1;
+            this.cbbTable.SelectedIndexChanged += new System.EventHandler(this.cmbTable_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -54,13 +55,21 @@ namespace LnLBackEndSystem
             this.label1.TabIndex = 2;
             this.label1.Text = "Select Table:";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(383, 481);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 30);
+            this.textBox1.TabIndex = 4;
+            // 
             // frmDataManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 670);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmbTable);
+            this.Controls.Add(this.cbbTable);
             this.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
@@ -78,7 +87,8 @@ namespace LnLBackEndSystem
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbTable;
+        private System.Windows.Forms.ComboBox cbbTable;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

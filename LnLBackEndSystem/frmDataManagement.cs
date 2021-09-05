@@ -11,29 +11,30 @@ namespace LnLBackEndSystem
         {
             InitializeComponent();
             
-            cmbTable.Items.Clear();
+            cbbTable.Items.Clear();
             string[] temp = DataModule.GetValues<string>(0, "SHOW TABLES; ");
             for (int x = 0; x < temp.Length; x++)
-                cmbTable.Items.Add(temp[x]);
+                cbbTable.Items.Add(temp[x]);
         }
 
         private void frmDataManagement_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (LastOpened != null)
+                LastOpened.Close();
             Creator.Show();
         }
-        Form LastOpened;
+        Form LastOpened = null;
         private void cmbTable_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (LastOpened != null)
                 LastOpened.Close();
             frmMaintainces.Creator = this;
-            frmMaintainces.TableName = cmbTable.Text;
+            frmMaintainces.TableName = cbbTable.Text;
             frmMaintainces Maintance = new frmMaintainces();
             Maintance.MdiParent = this;
             Maintance.Show();
             Maintance.Top = 0;
             Maintance.Left = 0;
-            
             LastOpened = Maintance;
         }
     }
