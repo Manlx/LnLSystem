@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using NSDataModule;
 
@@ -17,6 +10,7 @@ namespace LnLBackEndSystem
         public frmDataManagement()
         {
             InitializeComponent();
+            
             cmbTable.Items.Clear();
             string[] temp = DataModule.GetValues<string>(0, "SHOW TABLES; ");
             for (int x = 0; x < temp.Length; x++)
@@ -32,17 +26,15 @@ namespace LnLBackEndSystem
         {
             if (LastOpened != null)
                 LastOpened.Close();
-            frmMaintainces test = new frmMaintainces();
-            test.MdiParent = this;
-            test.Show();
-            test.Top = 0;
-            test.Left = 0;
-            LastOpened = test;
-        }
-
-        private void frmDataManagement_Load(object sender, EventArgs e)
-        {
-
+            frmMaintainces.Creator = this;
+            frmMaintainces.TableName = cmbTable.Text;
+            frmMaintainces Maintance = new frmMaintainces();
+            Maintance.MdiParent = this;
+            Maintance.Show();
+            Maintance.Top = 0;
+            Maintance.Left = 0;
+            
+            LastOpened = Maintance;
         }
     }
 }

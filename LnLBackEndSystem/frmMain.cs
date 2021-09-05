@@ -13,7 +13,7 @@ namespace LnLBackEndSystem
     public partial class frmMain : Form
     {
         public static frmSplash FormOwner;
-        frmDataManagement DataBaseManagement = new frmDataManagement();
+        
         public frmMain()
         {
             InitializeComponent();
@@ -35,6 +35,7 @@ namespace LnLBackEndSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+            frmDataManagement DataBaseManagement = new frmDataManagement();
             DataBaseManagement.Show();
             this.Hide();
         }

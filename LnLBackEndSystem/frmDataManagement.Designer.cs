@@ -71,7 +71,6 @@ namespace LnLBackEndSystem
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Database Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDataManagement_FormClosing);
-            this.Load += new System.EventHandler(this.frmDataManagement_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
