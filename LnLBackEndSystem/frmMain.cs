@@ -13,12 +13,12 @@ namespace LnLBackEndSystem
     public partial class frmMain : Form
     {
         public static frmSplash FormOwner;
-        frmDatabaseManagement DataBaseManagement = new frmDatabaseManagement();
+        frmDataManagement DataBaseManagement = new frmDataManagement();
         public frmMain()
         {
             InitializeComponent();
             frmSQLConsole.frmOwner = this;
-            frmDatabaseManagement.Creator = this;
+            frmDataManagement.Creator = this;
         }
 
         private void frmDataBaseMaintenance_FormClosed(object sender, FormClosedEventArgs e)
