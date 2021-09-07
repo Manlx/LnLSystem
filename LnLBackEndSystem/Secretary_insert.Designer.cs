@@ -41,26 +41,29 @@ namespace LnLBackEndSystem
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblHeading = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnInsert
             // 
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(77, 193);
+            this.btnInsert.Location = new System.Drawing.Point(72, 200);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(141, 45);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "Insert Record";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(207, 244);
+            this.btnBack.Location = new System.Drawing.Point(211, 261);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(79, 22);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblName
             // 
@@ -100,7 +103,7 @@ namespace LnLBackEndSystem
             // cbLicence
             // 
             this.cbLicence.AutoSize = true;
-            this.cbLicence.Location = new System.Drawing.Point(21, 135);
+            this.cbLicence.Location = new System.Drawing.Point(21, 154);
             this.cbLicence.Name = "cbLicence";
             this.cbLicence.Size = new System.Drawing.Size(102, 17);
             this.cbLicence.TabIndex = 6;
@@ -110,7 +113,7 @@ namespace LnLBackEndSystem
             // cbFulltime
             // 
             this.cbFulltime.AutoSize = true;
-            this.cbFulltime.Location = new System.Drawing.Point(21, 158);
+            this.cbFulltime.Location = new System.Drawing.Point(21, 177);
             this.cbFulltime.Name = "cbFulltime";
             this.cbFulltime.Size = new System.Drawing.Size(133, 17);
             this.cbFulltime.TabIndex = 7;
@@ -148,11 +151,21 @@ namespace LnLBackEndSystem
             this.lblHeading.TabIndex = 11;
             this.lblHeading.Text = "Personal Details";
             // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(18, 126);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(56, 13);
+            this.lblPassword.TabIndex = 12;
+            this.lblPassword.Text = "Password:";
+            // 
             // Secretary_insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 283);
+            this.ClientSize = new System.Drawing.Size(302, 291);
+            this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -167,6 +180,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.btnInsert);
             this.Name = "Secretary_insert";
             this.Text = "Secretary_insert";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_insert_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +200,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblHeading;
+        private System.Windows.Forms.Label lblPassword;
     }
 }

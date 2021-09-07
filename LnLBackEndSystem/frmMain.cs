@@ -39,5 +39,13 @@ namespace LnLBackEndSystem
             DataBaseManagement.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Secretary_form.creator = this;
+            Secretary_form frmSecretary = new Secretary_form();
+            frmSecretary.Show();
+            this.Hide();
+        }
     }
 }

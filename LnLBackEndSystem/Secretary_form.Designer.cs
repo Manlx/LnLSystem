@@ -74,6 +74,7 @@ namespace LnLBackEndSystem
             this.btnInsert.TabIndex = 3;
             this.btnInsert.Text = "Insert Record";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnBack
             // 
@@ -83,6 +84,7 @@ namespace LnLBackEndSystem
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Secretary_form
             // 
@@ -96,6 +98,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.dbView);
             this.Name = "Secretary_form";
             this.Text = "Secretary_form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_form_FormClosing);
             this.Load += new System.EventHandler(this.Secretary_login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbView)).EndInit();
             this.ResumeLayout(false);
