@@ -30,11 +30,13 @@ namespace LnLBackEndSystem
         private void InitializeComponent()
         {
             this.dgvTableData = new System.Windows.Forms.DataGridView();
-            this.tabUpdate = new System.Windows.Forms.TabControl();
+            this.tbcMaint = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableData)).BeginInit();
-            this.tabUpdate.SuspendLayout();
+            this.tbcMaint.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,14 +52,16 @@ namespace LnLBackEndSystem
             this.dgvTableData.TabIndex = 0;
             this.dgvTableData.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTableData_RowEnter);
             // 
-            // tabUpdate
+            // tbcMaint
             // 
-            this.tabUpdate.Controls.Add(this.tabPage1);
-            this.tabUpdate.Location = new System.Drawing.Point(0, 291);
-            this.tabUpdate.Name = "tabUpdate";
-            this.tabUpdate.SelectedIndex = 0;
-            this.tabUpdate.Size = new System.Drawing.Size(995, 280);
-            this.tabUpdate.TabIndex = 1;
+            this.tbcMaint.Controls.Add(this.tabPage1);
+            this.tbcMaint.Controls.Add(this.tabPage2);
+            this.tbcMaint.Controls.Add(this.tabPage3);
+            this.tbcMaint.Location = new System.Drawing.Point(0, 291);
+            this.tbcMaint.Name = "tbcMaint";
+            this.tbcMaint.SelectedIndex = 0;
+            this.tbcMaint.Size = new System.Drawing.Size(995, 280);
+            this.tbcMaint.TabIndex = 1;
             // 
             // tabPage1
             // 
@@ -67,7 +71,7 @@ namespace LnLBackEndSystem
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(987, 244);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Update";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -80,11 +84,31 @@ namespace LnLBackEndSystem
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(987, 244);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Insert";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(987, 244);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Delete";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // frmMaintainces
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(995, 572);
-            this.Controls.Add(this.tabUpdate);
+            this.Controls.Add(this.tbcMaint);
             this.Controls.Add(this.dgvTableData);
             this.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -95,7 +119,7 @@ namespace LnLBackEndSystem
             this.Text = "Bank Table Management";
             this.Load += new System.EventHandler(this.frmBank_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableData)).EndInit();
-            this.tabUpdate.ResumeLayout(false);
+            this.tbcMaint.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -104,8 +128,10 @@ namespace LnLBackEndSystem
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTableData;
-        private System.Windows.Forms.TabControl tabUpdate;
+        private System.Windows.Forms.TabControl tbcMaint;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }

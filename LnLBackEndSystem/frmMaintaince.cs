@@ -18,7 +18,7 @@ namespace LnLBackEndSystem
             DataModule.LoadTable(ref dgvTableData, tempSQL);
             dgvTableData.AutoResizeColumns();
             dgvTableData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DBEditCompsClass Comps = new DBEditCompsClass(tabUpdate, $"SHOW COLUMNS FROM {TableName}");
+            DBEditCompsClass Comps = new DBEditCompsClass(tbcMaint, $"SHOW COLUMNS FROM {TableName}");
         }
 
         private void dgvTableData_RowEnter(object sender, DataGridViewCellEventArgs e)
