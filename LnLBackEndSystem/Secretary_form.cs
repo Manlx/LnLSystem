@@ -14,6 +14,7 @@ namespace LnLBackEndSystem
     public partial class Secretary_form : Form
     {
         public static Form creator;
+    
         public Secretary_form()
         {
             InitializeComponent();
@@ -26,7 +27,10 @@ namespace LnLBackEndSystem
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-
+            Secretary_insert.creator = this;
+            Secretary_insert frmInsert = new Secretary_insert();
+            frmInsert.Show();
+            this.Hide();
         }
 
         private void Secretary_form_FormClosing(object sender, FormClosingEventArgs e)
@@ -37,6 +41,22 @@ namespace LnLBackEndSystem
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Secretary_update.creator = this;
+            Secretary_update frmUpdate = new Secretary_update();
+            frmUpdate.Show();
+            this.Hide();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Secretary_delete.creator = this;
+            Secretary_delete frmDelete = new Secretary_delete();
+            frmDelete.Show();
+            this.Hide();
         }
     }
 }

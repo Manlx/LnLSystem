@@ -31,37 +31,175 @@ namespace LnLBackEndSystem
         {
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.lblCell = new System.Windows.Forms.Label();
+            this.cbFulltime = new System.Windows.Forms.CheckBox();
+            this.cbLicence = new System.Windows.Forms.CheckBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtCell = new System.Windows.Forms.TextBox();
+            this.lblForgot = new System.Windows.Forms.LinkLabel();
+            this.lblHeading = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(86, 210);
+            this.btnUpdate.Location = new System.Drawing.Point(119, 226);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(144, 45);
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Update Record";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(218, 270);
+            this.btnBack.Location = new System.Drawing.Point(281, 312);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(11, 41);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.TabIndex = 2;
+            this.lblName.Text = "Name:";
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Location = new System.Drawing.Point(11, 71);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(52, 13);
+            this.lblSurname.TabIndex = 3;
+            this.lblSurname.Text = "Surname:";
+            this.lblSurname.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblCell
+            // 
+            this.lblCell.AutoSize = true;
+            this.lblCell.Location = new System.Drawing.Point(11, 129);
+            this.lblCell.Name = "lblCell";
+            this.lblCell.Size = new System.Drawing.Size(97, 13);
+            this.lblCell.TabIndex = 4;
+            this.lblCell.Text = "Cellphone Number:";
+            this.lblCell.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // cbFulltime
+            // 
+            this.cbFulltime.AutoSize = true;
+            this.cbFulltime.Location = new System.Drawing.Point(15, 161);
+            this.cbFulltime.Name = "cbFulltime";
+            this.cbFulltime.Size = new System.Drawing.Size(133, 17);
+            this.cbFulltime.TabIndex = 5;
+            this.cbFulltime.Text = "I am a full time member";
+            this.cbFulltime.UseVisualStyleBackColor = true;
+            // 
+            // cbLicence
+            // 
+            this.cbLicence.AutoSize = true;
+            this.cbLicence.Location = new System.Drawing.Point(15, 193);
+            this.cbLicence.Name = "cbLicence";
+            this.cbLicence.Size = new System.Drawing.Size(102, 17);
+            this.cbLicence.TabIndex = 6;
+            this.cbLicence.Text = "I have a licence";
+            this.cbLicence.UseVisualStyleBackColor = true;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(11, 100);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(56, 13);
+            this.lblPassword.TabIndex = 7;
+            this.lblPassword.Text = "Password:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(143, 38);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 9;
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Location = new System.Drawing.Point(143, 68);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtSurname.TabIndex = 10;
+            this.txtSurname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(143, 97);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // txtCell
+            // 
+            this.txtCell.Location = new System.Drawing.Point(143, 126);
+            this.txtCell.Name = "txtCell";
+            this.txtCell.Size = new System.Drawing.Size(100, 20);
+            this.txtCell.TabIndex = 12;
+            // 
+            // lblForgot
+            // 
+            this.lblForgot.AutoSize = true;
+            this.lblForgot.Location = new System.Drawing.Point(265, 104);
+            this.lblForgot.Name = "lblForgot";
+            this.lblForgot.Size = new System.Drawing.Size(91, 13);
+            this.lblForgot.TabIndex = 13;
+            this.lblForgot.TabStop = true;
+            this.lblForgot.Text = "Forgot password?";
+            this.lblForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblForgot_LinkClicked);
+            // 
+            // lblHeading
+            // 
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Location = new System.Drawing.Point(11, 9);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(150, 16);
+            this.lblHeading.TabIndex = 14;
+            this.lblHeading.Text = "Personal Information";
             // 
             // Secretary_update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 306);
+            this.ClientSize = new System.Drawing.Size(361, 339);
+            this.Controls.Add(this.lblHeading);
+            this.Controls.Add(this.lblForgot);
+            this.Controls.Add(this.txtCell);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.cbLicence);
+            this.Controls.Add(this.cbFulltime);
+            this.Controls.Add(this.lblCell);
+            this.Controls.Add(this.lblSurname);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdate);
             this.Name = "Secretary_update";
             this.Text = "Secretary_update";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_update_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,5 +207,17 @@ namespace LnLBackEndSystem
 
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Label lblCell;
+        private System.Windows.Forms.CheckBox cbFulltime;
+        private System.Windows.Forms.CheckBox cbLicence;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtCell;
+        private System.Windows.Forms.LinkLabel lblForgot;
+        private System.Windows.Forms.Label lblHeading;
     }
 }

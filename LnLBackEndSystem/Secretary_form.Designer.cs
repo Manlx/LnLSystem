@@ -54,6 +54,7 @@ namespace LnLBackEndSystem
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update Record";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -64,6 +65,7 @@ namespace LnLBackEndSystem
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete Record";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnInsert
             // 

@@ -10,27 +10,26 @@ using System.Windows.Forms;
 
 namespace LnLBackEndSystem
 {
-    public partial class Guest_form : Form
+    public partial class Secratary_Booking_Management : Form
     {
-        public static Form guest;
-        public Guest_form()
+        public Secratary_Booking_Management()
         {
             InitializeComponent();
         }
 
-        private void Guest_form_Load(object sender, EventArgs e)
+        private void Secratary_Booking_Management_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
-        private void Guest_form_FormClosing(object sender, FormClosingEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            guest.Show();
+
         }
     }
 }

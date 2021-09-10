@@ -119,11 +119,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin_login.cs">
+    <Compile Include="Admin_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_login.Designer.cs">
-      <DependentUpon>Admin_login.cs</DependentUpon>
+    <Compile Include="Admin_form.Designer.cs">
+      <DependentUpon>Admin_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_signup.cs">
       <SubType>Form</SubType>
@@ -131,7 +131,19 @@
     <Compile Include="Admin_signup.Designer.cs">
       <DependentUpon>Admin_signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Booking_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking_Management.Designer.cs">
+      <DependentUpon>Booking_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBEditCompsClass.cs" />
+    <Compile Include="Forgot_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot_password.Designer.cs">
+      <DependentUpon>Forgot_password.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMaintaince.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +194,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secratary_Booking_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secratary_Booking_Management.Designer.cs">
+      <DependentUpon>Secratary_Booking_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Secretary_delete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,11 +230,17 @@
     <Compile Include="Tab_login.Designer.cs">
       <DependentUpon>Tab_login.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin_login.resx">
-      <DependentUpon>Admin_login.cs</DependentUpon>
+    <EmbeddedResource Include="Admin_form.resx">
+      <DependentUpon>Admin_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_signup.resx">
       <DependentUpon>Admin_signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking_Management.resx">
+      <DependentUpon>Booking_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forgot_password.resx">
+      <DependentUpon>Forgot_password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMaintaince.resx">
       <DependentUpon>frmMaintaince.cs</DependentUpon>
@@ -252,6 +276,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Secratary_Booking_Management.resx">
+      <DependentUpon>Secratary_Booking_Management.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Secretary_delete.resx">
       <DependentUpon>Secretary_delete.cs</DependentUpon>
     </EmbeddedResource>
