@@ -57,7 +57,8 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo_xaL_icon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -125,6 +126,9 @@
     <Compile Include="Accountant_Login.Designer.cs">
       <DependentUpon>Accountant_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin_form.Designer.cs">
       <DependentUpon>Admin_form.cs</DependentUpon>
     </Compile>
@@ -134,10 +138,22 @@
     <Compile Include="Admin_signup.Designer.cs">
       <DependentUpon>Admin_signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Booking_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking_Management.Designer.cs">
+      <DependentUpon>Booking_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsCreateTables.cs" />
     <Compile Include="clsTableRelation.cs" />
     <Compile Include="clsTables.cs" />
     <Compile Include="DBCompsGenerator.cs" />
+    <Compile Include="Forgot_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot_password.Designer.cs">
+      <DependentUpon>Forgot_password.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMaintaince.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +171,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRequestStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRequestStock.designer.cs">
+      <DependentUpon>frmRequestStock.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
@@ -224,6 +246,24 @@
     <Compile Include="Tab_login.Designer.cs">
       <DependentUpon>Tab_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tab_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tab_Order.Designer.cs">
+      <DependentUpon>Tab_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse_Login.Designer.cs">
+      <DependentUpon>Warehouse_Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accountant_Login.resx">
+      <DependentUpon>Accountant_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_form.resx">
+      <DependentUpon>Admin_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_signup.resx">
       <DependentUpon>Admin_signup.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRequestStock.resx">
+      <DependentUpon>frmRequestStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
@@ -305,10 +348,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="logo_xaL_icon.ico" />
-    <Content Include="WordDelegation.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

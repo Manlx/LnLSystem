@@ -1,16 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31424.327
+VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LnLBackEndSystem", "LnLBackEndSystem\LnLBackEndSystem.csproj", "{052A2270-6E72-4903-A272-7526707C7D42}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LnLWebEndSystem", "LnLWebEndSystem\LnLWebEndSystem.csproj", "{2EF064B8-E28A-4ACD-82CF-0D018ADCA114}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BD2AF261-300C-4F59-AA87-6512106B2D2C}"
-	ProjectSection(SolutionItems) = preProject
-		Libraries\ReleaseDataModule\DataModuleNetFramework.dll = Libraries\ReleaseDataModule\DataModuleNetFramework.dll
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +46,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0A069721-1983-4B72-9993-141D2AF5E410}
+		SolutionGuid = {D606C5DA-3760-4835-BFA9-D0D1D3D18E7B}
 	EndGlobalSection
 EndGlobal
