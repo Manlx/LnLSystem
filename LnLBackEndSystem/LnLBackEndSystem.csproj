@@ -125,9 +125,6 @@
     <Compile Include="Accountant_Login.Designer.cs">
       <DependentUpon>Accountant_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_login.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Admin_form.Designer.cs">
       <DependentUpon>Admin_form.cs</DependentUpon>
     </Compile>
@@ -137,7 +134,10 @@
     <Compile Include="Admin_signup.Designer.cs">
       <DependentUpon>Admin_signup.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBEditCompsClass.cs" />
+    <Compile Include="clsCreateTables.cs" />
+    <Compile Include="clsTableRelation.cs" />
+    <Compile Include="clsTables.cs" />
+    <Compile Include="DBCompsGenerator.cs" />
     <Compile Include="frmMaintaince.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,9 +224,6 @@
     <Compile Include="Tab_login.Designer.cs">
       <DependentUpon>Tab_login.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin_login.resx">
-      <DependentUpon>Admin_login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin_signup.resx">
       <DependentUpon>Admin_signup.cs</DependentUpon>
     </EmbeddedResource>
