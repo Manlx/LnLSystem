@@ -131,7 +131,10 @@
     <Compile Include="Admin_signup.Designer.cs">
       <DependentUpon>Admin_signup.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBEditCompsClass.cs" />
+    <Compile Include="clsCreateTables.cs" />
+    <Compile Include="clsTableRelation.cs" />
+    <Compile Include="clsTables.cs" />
+    <Compile Include="DBCompsGenerator.cs" />
     <Compile Include="frmMaintaince.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -31,7 +31,6 @@ namespace LnLBackEndSystem
         {
             this.cbbTable = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cbbTable
@@ -55,19 +54,11 @@ namespace LnLBackEndSystem
             this.label1.TabIndex = 2;
             this.label1.Text = "Select Table:";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(383, 481);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 30);
-            this.textBox1.TabIndex = 4;
-            // 
             // frmDataManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 670);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbTable);
             this.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,6 +80,5 @@ namespace LnLBackEndSystem
 
         private System.Windows.Forms.ComboBox cbbTable;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

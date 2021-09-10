@@ -18,13 +18,21 @@ namespace LnLBackEndSystem
             DataModule.LoadTable(ref dgvTableData, tempSQL);
             dgvTableData.AutoResizeColumns();
             dgvTableData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DBEditCompsClass Comps = new DBEditCompsClass(tbcMaint, $"SHOW COLUMNS FROM {TableName}");
+            DBCompsGenerator Comps = new DBCompsGenerator(tbcMaint, $"SHOW COLUMNS FROM {TableName}");
         }
 
         private void dgvTableData_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvTableData.SelectedRows.Count != 0)
-                MessageBox.Show(dgvTableData.SelectedRows[0].Cells[0].Value.ToString());
+            {
+                string SelectedRow = "";
+                int limit = ((dgvTableData.ColumnCount > 4) ? 5 : dgvTableData.ColumnCount);
+                for (int x = 0; x < limit; x++)
+                    SelectedRow += $"{dgvTableData.Columns[x].Name}: {dgvTableData.SelectedRows[0].Cells[x].Value.ToString()}\n" ;
+                lblSelectedRow.Text = SelectedRow;
+            }
+                
+                //MessageBox.Show(dgvTableData.SelectedRows[0].Cells[0].Value.ToString());
             //MessageBox.Show(dgvTableData.SelectedCells[0].Value.ToString());
         }
         private void GenerateComps()
@@ -39,6 +47,13 @@ namespace LnLBackEndSystem
         private void button1_Click(object sender, EventArgs e)
         {
             GenerateComps();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Sure you would like to delete? ","Delete Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //Need to fix
+                DataModule.ExecuteSQL($"DELETE FROM {TableName} WHERE {dgvTableData}= {dgvTableData.SelectedRows[0].Cells[0]}");
         }
     }
 }
