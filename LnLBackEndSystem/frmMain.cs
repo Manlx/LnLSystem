@@ -47,5 +47,23 @@ namespace LnLBackEndSystem
             frmSecretary.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Guest_form.guest = this;
+            Guest_form frmGuest = new Guest_form();
+            frmGuest.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            Admin_form.admin = this;
+            Admin_form frmAdmin = new Admin_form();
+            frmAdmin.Show();
+            this.Hide();
+
+        }
     }
 }

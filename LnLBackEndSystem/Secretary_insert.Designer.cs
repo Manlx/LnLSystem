@@ -42,6 +42,7 @@ namespace LnLBackEndSystem
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblHeading = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnInsert
@@ -160,11 +161,19 @@ namespace LnLBackEndSystem
             this.lblPassword.TabIndex = 12;
             this.lblPassword.Text = "Password:";
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(144, 126);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.TabIndex = 13;
+            // 
             // Secretary_insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 291);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.textBox3);
@@ -201,5 +210,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

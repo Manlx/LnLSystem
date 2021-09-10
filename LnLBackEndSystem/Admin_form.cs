@@ -7,24 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NSDataModule;
+
+
 
 namespace LnLBackEndSystem
 {
-    public partial class Secretary_delete : Form
+    public partial class Admin_form : Form
     {
-        public static Form creator;
-        public Secretary_delete()
+        public static Form admin;
+        public Admin_form()
         {
             InitializeComponent();
         }
 
-        private void Secretary_delete_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnSignup_Click(object sender, EventArgs e)
         {
-            creator.Show();
         }
 
-        private void Secretary_delete_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
@@ -32,6 +32,11 @@ namespace LnLBackEndSystem
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Admin_form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            admin.Show();
         }
     }
 }

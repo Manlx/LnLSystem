@@ -51,6 +51,7 @@ namespace LnLBackEndSystem
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Guest_form
             // 
@@ -61,6 +62,8 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.btnOrder);
             this.Name = "Guest_form";
             this.Text = "Guest_form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Guest_form_FormClosing);
+            this.Load += new System.EventHandler(this.Guest_form_Load);
             this.ResumeLayout(false);
 
         }

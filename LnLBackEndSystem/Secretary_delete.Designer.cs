@@ -46,6 +46,7 @@ namespace LnLBackEndSystem
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnDelete
             // 
@@ -113,6 +114,8 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.btnDelete);
             this.Name = "Secretary_delete";
             this.Text = "Secretary_delete";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_delete_FormClosing);
+            this.Load += new System.EventHandler(this.Secretary_delete_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
