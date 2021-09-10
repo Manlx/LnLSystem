@@ -8,11 +8,11 @@ using NSDataModule;
 
 namespace LnLBackEndSystem
 {
-    public class DBEditCompsClass
+    public class DBCompsGenerator
     {
         public Control[] Inputs;
         public Label[] Desc;
-        public DBEditCompsClass(Control Parents, string SQL)
+        public DBCompsGenerator(Control Parents, string SQL)
         {
             int[] Cols = { 0, 1 };
             string[][] NameAndType = DataModule.GetValues(SQL, Cols);
@@ -25,7 +25,6 @@ namespace LnLBackEndSystem
                 {
                     Inputs[x] = new TextBox() {Height = 50, Width= 150 };
                     ((TextBox)Inputs[x]).TextChanged += new EventHandler(edtInpNumOnly);
-
                 }
             }
         }

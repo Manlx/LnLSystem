@@ -103,7 +103,7 @@ namespace LnLBackEndSystem
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Database Maintance";
+            this.Text = "Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDataBaseMaintenance_FormClosed);
             this.ResumeLayout(false);
 
