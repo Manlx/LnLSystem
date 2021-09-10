@@ -119,6 +119,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accountant_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accountant_Login.Designer.cs">
+      <DependentUpon>Accountant_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,21 @@
     <Compile Include="Tab_login.Designer.cs">
       <DependentUpon>Tab_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tab_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tab_Order.Designer.cs">
+      <DependentUpon>Tab_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse_Login.Designer.cs">
+      <DependentUpon>Warehouse_Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accountant_Login.resx">
+      <DependentUpon>Accountant_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_login.resx">
       <DependentUpon>Admin_login.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +290,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tab_login.resx">
       <DependentUpon>Tab_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab_Order.resx">
+      <DependentUpon>Tab_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse_Login.resx">
+      <DependentUpon>Warehouse_Login.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
