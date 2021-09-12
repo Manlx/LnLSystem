@@ -59,15 +59,16 @@ namespace LnLBackEndSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 115);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 13);
+            this.label2.Size = new System.Drawing.Size(130, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Purchase item on Tab.";
             // 
             // txtTabItemPrice
             // 
-            this.txtTabItemPrice.Location = new System.Drawing.Point(95, 160);
+            this.txtTabItemPrice.Location = new System.Drawing.Point(95, 146);
             this.txtTabItemPrice.Name = "txtTabItemPrice";
             this.txtTabItemPrice.Size = new System.Drawing.Size(100, 20);
             this.txtTabItemPrice.TabIndex = 3;
@@ -75,7 +76,7 @@ namespace LnLBackEndSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 160);
+            this.label3.Location = new System.Drawing.Point(12, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 4;
@@ -85,7 +86,7 @@ namespace LnLBackEndSystem
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 238);
+            this.label4.Location = new System.Drawing.Point(12, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 17);
             this.label4.TabIndex = 5;
@@ -94,7 +95,7 @@ namespace LnLBackEndSystem
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 272);
+            this.label5.Location = new System.Drawing.Point(12, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 13);
             this.label5.TabIndex = 6;
@@ -102,7 +103,7 @@ namespace LnLBackEndSystem
             // 
             // txtTabSettleAmount
             // 
-            this.txtTabSettleAmount.Location = new System.Drawing.Point(201, 269);
+            this.txtTabSettleAmount.Location = new System.Drawing.Point(201, 249);
             this.txtTabSettleAmount.Name = "txtTabSettleAmount";
             this.txtTabSettleAmount.Size = new System.Drawing.Size(100, 20);
             this.txtTabSettleAmount.TabIndex = 7;
@@ -166,7 +167,7 @@ namespace LnLBackEndSystem
             // 
             // btnSubmitPrice
             // 
-            this.btnSubmitPrice.Location = new System.Drawing.Point(15, 191);
+            this.btnSubmitPrice.Location = new System.Drawing.Point(15, 172);
             this.btnSubmitPrice.Name = "btnSubmitPrice";
             this.btnSubmitPrice.Size = new System.Drawing.Size(75, 23);
             this.btnSubmitPrice.TabIndex = 14;
@@ -175,7 +176,7 @@ namespace LnLBackEndSystem
             // 
             // btnSubmitTotal
             // 
-            this.btnSubmitTotal.Location = new System.Drawing.Point(15, 296);
+            this.btnSubmitTotal.Location = new System.Drawing.Point(15, 268);
             this.btnSubmitTotal.Name = "btnSubmitTotal";
             this.btnSubmitTotal.Size = new System.Drawing.Size(75, 23);
             this.btnSubmitTotal.TabIndex = 15;
@@ -186,7 +187,7 @@ namespace LnLBackEndSystem
             // 
             this.lblTabCutOff.AutoSize = true;
             this.lblTabCutOff.ForeColor = System.Drawing.Color.Red;
-            this.lblTabCutOff.Location = new System.Drawing.Point(97, 200);
+            this.lblTabCutOff.Location = new System.Drawing.Point(96, 182);
             this.lblTabCutOff.Name = "lblTabCutOff";
             this.lblTabCutOff.Size = new System.Drawing.Size(49, 13);
             this.lblTabCutOff.TabIndex = 16;

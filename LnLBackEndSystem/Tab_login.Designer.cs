@@ -94,7 +94,7 @@ namespace LnLBackEndSystem
             // 
             // btnSubmitTab
             // 
-            this.btnSubmitTab.Location = new System.Drawing.Point(123, 194);
+            this.btnSubmitTab.Location = new System.Drawing.Point(15, 194);
             this.btnSubmitTab.Name = "btnSubmitTab";
             this.btnSubmitTab.Size = new System.Drawing.Size(75, 23);
             this.btnSubmitTab.TabIndex = 7;

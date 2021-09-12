@@ -38,6 +38,12 @@ namespace LnLBackEndSystem
             this.button6 = new System.Windows.Forms.Button();
             this.lblStockPrice = new System.Windows.Forms.Label();
             this.linkToHome = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtStartStock = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.txtEndStock = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewAcc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +57,7 @@ namespace LnLBackEndSystem
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(213, 46);
+            this.button1.Location = new System.Drawing.Point(24, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 23);
             this.button1.TabIndex = 2;
@@ -60,7 +66,7 @@ namespace LnLBackEndSystem
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(213, 75);
+            this.button2.Location = new System.Drawing.Point(24, 70);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 23);
             this.button2.TabIndex = 3;
@@ -69,7 +75,7 @@ namespace LnLBackEndSystem
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(213, 104);
+            this.button3.Location = new System.Drawing.Point(24, 99);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 23);
             this.button3.TabIndex = 4;
@@ -78,7 +84,7 @@ namespace LnLBackEndSystem
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(213, 133);
+            this.button4.Location = new System.Drawing.Point(24, 128);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 23);
             this.button4.TabIndex = 5;
@@ -87,7 +93,7 @@ namespace LnLBackEndSystem
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(213, 17);
+            this.button5.Location = new System.Drawing.Point(24, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 23);
             this.button5.TabIndex = 6;
@@ -96,7 +102,7 @@ namespace LnLBackEndSystem
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(213, 545);
+            this.button6.Location = new System.Drawing.Point(24, 545);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(140, 23);
             this.button6.TabIndex = 7;
@@ -106,7 +112,7 @@ namespace LnLBackEndSystem
             // lblStockPrice
             // 
             this.lblStockPrice.AutoSize = true;
-            this.lblStockPrice.Location = new System.Drawing.Point(253, 571);
+            this.lblStockPrice.Location = new System.Drawing.Point(170, 550);
             this.lblStockPrice.Name = "lblStockPrice";
             this.lblStockPrice.Size = new System.Drawing.Size(75, 13);
             this.lblStockPrice.TabIndex = 8;
@@ -122,11 +128,69 @@ namespace LnLBackEndSystem
             this.linkToHome.TabStop = true;
             this.linkToHome.Text = "Return to Home Screen";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(361, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(198, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Enter stock range you would like to view";
+            // 
+            // txtStartStock
+            // 
+            this.txtStartStock.Location = new System.Drawing.Point(459, 43);
+            this.txtStartStock.Name = "txtStartStock";
+            this.txtStartStock.Size = new System.Drawing.Size(100, 20);
+            this.txtStartStock.TabIndex = 11;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(379, 45);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(74, 17);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "More than";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(379, 90);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(72, 17);
+            this.checkBox2.TabIndex = 13;
+            this.checkBox2.Text = "Less than";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // txtEndStock
+            // 
+            this.txtEndStock.Location = new System.Drawing.Point(459, 88);
+            this.txtEndStock.Name = "txtEndStock";
+            this.txtEndStock.Size = new System.Drawing.Size(100, 20);
+            this.txtEndStock.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(499, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "To";
+            // 
             // Accountant_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 615);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtEndStock);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.txtStartStock);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.linkToHome);
             this.Controls.Add(this.lblStockPrice);
             this.Controls.Add(this.button6);
@@ -154,5 +218,11 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label lblStockPrice;
         private System.Windows.Forms.LinkLabel linkToHome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtStartStock;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox txtEndStock;
+        private System.Windows.Forms.Label label2;
     }
 }
