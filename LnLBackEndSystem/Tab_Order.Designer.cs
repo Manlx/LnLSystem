@@ -149,7 +149,7 @@ namespace LnLBackEndSystem
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(150, 9);
+            this.label7.Location = new System.Drawing.Point(126, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 12;
