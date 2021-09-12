@@ -32,5 +32,13 @@ namespace LnLBackEndSystem
         {
             guest.Show();
         }
+
+        private void btnMakeBooking_Click(object sender, EventArgs e)
+        {
+            Booking_Management.make_booking = this;
+            Booking_Management frmMakeBooking = new Booking_Management();
+            frmMakeBooking.Show();
+            this.Hide();
+        }
     }
 }

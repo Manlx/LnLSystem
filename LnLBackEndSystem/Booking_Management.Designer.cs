@@ -206,6 +206,7 @@ namespace LnLBackEndSystem
             this.btnBack.TabIndex = 17;
             this.btnBack.Text = "back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Booking_Management
             // 
@@ -231,6 +232,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.btnAdd);
             this.Name = "Booking_Management";
             this.Text = "Booking_Management";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Booking_Management_FormClosing);
             this.Load += new System.EventHandler(this.Booking_Management_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

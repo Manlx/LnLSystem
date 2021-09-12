@@ -34,6 +34,7 @@ namespace LnLBackEndSystem
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnBooking = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dbView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +89,23 @@ namespace LnLBackEndSystem
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnBooking
+            // 
+            this.btnBooking.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooking.Location = new System.Drawing.Point(12, 229);
+            this.btnBooking.Name = "btnBooking";
+            this.btnBooking.Size = new System.Drawing.Size(138, 41);
+            this.btnBooking.TabIndex = 5;
+            this.btnBooking.Text = "Manage bookings";
+            this.btnBooking.UseVisualStyleBackColor = true;
+            this.btnBooking.Click += new System.EventHandler(this.btnBooking_Click);
+            // 
             // Secretary_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 298);
+            this.ClientSize = new System.Drawing.Size(448, 297);
+            this.Controls.Add(this.btnBooking);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnDelete);
@@ -114,5 +127,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnBooking;
     }
 }

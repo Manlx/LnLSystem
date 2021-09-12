@@ -64,6 +64,7 @@ namespace LnLBackEndSystem
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update booking";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -74,6 +75,7 @@ namespace LnLBackEndSystem
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete booking";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnApprove
             // 
@@ -108,6 +110,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.cbBookings);
             this.Name = "Secratary_Booking_Management";
             this.Text = "Secratary_Booking_Management";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secratary_Booking_Management_FormClosing);
             this.Load += new System.EventHandler(this.Secratary_Booking_Management_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

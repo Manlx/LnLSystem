@@ -8,25 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace LnLBackEndSystem
 {
-    public partial class Admin_form : Form
+    public partial class Update_Booking : Form
     {
-        public static Form admin;
-        public Admin_form()
+        public static Form update_booking;
+        public Update_Booking()
         {
             InitializeComponent();
-        }
-
-        private void btnSignup_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -34,14 +23,14 @@ namespace LnLBackEndSystem
             this.Close();
         }
 
-        private void Admin_form_FormClosing(object sender, FormClosingEventArgs e)
+        private void Update_Booking_Load(object sender, EventArgs e)
         {
-            admin.Show();
+
         }
 
-        private void Admin_form_Load(object sender, EventArgs e)
+        private void Update_Booking_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            update_booking.Show();
         }
     }
 }

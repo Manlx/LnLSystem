@@ -31,12 +31,13 @@ namespace LnLBackEndSystem
         {
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnMakeBooking = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOrder
             // 
             this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.Location = new System.Drawing.Point(100, 56);
+            this.btnOrder.Location = new System.Drawing.Point(100, 26);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(121, 35);
             this.btnOrder.TabIndex = 0;
@@ -53,11 +54,23 @@ namespace LnLBackEndSystem
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnMakeBooking
+            // 
+            this.btnMakeBooking.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMakeBooking.Location = new System.Drawing.Point(100, 67);
+            this.btnMakeBooking.Name = "btnMakeBooking";
+            this.btnMakeBooking.Size = new System.Drawing.Size(121, 37);
+            this.btnMakeBooking.TabIndex = 2;
+            this.btnMakeBooking.Text = "Make booking";
+            this.btnMakeBooking.UseVisualStyleBackColor = true;
+            this.btnMakeBooking.Click += new System.EventHandler(this.btnMakeBooking_Click);
+            // 
             // Guest_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 161);
+            this.Controls.Add(this.btnMakeBooking);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnOrder);
             this.Name = "Guest_form";
@@ -72,5 +85,6 @@ namespace LnLBackEndSystem
 
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnMakeBooking;
     }
 }

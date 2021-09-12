@@ -13,6 +13,7 @@ namespace LnLBackEndSystem
 {
     public partial class Booking_Management : Form
     {
+        public static Form make_booking;
         public Booking_Management()
         {
             InitializeComponent();
@@ -35,6 +36,16 @@ namespace LnLBackEndSystem
             string[] temp = DataModule.GetValues<string>(0, "SELECT Description FROM tblEventType ; ");
             for (int x = 0; x < temp.Length; x++)
                 cbType.Items.Add(temp[x]);
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Booking_Management_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            make_booking.Show();
         }
     }
 }

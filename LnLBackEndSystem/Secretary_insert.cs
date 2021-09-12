@@ -40,5 +40,10 @@ namespace LnLBackEndSystem
                // MessageBox.Show("Error was encountered");
 
         }
+
+        private void Secretary_insert_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

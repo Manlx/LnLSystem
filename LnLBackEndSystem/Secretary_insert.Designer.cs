@@ -190,6 +190,7 @@ namespace LnLBackEndSystem
             this.Name = "Secretary_insert";
             this.Text = "Secretary_insert";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_insert_FormClosing);
+            this.Load += new System.EventHandler(this.Secretary_insert_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
