@@ -34,6 +34,8 @@ namespace LnLBackEndSystem
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnBooking = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dbView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,9 +52,9 @@ namespace LnLBackEndSystem
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(158, 184);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(135, 39);
+            this.btnUpdate.Size = new System.Drawing.Size(135, 53);
             this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Update Record";
+            this.btnUpdate.Text = "Update Staff Record";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -61,9 +63,9 @@ namespace LnLBackEndSystem
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(302, 184);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(135, 39);
+            this.btnDelete.Size = new System.Drawing.Size(135, 53);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete Record";
+            this.btnDelete.Text = "Delete Staff Record";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -72,9 +74,9 @@ namespace LnLBackEndSystem
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.Location = new System.Drawing.Point(12, 184);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(138, 39);
+            this.btnInsert.Size = new System.Drawing.Size(138, 54);
             this.btnInsert.TabIndex = 3;
-            this.btnInsert.Text = "Insert Record";
+            this.btnInsert.Text = "Insert Staff Record";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -88,11 +90,34 @@ namespace LnLBackEndSystem
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnBooking
+            // 
+            this.btnBooking.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooking.Location = new System.Drawing.Point(12, 244);
+            this.btnBooking.Name = "btnBooking";
+            this.btnBooking.Size = new System.Drawing.Size(138, 41);
+            this.btnBooking.TabIndex = 5;
+            this.btnBooking.Text = "Manage Bookings";
+            this.btnBooking.UseVisualStyleBackColor = true;
+            this.btnBooking.Click += new System.EventHandler(this.btnBooking_Click);
+            // 
+            // btnReport
+            // 
+            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Location = new System.Drawing.Point(156, 243);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(135, 42);
+            this.btnReport.TabIndex = 6;
+            this.btnReport.Text = "Generate Reports";
+            this.btnReport.UseVisualStyleBackColor = true;
+            // 
             // Secretary_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 298);
+            this.ClientSize = new System.Drawing.Size(448, 297);
+            this.Controls.Add(this.btnReport);
+            this.Controls.Add(this.btnBooking);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnDelete);
@@ -114,5 +139,7 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnBooking;
+        private System.Windows.Forms.Button btnReport;
     }
 }

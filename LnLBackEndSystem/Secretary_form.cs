@@ -58,5 +58,14 @@ namespace LnLBackEndSystem
             frmDelete.Show();
             this.Hide();
         }
+
+        private void btnBooking_Click(object sender, EventArgs e)
+        {
+            Secratary_Booking_Management.booking = this;
+            Secratary_Booking_Management frmBooking = new Secratary_Booking_Management();
+            frmBooking.Show();
+            this.Hide();
+
+        }
     }
 }

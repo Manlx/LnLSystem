@@ -12,9 +12,15 @@ namespace LnLBackEndSystem
 {
     public partial class Tab_login : Form
     {
+        public static Form tab;
         public Tab_login()
         {
             InitializeComponent();
+        }
+
+        private void Tab_login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

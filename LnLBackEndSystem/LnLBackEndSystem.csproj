@@ -148,6 +148,12 @@
     <Compile Include="clsTableRelation.cs" />
     <Compile Include="clsTables.cs" />
     <Compile Include="DBCompsGenerator.cs" />
+    <Compile Include="Delete_Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Booking.Designer.cs">
+      <DependentUpon>Delete_Booking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forgot_password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,12 @@
     <Compile Include="Tab_Order.Designer.cs">
       <DependentUpon>Tab_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update_Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Booking.Designer.cs">
+      <DependentUpon>Update_Booking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Warehouse_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Booking_Management.resx">
       <DependentUpon>Booking_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Booking.resx">
+      <DependentUpon>Delete_Booking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forgot_password.resx">
       <DependentUpon>Forgot_password.cs</DependentUpon>
@@ -330,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tab_Order.resx">
       <DependentUpon>Tab_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Booking.resx">
+      <DependentUpon>Update_Booking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Warehouse_Login.resx">
       <DependentUpon>Warehouse_Login.cs</DependentUpon>
