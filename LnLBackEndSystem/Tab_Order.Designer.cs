@@ -42,6 +42,8 @@ namespace LnLBackEndSystem
             this.btnViewBalance = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnSubmitPrice = new System.Windows.Forms.Button();
+            this.btnSubmitTotal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +84,7 @@ namespace LnLBackEndSystem
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 232);
+            this.label4.Location = new System.Drawing.Point(12, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 17);
             this.label4.TabIndex = 5;
@@ -128,7 +130,7 @@ namespace LnLBackEndSystem
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 67);
+            this.label6.Location = new System.Drawing.Point(12, 84);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 17);
             this.label6.TabIndex = 10;
@@ -155,17 +157,37 @@ namespace LnLBackEndSystem
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 322);
+            this.label8.Location = new System.Drawing.Point(12, 331);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(285, 13);
             this.label8.TabIndex = 13;
             this.label8.Text = "View updated balance by clicking the View Balance button";
+            // 
+            // btnSubmitPrice
+            // 
+            this.btnSubmitPrice.Location = new System.Drawing.Point(15, 191);
+            this.btnSubmitPrice.Name = "btnSubmitPrice";
+            this.btnSubmitPrice.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmitPrice.TabIndex = 14;
+            this.btnSubmitPrice.Text = "Submit Price";
+            this.btnSubmitPrice.UseVisualStyleBackColor = true;
+            // 
+            // btnSubmitTotal
+            // 
+            this.btnSubmitTotal.Location = new System.Drawing.Point(15, 296);
+            this.btnSubmitTotal.Name = "btnSubmitTotal";
+            this.btnSubmitTotal.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmitTotal.TabIndex = 15;
+            this.btnSubmitTotal.Text = "Submit Total";
+            this.btnSubmitTotal.UseVisualStyleBackColor = true;
             // 
             // Tab_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 404);
+            this.Controls.Add(this.btnSubmitTotal);
+            this.Controls.Add(this.btnSubmitPrice);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnViewBalance);
@@ -201,5 +223,7 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnViewBalance;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnSubmitPrice;
+        private System.Windows.Forms.Button btnSubmitTotal;
     }
 }
