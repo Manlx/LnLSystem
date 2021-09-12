@@ -44,6 +44,7 @@ namespace LnLBackEndSystem
             this.label8 = new System.Windows.Forms.Label();
             this.btnSubmitPrice = new System.Windows.Forms.Button();
             this.btnSubmitTotal = new System.Windows.Forms.Button();
+            this.lblTabCutOff = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,9 +52,9 @@ namespace LnLBackEndSystem
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 13);
+            this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "View outstanding balance:";
+            this.label1.Text = "Outstanding balance:";
             // 
             // label2
             // 
@@ -181,11 +182,22 @@ namespace LnLBackEndSystem
             this.btnSubmitTotal.Text = "Submit Total";
             this.btnSubmitTotal.UseVisualStyleBackColor = true;
             // 
+            // lblTabCutOff
+            // 
+            this.lblTabCutOff.AutoSize = true;
+            this.lblTabCutOff.ForeColor = System.Drawing.Color.Red;
+            this.lblTabCutOff.Location = new System.Drawing.Point(97, 200);
+            this.lblTabCutOff.Name = "lblTabCutOff";
+            this.lblTabCutOff.Size = new System.Drawing.Size(49, 13);
+            this.lblTabCutOff.TabIndex = 16;
+            this.lblTabCutOff.Text = "CUTOFF";
+            // 
             // Tab_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 404);
+            this.Controls.Add(this.lblTabCutOff);
             this.Controls.Add(this.btnSubmitTotal);
             this.Controls.Add(this.btnSubmitPrice);
             this.Controls.Add(this.label8);
@@ -225,5 +237,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSubmitPrice;
         private System.Windows.Forms.Button btnSubmitTotal;
+        private System.Windows.Forms.Label lblTabCutOff;
     }
 }
