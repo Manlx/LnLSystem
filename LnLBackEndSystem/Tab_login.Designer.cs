@@ -136,6 +136,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.linkToGuestLogin);
             this.Name = "Tab_login";
             this.Text = "Tab_login";
+            this.Load += new System.EventHandler(this.Tab_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

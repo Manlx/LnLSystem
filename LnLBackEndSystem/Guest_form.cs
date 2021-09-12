@@ -40,5 +40,13 @@ namespace LnLBackEndSystem
             frmMakeBooking.Show();
             this.Hide();
         }
+
+        private void btnTab_Click(object sender, EventArgs e)
+        {
+            Tab_login.tab = this;
+            Tab_login frmTab = new Tab_login();
+            frmTab.Show();
+            this.Hide();
+        }
     }
 }
