@@ -214,6 +214,12 @@
     <Compile Include="Guest_form.Designer.cs">
       <DependentUpon>Guest_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guest_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest_order.Designer.cs">
+      <DependentUpon>Guest_order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Secratary_Booking_Management.cs">
@@ -315,6 +321,9 @@
     <EmbeddedResource Include="Guest_form.resx">
       <DependentUpon>Guest_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Guest_order.resx">
+      <DependentUpon>Guest_order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -369,6 +378,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1_Castle-Lager-NRB-340ml_600x600.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
