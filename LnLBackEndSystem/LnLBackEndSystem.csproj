@@ -252,6 +252,12 @@
     <Compile Include="Secretary_update.Designer.cs">
       <DependentUpon>Secretary_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="tabPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabPurchase.Designer.cs">
+      <DependentUpon>tabPurchase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tab_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secretary_update.resx">
       <DependentUpon>Secretary_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabPurchase.resx">
+      <DependentUpon>tabPurchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tab_login.resx">
       <DependentUpon>Tab_login.cs</DependentUpon>

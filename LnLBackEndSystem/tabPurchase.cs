@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace LnLBackEndSystem
 {
-    public partial class Tab_Order : Form
+    public partial class tabPurchase : Form
     {
-        public Tab_Order()
+        public static Form tabPurch;
+        public tabPurchase()
         {
             InitializeComponent();
         }
 
-        private void btnMakeTabPurchase_Click(object sender, EventArgs e)
+        private void tabPurchase_Load(object sender, EventArgs e)
         {
-            tabPurchase.tabPurch = this;
-            tabPurchase frmTabPurchase = new tabPurchase();
-            frmTabPurchase.Show();
-            this.Hide();
+
         }
     }
 }
