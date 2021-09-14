@@ -48,5 +48,13 @@ namespace LnLBackEndSystem
             frmTab.Show();
             this.Hide();
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            Guest_order.guest_order = this;
+            Guest_order frmOrder = new Guest_order();
+            frmOrder.Show();
+            this.Hide();
+        }
     }
 }

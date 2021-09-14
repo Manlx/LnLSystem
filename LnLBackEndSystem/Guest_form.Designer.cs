@@ -44,6 +44,7 @@ namespace LnLBackEndSystem
             this.btnOrder.TabIndex = 0;
             this.btnOrder.Text = "Cash Order";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnBack
             // 
