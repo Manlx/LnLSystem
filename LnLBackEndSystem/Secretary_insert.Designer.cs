@@ -37,18 +37,20 @@ namespace LnLBackEndSystem
             this.label4 = new System.Windows.Forms.Label();
             this.cbLicence = new System.Windows.Forms.CheckBox();
             this.cbFulltime = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtCellphone = new System.Windows.Forms.TextBox();
             this.lblHeading = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblRank = new System.Windows.Forms.Label();
+            this.cbRank = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnInsert
             // 
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(72, 200);
+            this.btnInsert.Location = new System.Drawing.Point(74, 250);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(141, 45);
             this.btnInsert.TabIndex = 0;
@@ -58,7 +60,7 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(211, 261);
+            this.btnBack.Location = new System.Drawing.Point(211, 318);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(79, 22);
             this.btnBack.TabIndex = 1;
@@ -104,7 +106,7 @@ namespace LnLBackEndSystem
             // cbLicence
             // 
             this.cbLicence.AutoSize = true;
-            this.cbLicence.Location = new System.Drawing.Point(21, 154);
+            this.cbLicence.Location = new System.Drawing.Point(21, 195);
             this.cbLicence.Name = "cbLicence";
             this.cbLicence.Size = new System.Drawing.Size(102, 17);
             this.cbLicence.TabIndex = 6;
@@ -114,33 +116,33 @@ namespace LnLBackEndSystem
             // cbFulltime
             // 
             this.cbFulltime.AutoSize = true;
-            this.cbFulltime.Location = new System.Drawing.Point(21, 177);
+            this.cbFulltime.Location = new System.Drawing.Point(21, 218);
             this.cbFulltime.Name = "cbFulltime";
             this.cbFulltime.Size = new System.Drawing.Size(133, 17);
             this.cbFulltime.TabIndex = 7;
             this.cbFulltime.Text = "I am a full-time member";
             this.cbFulltime.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtName.Location = new System.Drawing.Point(144, 44);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 8;
             // 
-            // textBox2
+            // txtSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtSurname.Location = new System.Drawing.Point(144, 69);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtSurname.TabIndex = 9;
             // 
-            // textBox3
+            // txtCellphone
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtCellphone.Location = new System.Drawing.Point(144, 96);
+            this.txtCellphone.Name = "txtCellphone";
+            this.txtCellphone.Size = new System.Drawing.Size(100, 20);
+            this.txtCellphone.TabIndex = 10;
             // 
             // lblHeading
             // 
@@ -168,17 +170,37 @@ namespace LnLBackEndSystem
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 13;
             // 
+            // lblRank
+            // 
+            this.lblRank.AutoSize = true;
+            this.lblRank.Location = new System.Drawing.Point(18, 158);
+            this.lblRank.Name = "lblRank";
+            this.lblRank.Size = new System.Drawing.Size(36, 13);
+            this.lblRank.TabIndex = 14;
+            this.lblRank.Text = "Rank:";
+            this.lblRank.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // cbRank
+            // 
+            this.cbRank.FormattingEnabled = true;
+            this.cbRank.Location = new System.Drawing.Point(144, 155);
+            this.cbRank.Name = "cbRank";
+            this.cbRank.Size = new System.Drawing.Size(100, 21);
+            this.cbRank.TabIndex = 15;
+            // 
             // Secretary_insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 291);
+            this.ClientSize = new System.Drawing.Size(302, 352);
+            this.Controls.Add(this.cbRank);
+            this.Controls.Add(this.lblRank);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblHeading);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCellphone);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.cbFulltime);
             this.Controls.Add(this.cbLicence);
             this.Controls.Add(this.label4);
@@ -206,11 +228,13 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox cbLicence;
         private System.Windows.Forms.CheckBox cbFulltime;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtCellphone;
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblRank;
+        private System.Windows.Forms.ComboBox cbRank;
     }
 }

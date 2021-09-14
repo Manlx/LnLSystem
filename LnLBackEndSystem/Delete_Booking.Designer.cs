@@ -57,6 +57,7 @@ namespace LnLBackEndSystem
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(100, 21);
             this.cbType.TabIndex = 50;
+            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
             // monthCalendar1
             // 
@@ -70,6 +71,7 @@ namespace LnLBackEndSystem
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(100, 20);
             this.txtTime.TabIndex = 48;
+            this.txtTime.Text = "00:00:00";
             // 
             // lblType
             // 
@@ -117,6 +119,7 @@ namespace LnLBackEndSystem
             this.btnDelete.TabIndex = 35;
             this.btnDelete.Text = "Delete booking";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Delete_Booking
             // 

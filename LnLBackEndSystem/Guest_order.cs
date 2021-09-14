@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NSDataModule;
 
 namespace LnLBackEndSystem
 {
@@ -20,7 +21,7 @@ namespace LnLBackEndSystem
 
         private void Guest_order_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void cbThirsti_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace LnLBackEndSystem
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
-
+        
         }
 
         private void lblTotal_Click(object sender, EventArgs e)
