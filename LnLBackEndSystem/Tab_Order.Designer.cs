@@ -81,12 +81,13 @@ namespace LnLBackEndSystem
             // linkToHome
             // 
             this.linkToHome.AutoSize = true;
-            this.linkToHome.Location = new System.Drawing.Point(9, 304);
+            this.linkToHome.Location = new System.Drawing.Point(9, 326);
             this.linkToHome.Name = "linkToHome";
             this.linkToHome.Size = new System.Drawing.Size(119, 13);
             this.linkToHome.TabIndex = 8;
             this.linkToHome.TabStop = true;
             this.linkToHome.Text = "Return to Home Screen";
+            this.linkToHome.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkToHome_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -173,6 +174,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.label1);
             this.Name = "Tab_Order";
             this.Text = "Tab_Order";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tab_Order_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

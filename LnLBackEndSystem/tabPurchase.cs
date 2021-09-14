@@ -22,5 +22,18 @@ namespace LnLBackEndSystem
         {
 
         }
+
+        private void linkTabOrder_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Tab_Order.tabOrder = this;
+            Tab_Order frmTabOrder = new Tab_Order();
+            frmTabOrder.Show();
+            this.Hide();
+        }
+
+        private void tabPurchase_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            tabPurch.Show();
+        }
     }
 }
