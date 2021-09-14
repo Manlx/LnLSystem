@@ -41,18 +41,18 @@ namespace LnLBackEndSystem
             this.cbBud = new System.Windows.Forms.ComboBox();
             this.cbCrystal = new System.Windows.Forms.ComboBox();
             this.cbLiqui = new System.Windows.Forms.ComboBox();
-            this.cbThirsti = new System.Windows.Forms.ComboBox();
-            this.cbPepsi = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbThirsti330 = new System.Windows.Forms.ComboBox();
+            this.cbPepsiRegBottle330 = new System.Windows.Forms.ComboBox();
+            this.cbThirsti500 = new System.Windows.Forms.ComboBox();
+            this.cbPepsiMaxBottle330 = new System.Windows.Forms.ComboBox();
+            this.cbPepsiMaxCan300 = new System.Windows.Forms.ComboBox();
+            this.cbPepsiMaxBottle600 = new System.Windows.Forms.ComboBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cbAquelleStill = new System.Windows.Forms.ComboBox();
+            this.cbAquelleStrawberry = new System.Windows.Forms.ComboBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cbCokeXero = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -182,56 +182,56 @@ namespace LnLBackEndSystem
             this.cbLiqui.Size = new System.Drawing.Size(35, 21);
             this.cbLiqui.TabIndex = 16;
             // 
-            // cbThirsti
+            // cbThirsti330
             // 
-            this.cbThirsti.FormattingEnabled = true;
-            this.cbThirsti.Location = new System.Drawing.Point(618, 164);
-            this.cbThirsti.Name = "cbThirsti";
-            this.cbThirsti.Size = new System.Drawing.Size(35, 21);
-            this.cbThirsti.TabIndex = 17;
-            this.cbThirsti.SelectedIndexChanged += new System.EventHandler(this.cbThirsti_SelectedIndexChanged);
+            this.cbThirsti330.FormattingEnabled = true;
+            this.cbThirsti330.Location = new System.Drawing.Point(618, 164);
+            this.cbThirsti330.Name = "cbThirsti330";
+            this.cbThirsti330.Size = new System.Drawing.Size(35, 21);
+            this.cbThirsti330.TabIndex = 17;
+            this.cbThirsti330.SelectedIndexChanged += new System.EventHandler(this.cbThirsti_SelectedIndexChanged);
             // 
-            // cbPepsi
+            // cbPepsiRegBottle330
             // 
-            this.cbPepsi.FormattingEnabled = true;
-            this.cbPepsi.Location = new System.Drawing.Point(173, 336);
-            this.cbPepsi.Name = "cbPepsi";
-            this.cbPepsi.Size = new System.Drawing.Size(35, 21);
-            this.cbPepsi.TabIndex = 18;
+            this.cbPepsiRegBottle330.FormattingEnabled = true;
+            this.cbPepsiRegBottle330.Location = new System.Drawing.Point(173, 336);
+            this.cbPepsiRegBottle330.Name = "cbPepsiRegBottle330";
+            this.cbPepsiRegBottle330.Size = new System.Drawing.Size(35, 21);
+            this.cbPepsiRegBottle330.TabIndex = 18;
             // 
-            // comboBox1
+            // cbThirsti500
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(618, 187);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(35, 21);
-            this.comboBox1.TabIndex = 23;
+            this.cbThirsti500.FormattingEnabled = true;
+            this.cbThirsti500.Location = new System.Drawing.Point(618, 187);
+            this.cbThirsti500.Name = "cbThirsti500";
+            this.cbThirsti500.Size = new System.Drawing.Size(35, 21);
+            this.cbThirsti500.TabIndex = 23;
             // 
-            // comboBox2
+            // cbPepsiMaxBottle330
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(173, 363);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(35, 21);
-            this.comboBox2.TabIndex = 24;
+            this.cbPepsiMaxBottle330.FormattingEnabled = true;
+            this.cbPepsiMaxBottle330.Location = new System.Drawing.Point(173, 363);
+            this.cbPepsiMaxBottle330.Name = "cbPepsiMaxBottle330";
+            this.cbPepsiMaxBottle330.Size = new System.Drawing.Size(35, 21);
+            this.cbPepsiMaxBottle330.TabIndex = 24;
             // 
-            // comboBox3
+            // cbPepsiMaxCan300
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(173, 387);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(35, 21);
-            this.comboBox3.TabIndex = 25;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cbPepsiMaxCan300.FormattingEnabled = true;
+            this.cbPepsiMaxCan300.Location = new System.Drawing.Point(173, 387);
+            this.cbPepsiMaxCan300.Name = "cbPepsiMaxCan300";
+            this.cbPepsiMaxCan300.Size = new System.Drawing.Size(35, 21);
+            this.cbPepsiMaxCan300.TabIndex = 25;
+            this.cbPepsiMaxCan300.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // comboBox4
+            // cbPepsiMaxBottle600
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(173, 414);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(35, 21);
-            this.comboBox4.TabIndex = 26;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.cbPepsiMaxBottle600.FormattingEnabled = true;
+            this.cbPepsiMaxBottle600.Location = new System.Drawing.Point(173, 414);
+            this.cbPepsiMaxBottle600.Name = "cbPepsiMaxBottle600";
+            this.cbPepsiMaxBottle600.Size = new System.Drawing.Size(35, 21);
+            this.cbPepsiMaxBottle600.TabIndex = 26;
+            this.cbPepsiMaxBottle600.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // pictureBox6
             // 
@@ -253,21 +253,21 @@ namespace LnLBackEndSystem
             this.pictureBox7.TabIndex = 29;
             this.pictureBox7.TabStop = false;
             // 
-            // comboBox5
+            // cbAquelleStill
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(387, 336);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(35, 21);
-            this.comboBox5.TabIndex = 31;
+            this.cbAquelleStill.FormattingEnabled = true;
+            this.cbAquelleStill.Location = new System.Drawing.Point(387, 336);
+            this.cbAquelleStill.Name = "cbAquelleStill";
+            this.cbAquelleStill.Size = new System.Drawing.Size(35, 21);
+            this.cbAquelleStill.TabIndex = 31;
             // 
-            // comboBox6
+            // cbAquelleStrawberry
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(618, 336);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(35, 21);
-            this.comboBox6.TabIndex = 32;
+            this.cbAquelleStrawberry.FormattingEnabled = true;
+            this.cbAquelleStrawberry.Location = new System.Drawing.Point(618, 336);
+            this.cbAquelleStrawberry.Name = "cbAquelleStrawberry";
+            this.cbAquelleStrawberry.Size = new System.Drawing.Size(35, 21);
+            this.cbAquelleStrawberry.TabIndex = 32;
             // 
             // pictureBox8
             // 
@@ -279,49 +279,49 @@ namespace LnLBackEndSystem
             this.pictureBox8.TabIndex = 33;
             this.pictureBox8.TabStop = false;
             // 
-            // comboBox7
+            // cbCokeXero
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(387, 573);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(35, 21);
-            this.comboBox7.TabIndex = 35;
+            this.cbCokeXero.FormattingEnabled = true;
+            this.cbCokeXero.Location = new System.Drawing.Point(387, 573);
+            this.cbCokeXero.Name = "cbCokeXero";
+            this.cbCokeXero.Size = new System.Drawing.Size(35, 21);
+            this.cbCokeXero.TabIndex = 35;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Crystal Water";
+            this.label1.Text = "Crystal Water R9.99";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(226, 172);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 13);
+            this.label2.Size = new System.Drawing.Size(153, 13);
             this.label2.TabIndex = 37;
-            this.label2.Text = "Liqui Fruit Orange 250ml";
+            this.label2.Text = "Liqui Fruit Orange 250ml R6.99";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(441, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.Size = new System.Drawing.Size(130, 13);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Thirsti Water 330ml";
+            this.label3.Text = "Thirsti Water 330ml R9.99";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(441, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
+            this.label4.Size = new System.Drawing.Size(136, 13);
             this.label4.TabIndex = 39;
-            this.label4.Text = "Thirsti Water 500ml";
+            this.label4.Text = "Thirsti Water 500ml R14.99";
             // 
             // label5
             // 
@@ -423,18 +423,18 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.cbCokeXero);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cbAquelleStrawberry);
+            this.Controls.Add(this.cbAquelleStill);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cbPepsi);
-            this.Controls.Add(this.cbThirsti);
+            this.Controls.Add(this.cbPepsiMaxBottle600);
+            this.Controls.Add(this.cbPepsiMaxCan300);
+            this.Controls.Add(this.cbPepsiMaxBottle330);
+            this.Controls.Add(this.cbThirsti500);
+            this.Controls.Add(this.cbPepsiRegBottle330);
+            this.Controls.Add(this.cbThirsti330);
             this.Controls.Add(this.cbLiqui);
             this.Controls.Add(this.cbCrystal);
             this.Controls.Add(this.cbBud);
@@ -475,18 +475,18 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.ComboBox cbBud;
         private System.Windows.Forms.ComboBox cbCrystal;
         private System.Windows.Forms.ComboBox cbLiqui;
-        private System.Windows.Forms.ComboBox cbThirsti;
-        private System.Windows.Forms.ComboBox cbPepsi;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbThirsti330;
+        private System.Windows.Forms.ComboBox cbPepsiRegBottle330;
+        private System.Windows.Forms.ComboBox cbThirsti500;
+        private System.Windows.Forms.ComboBox cbPepsiMaxBottle330;
+        private System.Windows.Forms.ComboBox cbPepsiMaxCan300;
+        private System.Windows.Forms.ComboBox cbPepsiMaxBottle600;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cbAquelleStill;
+        private System.Windows.Forms.ComboBox cbAquelleStrawberry;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cbCokeXero;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

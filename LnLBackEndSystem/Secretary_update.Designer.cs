@@ -43,12 +43,14 @@ namespace LnLBackEndSystem
             this.txtCell = new System.Windows.Forms.TextBox();
             this.lblForgot = new System.Windows.Forms.LinkLabel();
             this.lblHeading = new System.Windows.Forms.Label();
+            this.cbRank = new System.Windows.Forms.ComboBox();
+            this.lblRank = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(119, 226);
+            this.btnUpdate.Location = new System.Drawing.Point(114, 263);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(144, 45);
             this.btnUpdate.TabIndex = 0;
@@ -58,7 +60,7 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(281, 312);
+            this.btnBack.Location = new System.Drawing.Point(276, 349);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 1;
@@ -98,7 +100,7 @@ namespace LnLBackEndSystem
             // cbFulltime
             // 
             this.cbFulltime.AutoSize = true;
-            this.cbFulltime.Location = new System.Drawing.Point(15, 161);
+            this.cbFulltime.Location = new System.Drawing.Point(10, 198);
             this.cbFulltime.Name = "cbFulltime";
             this.cbFulltime.Size = new System.Drawing.Size(133, 17);
             this.cbFulltime.TabIndex = 5;
@@ -108,7 +110,7 @@ namespace LnLBackEndSystem
             // cbLicence
             // 
             this.cbLicence.AutoSize = true;
-            this.cbLicence.Location = new System.Drawing.Point(15, 193);
+            this.cbLicence.Location = new System.Drawing.Point(10, 230);
             this.cbLicence.Name = "cbLicence";
             this.cbLicence.Size = new System.Drawing.Size(102, 17);
             this.cbLicence.TabIndex = 6;
@@ -176,11 +178,30 @@ namespace LnLBackEndSystem
             this.lblHeading.TabIndex = 14;
             this.lblHeading.Text = "Personal Information";
             // 
+            // cbRank
+            // 
+            this.cbRank.FormattingEnabled = true;
+            this.cbRank.Location = new System.Drawing.Point(143, 152);
+            this.cbRank.Name = "cbRank";
+            this.cbRank.Size = new System.Drawing.Size(100, 21);
+            this.cbRank.TabIndex = 17;
+            // 
+            // lblRank
+            // 
+            this.lblRank.AutoSize = true;
+            this.lblRank.Location = new System.Drawing.Point(11, 155);
+            this.lblRank.Name = "lblRank";
+            this.lblRank.Size = new System.Drawing.Size(36, 13);
+            this.lblRank.TabIndex = 16;
+            this.lblRank.Text = "Rank:";
+            // 
             // Secretary_update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 339);
+            this.ClientSize = new System.Drawing.Size(361, 392);
+            this.Controls.Add(this.cbRank);
+            this.Controls.Add(this.lblRank);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblForgot);
             this.Controls.Add(this.txtCell);
@@ -219,5 +240,7 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.TextBox txtCell;
         private System.Windows.Forms.LinkLabel lblForgot;
         private System.Windows.Forms.Label lblHeading;
+        private System.Windows.Forms.ComboBox cbRank;
+        private System.Windows.Forms.Label lblRank;
     }
 }

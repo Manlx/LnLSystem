@@ -205,6 +205,7 @@ namespace LnLBackEndSystem
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "Update booking";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // Update_Booking
             // 
