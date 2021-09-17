@@ -127,6 +127,7 @@ namespace LnLBackEndSystem
             this.linkToHome.TabIndex = 9;
             this.linkToHome.TabStop = true;
             this.linkToHome.Text = "Return to Home Screen";
+            this.linkToHome.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkToHome_LinkClicked);
             // 
             // label1
             // 
@@ -202,6 +203,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.dgViewAcc);
             this.Name = "Accountant_Login";
             this.Text = "Accountant_Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Accountant_Login_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgViewAcc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

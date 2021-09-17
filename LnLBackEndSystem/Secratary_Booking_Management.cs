@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NSDataModule;
 
 namespace LnLBackEndSystem
 {
@@ -21,6 +22,7 @@ namespace LnLBackEndSystem
         private void Secratary_Booking_Management_Load(object sender, EventArgs e)
         {
 
+       
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)

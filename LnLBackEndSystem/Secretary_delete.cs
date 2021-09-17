@@ -33,5 +33,17 @@ namespace LnLBackEndSystem
         {
             this.Close();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            
+             string sql = "DELETE FROM tblStaff WHERE Name ='" + txtName.Text + "' AND Password = '" + txtPassword.Text + "'";
+
+            int sucessful = DataModule.ExecuteSQL(sql);
+            if (sucessful == 1)
+                MessageBox.Show("Deleted sucessfully");
+            else
+                MessageBox.Show("Error was encountered");
+        }
     }
 }

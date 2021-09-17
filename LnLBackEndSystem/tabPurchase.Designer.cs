@@ -398,6 +398,7 @@ namespace LnLBackEndSystem
             this.linkTabOrder.TabIndex = 84;
             this.linkTabOrder.TabStop = true;
             this.linkTabOrder.Text = "Return to Tab Order Page";
+            this.linkTabOrder.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkTabOrder_LinkClicked);
             // 
             // tabPurchase
             // 
@@ -442,6 +443,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.pictureBox1);
             this.Name = "tabPurchase";
             this.Text = "tabPurchase";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.tabPurchase_FormClosing);
             this.Load += new System.EventHandler(this.tabPurchase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

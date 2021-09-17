@@ -63,5 +63,21 @@ namespace LnLBackEndSystem
             frmGuest.Show();
             this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Warehouse_Login.warehouse = this;
+            Warehouse_Login frmWarehouse = new Warehouse_Login();
+            frmWarehouse.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            tabPurchase.tabPurch = this;
+            tabPurchase frmTabPurch = new tabPurchase();
+            frmTabPurch.Show();
+            this.Hide();
+        }
     }
 }

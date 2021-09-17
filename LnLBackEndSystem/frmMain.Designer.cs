@@ -40,6 +40,8 @@ namespace LnLBackEndSystem
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +88,7 @@ namespace LnLBackEndSystem
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1178, 207);
+            this.pictureBox1.Size = new System.Drawing.Size(1174, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -128,7 +130,7 @@ namespace LnLBackEndSystem
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(473, 629);
+            this.button5.Location = new System.Drawing.Point(471, 629);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(115, 56);
             this.button5.TabIndex = 9;
@@ -136,11 +138,33 @@ namespace LnLBackEndSystem
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(636, 624);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(134, 38);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Warehouse";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(799, 619);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(99, 43);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 681);
+            this.ClientSize = new System.Drawing.Size(1174, 683);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
@@ -177,5 +201,7 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
