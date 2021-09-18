@@ -1,5 +1,6 @@
 ﻿//Manuel A Nunes 34551875
 using NSDataModule;
+using System.Windows.Forms;
 
 namespace NSTableAndUtil
 {
@@ -12,6 +13,28 @@ namespace NSTableAndUtil
     }
     public static class Utilities
     {
+        public static string FieldAndCompToString(Field InField, Control InControl)
+        { //Creates SQL Eqals Statement
+            string Output = "";
+            switch (InField.DataType)
+            {
+
+                case DataTypes.Boolean:
+                    Output = $"{InField.FieldDesc} = '{(((CheckBox)InControl).Checked ? "'1'" : "'0'")}'";
+                    break;
+                case DataTypes.String:
+                case DataTypes.Date:
+                case DataTypes.Number:
+                    {
+                        if (InField.DataType == DataTypes.Number)
+                            Output = $"{InField.FieldDesc} = {((TextBox)InControl).Text}";
+                        else
+                            Output = $"{InField.FieldDesc} = '{((TextBox)InControl).Text}'";
+                    }
+                    break;
+            }
+            return Output;
+        }
         public static DataTypes StringToDT(string Input)
         {
             int Out;
@@ -121,8 +144,6 @@ namespace NSTableAndUtil
                 Fields[x].IsPrimaryField = FieldsData[x][2] != "";
                 Fields[x].ReadOnly = FieldsData[x][3] != "";
             }
-                
-
         }
     }
 }

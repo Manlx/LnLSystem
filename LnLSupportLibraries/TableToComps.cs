@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NSTableAndUtil;
 using NSDataModule;
+using NSTableAndUtil;
 
 namespace LnLSupportLibraries
 {
@@ -48,25 +49,22 @@ namespace LnLSupportLibraries
             }
         }
         public string GenerateUpdateString()
-        {
+        {//Generate SQL UPDATE Statment
             string SQL = $"UPDATE {TableUpdate.TableName} SET ";
-            for (int x =1;x < TableUpdate.Fields.Length;x++)
-                switch (TableUpdate.Fields[x].DataType)
-                {
-                    case DataTypes.Boolean: SQL += $"{TableUpdate.Fields[x].FieldDesc} = '{(((CheckBox)InputControl[x]).Checked?"'1'":"'0'" )}'";
-                        break;
-                    case DataTypes.String:
-                    case DataTypes.Date:
-                    case DataTypes.Number:
-                        {
-                            //InputControl[x] = new TextBox() { Name = $"edt{SelField.FieldDesc}" };
-                            //if (SelField.DataType == DataTypes.Number)
-                            //    ((TextBox)InputControl[x]).TextChanged += new EventHandler(NumberOnly);
-                        }
-                        break;
-                }
+            for (int x = 0; x < TableUpdate.Fields.Length; x++)
+                SQL += $" {Utilities.FieldAndCompToString(TableUpdate.Fields[x], InputControl[x])},";
+
+            SQL = SQL.Substring(0,SQL.Length-2);
+
+            SQL += " WHERE ";
+            bool Looking = true;
+            int y = 0;
+            for (; y < TableUpdate.Fields.Length && Looking; y++)
+                Looking = !TableUpdate.Fields[y].IsPrimaryField;
+            SQL += $" {Utilities.FieldAndCompToString(TableUpdate.Fields[y],InputControl[y])}";
             return SQL;
         }
+        
         private void NumberOnly(object sender, EventArgs e)
         {
             ((TextBox)sender).Text = ((TextBox)sender).Text.Substring(0, ((TextBox)sender).Text.Length-2);
