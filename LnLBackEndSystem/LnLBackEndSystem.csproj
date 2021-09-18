@@ -140,10 +140,6 @@
     <Compile Include="Booking_Management.Designer.cs">
       <DependentUpon>Booking_Management.cs</DependentUpon>
     </Compile>
-    <Compile Include="clsCreateTables.cs" />
-    <Compile Include="clsTableRelation.cs" />
-    <Compile Include="clsTables.cs" />
-    <Compile Include="DBCompsGenerator.cs" />
     <Compile Include="Delete_Booking.cs">
       <SubType>Form</SubType>
     </Compile>
