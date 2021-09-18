@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//Manuel A Nunes 34551875
 using NSDataModule;
 
 namespace NSTableAndUtil
@@ -101,6 +97,8 @@ namespace NSTableAndUtil
         public bool IsReference;
         public Table Source;
         public Field FieldPrime;
+        public bool IsPrimaryField;
+        public bool ReadOnly;
         public Field(DataTypes DataType,string FieldDesc)
         {
             this.DataType = DataType;
@@ -113,12 +111,17 @@ namespace NSTableAndUtil
         public Field[] Fields;
         public Table(string TableName)
         {
-            string[][] FieldsData = DataModule.GetValues($"SHOW COLUMNS FROM {TableName}",new int[] {0,1 });
+            string[][] FieldsData = DataModule.GetValues($"SHOW COLUMNS FROM {TableName}",new int[] {0,1,3,5 });
             this.TableName = TableName;
             Fields = new Field[FieldsData.Length];
 
             for (int x = 0;x < FieldsData.Length;x++)
-                Fields[x] = new Field(Utilities.StringToDT(FieldsData[x][1]),FieldsData[x][0]);
+            {
+                Fields[x] = new Field(Utilities.StringToDT(FieldsData[x][1]), FieldsData[x][0]);
+                Fields[x].IsPrimaryField = FieldsData[x][2] != "";
+                Fields[x].ReadOnly = FieldsData[x][3] != "";
+            }
+                
 
         }
     }
