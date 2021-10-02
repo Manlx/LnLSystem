@@ -41,7 +41,7 @@ namespace LnLBackEndSystem
             "Gamer"});
             this.cbbTable.Location = new System.Drawing.Point(132, 635);
             this.cbbTable.Name = "cbbTable";
-            this.cbbTable.Size = new System.Drawing.Size(944, 31);
+            this.cbbTable.Size = new System.Drawing.Size(1008, 31);
             this.cbbTable.TabIndex = 1;
             this.cbbTable.SelectedIndexChanged += new System.EventHandler(this.cmbTable_SelectedIndexChanged);
             // 
@@ -58,7 +58,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 670);
+            this.ClientSize = new System.Drawing.Size(1146, 670);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbTable);
             this.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

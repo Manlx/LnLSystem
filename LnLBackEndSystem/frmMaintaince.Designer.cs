@@ -61,11 +61,12 @@ namespace LnLBackEndSystem
             this.tbcMaint.Controls.Add(this.tabUpdate);
             this.tbcMaint.Controls.Add(this.tabInsert);
             this.tbcMaint.Controls.Add(this.tabDelete);
-            this.tbcMaint.Location = new System.Drawing.Point(0, 313);
+            this.tbcMaint.Location = new System.Drawing.Point(0, 321);
             this.tbcMaint.Name = "tbcMaint";
             this.tbcMaint.SelectedIndex = 0;
-            this.tbcMaint.Size = new System.Drawing.Size(995, 258);
+            this.tbcMaint.Size = new System.Drawing.Size(995, 250);
             this.tbcMaint.TabIndex = 1;
+            this.tbcMaint.SelectedIndexChanged += new System.EventHandler(this.tbcMaint_SelectedIndexChanged);
             // 
             // tabUpdate
             // 
@@ -73,7 +74,7 @@ namespace LnLBackEndSystem
             this.tabUpdate.Location = new System.Drawing.Point(4, 32);
             this.tabUpdate.Name = "tabUpdate";
             this.tabUpdate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUpdate.Size = new System.Drawing.Size(987, 222);
+            this.tabUpdate.Size = new System.Drawing.Size(987, 214);
             this.tabUpdate.TabIndex = 0;
             this.tabUpdate.Text = "Update";
             this.tabUpdate.UseVisualStyleBackColor = true;
@@ -90,10 +91,10 @@ namespace LnLBackEndSystem
             // tabInsert
             // 
             this.tabInsert.Controls.Add(this.btnInsert);
-            this.tabInsert.Location = new System.Drawing.Point(4, 32);
+            this.tabInsert.Location = new System.Drawing.Point(4, 22);
             this.tabInsert.Name = "tabInsert";
             this.tabInsert.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInsert.Size = new System.Drawing.Size(987, 222);
+            this.tabInsert.Size = new System.Drawing.Size(987, 232);
             this.tabInsert.TabIndex = 1;
             this.tabInsert.Text = "Insert";
             this.tabInsert.UseVisualStyleBackColor = true;
@@ -110,10 +111,10 @@ namespace LnLBackEndSystem
             // tabDelete
             // 
             this.tabDelete.Controls.Add(this.btnDelete);
-            this.tabDelete.Location = new System.Drawing.Point(4, 32);
+            this.tabDelete.Location = new System.Drawing.Point(4, 22);
             this.tabDelete.Name = "tabDelete";
             this.tabDelete.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDelete.Size = new System.Drawing.Size(987, 222);
+            this.tabDelete.Size = new System.Drawing.Size(987, 232);
             this.tabDelete.TabIndex = 2;
             this.tabDelete.Text = "Delete";
             this.tabDelete.UseVisualStyleBackColor = true;
@@ -131,7 +132,7 @@ namespace LnLBackEndSystem
             // frmMaintainces
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(995, 572);
+            this.ClientSize = new System.Drawing.Size(999, 572);
             this.Controls.Add(this.tbcMaint);
             this.Controls.Add(this.dgvTableData);
             this.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

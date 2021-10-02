@@ -39,10 +39,10 @@ namespace NSTableAndUtil
         {
             int Out;
             Input = Input.ToUpper();
-            string[] Strings = { "VARCHAR(", "VARCHAR", "CHAR(", "TINYTEXT", "TEXT(", "MEDIUMTEXT", "LONGTEXT", "NVARCHAR" },
-                Number = { "TINYINT", "SMALLINT", "INT", "BIGINT", "DECIMAL", "INTEGER(", "DOUBLE(", "FLOAT(", "DECIMAL(", "DEC(" },
+            string[] Strings = { "VARCHAR(", "VARCHAR", "CHAR(", "TINYTEXT", "TEXT(", "MEDIUMTEXT", "LONGTEXT", "NVARCHAR", "TEXT" },
+                Number = { "TINYINT", "SMALLINT", "INT", "BIGINT", "DECIMAL", "INTEGER(", "DOUBLE(", "FLOAT(", "DECIMAL(", "DEC(","FLOAT" },
                 Booleans = { "BOOL", "BIT", "BIT(" },
-                DATE = { "DATE", "DATETIME(", "TIMESTAMP(", "TIME(", "YEAR" };
+                DATE = { "DATE", "DATETIME(", "TIMESTAMP(", "TIME(", "YEAR","TIME"};
             Out = -1;
             bool bLooking = true;
 
@@ -106,7 +106,7 @@ namespace NSTableAndUtil
         }
         public static Table[] GenerateTables()
         {
-            string[] Datas = DataModule.GetValues<string>(0,"SHOW TABLES");
+            string[] Datas = DataModule.GetValues(0,"SHOW TABLES");
             Table[] Tables = new Table[Datas.Length];
             for (int x = 0; x < Datas.Length; x++)
                 Tables[x] = new Table(Datas[x]);

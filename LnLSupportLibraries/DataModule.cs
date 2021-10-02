@@ -179,6 +179,26 @@ namespace NSDataModule
 
             return Outs.ToArray();
         }
+        public static string[] GetValues(int Colum, string SQL = "")
+        {
+
+            System.Collections.Generic.List<string> Outs = new System.Collections.Generic.List<string>();
+
+            if (OpenConnection())
+            {
+                if (SQL != "")
+                    Com = new MySqlCommand(SQL, Con);
+                else if (Com.CommandText == "")
+                    return Outs.ToArray();
+                Reader = Com.ExecuteReader();
+                if (Colum < Reader.FieldCount)
+                    while (Reader.Read())
+                        Outs.Add(Reader.GetValue(Colum).ToString());
+                Reader.Close();
+            }
+
+            return Outs.ToArray();
+        }
         /// <summary>
         /// Executes SQL and returns the number of effected columns 
         /// </summary>
