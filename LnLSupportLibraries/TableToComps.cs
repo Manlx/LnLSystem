@@ -32,7 +32,7 @@ namespace LnLSupportLibraries
             {
                 if (SelField.IsReference)
                 {
-                    InputControl[x] = new ComboBox() { Name=$"cbb{SelField.FieldDesc}", Parent = BigParent };
+                    InputControl[x] = new ComboBox() { Name=$"cbb{SelField.FieldDesc}", Parent = BigParent, Enabled = !SelField.IsPrimaryField };
                     foreach (string Item in DataModule.GetValues(0, $"SELECT {SelField.FieldPrime.FieldDesc} FROM {SelField.Source.TableName}"))
                         ((ComboBox)InputControl[x]).Items.Add(Item);
                 }
@@ -40,13 +40,13 @@ namespace LnLSupportLibraries
                 {
                     switch (SelField.DataType)
                     {
-                        case DataTypes.Boolean: InputControl[x] = new CheckBox() { Name = $"chk{SelField.FieldDesc}",Text = ".", Parent =BigParent, AutoSize = true };
+                        case DataTypes.Boolean: InputControl[x] = new CheckBox() { Name = $"chk{SelField.FieldDesc}",Text = ".", Parent =BigParent, AutoSize = true,Enabled = !SelField.IsPrimaryField };
                             break;
                         case DataTypes.String:
                         case DataTypes.Date:
                         case DataTypes.Number:
                         {
-                            InputControl[x] = new TextBox() { Name = $"edt{SelField.FieldDesc}", Parent = BigParent};
+                            InputControl[x] = new TextBox() { Name = $"edt{SelField.FieldDesc}", Parent = BigParent, Enabled = !SelField.IsPrimaryField };
                             if (SelField.DataType == DataTypes.Number)
                                 ((TextBox)InputControl[x]).TextChanged += new EventHandler(NumberOnly);
                         }
@@ -119,36 +119,47 @@ namespace LnLSupportLibraries
             }
                 
         }
-        //public string GenerateUpdateSQL(Table InpTable)
-        //{
-        //    string SQL = $"UPDATE {InpTable.TableName} SET ";
-        //    int x = 0;
-        //    foreach (Field SelField in InpTable.Fields)
-        //    {
-        //        if (!SelField.IsPrimaryField)
-        //        {
-        //            SQL = $"{SQL} {SelField.FieldDesc} = {((SelField.DataType != DataTypes.Number) ? "'" : "")}";
-        //            if (SelField.IsReference)
-        //                (ComboBox)InputControl[x]).Text;
-        //            else
-        //                switch (SelField.DataType)
-        //                {
-        //                    case DataTypes.Boolean:
-        //                        ((CheckBox)InputControl[x]).Checked = dgvDipInp.SelectedRows[0].Cells[x].Value.ToString() == "1";
-        //                        break;
-        //                    default:
-        //                        ((TextBox)InputControl[x]).Text = dgvDipInp.SelectedRows[0].Cells[x].Value.ToString();
-        //                        break;
-        //                }
-        //            SQL = $"{SQL}{((SelField.DataType != DataTypes.Number) ? "'" : "")}";
+        public string GenerateUpdateSQL(Table InpTable)
+        {
+            string SQL = $"UPDATE {InpTable.TableName} SET ",strTemp;
+            int x = 0,PrimeNumTemp = 0;
+            Field PrimeTemp = null;
+            foreach (Field SelField in InpTable.Fields)
+            {
+                if (!SelField.IsPrimaryField)
+                {
+                    SQL = $"{SQL} {SelField.FieldDesc} = {((SelField.DataType != DataTypes.Number) ? "'" : "")}";
+                    if (SelField.IsReference)
+                        strTemp = ((ComboBox)InputControl[x]).Text;
+                    else
+                        switch (SelField.DataType)
+                        {
+                            case DataTypes.Boolean:
+                                strTemp = ((CheckBox)InputControl[x]).Checked ? "1" : "0";
+                                break;
+                            default:
+                                strTemp = ((TextBox)InputControl[x]).Text;
+                                break;
+                        }
+                    SQL = $"{SQL}{strTemp}{((SelField.DataType != DataTypes.Number) ? "'" : "")}";
 
-        //        }
-        //        x++;
-        //    }
-                
+                }
+                else
+                {
+                    PrimeTemp = SelField;
+                    PrimeNumTemp = x;
+                }
                     
-        //    return SQL;
-        //}
+                if (x >0 )
+                    SQL = $"{SQL},";
+                x++;
+            }
+            
+
+            SQL = SQL.Remove(SQL.Length-1,1);
+            SQL = $"{SQL} WHERE {PrimeTemp.FieldDesc} = {dgvDipInp.SelectedRows[0].Cells[PrimeNumTemp].Value.ToString()}";
+            return SQL;
+        }
 
         public void RemoveLetters(ref string Value)
         {

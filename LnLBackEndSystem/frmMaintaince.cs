@@ -30,24 +30,14 @@ namespace LnLBackEndSystem
 
         private void dgvTableData_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            
             if (dgvTableData.SelectedRows.Count != 0)
-            MyUpdateComps.UpdateValue(Utilities.SearchTable(Tables, TableName));
-            //if (dgvTableData.SelectedRows.Count != 0)
-            //MessageBox.Show($"{dgvTableData.Columns[0].Name}: {dgvTableData.SelectedRows[0].Cells[0].Value.ToString()}\n");
-            //if (dgvTableData.SelectedRows.Count != 0)
-            //{
-            //    string SelectedRow = "";
-            //    int limit = ((dgvTableData.ColumnCount > 4) ? 5 : dgvTableData.ColumnCount);
-            //    for (int x = 0; x < limit; x++)
-            //        SelectedRow += $"{dgvTableData.Columns[x].Name}: {dgvTableData.SelectedRows[0].Cells[x].Value.ToString()}\n" ;
-            //    lblSelectedRow.Text = SelectedRow;
-            //}
-                
-                //MessageBox.Show(dgvTableData.SelectedRows[0].Cells[0].Value.ToString());
-            //MessageBox.Show(dgvTableData.SelectedCells[0].Value.ToString());
+                if (dgvTableData.SelectedRows[0].Cells[0].Value != null)
+                    MyUpdateComps.UpdateValue(Utilities.SearchTable(Tables, TableName));
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
+
             if (MessageBox.Show("Sure you would like to delete? ","Delete Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //Need to fix
                 DataModule.ExecuteSQL($"DELETE FROM {TableName} WHERE {dgvTableData}= {dgvTableData.SelectedRows[0].Cells[0]}");
@@ -57,6 +47,14 @@ namespace LnLBackEndSystem
         {
             dgvTableData.Visible = tbcMaint.SelectedTab != tabInsert;
             //MessageBox.Show(tbcMaint.SelectedTab.Text);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show(DataModule.ExecuteSQL(MyUpdateComps.GenerateUpdateSQL(Utilities.SearchTable(Tables, TableName))).ToString());
+            Clipboard.SetText((MyUpdateComps.GenerateUpdateSQL(Utilities.SearchTable(Tables, TableName))).ToString());
+            DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
         }
     }
 }

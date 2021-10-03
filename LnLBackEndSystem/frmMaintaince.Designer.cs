@@ -32,7 +32,7 @@ namespace LnLBackEndSystem
             this.dgvTableData = new System.Windows.Forms.DataGridView();
             this.tbcMaint = new System.Windows.Forms.TabControl();
             this.tabUpdate = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.tabInsert = new System.Windows.Forms.TabPage();
             this.btnInsert = new System.Windows.Forms.Button();
             this.tabDelete = new System.Windows.Forms.TabPage();
@@ -70,7 +70,7 @@ namespace LnLBackEndSystem
             // 
             // tabUpdate
             // 
-            this.tabUpdate.Controls.Add(this.button1);
+            this.tabUpdate.Controls.Add(this.btnUpdate);
             this.tabUpdate.Location = new System.Drawing.Point(4, 32);
             this.tabUpdate.Name = "tabUpdate";
             this.tabUpdate.Padding = new System.Windows.Forms.Padding(3);
@@ -79,14 +79,15 @@ namespace LnLBackEndSystem
             this.tabUpdate.Text = "Update";
             this.tabUpdate.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.Location = new System.Drawing.Point(396, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 43);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Update Record";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(392, 165);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(195, 43);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update Record";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // tabInsert
             // 
@@ -94,7 +95,7 @@ namespace LnLBackEndSystem
             this.tabInsert.Location = new System.Drawing.Point(4, 22);
             this.tabInsert.Name = "tabInsert";
             this.tabInsert.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInsert.Size = new System.Drawing.Size(987, 232);
+            this.tabInsert.Size = new System.Drawing.Size(987, 224);
             this.tabInsert.TabIndex = 1;
             this.tabInsert.Text = "Insert";
             this.tabInsert.UseVisualStyleBackColor = true;
@@ -114,7 +115,7 @@ namespace LnLBackEndSystem
             this.tabDelete.Location = new System.Drawing.Point(4, 22);
             this.tabDelete.Name = "tabDelete";
             this.tabDelete.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDelete.Size = new System.Drawing.Size(987, 232);
+            this.tabDelete.Size = new System.Drawing.Size(987, 224);
             this.tabDelete.TabIndex = 2;
             this.tabDelete.Text = "Delete";
             this.tabDelete.UseVisualStyleBackColor = true;
@@ -160,7 +161,7 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.TabPage tabInsert;
         private System.Windows.Forms.TabPage tabDelete;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
     }
 }
