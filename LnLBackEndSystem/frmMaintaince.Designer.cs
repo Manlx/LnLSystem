@@ -52,6 +52,7 @@ namespace LnLBackEndSystem
             this.dgvTableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTableData.Location = new System.Drawing.Point(0, -1);
             this.dgvTableData.Name = "dgvTableData";
+            this.dgvTableData.ReadOnly = true;
             this.dgvTableData.Size = new System.Drawing.Size(995, 316);
             this.dgvTableData.TabIndex = 0;
             this.dgvTableData.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTableData_RowEnter);

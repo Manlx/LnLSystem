@@ -284,7 +284,7 @@ namespace NSDataModule
                 {
                     temp = "";
                     for (int y = 0; y < ColCount; y++)
-                        temp = temp + $"{StringReSizer(ref (OutPut[x - 1][y]), (Sizing[y] + TableSpacer))}";
+                        temp += $"{StringReSizer(ref (OutPut[x - 1][y]), (Sizing[y] + TableSpacer))}";
                     ProperOut[x] = temp;
                 }
                 return ProperOut;

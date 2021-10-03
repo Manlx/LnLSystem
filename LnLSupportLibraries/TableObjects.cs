@@ -141,7 +141,7 @@ namespace NSTableAndUtil
             for (int x = 0;x < FieldsData.Length;x++)
             {
                 Fields[x] = new Field(Utilities.StringToDT(FieldsData[x][1]), FieldsData[x][0]);
-                Fields[x].IsPrimaryField = FieldsData[x][2] != "";
+                Fields[x].IsPrimaryField = FieldsData[x][2] == "PRI";
                 Fields[x].ReadOnly = FieldsData[x][3] != "";
             }
         }
