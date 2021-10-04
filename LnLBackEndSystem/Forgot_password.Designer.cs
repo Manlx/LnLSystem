@@ -113,6 +113,7 @@ namespace LnLBackEndSystem
             this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Reset password";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // lblPassword
             // 
