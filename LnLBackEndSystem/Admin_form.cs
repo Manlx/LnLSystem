@@ -43,5 +43,10 @@ namespace LnLBackEndSystem
         {
 
         }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

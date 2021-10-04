@@ -86,6 +86,7 @@ namespace LnLBackEndSystem
             this.btnApprove.TabIndex = 4;
             this.btnApprove.Text = "Approve booking";
             this.btnApprove.UseVisualStyleBackColor = true;
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
             // btnBack
             // 
