@@ -67,5 +67,10 @@ namespace LnLBackEndSystem
             this.Hide();
 
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

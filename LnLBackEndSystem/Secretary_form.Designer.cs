@@ -110,6 +110,7 @@ namespace LnLBackEndSystem
             this.btnReport.TabIndex = 6;
             this.btnReport.Text = "Generate Reports";
             this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // Secretary_form
             // 

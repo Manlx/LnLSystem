@@ -152,6 +152,12 @@
     <Compile Include="Forgot_password.Designer.cs">
       <DependentUpon>Forgot_password.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmImageManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImageManager.Designer.cs">
+      <DependentUpon>frmImageManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMaintaince.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     <EmbeddedResource Include="Forgot_password.resx">
       <DependentUpon>Forgot_password.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmImageManager.resx">
+      <DependentUpon>frmImageManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMaintaince.resx">
       <DependentUpon>frmMaintaince.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,6 +388,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

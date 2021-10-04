@@ -146,6 +146,7 @@ namespace LnLBackEndSystem
             this.btnSignup.TabIndex = 11;
             this.btnSignup.Text = "Sign up";
             this.btnSignup.UseVisualStyleBackColor = true;
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // Admin_signup
             // 

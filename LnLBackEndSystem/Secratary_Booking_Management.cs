@@ -21,7 +21,8 @@ namespace LnLBackEndSystem
 
         private void Secratary_Booking_Management_Load(object sender, EventArgs e)
         {
-
+            btnDelete.Visible = false;
+            btnUpdate.Visible = false;
        
         }
 
@@ -54,6 +55,13 @@ namespace LnLBackEndSystem
             Delete_Booking frmDelete = new Delete_Booking();
             frmDelete.Show();
             this.Hide();
+        }
+
+        private void btnApprove_Click(object sender, EventArgs e)
+        {
+            btnUpdate.Visible = true;
+            btnDelete.Visible = true;
+            MessageBox.Show("Booking approved");
         }
     }
 }

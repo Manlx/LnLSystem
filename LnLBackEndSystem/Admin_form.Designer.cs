@@ -54,6 +54,7 @@ namespace LnLBackEndSystem
             this.btnReports.TabIndex = 1;
             this.btnReports.Text = "Generate reports";
             this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnBack
             // 
