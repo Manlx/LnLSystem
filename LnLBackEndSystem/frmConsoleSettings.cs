@@ -16,6 +16,7 @@ namespace LnLBackEndSystem
             ttHints.SetToolTip(btnApply, "Applies changes to storage");
             ttHints.SetToolTip(chkClearSQLAfterExecution, "After SQL is executed it will clear.");
             ttHints.SetToolTip(chkClearAfterSuccessOnly, "Only clear input area after SQL executed successfully");
+            btnApply.BackColor = System.Drawing.Color.FromArgb(23,23,23);
         }
         public static string SettingsPath = "Settings.bin";
         public void ReadBinFile()
