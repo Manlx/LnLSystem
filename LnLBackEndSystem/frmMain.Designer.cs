@@ -172,7 +172,7 @@ namespace LnLBackEndSystem
             // 
             // btnRequestStock
             // 
-            this.btnRequestStock.Location = new System.Drawing.Point(799, 479);
+            this.btnRequestStock.Location = new System.Drawing.Point(840, 420);
             this.btnRequestStock.Name = "btnRequestStock";
             this.btnRequestStock.Size = new System.Drawing.Size(217, 96);
             this.btnRequestStock.TabIndex = 12;
