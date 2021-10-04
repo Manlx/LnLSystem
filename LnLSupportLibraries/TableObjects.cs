@@ -101,13 +101,18 @@ namespace NSTableAndUtil
                 SelectedField.Source = SearchTable(Tables, Row[2]);//Gets Source table for foreign table
                 SelectedField.FieldPrime = SearchField(SelectedField.Source.Fields,Row[3]);//Get foreign field
                 SelectedField.IsReference = true;
+                
             }
             foreach (Table Value in Tables)
             {
                 int x = 0;
                 foreach (Field SelField in Value.Fields)
                     if (SelField.IsPrimaryField)
+                    {
+                        SelField.AutoInc = DataModule.GetValue<string>(5, $"SHOW COLUMNS FROM {Value.TableName} WHERE FIELD = '{SelField.FieldDesc}'") == ("auto_increment");
                         x++;
+                    }
+                        
                 Value.HasMultiPrime = x > 1;
             }
             
@@ -130,6 +135,7 @@ namespace NSTableAndUtil
         public Field FieldPrime;
         public bool IsPrimaryField;
         public bool ReadOnly;
+        public bool AutoInc;
         public Field(DataTypes DataType,string FieldDesc)
         {
             this.DataType = DataType;

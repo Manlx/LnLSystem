@@ -67,7 +67,6 @@ namespace LnLBackEndSystem
             this.tbcMaint.SelectedIndex = 0;
             this.tbcMaint.Size = new System.Drawing.Size(995, 250);
             this.tbcMaint.TabIndex = 1;
-            this.tbcMaint.SelectedIndexChanged += new System.EventHandler(this.tbcMaint_SelectedIndexChanged);
             // 
             // tabUpdate
             // 

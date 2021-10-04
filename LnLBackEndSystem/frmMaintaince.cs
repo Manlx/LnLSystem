@@ -52,30 +52,30 @@ namespace LnLBackEndSystem
                     {
                         if (DataModule.ExecuteSQL($"DELETE FROM {TableName} {CompsUtilities.BuildWHERE(ActiveTable, dgvTableData)}") == -1)
                             MessageBox.Show("Deletion was restricted or has encountered an error");
-                        //Clipboard.SetText($"DELETE FROM {TableName} {CompsUtilities.BuildWHERE(Utilities.SearchTable(Tables, TableName), dgvTableData)}");
                         DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
-
                     }
         }
-
-        private void tbcMaint_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void btnInsert_Click(object sender, EventArgs e)
         {
             string temp ="";
-            if (MyInsertComps.GenerateInsertSQL(ref temp, ActiveTable))
+            InsertErrorCodes ErrorCatcher;
+            if (MyInsertComps.GenerateInsertSQL(out temp, ActiveTable, out ErrorCatcher))
                 MessageBox.Show($"{DataModule.ExecuteSQL(temp)} Rows were effected");
-            //Clipboard.SetText(temp);
-            //MessageBox.Show(temp);
+            switch(ErrorCatcher)
+            {
+                case InsertErrorCodes.Empty: MessageBox.Show("All fields can't be empty");
+                    break;
+                case InsertErrorCodes.MissingPrime: MessageBox.Show("Missing Primary Key");
+                    break;
+                case InsertErrorCodes.SyntaxIssues: MessageBox.Show("Unknown error as occured");
+                    break;
+            }
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MessageBox.Show( $"{DataModule.ExecuteSQL(MyUpdateComps.GenerateUpdateSQL(ActiveTable))} Rows were effected");
-            //Clipboard.SetText((MyUpdateComps.GenerateUpdateSQL(Utilities.SearchTable(Tables, TableName))).ToString());
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
         }
     }

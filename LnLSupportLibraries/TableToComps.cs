@@ -1,15 +1,18 @@
 ﻿//Manuel A Nunes 34551875
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using NSTableAndUtil;
 using NSDataModule;
 
 namespace LnLSupportLibraries
 {
+    public enum InsertErrorCodes
+    {
+        NoError,
+        Empty,
+        SyntaxIssues,
+        MissingPrime
+    }
     public class CompsUtilities
     {
         public Control[] InputControl;
@@ -111,7 +114,7 @@ namespace LnLSupportLibraries
         public string GenerateUpdateSQL(Table InpTable)
         {
             //Builds Update String
-            string SQL = $"UPDATE {InpTable.TableName} SET ",strTemp;
+            string SQL = $"UPDATE {InpTable.TableName} SET ";
             int x = 0;
             
             foreach (Field SelField in InpTable.Fields)
@@ -142,7 +145,10 @@ namespace LnLSupportLibraries
         { //Gets Values out of objects at
             string strTemp;
             if (SelField.IsReference)
-                strTemp = ((ComboBox)InputControl[x]).Items[((ComboBox)InputControl[x]).SelectedIndex].ToString();
+                if (((ComboBox)InputControl[x]).SelectedIndex > -1)
+                    strTemp = ((ComboBox)InputControl[x]).Items[((ComboBox)InputControl[x]).SelectedIndex].ToString();
+                else
+                    strTemp = "";
             else
                 switch (SelField.DataType)
                 {
@@ -170,39 +176,58 @@ namespace LnLSupportLibraries
                     Temp += x;
             Value = Temp;
         }
-        public bool GenerateInsertSQL(ref string SQL,Table InpTable)
+        public bool GenerateInsertSQL(out string SQL,Table InpTable,out InsertErrorCodes Error)
         {
-            bool isSuccess = true;
+            bool isSuccess = true, IsAllEmpty = true, MissingPrime = false;
             Field SelField;
             int x = 0;
             SQL = $"INSERT INTO {InpTable.TableName} (";
             string Cols = "", Values = "";
-            bool IsAllEmpty= true;
-
-            while (x < InpTable.Fields.Length && isSuccess )
+            Control TempErrorFocus = null;
+            Error = InsertErrorCodes.NoError;
+            try
             {
-                SelField = InpTable.Fields[x];
-                string strTemp =GetValueAt(SelField,x);
-                if (strTemp!= "")
-                {
-                    Cols += $"{SelField.FieldDesc}, ";
-                    Values += $"{ConfQoutes(SelField,strTemp)}, ";
+                while (x < InpTable.Fields.Length && (!MissingPrime|| IsAllEmpty))
+                {//Loops through all fields to get values
+                    SelField = InpTable.Fields[x];
+                    string strTemp = GetValueAt(SelField, x);
+                    if (strTemp != "")
+                    {
+                        Cols += $"{SelField.FieldDesc}, ";
+                        Values += $"{ConfQoutes(SelField, strTemp)}, ";
+                    }
+                    else if (SelField.IsPrimaryField && !SelField.AutoInc)
+                    {
+                        MissingPrime = strTemp == "";
+                        if (MissingPrime)
+                            TempErrorFocus = InputControl[x];
+                    }
+                        
+                    if (IsAllEmpty)
+                        IsAllEmpty = strTemp == "";
+                    x++;
                 }
-                else if (InpTable.HasMultiPrime)
-                        if (SelField.IsPrimaryField)
-                            isSuccess = strTemp != "";
+
+                if (Values.Length > 2)//Trims strings is required
+                    Values = Values.Remove(Values.Length - 2, 2);
+                if (Cols.Length > 2)
+                    Cols = Cols.Remove(Cols.Length - 2, 2);
+
+                SQL += $"{Cols}) VALUES ({Values})";//Builds Insert String
+                
+                if (MissingPrime)
+                    Error = InsertErrorCodes.MissingPrime;
                 if (IsAllEmpty)
-                    IsAllEmpty = strTemp == "";
-                x++;
+                    Error = InsertErrorCodes.Empty;
+            }
+            catch (Exception)
+            {
+                isSuccess = false;
             }
 
-            if (Values.Length >2)
-                Values= Values.Remove(Values.Length - 2, 2);
-            if (Cols.Length > 2)
-                Cols = Cols.Remove(Cols.Length - 2, 2);
-            
-            SQL += $"{Cols}) VALUES ({Values})";
-            return isSuccess && !IsAllEmpty;
+            if (TempErrorFocus != null)//Display 
+                TempErrorFocus.Focus();
+            return isSuccess && !IsAllEmpty&& !MissingPrime;
         }
     }
 
