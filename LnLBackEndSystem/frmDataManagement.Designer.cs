@@ -35,11 +35,13 @@ namespace LnLBackEndSystem
             // 
             // cbbTable
             // 
+            this.cbbTable.BackColor = System.Drawing.SystemColors.InfoText;
+            this.cbbTable.ForeColor = System.Drawing.SystemColors.Highlight;
             this.cbbTable.FormattingEnabled = true;
             this.cbbTable.Items.AddRange(new object[] {
             "Hi",
             "Gamer"});
-            this.cbbTable.Location = new System.Drawing.Point(132, 635);
+            this.cbbTable.Location = new System.Drawing.Point(131, 638);
             this.cbbTable.Name = "cbbTable";
             this.cbbTable.Size = new System.Drawing.Size(1008, 31);
             this.cbbTable.TabIndex = 1;
@@ -48,7 +50,8 @@ namespace LnLBackEndSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 639);
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(8, 643);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 23);
             this.label1.TabIndex = 2;
@@ -58,6 +61,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1146, 670);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbTable);
@@ -70,6 +74,7 @@ namespace LnLBackEndSystem
             this.Name = "frmDataManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Database Management";
+            this.TransparencyKey = System.Drawing.Color.Aquamarine;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDataManagement_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -78,7 +83,7 @@ namespace LnLBackEndSystem
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbbTable;
+        public System.Windows.Forms.ComboBox cbbTable;
         private System.Windows.Forms.Label label1;
     }
 }

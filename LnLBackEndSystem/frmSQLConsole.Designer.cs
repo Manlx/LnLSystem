@@ -48,10 +48,10 @@ namespace LnLBackEndSystem
             this.redSqlOut.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.redSqlOut.Location = new System.Drawing.Point(0, 0);
             this.redSqlOut.Name = "redSqlOut";
-            this.redSqlOut.Size = new System.Drawing.Size(1202, 244);
+            this.redSqlOut.Size = new System.Drawing.Size(1202, 248);
             this.redSqlOut.TabIndex = 6;
             this.redSqlOut.TabStop = false;
-            this.redSqlOut.Text = "asd";
+            this.redSqlOut.Text = "";
             // 
             // edtSqlInput
             // 

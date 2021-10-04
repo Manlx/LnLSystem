@@ -14,17 +14,25 @@ namespace LnLBackEndSystem
         public frmMaintainces()
         {
             InitializeComponent();
-            this.Width = Creator.ClientRectangle.Width-10;
+            
         }
         public static string TableName;
         public static CompsUtilities MyUpdateComps,MyInsertComps;
         private void frmBank_Load(object sender, EventArgs e)
         {
+            this.Width = Creator.ClientRectangle.Width - 10;
+            this.Height = ((frmDataManagement)Creator).cbbTable.Top - 10;
+            this.Top = 5;
+            this.Left = 5;
+
+            dgvTableData.Width = ClientRectangle.Width - 10;
+            tbcMain.Width = ClientRectangle.Width - 10;
+            dgvTableData.Left = 5;
+            tbcMain.Left = 5;
+
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
             dgvTableData.AutoResizeColumns();
             dgvTableData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            tbcMaint.Width = Parent.Width - 10;
-            tbcMaint.Left = 5;
 
             Tables = Utilities.GenerateTables();
             Utilities.UpdateFields(Tables);
@@ -39,7 +47,6 @@ namespace LnLBackEndSystem
 
         private void dgvTableData_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            
             if (dgvTableData.SelectedRows.Count != 0)
                 if (dgvTableData.SelectedRows[0].Cells[0].Value != null)
                     MyUpdateComps.UpdateValue(ActiveTable);

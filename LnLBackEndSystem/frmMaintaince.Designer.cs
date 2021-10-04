@@ -30,7 +30,7 @@ namespace LnLBackEndSystem
         private void InitializeComponent()
         {
             this.dgvTableData = new System.Windows.Forms.DataGridView();
-            this.tbcMaint = new System.Windows.Forms.TabControl();
+            this.tbcMain = new System.Windows.Forms.TabControl();
             this.tabUpdate = new System.Windows.Forms.TabPage();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.tabInsert = new System.Windows.Forms.TabPage();
@@ -38,7 +38,7 @@ namespace LnLBackEndSystem
             this.tabDelete = new System.Windows.Forms.TabPage();
             this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableData)).BeginInit();
-            this.tbcMaint.SuspendLayout();
+            this.tbcMain.SuspendLayout();
             this.tabUpdate.SuspendLayout();
             this.tabInsert.SuspendLayout();
             this.tabDelete.SuspendLayout();
@@ -46,38 +46,42 @@ namespace LnLBackEndSystem
             // 
             // dgvTableData
             // 
+            this.dgvTableData.AllowUserToDeleteRows = false;
             this.dgvTableData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTableData.Location = new System.Drawing.Point(0, -1);
+            this.dgvTableData.Location = new System.Drawing.Point(0, 0);
             this.dgvTableData.Name = "dgvTableData";
             this.dgvTableData.ReadOnly = true;
             this.dgvTableData.Size = new System.Drawing.Size(995, 316);
             this.dgvTableData.TabIndex = 0;
             this.dgvTableData.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTableData_RowEnter);
             // 
-            // tbcMaint
+            // tbcMain
             // 
-            this.tbcMaint.Controls.Add(this.tabUpdate);
-            this.tbcMaint.Controls.Add(this.tabInsert);
-            this.tbcMaint.Controls.Add(this.tabDelete);
-            this.tbcMaint.Location = new System.Drawing.Point(0, 321);
-            this.tbcMaint.Name = "tbcMaint";
-            this.tbcMaint.SelectedIndex = 0;
-            this.tbcMaint.Size = new System.Drawing.Size(995, 250);
-            this.tbcMaint.TabIndex = 1;
+            this.tbcMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbcMain.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tbcMain.Controls.Add(this.tabUpdate);
+            this.tbcMain.Controls.Add(this.tabInsert);
+            this.tbcMain.Controls.Add(this.tabDelete);
+            this.tbcMain.Location = new System.Drawing.Point(0, 316);
+            this.tbcMain.Name = "tbcMain";
+            this.tbcMain.SelectedIndex = 0;
+            this.tbcMain.Size = new System.Drawing.Size(995, 255);
+            this.tbcMain.TabIndex = 1;
             // 
             // tabUpdate
             // 
+            this.tabUpdate.BackColor = System.Drawing.Color.DimGray;
             this.tabUpdate.Controls.Add(this.btnUpdate);
-            this.tabUpdate.Location = new System.Drawing.Point(4, 32);
+            this.tabUpdate.Location = new System.Drawing.Point(4, 35);
             this.tabUpdate.Name = "tabUpdate";
             this.tabUpdate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUpdate.Size = new System.Drawing.Size(987, 214);
+            this.tabUpdate.Size = new System.Drawing.Size(987, 216);
             this.tabUpdate.TabIndex = 0;
             this.tabUpdate.Text = "Update";
-            this.tabUpdate.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
             // 
@@ -91,14 +95,14 @@ namespace LnLBackEndSystem
             // 
             // tabInsert
             // 
+            this.tabInsert.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tabInsert.Controls.Add(this.btnInsert);
-            this.tabInsert.Location = new System.Drawing.Point(4, 32);
+            this.tabInsert.Location = new System.Drawing.Point(4, 35);
             this.tabInsert.Name = "tabInsert";
             this.tabInsert.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInsert.Size = new System.Drawing.Size(987, 214);
+            this.tabInsert.Size = new System.Drawing.Size(987, 216);
             this.tabInsert.TabIndex = 1;
             this.tabInsert.Text = "Insert";
-            this.tabInsert.UseVisualStyleBackColor = true;
             // 
             // btnInsert
             // 
@@ -112,14 +116,14 @@ namespace LnLBackEndSystem
             // 
             // tabDelete
             // 
+            this.tabDelete.BackColor = System.Drawing.Color.DimGray;
             this.tabDelete.Controls.Add(this.btnDelete);
-            this.tabDelete.Location = new System.Drawing.Point(4, 22);
+            this.tabDelete.Location = new System.Drawing.Point(4, 35);
             this.tabDelete.Name = "tabDelete";
             this.tabDelete.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDelete.Size = new System.Drawing.Size(987, 224);
+            this.tabDelete.Size = new System.Drawing.Size(987, 216);
             this.tabDelete.TabIndex = 2;
             this.tabDelete.Text = "Delete";
-            this.tabDelete.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -134,8 +138,9 @@ namespace LnLBackEndSystem
             // frmMaintainces
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(999, 572);
-            this.Controls.Add(this.tbcMaint);
+            this.Controls.Add(this.tbcMain);
             this.Controls.Add(this.dgvTableData);
             this.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -146,7 +151,7 @@ namespace LnLBackEndSystem
             this.Text = "Bank Table Management";
             this.Load += new System.EventHandler(this.frmBank_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableData)).EndInit();
-            this.tbcMaint.ResumeLayout(false);
+            this.tbcMain.ResumeLayout(false);
             this.tabUpdate.ResumeLayout(false);
             this.tabInsert.ResumeLayout(false);
             this.tabDelete.ResumeLayout(false);
@@ -157,7 +162,7 @@ namespace LnLBackEndSystem
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTableData;
-        private System.Windows.Forms.TabControl tbcMaint;
+        private System.Windows.Forms.TabControl tbcMain;
         private System.Windows.Forms.TabPage tabUpdate;
         private System.Windows.Forms.TabPage tabInsert;
         private System.Windows.Forms.TabPage tabDelete;

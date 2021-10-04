@@ -224,7 +224,6 @@ namespace LnLSupportLibraries
             {
                 isSuccess = false;
             }
-
             if (TempErrorFocus != null)//Display 
                 TempErrorFocus.Focus();
             return isSuccess && !IsAllEmpty&& !MissingPrime;
