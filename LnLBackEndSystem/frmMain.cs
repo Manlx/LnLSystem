@@ -79,8 +79,9 @@ namespace LnLBackEndSystem
             frmTabPurch.Show();
             this.Hide();
         }
+        
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnRequestStock_Click(object sender, EventArgs e)
         {
             frmRequestStock.Creator = this;
             frmRequestStock stockfrm = new frmRequestStock();
