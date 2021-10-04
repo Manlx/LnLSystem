@@ -29,25 +29,20 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstStockName = new System.Windows.Forms.ListBox();
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.addToList = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lstStockRequest = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnDeleteItem = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.cmbStock = new System.Windows.Forms.ComboBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.errorQuantity = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorQuantity)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lstStockName
-            // 
-            this.lstStockName.FormattingEnabled = true;
-            this.lstStockName.Location = new System.Drawing.Point(124, 75);
-            this.lstStockName.Name = "lstStockName";
-            this.lstStockName.Size = new System.Drawing.Size(245, 30);
-            this.lstStockName.TabIndex = 0;
             // 
             // label1
             // 
@@ -77,14 +72,15 @@ namespace LnLBackEndSystem
             this.addToList.TabIndex = 4;
             this.addToList.Text = "Add to list";
             this.addToList.UseVisualStyleBackColor = true;
+            this.addToList.Click += new System.EventHandler(this.addToList_Click);
             // 
-            // listBox2
+            // lstStockRequest
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(48, 267);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(320, 95);
-            this.listBox2.TabIndex = 5;
+            this.lstStockRequest.FormattingEnabled = true;
+            this.lstStockRequest.Location = new System.Drawing.Point(48, 267);
+            this.lstStockRequest.Name = "lstStockRequest";
+            this.lstStockRequest.Size = new System.Drawing.Size(320, 95);
+            this.lstStockRequest.TabIndex = 5;
             // 
             // label3
             // 
@@ -104,6 +100,7 @@ namespace LnLBackEndSystem
             this.btnSubmit.TabIndex = 7;
             this.btnSubmit.Text = "Submit list";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnDeleteItem
             // 
@@ -113,6 +110,7 @@ namespace LnLBackEndSystem
             this.btnDeleteItem.TabIndex = 8;
             this.btnDeleteItem.Text = "Delete item";
             this.btnDeleteItem.UseVisualStyleBackColor = true;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
             // label4
             // 
@@ -125,6 +123,14 @@ namespace LnLBackEndSystem
             this.label4.TabIndex = 9;
             this.label4.Text = "Request Stock";
             // 
+            // cmbStock
+            // 
+            this.cmbStock.FormattingEnabled = true;
+            this.cmbStock.Location = new System.Drawing.Point(124, 74);
+            this.cmbStock.Name = "cmbStock";
+            this.cmbStock.Size = new System.Drawing.Size(244, 21);
+            this.cmbStock.TabIndex = 11;
+            // 
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(124, 131);
@@ -132,41 +138,48 @@ namespace LnLBackEndSystem
             this.txtQuantity.Size = new System.Drawing.Size(103, 20);
             this.txtQuantity.TabIndex = 10;
             // 
+            // errorQuantity
+            // 
+            this.errorQuantity.ContainerControl = this;
+            // 
             // frmRequestStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(430, 432);
+            this.Controls.Add(this.cmbStock);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDeleteItem);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.lstStockRequest);
             this.Controls.Add(this.addToList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lstStockName);
             this.ForeColor = System.Drawing.Color.Navy;
             this.Name = "frmRequestStock";
             this.Text = "Request Stock";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmRequestStock_FormClosed);
+            this.Load += new System.EventHandler(this.frmRequestStock_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lstStockName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addToList;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lstStockRequest;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnDeleteItem;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbStock;
         private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.ErrorProvider errorQuantity;
     }
 }
