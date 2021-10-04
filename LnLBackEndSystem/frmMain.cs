@@ -79,5 +79,13 @@ namespace LnLBackEndSystem
             frmTabPurch.Show();
             this.Hide();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmImageManager.Creator = this;
+            frmImageManager frmImage = new frmImageManager();
+            frmImage.Show();
+            this.Hide();
+        }
     }
 }
