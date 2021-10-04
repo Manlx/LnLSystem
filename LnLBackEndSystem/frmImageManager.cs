@@ -64,6 +64,7 @@ namespace LnLBackEndSystem
                 }
                 else
                     File.Copy(ImageOFD.FileName, FilePathOut);
+                dgvInfo_SelectionChanged(dgvInfo, new EventArgs());
                 MessageBox.Show("Success");
             }
             img.Image = null;
