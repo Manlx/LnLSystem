@@ -140,7 +140,7 @@ namespace NSDataModule
         /// <returns>Returns the value of selected datatype</returns>
         public static T GetValue<T>(int Colum, string SQL = "")
         {
-            T Outs = default(T);
+            T Outs = default;
             if (OpenConnection())
             {
                 if (SQL != "")
@@ -277,7 +277,7 @@ namespace NSDataModule
                 string[] ProperOut = new string[OutPut.Count + 1];//Plus one to make space for the headings
                 string temp = "";
                 for (int y = 0; y < ColCount; y++)
-                    temp = temp + $"{StringReSizer(ref (Headings[y]), (Sizing[y] + TableSpacer))}";
+                    temp += $"{StringReSizer(ref (Headings[y]), (Sizing[y] + TableSpacer))}";
                 ProperOut[0] = temp;
                 int Max = OutPut.Count + 1;
                 for (int x = 1; x < Max; x++)
@@ -297,9 +297,9 @@ namespace NSDataModule
         public static string StringReSizer(ref string Input, int SizeReg)
         {
             if (SizeReg < 0)
-                SizeReg = SizeReg * -1;
+                SizeReg *= -1;
             for (int x = Input.Length; x < SizeReg; x++)
-                Input = Input + " ";
+                Input += " ";
             return Input;
         }
 
@@ -336,7 +336,7 @@ namespace NSDataModule
         }
         public static string[][] GetValues(string SQL, int[] ArrColums)
         {//Returns an array of array of selected columns and cells
-            string[][] Out = default(string[][]);
+            string[][] Out = default;
 
             int TableMax = GetColumCount(SQL);
             for (int x = 0; x < ArrColums.Length; x++)
@@ -359,7 +359,7 @@ namespace NSDataModule
         }
         public static T[][] GetValues<T>(string SQL, int[] ArrColums)
         {//Returns an array of array of selected columns and cells
-            T[][] Out = default(T[][]);
+            T[][] Out = default;
 
             int TableMax = GetColumCount(SQL);
             for (int x = 0; x < ArrColums.Length; x++)

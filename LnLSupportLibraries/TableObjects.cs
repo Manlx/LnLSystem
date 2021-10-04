@@ -102,6 +102,14 @@ namespace NSTableAndUtil
                 SelectedField.FieldPrime = SearchField(SelectedField.Source.Fields,Row[3]);//Get foreign field
                 SelectedField.IsReference = true;
             }
+            foreach (Table Value in Tables)
+            {
+                int x = 0;
+                foreach (Field SelField in Value.Fields)
+                    if (SelField.IsPrimaryField)
+                        x++;
+                Value.HasMultiPrime = x > 1;
+            }
             
         }
         public static Table[] GenerateTables()
@@ -132,6 +140,7 @@ namespace NSTableAndUtil
     {
         public string TableName;
         public Field[] Fields;
+        public bool HasMultiPrime;
         public Table(string TableName)
         {
             string[][] FieldsData = DataModule.GetValues($"SHOW COLUMNS FROM {TableName}",new int[] {0,1,3,5 });
@@ -140,9 +149,7 @@ namespace NSTableAndUtil
 
             for (int x = 0;x < FieldsData.Length;x++)
             {
-                Fields[x] = new Field(Utilities.StringToDT(FieldsData[x][1]), FieldsData[x][0]);
-                Fields[x].IsPrimaryField = FieldsData[x][2] == "PRI";
-                Fields[x].ReadOnly = FieldsData[x][3] != "";
+                Fields[x] = new Field(Utilities.StringToDT(FieldsData[x][1]), FieldsData[x][0]) { IsPrimaryField = FieldsData[x][2] == "PRI", ReadOnly = FieldsData[x][3] != "" };
             }
         }
     }

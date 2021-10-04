@@ -10,13 +10,13 @@ using NSDataModule;
 
 namespace LnLSupportLibraries
 {
-    public class CreateUpdateComs
+    public class CompsUtilities
     {
         public Control[] InputControl;
         public Label[] Labels;
         public Table TableUpdate;
         public DataGridView dgvDipInp;
-        public CreateUpdateComs(Table InpTable, Control BigParent,DataGridView DataInput)
+        public void CreateComs(Table InpTable, Control BigParent,DataGridView DataInput)
         {//Generates Components Required to do Update functions
             this.dgvDipInp = DataInput;
             TableUpdate = InpTable;
@@ -116,45 +116,52 @@ namespace LnLSupportLibraries
             
             foreach (Field SelField in InpTable.Fields)
             {
-                SQL = $"{SQL} {SelField.FieldDesc} = {((SelField.DataType != DataTypes.Number) ? "'" : "")}";
-                if (SelField.IsReference)
-                    strTemp = ((ComboBox)InputControl[x]).Items[((ComboBox)InputControl[x]).SelectedIndex].ToString();
-                else
-                    switch (SelField.DataType)
-                    {
-                        case DataTypes.Boolean:
-                            strTemp = ((CheckBox)InputControl[x]).Checked ? "1" : "0";
-                            break;
-                        default:
-                            strTemp = ((TextBox)InputControl[x]).Text;
-                            break;
-                    }
-                SQL = $"{SQL}{strTemp}{((SelField.DataType != DataTypes.Number) ? "'" : "")},";
+                SQL = $"{SQL} {SelField.FieldDesc} = {ConfQoutes(SelField, GetValueAt(SelField, x))},";
                 x++;
             }
 
             SQL = SQL.Remove(SQL.Length-1,1);
             
-            SQL = $"{SQL} {BuildWHERE(InpTable)};";
+            SQL = $"{SQL} {BuildWHERE(InpTable,dgvDipInp)};";
             return SQL;
         }
-        public string BuildWHERE(Table InpTable)
+        public static string BuildWHERE(Table InpTable, DataGridView dgvDipInp)
         {//Builds where string for update and Delete SQL Statements
             string WHERE = "WHERE ";
             int x = 0;
             foreach (Field SelField in InpTable.Fields)
             {
                 if (SelField.IsPrimaryField)
-                {
-                    WHERE = $"{WHERE} ({SelField.FieldDesc} = {((SelField.DataType != DataTypes.Number) ? "'" : "")}" +
-                        $"{dgvDipInp.SelectedRows[0].Cells[x].Value.ToString()}{((SelField.DataType != DataTypes.Number) ? "'" : "")}) AND ";
-                }
+                    WHERE = $"{WHERE} ({SelField.FieldDesc} = {ConfQoutes(SelField, dgvDipInp.SelectedRows[0].Cells[x].Value.ToString())}) AND ";
                 x++;
             }
             WHERE = WHERE.Remove(WHERE.Length - 5, 4);
             return WHERE;
         }
-
+        public string GetValueAt(Field SelField,int x)
+        { //Gets Values out of objects at
+            string strTemp;
+            if (SelField.IsReference)
+                strTemp = ((ComboBox)InputControl[x]).Items[((ComboBox)InputControl[x]).SelectedIndex].ToString();
+            else
+                switch (SelField.DataType)
+                {
+                    case DataTypes.Boolean:
+                        strTemp = ((CheckBox)InputControl[x]).Checked ? "1" : "0";
+                        break;
+                    default:
+                        strTemp = ((TextBox)InputControl[x]).Text;
+                        break;
+                }
+            return strTemp;
+        }
+        public static string ConfQoutes(Field Col, string Value)
+        { //Adds Qoutes if required
+            if (Col.DataType == DataTypes.Number)
+                return Value;
+            else
+                return $"'{Value}'";
+        }
         public void RemoveLetters(ref string Value)
         {//Removes Letters for string leaving only numbers
             string Temp = "";
@@ -162,6 +169,40 @@ namespace LnLSupportLibraries
                 if (x > 47 && x < 58)
                     Temp += x;
             Value = Temp;
+        }
+        public bool GenerateInsertSQL(ref string SQL,Table InpTable)
+        {
+            bool isSuccess = true;
+            Field SelField;
+            int x = 0;
+            SQL = $"INSERT INTO {InpTable.TableName} (";
+            string Cols = "", Values = "";
+            bool IsAllEmpty= true;
+
+            while (x < InpTable.Fields.Length && isSuccess )
+            {
+                SelField = InpTable.Fields[x];
+                string strTemp =GetValueAt(SelField,x);
+                if (strTemp!= "")
+                {
+                    Cols += $"{SelField.FieldDesc}, ";
+                    Values += $"{ConfQoutes(SelField,strTemp)}, ";
+                }
+                else if (InpTable.HasMultiPrime)
+                        if (SelField.IsPrimaryField)
+                            isSuccess = strTemp != "";
+                if (IsAllEmpty)
+                    IsAllEmpty = strTemp == "";
+                x++;
+            }
+
+            if (Values.Length >2)
+                Values= Values.Remove(Values.Length - 2, 2);
+            if (Cols.Length > 2)
+                Cols = Cols.Remove(Cols.Length - 2, 2);
+            
+            SQL += $"{Cols}) VALUES ({Values})";
+            return isSuccess && !IsAllEmpty;
         }
     }
 

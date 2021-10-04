@@ -93,22 +93,23 @@ namespace LnLBackEndSystem
             // tabInsert
             // 
             this.tabInsert.Controls.Add(this.btnInsert);
-            this.tabInsert.Location = new System.Drawing.Point(4, 22);
+            this.tabInsert.Location = new System.Drawing.Point(4, 32);
             this.tabInsert.Name = "tabInsert";
             this.tabInsert.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInsert.Size = new System.Drawing.Size(987, 224);
+            this.tabInsert.Size = new System.Drawing.Size(987, 214);
             this.tabInsert.TabIndex = 1;
             this.tabInsert.Text = "Insert";
             this.tabInsert.UseVisualStyleBackColor = true;
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(422, 172);
+            this.btnInsert.Location = new System.Drawing.Point(422, 168);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(143, 43);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "Insert Row";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // tabDelete
             // 
@@ -123,7 +124,7 @@ namespace LnLBackEndSystem
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(325, 174);
+            this.btnDelete.Location = new System.Drawing.Point(325, 166);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(337, 41);
             this.btnDelete.TabIndex = 1;

@@ -9,7 +9,7 @@ namespace LnLBackEndSystem
     public partial class frmSQLConsole : Form
     {
         public static Form frmOwner;
-        frmConsoleSettings frmConsoleSetting = new frmConsoleSettings();
+        readonly static frmConsoleSettings frmConsoleSetting = new frmConsoleSettings();
         public frmSQLConsole()
         {
             InitializeComponent();
@@ -33,7 +33,6 @@ namespace LnLBackEndSystem
                 redSqlOut.Text += "Connection to DB successfull\n";
             else
                 redSqlOut.Text += "Connection failed please try again later.\n";
-            
         }
         //Executes Code on run
         private void btnGOSQL_Click(object sender, EventArgs e)
