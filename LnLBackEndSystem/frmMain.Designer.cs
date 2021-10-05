@@ -184,7 +184,7 @@ namespace LnLBackEndSystem
             // 
             // btnStockOrder
             // 
-            this.btnStockOrder.Location = new System.Drawing.Point(244, 481);
+            this.btnStockOrder.Location = new System.Drawing.Point(128, 447);
             this.btnStockOrder.Name = "btnStockOrder";
             this.btnStockOrder.Size = new System.Drawing.Size(200, 116);
             this.btnStockOrder.TabIndex = 13;
