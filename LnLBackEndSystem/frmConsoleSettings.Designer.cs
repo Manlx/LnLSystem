@@ -39,7 +39,8 @@ namespace LnLBackEndSystem
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(245, 63);
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnApply.Location = new System.Drawing.Point(237, 59);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(110, 48);
             this.btnApply.TabIndex = 0;
@@ -50,7 +51,7 @@ namespace LnLBackEndSystem
             // chkClearOnLoad
             // 
             this.chkClearOnLoad.AutoSize = true;
-            this.chkClearOnLoad.Location = new System.Drawing.Point(12, 12);
+            this.chkClearOnLoad.Location = new System.Drawing.Point(12, 7);
             this.chkClearOnLoad.Name = "chkClearOnLoad";
             this.chkClearOnLoad.Size = new System.Drawing.Size(151, 29);
             this.chkClearOnLoad.TabIndex = 1;
@@ -61,7 +62,7 @@ namespace LnLBackEndSystem
             // chkClearSQLAfterExecution
             // 
             this.chkClearSQLAfterExecution.AutoSize = true;
-            this.chkClearSQLAfterExecution.Location = new System.Drawing.Point(12, 47);
+            this.chkClearSQLAfterExecution.Location = new System.Drawing.Point(12, 42);
             this.chkClearSQLAfterExecution.Name = "chkClearSQLAfterExecution";
             this.chkClearSQLAfterExecution.Size = new System.Drawing.Size(208, 29);
             this.chkClearSQLAfterExecution.TabIndex = 2;
@@ -72,7 +73,7 @@ namespace LnLBackEndSystem
             // chkClearAfterSuccessOnly
             // 
             this.chkClearAfterSuccessOnly.AutoSize = true;
-            this.chkClearAfterSuccessOnly.Location = new System.Drawing.Point(12, 82);
+            this.chkClearAfterSuccessOnly.Location = new System.Drawing.Point(12, 77);
             this.chkClearAfterSuccessOnly.Name = "chkClearAfterSuccessOnly";
             this.chkClearAfterSuccessOnly.Size = new System.Drawing.Size(175, 29);
             this.chkClearAfterSuccessOnly.TabIndex = 3;
@@ -84,12 +85,14 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.ClientSize = new System.Drawing.Size(354, 113);
             this.Controls.Add(this.chkClearAfterSuccessOnly);
             this.Controls.Add(this.chkClearSQLAfterExecution);
             this.Controls.Add(this.chkClearOnLoad);
             this.Controls.Add(this.btnApply);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;

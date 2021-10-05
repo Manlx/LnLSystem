@@ -26,11 +26,16 @@ namespace LnLBackEndSystem
             DataModule.LoadTable(ref dgvInfo,"SELECT StockID,StockName FROM tblStock");
             dgvInfo.AutoResizeColumns();
             dgvInfo.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            CheckFilePath();
         }
-
         private void frmImageManager_FormClosed(object sender, FormClosedEventArgs e)
         {
             Creator.Show();
+        }
+        private void CheckFilePath()
+        {
+            if (!Directory.Exists(Directory.GetCurrentDirectory()+"\\Images"))
+                Directory.CreateDirectory(Directory.GetCurrentDirectory()+"\\Images");
         }
 
         private void btnLoadFromFile_Click(object sender, EventArgs e)
@@ -70,10 +75,6 @@ namespace LnLBackEndSystem
             img.Image = null;
         }
 
-        private void frmImageManager_FormClosing(object sender, FormClosingEventArgs e)
-        {
-        }
-
         private void dgvInfo_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvInfo.SelectedRows.Count != 0)
@@ -90,6 +91,16 @@ namespace LnLBackEndSystem
                             imgExsistingImage.Image = null;
                         }
                     }
+        }
+
+        private void img_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

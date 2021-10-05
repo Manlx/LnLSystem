@@ -35,8 +35,8 @@ namespace LnLBackEndSystem
             // 
             // cbbTable
             // 
-            this.cbbTable.BackColor = System.Drawing.SystemColors.InfoText;
-            this.cbbTable.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.cbbTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.cbbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.cbbTable.FormattingEnabled = true;
             this.cbbTable.Items.AddRange(new object[] {
             "Hi",
@@ -50,7 +50,8 @@ namespace LnLBackEndSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(8, 643);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 23);
@@ -66,6 +67,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbTable);
             this.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);

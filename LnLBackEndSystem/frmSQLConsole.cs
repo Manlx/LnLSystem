@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using NSDataModule;
 
+using CypherLib;
+
 namespace LnLBackEndSystem
 {
     public partial class frmSQLConsole : Form
@@ -39,8 +41,8 @@ namespace LnLBackEndSystem
         {
             if (edtSqlInput.Text.Length == 0)
                 return;
-            string temp = edtSqlInput.Text.Substring(0,10).ToUpper() ;
-            if (temp.IndexOf("SELECT") >=0 || temp.IndexOf("SHOW") >= 0) //Checks if Table should be returned
+            string temp = edtSqlInput.Text.Substring(0, 10).ToUpper();
+            if (temp.IndexOf("SELECT") >= 0 || temp.IndexOf("SHOW") >= 0) //Checks if Table should be returned
             {
                 string[] TableTemps = DataModule.GenerateTable(edtSqlInput.Text);
                 redSqlOut.Text += "\n";
@@ -52,7 +54,7 @@ namespace LnLBackEndSystem
             else
             {//Executes if code should not return a table
                 if (temp.IndexOf("DELETE") >= 0)
-                    if (MessageBox.Show("Are you sure you want to execute delete code","Delete Command",MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                    if (MessageBox.Show("Are you sure you want to execute delete code", "Delete Command", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
                         return;
                 int x = DataModule.ExecuteSQL(edtSqlInput.Text);
                 redSqlOut.Text += $"{x} Lines where effected";
