@@ -35,6 +35,7 @@ namespace LnLBackEndSystem
             this.lblDate = new System.Windows.Forms.Label();
             this.dgvStockReport = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClearSearch = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
@@ -119,11 +120,11 @@ namespace LnLBackEndSystem
             this.dgvStockReport.Name = "dgvStockReport";
             this.dgvStockReport.Size = new System.Drawing.Size(868, 655);
             this.dgvStockReport.TabIndex = 3;
-            this.dgvStockReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStockReport_CellContentClick);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.btnClearSearch);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
@@ -139,6 +140,16 @@ namespace LnLBackEndSystem
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(307, 707);
             this.panel2.TabIndex = 5;
+            // 
+            // btnClearSearch
+            // 
+            this.btnClearSearch.Location = new System.Drawing.Point(168, 241);
+            this.btnClearSearch.Name = "btnClearSearch";
+            this.btnClearSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnClearSearch.TabIndex = 2;
+            this.btnClearSearch.Text = "Clear search";
+            this.btnClearSearch.UseVisualStyleBackColor = true;
+            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
             // panel6
             // 
@@ -369,7 +380,7 @@ namespace LnLBackEndSystem
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(122, 243);
+            this.btnSearch.Location = new System.Drawing.Point(72, 241);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 7;
@@ -491,5 +502,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.ErrorProvider errorProviderCountInWarehouse;
         private System.Windows.Forms.ErrorProvider errorProviderWarehouse;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnClearSearch;
     }
 }
