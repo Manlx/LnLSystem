@@ -96,5 +96,13 @@ namespace LnLBackEndSystem
             frmImage.Show();
             this.Hide();
         }
+
+        private void btnStockOrder_Click(object sender, EventArgs e)
+        {
+            frmStockPurchase.Creator = this;
+            frmStockPurchase frmPurchase = new frmStockPurchase();
+            frmPurchase.Show();
+            this.Hide();
+        }
     }
 }

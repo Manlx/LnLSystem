@@ -49,7 +49,7 @@ namespace LnLBackEndSystem
             this.dgvTableData.AllowUserToDeleteRows = false;
             this.dgvTableData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.dgvTableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTableData.GridColor = System.Drawing.SystemColors.Highlight;
+            this.dgvTableData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.dgvTableData.Location = new System.Drawing.Point(0, 0);
             this.dgvTableData.Name = "dgvTableData";
             this.dgvTableData.ReadOnly = true;
@@ -75,7 +75,7 @@ namespace LnLBackEndSystem
             // 
             this.tabUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.tabUpdate.Controls.Add(this.btnUpdate);
-            this.tabUpdate.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.tabUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.tabUpdate.Location = new System.Drawing.Point(4, 35);
             this.tabUpdate.Name = "tabUpdate";
             this.tabUpdate.Padding = new System.Windows.Forms.Padding(3);
@@ -85,6 +85,7 @@ namespace LnLBackEndSystem
             // 
             // btnUpdate
             // 
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Location = new System.Drawing.Point(392, 165);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(195, 43);
@@ -97,6 +98,7 @@ namespace LnLBackEndSystem
             // 
             this.tabInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.tabInsert.Controls.Add(this.btnInsert);
+            this.tabInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.tabInsert.Location = new System.Drawing.Point(4, 35);
             this.tabInsert.Name = "tabInsert";
             this.tabInsert.Padding = new System.Windows.Forms.Padding(3);
@@ -106,6 +108,7 @@ namespace LnLBackEndSystem
             // 
             // btnInsert
             // 
+            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnInsert.Location = new System.Drawing.Point(422, 168);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(143, 43);
@@ -118,6 +121,7 @@ namespace LnLBackEndSystem
             // 
             this.tabDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.tabDelete.Controls.Add(this.btnDelete);
+            this.tabDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.tabDelete.Location = new System.Drawing.Point(4, 35);
             this.tabDelete.Name = "tabDelete";
             this.tabDelete.Padding = new System.Windows.Forms.Padding(3);
@@ -127,6 +131,7 @@ namespace LnLBackEndSystem
             // 
             // btnDelete
             // 
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Location = new System.Drawing.Point(325, 166);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(337, 41);
