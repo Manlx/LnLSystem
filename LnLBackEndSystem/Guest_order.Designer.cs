@@ -169,10 +169,14 @@ namespace LnLBackEndSystem
             // cbCrystal
             // 
             this.cbCrystal.FormattingEnabled = true;
+            this.cbCrystal.Items.AddRange(new object[] {
+            "1",
+            "2"});
             this.cbCrystal.Location = new System.Drawing.Point(173, 166);
             this.cbCrystal.Name = "cbCrystal";
             this.cbCrystal.Size = new System.Drawing.Size(35, 21);
             this.cbCrystal.TabIndex = 15;
+            this.cbCrystal.SelectedIndexChanged += new System.EventHandler(this.cbCrystal_SelectedIndexChanged);
             // 
             // cbLiqui
             // 

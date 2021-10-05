@@ -71,7 +71,7 @@ namespace LnLBackEndSystem
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
-        
+            
         }
 
         private void lblTotal_Click(object sender, EventArgs e)
@@ -97,6 +97,11 @@ namespace LnLBackEndSystem
         private void Guest_order_FormClosing(object sender, FormClosingEventArgs e)
         {
             guest_order.Show();
+        }
+
+        private void cbCrystal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

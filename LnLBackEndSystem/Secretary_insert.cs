@@ -62,5 +62,10 @@ namespace LnLBackEndSystem
         {
 
         }
+
+        private void cbRank_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
