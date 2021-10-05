@@ -96,5 +96,13 @@ namespace LnLBackEndSystem
             frmImage.Show();
             this.Hide();
         }
+
+        private void btnStockReport_Click(object sender, EventArgs e)
+        {
+            frmStockReport.Creator = this;
+            frmStockReport frmStockreport = new frmStockReport();
+            frmStockreport.Show();
+            this.Hide();
+        }
     }
 }

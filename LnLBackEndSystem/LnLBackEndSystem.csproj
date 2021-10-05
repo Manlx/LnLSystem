@@ -194,6 +194,12 @@
     <Compile Include="frmSQLConsole.Designer.cs">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockReport.Designer.cs">
+      <DependentUpon>frmStockReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTableSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSQLConsole.resx">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockReport.resx">
+      <DependentUpon>frmStockReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTableSelect.resx">
       <DependentUpon>frmTableSelect.cs</DependentUpon>
