@@ -41,13 +41,16 @@ namespace LnLBackEndSystem
             }
             Creator.Show();
         }
+
         static Cart UserCart;
+
         private void StockItemClick(object sender, EventArgs e)
         {
             StockDisplay ObjectSuper = (StockDisplay)((PictureBox)sender).Tag;
             UserCart.AddToCart(ObjectSuper);
             UserCart.UpdateListBox(ref lstOrder);
         }
+
         private StockDisplay[] SDArr;
         private void frmStockPurchase_Load(object sender, EventArgs e)
         {
@@ -81,6 +84,7 @@ namespace LnLBackEndSystem
             UserCart.UpdateListBox(ref lstOrder);
         }
 
+        
         private void btnPayCash_Click(object sender, EventArgs e)
         {
             frmPayConfirm.Creator = this;
