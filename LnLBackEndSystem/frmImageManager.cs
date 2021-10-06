@@ -32,7 +32,7 @@ namespace LnLBackEndSystem
         {
             Creator.Show();
         }
-        private void CheckFilePath()
+        public static void CheckFilePath()
         {
             if (!Directory.Exists(Directory.GetCurrentDirectory()+"\\Images"))
                 Directory.CreateDirectory(Directory.GetCurrentDirectory()+"\\Images");
