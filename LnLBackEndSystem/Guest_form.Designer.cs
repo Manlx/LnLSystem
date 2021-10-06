@@ -48,7 +48,7 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(170, 141);
+            this.btnBack.Location = new System.Drawing.Point(240, 141);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(67, 38);
             this.btnBack.TabIndex = 1;
