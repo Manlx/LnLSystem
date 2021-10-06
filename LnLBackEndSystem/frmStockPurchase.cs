@@ -38,6 +38,11 @@ namespace LnLBackEndSystem
         }
         private void frmStockPurchase_FormClosed(object sender, FormClosedEventArgs e)
         {
+            foreach (StockDisplay x in SDArr )
+            {
+                x.StockImg.Image.Dispose();
+                x.StockImg.Image = null;
+            }
             Creator.Show();
         }
         Cart UserCart;
