@@ -1,4 +1,4 @@
-﻿namespace LnLSupportLibraries
+﻿namespace BookingUtil
 {
     public class BookingObject
     {
@@ -18,7 +18,7 @@
         {
             string Delete = $"DELETE FROM tblBooking WHERE BookingID = {BookingID}";
             string InsertToConfirmed = $"INSERT INTO tblEvent (DateOfBooking,TimeOfBooking,LocationID,ClientID,EventType) VALUES (" +
-                $"{DateOfBooking},{TimeOfBooking},{Location},{ClientID},{EventType})";
+                $"'{DateOfBooking}','{TimeOfBooking}',{Location},{ClientID},{EventType})";
             return new string[2] { Delete,InsertToConfirmed};
         }
     }
