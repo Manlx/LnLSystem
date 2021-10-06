@@ -22,9 +22,6 @@ namespace LnLBackEndSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.dgViewWarehouse.DefaultCellStyle.ForeColor = Color.Blue;
-            this.dgViewWarehouse.DefaultCellStyle.BackColor = Color.Beige;
-
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
             //DataModule.LoadTable(ref dgViewWarehouse, "SELECT CountInWareHouse-CountInBar FROM tblStock WHERE CountInBar<20");
 
@@ -40,9 +37,6 @@ namespace LnLBackEndSystem
             else
                 MessageBox.Show("Error was encountered");
 
-            this.dgViewWarehouse.DefaultCellStyle.ForeColor = Color.Blue;
-            this.dgViewWarehouse.DefaultCellStyle.BackColor = Color.Beige;
-            
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
 
         }
@@ -55,9 +49,6 @@ namespace LnLBackEndSystem
                 MessageBox.Show("Updated sucessfully");
             else
                 MessageBox.Show("Error was encountered");
-
-            this.dgViewWarehouse.DefaultCellStyle.ForeColor = Color.Blue;
-            this.dgViewWarehouse.DefaultCellStyle.BackColor = Color.Beige;
 
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
         }

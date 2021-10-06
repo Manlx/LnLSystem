@@ -30,6 +30,9 @@ namespace LnLBackEndSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
@@ -116,9 +119,29 @@ namespace LnLBackEndSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStockReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStockReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStockReport.EnableHeadersVisualStyles = false;
             this.dgvStockReport.Location = new System.Drawing.Point(0, 50);
             this.dgvStockReport.Name = "dgvStockReport";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.dgvStockReport.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvStockReport.Size = new System.Drawing.Size(868, 655);
             this.dgvStockReport.TabIndex = 3;
             // 
@@ -361,11 +384,11 @@ namespace LnLBackEndSystem
             // txtCountINWareHouse
             // 
             this.txtCountINWareHouse.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtCountINWareHouse.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCountINWareHouse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCountINWareHouse.ForeColor = System.Drawing.Color.White;
             this.txtCountINWareHouse.Location = new System.Drawing.Point(191, 319);
             this.txtCountINWareHouse.Name = "txtCountINWareHouse";
-            this.txtCountINWareHouse.Size = new System.Drawing.Size(100, 13);
+            this.txtCountINWareHouse.Size = new System.Drawing.Size(100, 20);
             this.txtCountINWareHouse.TabIndex = 11;
             this.txtCountINWareHouse.TextChanged += new System.EventHandler(this.txtCountINWareHouse_TextChanged);
             // 
@@ -381,11 +404,11 @@ namespace LnLBackEndSystem
             // txtCountInBar
             // 
             this.txtCountInBar.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtCountInBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCountInBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCountInBar.ForeColor = System.Drawing.Color.White;
             this.txtCountInBar.Location = new System.Drawing.Point(191, 279);
             this.txtCountInBar.Name = "txtCountInBar";
-            this.txtCountInBar.Size = new System.Drawing.Size(100, 13);
+            this.txtCountInBar.Size = new System.Drawing.Size(100, 20);
             this.txtCountInBar.TabIndex = 9;
             this.txtCountInBar.TextChanged += new System.EventHandler(this.txtCountInBar_TextChanged);
             // 
@@ -414,11 +437,11 @@ namespace LnLBackEndSystem
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.ForeColor = System.Drawing.Color.White;
             this.txtSearch.Location = new System.Drawing.Point(59, 215);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(234, 13);
+            this.txtSearch.Size = new System.Drawing.Size(234, 20);
             this.txtSearch.TabIndex = 6;
             // 
             // label2

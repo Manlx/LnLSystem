@@ -20,7 +20,7 @@ namespace LnLBackEndSystem
                 MdiClient client = control as MdiClient;
                 if (!(client == null))
                 {
-                    client.BackColor = System.Drawing.Color.FromArgb(23, 23, 23);
+                    client.BackColor = System.Drawing.Color.FromArgb(64,64,64);
                     break;
                 }
             }

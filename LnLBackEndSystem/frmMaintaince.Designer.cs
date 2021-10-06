@@ -29,6 +29,9 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTableData = new System.Windows.Forms.DataGridView();
             this.tbcMain = new System.Windows.Forms.TabControl();
             this.tabUpdate = new System.Windows.Forms.TabPage();
@@ -48,11 +51,36 @@ namespace LnLBackEndSystem
             // 
             this.dgvTableData.AllowUserToDeleteRows = false;
             this.dgvTableData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTableData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvTableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTableData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTableData.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvTableData.EnableHeadersVisualStyles = false;
+            this.dgvTableData.GridColor = System.Drawing.Color.DarkGray;
             this.dgvTableData.Location = new System.Drawing.Point(0, 0);
             this.dgvTableData.Name = "dgvTableData";
             this.dgvTableData.ReadOnly = true;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTableData.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvTableData.Size = new System.Drawing.Size(995, 316);
             this.dgvTableData.TabIndex = 0;
             this.dgvTableData.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTableData_RowEnter);
@@ -75,7 +103,7 @@ namespace LnLBackEndSystem
             // 
             this.tabUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabUpdate.Controls.Add(this.btnUpdate);
-            this.tabUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.tabUpdate.ForeColor = System.Drawing.Color.White;
             this.tabUpdate.Location = new System.Drawing.Point(4, 36);
             this.tabUpdate.Name = "tabUpdate";
             this.tabUpdate.Padding = new System.Windows.Forms.Padding(3);
@@ -89,7 +117,7 @@ namespace LnLBackEndSystem
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(389, 165);
+            this.btnUpdate.Location = new System.Drawing.Point(480, 165);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(195, 43);
             this.btnUpdate.TabIndex = 4;
@@ -99,9 +127,9 @@ namespace LnLBackEndSystem
             // 
             // tabInsert
             // 
-            this.tabInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.tabInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabInsert.Controls.Add(this.btnInsert);
-            this.tabInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.tabInsert.ForeColor = System.Drawing.Color.White;
             this.tabInsert.Location = new System.Drawing.Point(4, 36);
             this.tabInsert.Name = "tabInsert";
             this.tabInsert.Padding = new System.Windows.Forms.Padding(3);
@@ -111,20 +139,22 @@ namespace LnLBackEndSystem
             // 
             // btnInsert
             // 
-            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInsert.Location = new System.Drawing.Point(422, 168);
+            this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnInsert.FlatAppearance.BorderSize = 0;
+            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsert.Location = new System.Drawing.Point(477, 166);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(143, 43);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "Insert Row";
-            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // tabDelete
             // 
-            this.tabDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.tabDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabDelete.Controls.Add(this.btnDelete);
-            this.tabDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.tabDelete.ForeColor = System.Drawing.Color.White;
             this.tabDelete.Location = new System.Drawing.Point(4, 36);
             this.tabDelete.Name = "tabDelete";
             this.tabDelete.Padding = new System.Windows.Forms.Padding(3);
@@ -134,23 +164,26 @@ namespace LnLBackEndSystem
             // 
             // btnDelete
             // 
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelete.Location = new System.Drawing.Point(325, 166);
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Location = new System.Drawing.Point(370, 167);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(337, 41);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete Selected Row";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmMaintainces
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(999, 572);
             this.Controls.Add(this.tbcMain);
             this.Controls.Add(this.dgvTableData);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;

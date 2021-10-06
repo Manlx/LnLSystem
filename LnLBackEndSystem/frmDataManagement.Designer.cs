@@ -35,8 +35,8 @@ namespace LnLBackEndSystem
             // 
             // cbbTable
             // 
-            this.cbbTable.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.cbbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.cbbTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.cbbTable.ForeColor = System.Drawing.Color.White;
             this.cbbTable.FormattingEnabled = true;
             this.cbbTable.Items.AddRange(new object[] {
             "Hi",
@@ -62,7 +62,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1146, 670);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbTable);
