@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NSDataModule;
+using CypherLib;
 
 namespace LnLBackEndSystem
 {
@@ -44,7 +45,15 @@ namespace LnLBackEndSystem
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            string sql = "";
+            string password = txtPass.Text;
 
+            if (txtPass.Text == txtConfirm_pass.Text)
+            {
+                   sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , RankID='" + cbRank.SelectedIndex + "', EncryptedPassword'" + Cypher.Encrypt(txtPass.Text) + "'";
+            }
+            else
+                MessageBox.Show("Passwords do not match");
         }
     }
 }
