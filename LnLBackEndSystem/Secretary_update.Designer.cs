@@ -219,6 +219,7 @@ namespace LnLBackEndSystem
             this.Name = "Secretary_update";
             this.Text = "Secretary_update";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_update_FormClosing);
+            this.Load += new System.EventHandler(this.Secretary_update_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

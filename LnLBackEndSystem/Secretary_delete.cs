@@ -37,9 +37,10 @@ namespace LnLBackEndSystem
         private void btnDelete_Click(object sender, EventArgs e)
         {
             
-             string sql = "DELETE FROM tblStaff WHERE Name ='" + txtName.Text + "' AND Password = '" + txtPassword.Text + "'";
+             string sql = "DELETE FROM tblStaff WHERE Name ='" + txtName.Text + "' AND EncryptedPassword = '" + txtPassword.Text + "'";
 
             int sucessful = DataModule.ExecuteSQL(sql);
+            DataModule.LoadTable(ref ((Secretary_form)creator).dbView, "SELECT * FROM tblStaff");
             if (sucessful == 1)
                 MessageBox.Show("Deleted sucessfully");
             else
