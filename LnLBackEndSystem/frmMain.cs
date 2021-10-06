@@ -79,12 +79,37 @@ namespace LnLBackEndSystem
             frmTabPurch.Show();
             this.Hide();
         }
+        
+
+        private void btnRequestStock_Click(object sender, EventArgs e)
+        {
+            frmRequestStock.Creator = this;
+            frmRequestStock stockfrm = new frmRequestStock();
+            stockfrm.Show();
+            this.Hide();
+        }
 
         private void button8_Click(object sender, EventArgs e)
         {
             frmImageManager.Creator = this;
             frmImageManager frmImage = new frmImageManager();
             frmImage.Show();
+            this.Hide();
+        }
+
+        private void btnStockReport_Click(object sender, EventArgs e)
+        {
+            frmStockReport.Creator = this;
+            frmStockReport frmStockreport = new frmStockReport();
+            frmStockreport.Show();
+            this.Hide();
+        }
+
+        private void btnStockOrder_Click(object sender, EventArgs e)
+        {
+            frmStockPurchase.Creator = this;
+            frmStockPurchase frmPurchase = new frmStockPurchase();
+            frmPurchase.Show();
             this.Hide();
         }
     }

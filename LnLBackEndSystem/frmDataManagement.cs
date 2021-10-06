@@ -15,6 +15,15 @@ namespace LnLBackEndSystem
             string[] temp = DataModule.GetValues<string>(0, "SHOW TABLES; ");
             for (int x = 0; x < temp.Length; x++)
                 cbbTable.Items.Add(temp[x]);
+            foreach (Control control in this.Controls)
+            {
+                MdiClient client = control as MdiClient;
+                if (!(client == null))
+                {
+                    client.BackColor = System.Drawing.Color.FromArgb(23, 23, 23);
+                    break;
+                }
+            }
         }
 
         private void frmDataManagement_FormClosing(object sender, FormClosingEventArgs e)

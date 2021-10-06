@@ -13,6 +13,10 @@ namespace NSTableAndUtil
     }
     public static class Utilities
     {
+        public static string BoolToBit(bool Value)
+        {
+            return (Value) ? "1" : "0";
+        }
         public static string FieldAndCompToString(Field InField, Control InControl)
         { //Creates SQL Eqals Statement
             string Output = "";
