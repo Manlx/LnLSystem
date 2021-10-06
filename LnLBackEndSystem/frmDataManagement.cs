@@ -46,5 +46,10 @@ namespace LnLBackEndSystem
             Maintance.Left = 0;
             LastOpened = Maintance;
         }
+
+        private void frmDataManagement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

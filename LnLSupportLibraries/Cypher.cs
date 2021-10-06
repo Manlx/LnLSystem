@@ -22,13 +22,13 @@ namespace CypherLib
             }    
             return Return;
         }
-        static public string Decrypt(string UnCrypt)
+        static public string Decrypt(string Encrypted)
         {
             string Return = "";
             int iKey = 0;
-            for (int x = 0; x < UnCrypt.Length; x++)
+            for (int x = 0; x < Encrypted.Length; x++)
             {
-                int temp = (((int)UnCrypt[x]) - ((int)NewKey[iKey] - '0'));
+                int temp = (((int)Encrypted[x]) - ((int)NewKey[iKey] - '0'));
                 if (temp < 48)
                     temp = temp + 80;
                 Return += (char)temp;

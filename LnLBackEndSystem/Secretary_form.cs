@@ -70,6 +70,15 @@ namespace LnLBackEndSystem
 
         private void btnReport_Click(object sender, EventArgs e)
         {
+            Accountant_Login.accountant = this;
+
+            Accountant_Login AccountantLogin = new Accountant_Login();
+            AccountantLogin.Show();
+            this.Hide();
+        }
+
+        private void Secretary_form_Shown(object sender, EventArgs e)
+        {
 
         }
     }

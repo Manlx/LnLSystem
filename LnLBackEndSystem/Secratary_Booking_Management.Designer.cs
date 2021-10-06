@@ -39,10 +39,11 @@ namespace LnLBackEndSystem
             // 
             // cbBookings
             // 
+            this.cbBookings.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBookings.FormattingEnabled = true;
             this.cbBookings.Location = new System.Drawing.Point(12, 49);
             this.cbBookings.Name = "cbBookings";
-            this.cbBookings.Size = new System.Drawing.Size(444, 169);
+            this.cbBookings.Size = new System.Drawing.Size(922, 169);
             this.cbBookings.TabIndex = 0;
             this.cbBookings.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
@@ -82,7 +83,7 @@ namespace LnLBackEndSystem
             this.btnApprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApprove.Location = new System.Drawing.Point(12, 237);
             this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(144, 59);
+            this.btnApprove.Size = new System.Drawing.Size(144, 63);
             this.btnApprove.TabIndex = 4;
             this.btnApprove.Text = "Approve booking";
             this.btnApprove.UseVisualStyleBackColor = true;
@@ -102,7 +103,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 339);
+            this.ClientSize = new System.Drawing.Size(939, 339);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnApprove);
             this.Controls.Add(this.btnDelete);
