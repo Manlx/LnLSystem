@@ -48,6 +48,7 @@ namespace LnLBackEndSystem
             this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCEO = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@ namespace LnLBackEndSystem
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(12, 8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(279, 43);
             this.button1.TabIndex = 0;
@@ -72,7 +73,7 @@ namespace LnLBackEndSystem
             this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(12, 63);
+            this.button2.Location = new System.Drawing.Point(12, 59);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(279, 43);
             this.button2.TabIndex = 1;
@@ -86,7 +87,7 @@ namespace LnLBackEndSystem
             this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(12, 114);
+            this.button3.Location = new System.Drawing.Point(12, 110);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(279, 43);
             this.button3.TabIndex = 2;
@@ -136,7 +137,7 @@ namespace LnLBackEndSystem
             this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(12, 318);
+            this.button4.Location = new System.Drawing.Point(12, 314);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(279, 43);
             this.button4.TabIndex = 8;
@@ -150,7 +151,7 @@ namespace LnLBackEndSystem
             this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(12, 267);
+            this.button6.Location = new System.Drawing.Point(12, 263);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(279, 43);
             this.button6.TabIndex = 10;
@@ -164,7 +165,7 @@ namespace LnLBackEndSystem
             this.button8.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(12, 420);
+            this.button8.Location = new System.Drawing.Point(12, 416);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(279, 43);
             this.button8.TabIndex = 12;
@@ -178,7 +179,7 @@ namespace LnLBackEndSystem
             this.btnRequestStock.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnRequestStock.FlatAppearance.BorderSize = 0;
             this.btnRequestStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRequestStock.Location = new System.Drawing.Point(12, 369);
+            this.btnRequestStock.Location = new System.Drawing.Point(12, 365);
             this.btnRequestStock.Name = "btnRequestStock";
             this.btnRequestStock.Size = new System.Drawing.Size(279, 43);
             this.btnRequestStock.TabIndex = 12;
@@ -192,7 +193,7 @@ namespace LnLBackEndSystem
             this.btnStockOrder.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnStockOrder.FlatAppearance.BorderSize = 0;
             this.btnStockOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStockOrder.Location = new System.Drawing.Point(12, 216);
+            this.btnStockOrder.Location = new System.Drawing.Point(12, 212);
             this.btnStockOrder.Name = "btnStockOrder";
             this.btnStockOrder.Size = new System.Drawing.Size(279, 43);
             this.btnStockOrder.TabIndex = 13;
@@ -206,7 +207,7 @@ namespace LnLBackEndSystem
             this.btnStockReport.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnStockReport.FlatAppearance.BorderSize = 0;
             this.btnStockReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStockReport.Location = new System.Drawing.Point(12, 471);
+            this.btnStockReport.Location = new System.Drawing.Point(12, 467);
             this.btnStockReport.Name = "btnStockReport";
             this.btnStockReport.Size = new System.Drawing.Size(279, 43);
             this.btnStockReport.TabIndex = 13;
@@ -220,7 +221,7 @@ namespace LnLBackEndSystem
             this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(12, 165);
+            this.button9.Location = new System.Drawing.Point(12, 161);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(279, 43);
             this.button9.TabIndex = 14;
@@ -275,12 +276,27 @@ namespace LnLBackEndSystem
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCEO
+            // 
+            this.btnCEO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnCEO.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCEO.FlatAppearance.BorderSize = 0;
+            this.btnCEO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCEO.Location = new System.Drawing.Point(12, 518);
+            this.btnCEO.Name = "btnCEO";
+            this.btnCEO.Size = new System.Drawing.Size(279, 43);
+            this.btnCEO.TabIndex = 17;
+            this.btnCEO.Text = "CEO";
+            this.btnCEO.UseVisualStyleBackColor = false;
+            this.btnCEO.Click += new System.EventHandler(this.btnCEO_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(990, 523);
+            this.ClientSize = new System.Drawing.Size(990, 567);
+            this.Controls.Add(this.btnCEO);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button9);
@@ -329,5 +345,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCEO;
     }
 }

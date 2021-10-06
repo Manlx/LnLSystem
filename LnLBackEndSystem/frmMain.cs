@@ -153,5 +153,13 @@ namespace LnLBackEndSystem
             }
             this.Hide();
         }
+
+        private void btnCEO_Click(object sender, EventArgs e)
+        {
+            frmCEO.Creator = this;
+            frmCEO CEO = new frmCEO();
+            this.Hide();
+            CEO.Show();
+        }
     }
 }
