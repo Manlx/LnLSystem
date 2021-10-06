@@ -39,11 +39,14 @@ namespace LnLBackEndSystem
             // 
             // cbBookings
             // 
+            this.cbBookings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.cbBookings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cbBookings.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBookings.ForeColor = System.Drawing.Color.White;
             this.cbBookings.FormattingEnabled = true;
             this.cbBookings.Location = new System.Drawing.Point(12, 49);
             this.cbBookings.Name = "cbBookings";
-            this.cbBookings.Size = new System.Drawing.Size(922, 169);
+            this.cbBookings.Size = new System.Drawing.Size(922, 154);
             this.cbBookings.TabIndex = 0;
             this.cbBookings.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
@@ -58,51 +61,64 @@ namespace LnLBackEndSystem
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(162, 237);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(144, 61);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update booking";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(312, 237);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(144, 63);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete booking";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnApprove
             // 
+            this.btnApprove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnApprove.FlatAppearance.BorderSize = 0;
+            this.btnApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApprove.Location = new System.Drawing.Point(12, 237);
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.Size = new System.Drawing.Size(144, 63);
             this.btnApprove.TabIndex = 4;
             this.btnApprove.Text = "Approve booking";
-            this.btnApprove.UseVisualStyleBackColor = true;
+            this.btnApprove.UseVisualStyleBackColor = false;
             this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(381, 306);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(852, 301);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 26);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.button1_Click);
             // 
             // Secratary_Booking_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(939, 339);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnApprove);
@@ -110,6 +126,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblSelect);
             this.Controls.Add(this.cbBookings);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Secratary_Booking_Management";
             this.Text = "Secratary_Booking_Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secratary_Booking_Management_FormClosing);

@@ -120,5 +120,6 @@ namespace LnLBackEndSystem
             frmAccountant.Show();
             this.Hide();
         }
+
     }
 }

@@ -73,6 +73,8 @@ namespace LnLBackEndSystem
             // 
             // cbRank
             // 
+            this.cbRank.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cbRank.ForeColor = System.Drawing.Color.White;
             this.cbRank.FormattingEnabled = true;
             this.cbRank.Location = new System.Drawing.Point(166, 96);
             this.cbRank.Name = "cbRank";
@@ -92,6 +94,9 @@ namespace LnLBackEndSystem
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(166, 34);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
@@ -99,6 +104,9 @@ namespace LnLBackEndSystem
             // 
             // txtSurname
             // 
+            this.txtSurname.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSurname.ForeColor = System.Drawing.Color.White;
             this.txtSurname.Location = new System.Drawing.Point(166, 63);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(100, 20);
@@ -106,13 +114,16 @@ namespace LnLBackEndSystem
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(70, 199);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(131, 48);
             this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Reset password";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // lblPassword
@@ -135,6 +146,9 @@ namespace LnLBackEndSystem
             // 
             // txtPass
             // 
+            this.txtPass.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPass.ForeColor = System.Drawing.Color.White;
             this.txtPass.Location = new System.Drawing.Point(166, 130);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -143,7 +157,10 @@ namespace LnLBackEndSystem
             // 
             // txtConfirm_pass
             // 
-            this.txtConfirm_pass.Location = new System.Drawing.Point(166, 161);
+            this.txtConfirm_pass.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtConfirm_pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtConfirm_pass.ForeColor = System.Drawing.Color.White;
+            this.txtConfirm_pass.Location = new System.Drawing.Point(166, 162);
             this.txtConfirm_pass.Name = "txtConfirm_pass";
             this.txtConfirm_pass.PasswordChar = '*';
             this.txtConfirm_pass.Size = new System.Drawing.Size(100, 20);
@@ -151,18 +168,22 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(203, 261);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 6;
             this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Forgot_password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(284, 296);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtConfirm_pass);
@@ -177,6 +198,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblRank);
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblName);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Forgot_password";
             this.Text = "Forgot_password";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Forgot_password_FormClosing);

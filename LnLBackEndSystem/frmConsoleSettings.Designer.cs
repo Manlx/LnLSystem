@@ -39,13 +39,15 @@ namespace LnLBackEndSystem
             // 
             // btnApply
             // 
-            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnApply.Location = new System.Drawing.Point(237, 59);
+            this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnApply.FlatAppearance.BorderSize = 0;
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApply.Location = new System.Drawing.Point(237, 65);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(110, 48);
+            this.btnApply.Size = new System.Drawing.Size(110, 42);
             this.btnApply.TabIndex = 0;
             this.btnApply.Text = "Apply";
-            this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // chkClearOnLoad
@@ -85,14 +87,14 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(354, 113);
             this.Controls.Add(this.chkClearAfterSuccessOnly);
             this.Controls.Add(this.chkClearSQLAfterExecution);
             this.Controls.Add(this.chkClearOnLoad);
             this.Controls.Add(this.btnApply);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;

@@ -43,6 +43,8 @@ namespace LnLBackEndSystem
             // linkToGuestLogin
             // 
             this.linkToGuestLogin.AutoSize = true;
+            this.linkToGuestLogin.ForeColor = System.Drawing.Color.LightBlue;
+            this.linkToGuestLogin.LinkColor = System.Drawing.Color.LightBlue;
             this.linkToGuestLogin.Location = new System.Drawing.Point(291, 261);
             this.linkToGuestLogin.Name = "linkToGuestLogin";
             this.linkToGuestLogin.Size = new System.Drawing.Size(140, 13);
@@ -63,6 +65,9 @@ namespace LnLBackEndSystem
             // 
             // txtTabID
             // 
+            this.txtTabID.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtTabID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTabID.ForeColor = System.Drawing.Color.White;
             this.txtTabID.Location = new System.Drawing.Point(95, 86);
             this.txtTabID.Name = "txtTabID";
             this.txtTabID.Size = new System.Drawing.Size(139, 20);
@@ -88,6 +93,9 @@ namespace LnLBackEndSystem
             // 
             // txtTabPIN
             // 
+            this.txtTabPIN.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtTabPIN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTabPIN.ForeColor = System.Drawing.Color.White;
             this.txtTabPIN.Location = new System.Drawing.Point(95, 129);
             this.txtTabPIN.Name = "txtTabPIN";
             this.txtTabPIN.Size = new System.Drawing.Size(139, 20);
@@ -95,12 +103,15 @@ namespace LnLBackEndSystem
             // 
             // btnSubmitTab
             // 
+            this.btnSubmitTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnSubmitTab.FlatAppearance.BorderSize = 0;
+            this.btnSubmitTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitTab.Location = new System.Drawing.Point(15, 194);
             this.btnSubmitTab.Name = "btnSubmitTab";
             this.btnSubmitTab.Size = new System.Drawing.Size(75, 23);
             this.btnSubmitTab.TabIndex = 7;
             this.btnSubmitTab.Text = "Submit";
-            this.btnSubmitTab.UseVisualStyleBackColor = true;
+            this.btnSubmitTab.UseVisualStyleBackColor = false;
             this.btnSubmitTab.Click += new System.EventHandler(this.btnSubmitTab_Click);
             // 
             // label4
@@ -115,6 +126,7 @@ namespace LnLBackEndSystem
             // linkToHome
             // 
             this.linkToHome.AutoSize = true;
+            this.linkToHome.LinkColor = System.Drawing.Color.LightBlue;
             this.linkToHome.Location = new System.Drawing.Point(12, 261);
             this.linkToHome.Name = "linkToHome";
             this.linkToHome.Size = new System.Drawing.Size(119, 13);
@@ -127,6 +139,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(443, 283);
             this.Controls.Add(this.linkToHome);
             this.Controls.Add(this.label4);
@@ -137,6 +150,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.txtTabID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkToGuestLogin);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Tab_login";
             this.Text = "Tab_login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Tab_login_FormClosed);

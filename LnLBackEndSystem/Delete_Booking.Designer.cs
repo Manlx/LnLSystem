@@ -42,16 +42,21 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(175, 354);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 51;
             this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // cbType
             // 
+            this.cbType.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cbType.ForeColor = System.Drawing.Color.White;
             this.cbType.FormattingEnabled = true;
             this.cbType.Location = new System.Drawing.Point(58, 252);
             this.cbType.Name = "cbType";
@@ -61,12 +66,16 @@ namespace LnLBackEndSystem
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.BackColor = System.Drawing.Color.Gray;
             this.monthCalendar1.Location = new System.Drawing.Point(18, 58);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 49;
             // 
             // txtTime
             // 
+            this.txtTime.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTime.ForeColor = System.Drawing.Color.White;
             this.txtTime.Location = new System.Drawing.Point(58, 226);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(100, 20);
@@ -112,19 +121,23 @@ namespace LnLBackEndSystem
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(58, 297);
+            this.btnDelete.Location = new System.Drawing.Point(58, 279);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(139, 51);
             this.btnDelete.TabIndex = 35;
             this.btnDelete.Text = "Delete booking";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Delete_Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(256, 385);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbType);
@@ -135,6 +148,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblHeadings);
             this.Controls.Add(this.btnDelete);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Delete_Booking";
             this.Text = "Delete_Booking";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Delete_Booking_FormClosing);

@@ -139,13 +139,16 @@ namespace LnLBackEndSystem
             // 
             // btnPlaceOrder
             // 
+            this.btnPlaceOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnPlaceOrder.FlatAppearance.BorderSize = 0;
+            this.btnPlaceOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlaceOrder.Location = new System.Drawing.Point(512, 517);
             this.btnPlaceOrder.Name = "btnPlaceOrder";
             this.btnPlaceOrder.Size = new System.Drawing.Size(112, 44);
             this.btnPlaceOrder.TabIndex = 11;
             this.btnPlaceOrder.Text = "Place order";
-            this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.btnPlaceOrder.UseVisualStyleBackColor = false;
             this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // lblTotal
@@ -401,18 +404,22 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(609, 608);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(74, 26);
             this.btnBack.TabIndex = 48;
             this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Guest_order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(695, 646);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label12);
@@ -450,6 +457,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Guest_order";
             this.Text = "Guest_order";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Guest_order_FormClosing);

@@ -56,7 +56,7 @@ namespace LnLBackEndSystem
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 165);
+            this.label4.Location = new System.Drawing.Point(12, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 17);
             this.label4.TabIndex = 5;
@@ -65,7 +65,7 @@ namespace LnLBackEndSystem
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 202);
+            this.label5.Location = new System.Drawing.Point(12, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 13);
             this.label5.TabIndex = 6;
@@ -73,6 +73,9 @@ namespace LnLBackEndSystem
             // 
             // txtTabSettleAmount
             // 
+            this.txtTabSettleAmount.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtTabSettleAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTabSettleAmount.ForeColor = System.Drawing.Color.White;
             this.txtTabSettleAmount.Location = new System.Drawing.Point(197, 199);
             this.txtTabSettleAmount.Name = "txtTabSettleAmount";
             this.txtTabSettleAmount.Size = new System.Drawing.Size(100, 20);
@@ -81,7 +84,8 @@ namespace LnLBackEndSystem
             // linkToHome
             // 
             this.linkToHome.AutoSize = true;
-            this.linkToHome.Location = new System.Drawing.Point(9, 326);
+            this.linkToHome.LinkColor = System.Drawing.Color.LightBlue;
+            this.linkToHome.Location = new System.Drawing.Point(12, 326);
             this.linkToHome.Name = "linkToHome";
             this.linkToHome.Size = new System.Drawing.Size(119, 13);
             this.linkToHome.TabIndex = 8;
@@ -92,6 +96,7 @@ namespace LnLBackEndSystem
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
+            this.linkLabel2.LinkColor = System.Drawing.Color.LightBlue;
             this.linkLabel2.Location = new System.Drawing.Point(348, 9);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(45, 13);
@@ -111,12 +116,15 @@ namespace LnLBackEndSystem
             // 
             // btnViewBalance
             // 
+            this.btnViewBalance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnViewBalance.FlatAppearance.BorderSize = 0;
+            this.btnViewBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewBalance.Location = new System.Drawing.Point(15, 25);
             this.btnViewBalance.Name = "btnViewBalance";
             this.btnViewBalance.Size = new System.Drawing.Size(88, 23);
             this.btnViewBalance.TabIndex = 11;
             this.btnViewBalance.Text = "View Balance";
-            this.btnViewBalance.UseVisualStyleBackColor = true;
+            this.btnViewBalance.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -138,27 +146,34 @@ namespace LnLBackEndSystem
             // 
             // btnSubmitTotal
             // 
-            this.btnSubmitTotal.Location = new System.Drawing.Point(15, 232);
+            this.btnSubmitTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnSubmitTotal.FlatAppearance.BorderSize = 0;
+            this.btnSubmitTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmitTotal.Location = new System.Drawing.Point(15, 243);
             this.btnSubmitTotal.Name = "btnSubmitTotal";
             this.btnSubmitTotal.Size = new System.Drawing.Size(75, 23);
             this.btnSubmitTotal.TabIndex = 15;
             this.btnSubmitTotal.Text = "Submit Total";
-            this.btnSubmitTotal.UseVisualStyleBackColor = true;
+            this.btnSubmitTotal.UseVisualStyleBackColor = false;
             // 
             // btnMakeTabPurchase
             // 
-            this.btnMakeTabPurchase.Location = new System.Drawing.Point(12, 103);
+            this.btnMakeTabPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnMakeTabPurchase.FlatAppearance.BorderSize = 0;
+            this.btnMakeTabPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMakeTabPurchase.Location = new System.Drawing.Point(15, 103);
             this.btnMakeTabPurchase.Name = "btnMakeTabPurchase";
             this.btnMakeTabPurchase.Size = new System.Drawing.Size(116, 23);
             this.btnMakeTabPurchase.TabIndex = 16;
             this.btnMakeTabPurchase.Text = "Make Tab Purchase";
-            this.btnMakeTabPurchase.UseVisualStyleBackColor = true;
+            this.btnMakeTabPurchase.UseVisualStyleBackColor = false;
             this.btnMakeTabPurchase.Click += new System.EventHandler(this.btnMakeTabPurchase_Click);
             // 
             // Tab_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(399, 348);
             this.Controls.Add(this.btnMakeTabPurchase);
             this.Controls.Add(this.btnSubmitTotal);
@@ -172,6 +187,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Tab_Order";
             this.Text = "Tab_Order";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tab_Order_FormClosing);

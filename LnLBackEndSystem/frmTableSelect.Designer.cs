@@ -34,8 +34,8 @@ namespace LnLBackEndSystem
             // 
             // cmbSelectTables
             // 
-            this.cmbSelectTables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.cmbSelectTables.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(88)))), ((int)(((byte)(251)))));
+            this.cmbSelectTables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.cmbSelectTables.ForeColor = System.Drawing.Color.White;
             this.cmbSelectTables.FormattingEnabled = true;
             this.cmbSelectTables.Location = new System.Drawing.Point(-1, 1);
             this.cmbSelectTables.Name = "cmbSelectTables";
@@ -51,7 +51,7 @@ namespace LnLBackEndSystem
             this.ClientSize = new System.Drawing.Size(217, 28);
             this.Controls.Add(this.cmbSelectTables);
             this.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

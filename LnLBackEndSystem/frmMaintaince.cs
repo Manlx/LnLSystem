@@ -30,11 +30,6 @@ namespace LnLBackEndSystem
             dgvTableData.Left = 5;
             tbcMain.Left = 5;
 
-            btnDelete.Left = (btnDelete.Parent.Width - btnDelete.Width) / 2;
-            btnInsert.Left = (btnInsert.Parent.Width - btnInsert.Width) / 2;
-            btnUpdate.Left = (btnUpdate.Parent.Width - btnUpdate.Width) / 2;
-
-
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
             dgvTableData.AutoResizeColumns();
             dgvTableData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -48,6 +43,10 @@ namespace LnLBackEndSystem
 
             MyUpdateComps.CreateComs(ActiveTable, tabUpdate,dgvTableData) ;
             MyInsertComps.CreateComs(ActiveTable, tabInsert ,dgvTableData);
+
+            btnDelete.Left = (btnDelete.Parent.Width - btnDelete.Width) / 2;
+            btnInsert.Left = (btnInsert.Parent.Width - btnInsert.Width) / 2;
+            btnUpdate.Left = (btnUpdate.Parent.Width - btnUpdate.Width) / 2;
         }
 
         private void dgvTableData_RowEnter(object sender, DataGridViewCellEventArgs e)
