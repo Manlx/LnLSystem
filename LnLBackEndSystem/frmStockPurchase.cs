@@ -1,9 +1,5 @@
 ﻿//Manuel A Nunes 34551875
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -45,7 +41,7 @@ namespace LnLBackEndSystem
             }
             Creator.Show();
         }
-        Cart UserCart;
+        static Cart UserCart;
         private void StockItemClick(object sender, EventArgs e)
         {
             StockDisplay ObjectSuper = (StockDisplay)((PictureBox)sender).Tag;
@@ -83,6 +79,17 @@ namespace LnLBackEndSystem
             else
                 MessageBox.Show("Please sullect");
             UserCart.UpdateListBox(ref lstOrder);
+        }
+
+        private void btnPayCash_Click(object sender, EventArgs e)
+        {
+            frmPayConfirm.Creator = this;
+            frmPayConfirm MakePayMent = new frmPayConfirm();
+            MakePayMent.ShowDialog();
+            if (frmPayConfirm.isVerified)
+            {
+                //Update Database
+            }
         }
     }
 }

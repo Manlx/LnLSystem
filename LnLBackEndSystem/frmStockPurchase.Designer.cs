@@ -88,6 +88,7 @@ namespace LnLBackEndSystem
             this.btnPayCash.TabIndex = 5;
             this.btnPayCash.Text = "Cash Payment";
             this.btnPayCash.UseVisualStyleBackColor = false;
+            this.btnPayCash.Click += new System.EventHandler(this.btnPayCash_Click);
             // 
             // imgBackUp
             // 

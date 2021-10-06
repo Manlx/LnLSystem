@@ -34,13 +34,13 @@ namespace LnLBackEndSystem
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInfo = new System.Windows.Forms.DataGridView();
-            this.img = new System.Windows.Forms.PictureBox();
+            this.imgPreview = new System.Windows.Forms.PictureBox();
             this.btnLoadFromFile = new System.Windows.Forms.Button();
             this.imgExsistingImage = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgExsistingImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,15 +85,14 @@ namespace LnLBackEndSystem
             this.dgvInfo.TabIndex = 0;
             this.dgvInfo.SelectionChanged += new System.EventHandler(this.dgvInfo_SelectionChanged);
             // 
-            // img
+            // imgPreview
             // 
-            this.img.Location = new System.Drawing.Point(0, 306);
-            this.img.Margin = new System.Windows.Forms.Padding(6);
-            this.img.Name = "img";
-            this.img.Size = new System.Drawing.Size(300, 300);
-            this.img.TabIndex = 1;
-            this.img.TabStop = false;
-            this.img.Click += new System.EventHandler(this.img_Click);
+            this.imgPreview.Location = new System.Drawing.Point(0, 306);
+            this.imgPreview.Margin = new System.Windows.Forms.Padding(6);
+            this.imgPreview.Name = "imgPreview";
+            this.imgPreview.Size = new System.Drawing.Size(300, 300);
+            this.imgPreview.TabIndex = 1;
+            this.imgPreview.TabStop = false;
             // 
             // btnLoadFromFile
             // 
@@ -126,7 +125,6 @@ namespace LnLBackEndSystem
             this.label1.TabIndex = 4;
             this.label1.Text = "Preview:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -148,7 +146,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.imgExsistingImage);
             this.Controls.Add(this.btnLoadFromFile);
-            this.Controls.Add(this.img);
+            this.Controls.Add(this.imgPreview);
             this.Controls.Add(this.dgvInfo);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
@@ -160,7 +158,7 @@ namespace LnLBackEndSystem
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmImageManager_FormClosed);
             this.Load += new System.EventHandler(this.frmImageManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgExsistingImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,7 +168,7 @@ namespace LnLBackEndSystem
         #endregion
 
         private System.Windows.Forms.DataGridView dgvInfo;
-        private System.Windows.Forms.PictureBox img;
+        private System.Windows.Forms.PictureBox imgPreview;
         private System.Windows.Forms.Button btnLoadFromFile;
         private System.Windows.Forms.PictureBox imgExsistingImage;
         private System.Windows.Forms.Label label1;
