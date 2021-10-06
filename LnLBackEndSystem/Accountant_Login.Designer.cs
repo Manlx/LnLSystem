@@ -50,6 +50,7 @@ namespace LnLBackEndSystem
             // 
             // dgViewAcc
             // 
+            this.dgViewAcc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dgViewAcc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgViewAcc.Location = new System.Drawing.Point(24, 162);
             this.dgViewAcc.Name = "dgViewAcc";
@@ -58,62 +59,80 @@ namespace LnLBackEndSystem
             // 
             // viewHighTab
             // 
+            this.viewHighTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.viewHighTab.FlatAppearance.BorderSize = 0;
+            this.viewHighTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewHighTab.Location = new System.Drawing.Point(24, 41);
             this.viewHighTab.Name = "viewHighTab";
             this.viewHighTab.Size = new System.Drawing.Size(140, 23);
             this.viewHighTab.TabIndex = 2;
             this.viewHighTab.Text = "View High Balance Tabs";
-            this.viewHighTab.UseVisualStyleBackColor = true;
+            this.viewHighTab.UseVisualStyleBackColor = false;
             this.viewHighTab.Click += new System.EventHandler(this.viewHighTab_Click);
             // 
             // viewOldStock
             // 
+            this.viewOldStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.viewOldStock.FlatAppearance.BorderSize = 0;
+            this.viewOldStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewOldStock.Location = new System.Drawing.Point(24, 70);
             this.viewOldStock.Name = "viewOldStock";
             this.viewOldStock.Size = new System.Drawing.Size(140, 23);
             this.viewOldStock.TabIndex = 3;
             this.viewOldStock.Text = "View Old Stock";
-            this.viewOldStock.UseVisualStyleBackColor = true;
+            this.viewOldStock.UseVisualStyleBackColor = false;
             this.viewOldStock.Click += new System.EventHandler(this.viewOldStock_Click);
             // 
             // viewIncomplete
             // 
+            this.viewIncomplete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.viewIncomplete.FlatAppearance.BorderSize = 0;
+            this.viewIncomplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewIncomplete.Location = new System.Drawing.Point(24, 99);
             this.viewIncomplete.Name = "viewIncomplete";
             this.viewIncomplete.Size = new System.Drawing.Size(140, 23);
             this.viewIncomplete.TabIndex = 4;
             this.viewIncomplete.Text = "View Incomplete Orders";
-            this.viewIncomplete.UseVisualStyleBackColor = true;
+            this.viewIncomplete.UseVisualStyleBackColor = false;
             this.viewIncomplete.Click += new System.EventHandler(this.viewIncomplete_Click);
             // 
             // viewUpcomingBookings
             // 
+            this.viewUpcomingBookings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.viewUpcomingBookings.FlatAppearance.BorderSize = 0;
+            this.viewUpcomingBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewUpcomingBookings.Location = new System.Drawing.Point(24, 128);
             this.viewUpcomingBookings.Name = "viewUpcomingBookings";
             this.viewUpcomingBookings.Size = new System.Drawing.Size(140, 23);
             this.viewUpcomingBookings.TabIndex = 5;
             this.viewUpcomingBookings.Text = "View Upcoming Bookings";
-            this.viewUpcomingBookings.UseVisualStyleBackColor = true;
+            this.viewUpcomingBookings.UseVisualStyleBackColor = false;
             this.viewUpcomingBookings.Click += new System.EventHandler(this.viewUpcomingBookings_Click);
             // 
             // viewStockBalance
             // 
+            this.viewStockBalance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.viewStockBalance.FlatAppearance.BorderSize = 0;
+            this.viewStockBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewStockBalance.Location = new System.Drawing.Point(24, 12);
             this.viewStockBalance.Name = "viewStockBalance";
             this.viewStockBalance.Size = new System.Drawing.Size(140, 23);
             this.viewStockBalance.TabIndex = 6;
             this.viewStockBalance.Text = "View Stock Balance";
-            this.viewStockBalance.UseVisualStyleBackColor = true;
+            this.viewStockBalance.UseVisualStyleBackColor = false;
             this.viewStockBalance.Click += new System.EventHandler(this.viewStockBalance_Click);
             // 
             // viewTotalPrice
             // 
+            this.viewTotalPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.viewTotalPrice.FlatAppearance.BorderSize = 0;
+            this.viewTotalPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewTotalPrice.Location = new System.Drawing.Point(24, 545);
             this.viewTotalPrice.Name = "viewTotalPrice";
             this.viewTotalPrice.Size = new System.Drawing.Size(140, 23);
             this.viewTotalPrice.TabIndex = 7;
             this.viewTotalPrice.Text = "View Stock Total Price";
-            this.viewTotalPrice.UseVisualStyleBackColor = true;
+            this.viewTotalPrice.UseVisualStyleBackColor = false;
             this.viewTotalPrice.Click += new System.EventHandler(this.viewTotalPrice_Click);
             // 
             // lblStockPrice
@@ -128,6 +147,7 @@ namespace LnLBackEndSystem
             // linkToHome
             // 
             this.linkToHome.AutoSize = true;
+            this.linkToHome.LinkColor = System.Drawing.Color.PowderBlue;
             this.linkToHome.Location = new System.Drawing.Point(12, 593);
             this.linkToHome.Name = "linkToHome";
             this.linkToHome.Size = new System.Drawing.Size(119, 13);
@@ -147,9 +167,12 @@ namespace LnLBackEndSystem
             // 
             // txtStartStock
             // 
+            this.txtStartStock.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtStartStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStartStock.ForeColor = System.Drawing.Color.White;
             this.txtStartStock.Location = new System.Drawing.Point(459, 43);
             this.txtStartStock.Name = "txtStartStock";
-            this.txtStartStock.Size = new System.Drawing.Size(100, 20);
+            this.txtStartStock.Size = new System.Drawing.Size(100, 13);
             this.txtStartStock.TabIndex = 11;
             // 
             // checkBox1
@@ -174,9 +197,12 @@ namespace LnLBackEndSystem
             // 
             // txtEndStock
             // 
+            this.txtEndStock.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtEndStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEndStock.ForeColor = System.Drawing.Color.White;
             this.txtEndStock.Location = new System.Drawing.Point(459, 88);
             this.txtEndStock.Name = "txtEndStock";
-            this.txtEndStock.Size = new System.Drawing.Size(100, 20);
+            this.txtEndStock.Size = new System.Drawing.Size(100, 13);
             this.txtEndStock.TabIndex = 14;
             // 
             // label2
@@ -201,6 +227,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(598, 615);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -218,6 +245,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.viewOldStock);
             this.Controls.Add(this.viewHighTab);
             this.Controls.Add(this.dgViewAcc);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Accountant_Login";
             this.Text = "Accountant_Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Accountant_Login_FormClosing);

@@ -42,6 +42,7 @@ namespace LnLBackEndSystem
             // 
             // dgViewWarehouse
             // 
+            this.dgViewWarehouse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dgViewWarehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgViewWarehouse.Location = new System.Drawing.Point(15, 105);
             this.dgViewWarehouse.Name = "dgViewWarehouse";
@@ -50,12 +51,15 @@ namespace LnLBackEndSystem
             // 
             // btnGenerateReport
             // 
+            this.btnGenerateReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnGenerateReport.FlatAppearance.BorderSize = 0;
+            this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateReport.Location = new System.Drawing.Point(199, 64);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(75, 23);
             this.btnGenerateReport.TabIndex = 1;
             this.btnGenerateReport.Text = "Generate";
-            this.btnGenerateReport.UseVisualStyleBackColor = true;
+            this.btnGenerateReport.UseVisualStyleBackColor = false;
             this.btnGenerateReport.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
@@ -71,6 +75,7 @@ namespace LnLBackEndSystem
             // linktoHome
             // 
             this.linktoHome.AutoSize = true;
+            this.linktoHome.LinkColor = System.Drawing.Color.LightBlue;
             this.linktoHome.Location = new System.Drawing.Point(21, 516);
             this.linktoHome.Name = "linktoHome";
             this.linktoHome.Size = new System.Drawing.Size(119, 13);
@@ -90,12 +95,15 @@ namespace LnLBackEndSystem
             // 
             // btnBarRestock
             // 
+            this.btnBarRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBarRestock.FlatAppearance.BorderSize = 0;
+            this.btnBarRestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBarRestock.Location = new System.Drawing.Point(24, 423);
             this.btnBarRestock.Name = "btnBarRestock";
             this.btnBarRestock.Size = new System.Drawing.Size(75, 23);
             this.btnBarRestock.TabIndex = 13;
             this.btnBarRestock.Text = "Restock";
-            this.btnBarRestock.UseVisualStyleBackColor = true;
+            this.btnBarRestock.UseVisualStyleBackColor = false;
             this.btnBarRestock.Click += new System.EventHandler(this.btnBarRestock_Click);
             // 
             // label3
@@ -109,18 +117,22 @@ namespace LnLBackEndSystem
             // 
             // btnWarehouseRestock
             // 
+            this.btnWarehouseRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnWarehouseRestock.FlatAppearance.BorderSize = 0;
+            this.btnWarehouseRestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWarehouseRestock.Location = new System.Drawing.Point(24, 475);
             this.btnWarehouseRestock.Name = "btnWarehouseRestock";
             this.btnWarehouseRestock.Size = new System.Drawing.Size(75, 23);
             this.btnWarehouseRestock.TabIndex = 15;
             this.btnWarehouseRestock.Text = "Restock";
-            this.btnWarehouseRestock.UseVisualStyleBackColor = true;
+            this.btnWarehouseRestock.UseVisualStyleBackColor = false;
             this.btnWarehouseRestock.Click += new System.EventHandler(this.btnWarehouseRestock_Click);
             // 
             // Warehouse_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(539, 537);
             this.Controls.Add(this.btnWarehouseRestock);
             this.Controls.Add(this.label3);
@@ -130,6 +142,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.dgViewWarehouse);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Warehouse_Login";
             this.Text = "Warehouse_Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Warehouse_Login_FormClosing);

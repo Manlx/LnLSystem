@@ -321,13 +321,16 @@ namespace LnLBackEndSystem
             // 
             // btnPlaceOrder
             // 
+            this.btnPlaceOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnPlaceOrder.FlatAppearance.BorderSize = 0;
+            this.btnPlaceOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlaceOrder.Location = new System.Drawing.Point(516, 512);
             this.btnPlaceOrder.Name = "btnPlaceOrder";
             this.btnPlaceOrder.Size = new System.Drawing.Size(112, 44);
             this.btnPlaceOrder.TabIndex = 55;
             this.btnPlaceOrder.Text = "Place order";
-            this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.btnPlaceOrder.UseVisualStyleBackColor = false;
             this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // lblHeading
@@ -393,6 +396,7 @@ namespace LnLBackEndSystem
             // linkTabOrder
             // 
             this.linkTabOrder.AutoSize = true;
+            this.linkTabOrder.LinkColor = System.Drawing.Color.LightBlue;
             this.linkTabOrder.Location = new System.Drawing.Point(572, 618);
             this.linkTabOrder.Name = "linkTabOrder";
             this.linkTabOrder.Size = new System.Drawing.Size(130, 13);
@@ -405,6 +409,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(714, 640);
             this.Controls.Add(this.linkTabOrder);
             this.Controls.Add(this.label12);
@@ -442,6 +447,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "tabPurchase";
             this.Text = "tabPurchase";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.tabPurchase_FormClosing);

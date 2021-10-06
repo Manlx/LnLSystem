@@ -49,23 +49,29 @@ namespace LnLBackEndSystem
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(114, 263);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(144, 45);
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Update Record";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(276, 349);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblName
@@ -128,6 +134,9 @@ namespace LnLBackEndSystem
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(143, 38);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
@@ -135,6 +144,9 @@ namespace LnLBackEndSystem
             // 
             // txtSurname
             // 
+            this.txtSurname.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSurname.ForeColor = System.Drawing.Color.White;
             this.txtSurname.Location = new System.Drawing.Point(143, 68);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(100, 20);
@@ -143,6 +155,9 @@ namespace LnLBackEndSystem
             // 
             // txtPassword
             // 
+            this.txtPassword.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(143, 97);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -152,6 +167,9 @@ namespace LnLBackEndSystem
             // 
             // txtCell
             // 
+            this.txtCell.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCell.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCell.ForeColor = System.Drawing.Color.White;
             this.txtCell.Location = new System.Drawing.Point(143, 126);
             this.txtCell.Name = "txtCell";
             this.txtCell.Size = new System.Drawing.Size(100, 20);
@@ -180,6 +198,8 @@ namespace LnLBackEndSystem
             // 
             // cbRank
             // 
+            this.cbRank.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cbRank.ForeColor = System.Drawing.Color.White;
             this.cbRank.FormattingEnabled = true;
             this.cbRank.Location = new System.Drawing.Point(143, 152);
             this.cbRank.Name = "cbRank";
@@ -199,6 +219,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(361, 392);
             this.Controls.Add(this.cbRank);
             this.Controls.Add(this.lblRank);
@@ -216,6 +237,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdate);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Secretary_update";
             this.Text = "Secretary_update";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_update_FormClosing);

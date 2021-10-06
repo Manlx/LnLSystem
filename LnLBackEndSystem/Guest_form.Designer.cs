@@ -37,56 +37,70 @@ namespace LnLBackEndSystem
             // 
             // btnOrder
             // 
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.Location = new System.Drawing.Point(100, 26);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(121, 35);
             this.btnOrder.TabIndex = 0;
             this.btnOrder.Text = "Cash Order";
-            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(245, 156);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(67, 23);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnMakeBooking
             // 
+            this.btnMakeBooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnMakeBooking.FlatAppearance.BorderSize = 0;
+            this.btnMakeBooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMakeBooking.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMakeBooking.Location = new System.Drawing.Point(100, 108);
             this.btnMakeBooking.Name = "btnMakeBooking";
             this.btnMakeBooking.Size = new System.Drawing.Size(121, 37);
             this.btnMakeBooking.TabIndex = 2;
             this.btnMakeBooking.Text = "Make booking";
-            this.btnMakeBooking.UseVisualStyleBackColor = true;
+            this.btnMakeBooking.UseVisualStyleBackColor = false;
             this.btnMakeBooking.Click += new System.EventHandler(this.btnMakeBooking_Click);
             // 
             // btnTab
             // 
+            this.btnTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnTab.FlatAppearance.BorderSize = 0;
+            this.btnTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab.Location = new System.Drawing.Point(100, 67);
             this.btnTab.Name = "btnTab";
             this.btnTab.Size = new System.Drawing.Size(121, 35);
             this.btnTab.TabIndex = 3;
             this.btnTab.Text = "Credit Order";
-            this.btnTab.UseVisualStyleBackColor = true;
+            this.btnTab.UseVisualStyleBackColor = false;
             this.btnTab.Click += new System.EventHandler(this.btnTab_Click);
             // 
             // Guest_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(335, 191);
             this.Controls.Add(this.btnTab);
             this.Controls.Add(this.btnMakeBooking);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnOrder);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Guest_form";
             this.Text = "Guest_form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Guest_form_FormClosing);

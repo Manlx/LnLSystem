@@ -48,13 +48,16 @@ namespace LnLBackEndSystem
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(24, 666);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(113, 51);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add booking";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblHeadings
@@ -108,6 +111,8 @@ namespace LnLBackEndSystem
             // 
             // txtTime
             // 
+            this.txtTime.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTime.Location = new System.Drawing.Point(64, 302);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(100, 20);
@@ -115,6 +120,8 @@ namespace LnLBackEndSystem
             // 
             // cldDate
             // 
+            this.cldDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.cldDate.ForeColor = System.Drawing.Color.White;
             this.cldDate.Location = new System.Drawing.Point(18, 128);
             this.cldDate.Name = "cldDate";
             this.cldDate.TabIndex = 15;
@@ -122,6 +129,8 @@ namespace LnLBackEndSystem
             // 
             // cbType
             // 
+            this.cbType.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cbType.ForeColor = System.Drawing.Color.White;
             this.cbType.FormattingEnabled = true;
             this.cbType.Location = new System.Drawing.Point(64, 328);
             this.cbType.Name = "cbType";
@@ -130,33 +139,45 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(257, 656);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(314, 680);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 17;
             this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // clsRequirements
             // 
+            this.clsRequirements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.clsRequirements.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.clsRequirements.ForeColor = System.Drawing.Color.White;
             this.clsRequirements.FormattingEnabled = true;
             this.clsRequirements.Location = new System.Drawing.Point(24, 386);
             this.clsRequirements.Name = "clsRequirements";
-            this.clsRequirements.Size = new System.Drawing.Size(227, 124);
+            this.clsRequirements.Size = new System.Drawing.Size(227, 122);
             this.clsRequirements.TabIndex = 18;
             this.clsRequirements.Click += new System.EventHandler(this.clsRequirements_Click);
             // 
             // lstVenues
             // 
+            this.lstVenues.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lstVenues.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstVenues.ForeColor = System.Drawing.Color.White;
             this.lstVenues.FormattingEnabled = true;
             this.lstVenues.Location = new System.Drawing.Point(24, 519);
             this.lstVenues.Name = "lstVenues";
-            this.lstVenues.Size = new System.Drawing.Size(227, 147);
+            this.lstVenues.Size = new System.Drawing.Size(227, 145);
             this.lstVenues.TabIndex = 19;
             // 
             // txtClientID
             // 
+            this.txtClientID.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtClientID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtClientID.ForeColor = System.Drawing.Color.White;
             this.txtClientID.Location = new System.Drawing.Point(99, 42);
             this.txtClientID.Name = "txtClientID";
             this.txtClientID.Size = new System.Drawing.Size(100, 20);
@@ -185,6 +206,7 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(401, 723);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -201,6 +223,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblHeadings);
             this.Controls.Add(this.btnAdd);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Booking_Management";
             this.Text = "Booking_Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Booking_Management_FormClosing);

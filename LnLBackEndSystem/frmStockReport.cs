@@ -30,6 +30,7 @@ namespace LnLBackEndSystem
         {
             rbASC.Checked = true;
             DataModule.LoadTable(ref dgvStockReport, BuildSQL());
+            lblDate.Text = DateTime.Now.ToString();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
