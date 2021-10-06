@@ -138,6 +138,23 @@ namespace NSDataModule
         /// <param name="Colum">The column/field number starting at 0</param>
         /// <param name="SQL">The sql to be executed if SQL is left empty the function assumes that the SQL has already be set</param>
         /// <returns>Returns the value of selected datatype</returns>
+        public static string GetValue(int Colum, string SQL = "")
+        {
+            string Outs = default;
+            if (OpenConnection())
+            {
+                if (SQL != "")
+                    Com = new MySqlCommand(SQL, Con);
+                else if (Com.CommandText == "")
+                    return Outs;
+                Reader = Com.ExecuteReader();
+                Reader.Read();
+                if (Colum < Reader.FieldCount)
+                    Outs = Reader.GetValue(Colum).ToString();
+            }
+            Reader.Close();
+            return Outs;
+        }
         public static T GetValue<T>(int Colum, string SQL = "")
         {
             T Outs = default;

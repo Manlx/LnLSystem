@@ -49,6 +49,7 @@ namespace LnLBackEndSystem
             this.linkToGuestLogin.TabIndex = 1;
             this.linkToGuestLogin.TabStop = true;
             this.linkToGuestLogin.Text = "Return to guest login screen";
+            this.linkToGuestLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkToGuestLogin_LinkClicked);
             // 
             // label1
             // 
@@ -100,6 +101,7 @@ namespace LnLBackEndSystem
             this.btnSubmitTab.TabIndex = 7;
             this.btnSubmitTab.Text = "Submit";
             this.btnSubmitTab.UseVisualStyleBackColor = true;
+            this.btnSubmitTab.Click += new System.EventHandler(this.btnSubmitTab_Click);
             // 
             // label4
             // 
@@ -119,6 +121,7 @@ namespace LnLBackEndSystem
             this.linkToHome.TabIndex = 9;
             this.linkToHome.TabStop = true;
             this.linkToHome.Text = "Return to Home Screen";
+            this.linkToHome.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkToHome_LinkClicked);
             // 
             // Tab_login
             // 
@@ -136,6 +139,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.linkToGuestLogin);
             this.Name = "Tab_login";
             this.Text = "Tab_login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Tab_login_FormClosed);
             this.Load += new System.EventHandler(this.Tab_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

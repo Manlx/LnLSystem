@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Brendan 32737742
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +42,7 @@ namespace LnLBackEndSystem
 
             this.dgViewWarehouse.DefaultCellStyle.ForeColor = Color.Blue;
             this.dgViewWarehouse.DefaultCellStyle.BackColor = Color.Beige;
-
+            
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
 
         }

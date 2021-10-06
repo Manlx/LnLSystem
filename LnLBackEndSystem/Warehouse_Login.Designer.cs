@@ -30,7 +30,7 @@ namespace LnLBackEndSystem
         private void InitializeComponent()
         {
             this.dgViewWarehouse = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.linktoHome = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,18 +45,18 @@ namespace LnLBackEndSystem
             this.dgViewWarehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgViewWarehouse.Location = new System.Drawing.Point(15, 105);
             this.dgViewWarehouse.Name = "dgViewWarehouse";
-            this.dgViewWarehouse.Size = new System.Drawing.Size(453, 272);
+            this.dgViewWarehouse.Size = new System.Drawing.Size(512, 279);
             this.dgViewWarehouse.TabIndex = 0;
             // 
-            // button1
+            // btnGenerateReport
             // 
-            this.button1.Location = new System.Drawing.Point(199, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Generate";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnGenerateReport.Location = new System.Drawing.Point(199, 64);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerateReport.TabIndex = 1;
+            this.btnGenerateReport.Text = "Generate";
+            this.btnGenerateReport.UseVisualStyleBackColor = true;
+            this.btnGenerateReport.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -71,7 +71,7 @@ namespace LnLBackEndSystem
             // linktoHome
             // 
             this.linktoHome.AutoSize = true;
-            this.linktoHome.Location = new System.Drawing.Point(18, 578);
+            this.linktoHome.Location = new System.Drawing.Point(21, 516);
             this.linktoHome.Name = "linktoHome";
             this.linktoHome.Size = new System.Drawing.Size(119, 13);
             this.linktoHome.TabIndex = 11;
@@ -101,7 +101,7 @@ namespace LnLBackEndSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 487);
+            this.label3.Location = new System.Drawing.Point(21, 459);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 14;
@@ -109,7 +109,7 @@ namespace LnLBackEndSystem
             // 
             // btnWarehouseRestock
             // 
-            this.btnWarehouseRestock.Location = new System.Drawing.Point(24, 503);
+            this.btnWarehouseRestock.Location = new System.Drawing.Point(24, 475);
             this.btnWarehouseRestock.Name = "btnWarehouseRestock";
             this.btnWarehouseRestock.Size = new System.Drawing.Size(75, 23);
             this.btnWarehouseRestock.TabIndex = 15;
@@ -121,14 +121,14 @@ namespace LnLBackEndSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 603);
+            this.ClientSize = new System.Drawing.Size(539, 537);
             this.Controls.Add(this.btnWarehouseRestock);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBarRestock);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linktoHome);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.dgViewWarehouse);
             this.Name = "Warehouse_Login";
             this.Text = "Warehouse_Login";
@@ -142,7 +142,7 @@ namespace LnLBackEndSystem
         #endregion
 
         private System.Windows.Forms.DataGridView dgViewWarehouse;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGenerateReport;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linktoHome;
         private System.Windows.Forms.Label label2;
