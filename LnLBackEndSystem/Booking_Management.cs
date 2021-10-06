@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//M Tolmay 33784507
+using System;
 using System.Windows.Forms;
 using NSDataModule;
-using NSTableAndUtil;
 
 namespace LnLBackEndSystem
 {

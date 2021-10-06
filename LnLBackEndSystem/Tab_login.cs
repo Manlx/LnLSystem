@@ -1,12 +1,5 @@
 ﻿//Brendan 32737742
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using NSDataModule;
 
@@ -26,14 +19,6 @@ namespace LnLBackEndSystem
         private void Tab_login_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void linkToGuestLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            tabPurchase.tabPurch = this;
-            tabPurchase frmTabPurchase = new tabPurchase();
-            frmTabPurchase.Show();
-            this.Hide();
         }
 
         private void linkToHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

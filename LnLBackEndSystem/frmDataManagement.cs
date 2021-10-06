@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Manuel A Nunes 34551875 2021-09-27
+using System;
 using System.Windows.Forms;
 using NSDataModule;
 

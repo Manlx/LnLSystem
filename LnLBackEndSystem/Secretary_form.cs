@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//M Tolmay 33784507
+using System;
 using System.Windows.Forms;
 using NSDataModule;
 
@@ -13,7 +7,7 @@ namespace LnLBackEndSystem
 {
     public partial class Secretary_form : Form
     {
-        public static Form creator;
+        public static Form Creator;
     
         public Secretary_form()
         {
@@ -35,7 +29,7 @@ namespace LnLBackEndSystem
 
         private void Secretary_form_FormClosing(object sender, FormClosingEventArgs e)
         {
-            creator.Show();
+            Creator.Show();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -70,7 +64,7 @@ namespace LnLBackEndSystem
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            Accountant_Login.accountant = this;
+            Accountant_Login.Creator = this;
 
             Accountant_Login AccountantLogin = new Accountant_Login();
             AccountantLogin.Show();

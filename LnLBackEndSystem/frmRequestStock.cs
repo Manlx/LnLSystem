@@ -1,13 +1,7 @@
-﻿using System;
+﻿//Carla Pretorius 36184950
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using LnLSupportLibraries;
 using NSDataModule;
 using System.IO;
 

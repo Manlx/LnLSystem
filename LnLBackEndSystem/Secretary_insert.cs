@@ -1,4 +1,4 @@
-﻿//Madelein Tolmay 33784507
+﻿//Madelein Tolmay 33784507 Manuel A Nunes 34551875
 using System;
 using System.Windows.Forms;
 using NSDataModule;
