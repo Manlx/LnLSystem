@@ -20,9 +20,9 @@ namespace LnLBackEndSystem
 
         private void btnMakeTabPurchase_Click(object sender, EventArgs e)
         {
-            tabPurchase.tabPurch = this;
-            tabPurchase frmTabPurchase = new tabPurchase();
-            frmTabPurchase.Show();
+            Guest_form.guest = this;
+            Guest_form frmGuestForm = new Guest_form();
+            frmGuestForm.Show();
             this.Hide();
         }
 

@@ -41,10 +41,12 @@ namespace LnLBackEndSystem
             //else
             //    sql = "INSERT INTO tblStaff VALUES('" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtCellphone.Text + "', '" + 0 + "', '" + 0 + cbRank.SelectedIndex + 1 + "', '" + "')";
             int sucessful = DataModule.ExecuteSQL(sql);
+            DataModule.LoadTable(ref ((Secretary_form)creator).dbView, "SELECT * FROM tblStaff");
             if (sucessful == 1)
                 MessageBox.Show("Added sucessfully");
             else
                 MessageBox.Show("Error was encountered");
+
         }
         private string[] TempID;
         private void Secretary_insert_Load(object sender, EventArgs e)

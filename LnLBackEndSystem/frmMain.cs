@@ -112,5 +112,13 @@ namespace LnLBackEndSystem
             frmPurchase.Show();
             this.Hide();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Accountant_Login.accountant = this;
+            Accountant_Login frmAccountant = new Accountant_Login();
+            frmAccountant.Show();
+            this.Hide();
+        }
     }
 }

@@ -30,12 +30,12 @@ namespace LnLBackEndSystem
         private void InitializeComponent()
         {
             this.dgViewAcc = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.viewHighTab = new System.Windows.Forms.Button();
+            this.viewOldStock = new System.Windows.Forms.Button();
+            this.viewIncomplete = new System.Windows.Forms.Button();
+            this.viewUpcomingBookings = new System.Windows.Forms.Button();
+            this.viewStockBalance = new System.Windows.Forms.Button();
+            this.viewTotalPrice = new System.Windows.Forms.Button();
             this.lblStockPrice = new System.Windows.Forms.Label();
             this.linkToHome = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@ namespace LnLBackEndSystem
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.txtEndStock = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewAcc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,59 +56,65 @@ namespace LnLBackEndSystem
             this.dgViewAcc.Size = new System.Drawing.Size(539, 377);
             this.dgViewAcc.TabIndex = 1;
             // 
-            // button1
+            // viewHighTab
             // 
-            this.button1.Location = new System.Drawing.Point(24, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "View High Balance Tabs";
-            this.button1.UseVisualStyleBackColor = true;
+            this.viewHighTab.Location = new System.Drawing.Point(24, 41);
+            this.viewHighTab.Name = "viewHighTab";
+            this.viewHighTab.Size = new System.Drawing.Size(140, 23);
+            this.viewHighTab.TabIndex = 2;
+            this.viewHighTab.Text = "View High Balance Tabs";
+            this.viewHighTab.UseVisualStyleBackColor = true;
+            this.viewHighTab.Click += new System.EventHandler(this.viewHighTab_Click);
             // 
-            // button2
+            // viewOldStock
             // 
-            this.button2.Location = new System.Drawing.Point(24, 70);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "View Old Stock";
-            this.button2.UseVisualStyleBackColor = true;
+            this.viewOldStock.Location = new System.Drawing.Point(24, 70);
+            this.viewOldStock.Name = "viewOldStock";
+            this.viewOldStock.Size = new System.Drawing.Size(140, 23);
+            this.viewOldStock.TabIndex = 3;
+            this.viewOldStock.Text = "View Old Stock";
+            this.viewOldStock.UseVisualStyleBackColor = true;
+            this.viewOldStock.Click += new System.EventHandler(this.viewOldStock_Click);
             // 
-            // button3
+            // viewIncomplete
             // 
-            this.button3.Location = new System.Drawing.Point(24, 99);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "View Incomplete Orders";
-            this.button3.UseVisualStyleBackColor = true;
+            this.viewIncomplete.Location = new System.Drawing.Point(24, 99);
+            this.viewIncomplete.Name = "viewIncomplete";
+            this.viewIncomplete.Size = new System.Drawing.Size(140, 23);
+            this.viewIncomplete.TabIndex = 4;
+            this.viewIncomplete.Text = "View Incomplete Orders";
+            this.viewIncomplete.UseVisualStyleBackColor = true;
+            this.viewIncomplete.Click += new System.EventHandler(this.viewIncomplete_Click);
             // 
-            // button4
+            // viewUpcomingBookings
             // 
-            this.button4.Location = new System.Drawing.Point(24, 128);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "View Upcoming Bookings";
-            this.button4.UseVisualStyleBackColor = true;
+            this.viewUpcomingBookings.Location = new System.Drawing.Point(24, 128);
+            this.viewUpcomingBookings.Name = "viewUpcomingBookings";
+            this.viewUpcomingBookings.Size = new System.Drawing.Size(140, 23);
+            this.viewUpcomingBookings.TabIndex = 5;
+            this.viewUpcomingBookings.Text = "View Upcoming Bookings";
+            this.viewUpcomingBookings.UseVisualStyleBackColor = true;
+            this.viewUpcomingBookings.Click += new System.EventHandler(this.viewUpcomingBookings_Click);
             // 
-            // button5
+            // viewStockBalance
             // 
-            this.button5.Location = new System.Drawing.Point(24, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(140, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "View Stock Balance";
-            this.button5.UseVisualStyleBackColor = true;
+            this.viewStockBalance.Location = new System.Drawing.Point(24, 12);
+            this.viewStockBalance.Name = "viewStockBalance";
+            this.viewStockBalance.Size = new System.Drawing.Size(140, 23);
+            this.viewStockBalance.TabIndex = 6;
+            this.viewStockBalance.Text = "View Stock Balance";
+            this.viewStockBalance.UseVisualStyleBackColor = true;
+            this.viewStockBalance.Click += new System.EventHandler(this.viewStockBalance_Click);
             // 
-            // button6
+            // viewTotalPrice
             // 
-            this.button6.Location = new System.Drawing.Point(24, 545);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(140, 23);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "View Stock Total Price";
-            this.button6.UseVisualStyleBackColor = true;
+            this.viewTotalPrice.Location = new System.Drawing.Point(24, 545);
+            this.viewTotalPrice.Name = "viewTotalPrice";
+            this.viewTotalPrice.Size = new System.Drawing.Size(140, 23);
+            this.viewTotalPrice.TabIndex = 7;
+            this.viewTotalPrice.Text = "View Stock Total Price";
+            this.viewTotalPrice.UseVisualStyleBackColor = true;
+            this.viewTotalPrice.Click += new System.EventHandler(this.viewTotalPrice_Click);
             // 
             // lblStockPrice
             // 
@@ -181,11 +188,21 @@ namespace LnLBackEndSystem
             this.label2.TabIndex = 15;
             this.label2.Text = "To";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(415, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "label3";
+            // 
             // Accountant_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 615);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEndStock);
             this.Controls.Add(this.checkBox2);
@@ -194,12 +211,12 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkToHome);
             this.Controls.Add(this.lblStockPrice);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.viewTotalPrice);
+            this.Controls.Add(this.viewStockBalance);
+            this.Controls.Add(this.viewUpcomingBookings);
+            this.Controls.Add(this.viewIncomplete);
+            this.Controls.Add(this.viewOldStock);
+            this.Controls.Add(this.viewHighTab);
             this.Controls.Add(this.dgViewAcc);
             this.Name = "Accountant_Login";
             this.Text = "Accountant_Login";
@@ -212,12 +229,12 @@ namespace LnLBackEndSystem
 
         #endregion
         private System.Windows.Forms.DataGridView dgViewAcc;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button viewHighTab;
+        private System.Windows.Forms.Button viewOldStock;
+        private System.Windows.Forms.Button viewIncomplete;
+        private System.Windows.Forms.Button viewUpcomingBookings;
+        private System.Windows.Forms.Button viewStockBalance;
+        private System.Windows.Forms.Button viewTotalPrice;
         private System.Windows.Forms.Label lblStockPrice;
         private System.Windows.Forms.LinkLabel linkToHome;
         private System.Windows.Forms.Label label1;
@@ -226,5 +243,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox txtEndStock;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

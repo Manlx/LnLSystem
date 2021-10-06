@@ -328,6 +328,7 @@ namespace LnLBackEndSystem
             this.btnPlaceOrder.TabIndex = 55;
             this.btnPlaceOrder.Text = "Place order";
             this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // lblHeading
             // 

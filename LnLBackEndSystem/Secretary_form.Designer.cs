@@ -128,6 +128,7 @@ namespace LnLBackEndSystem
             this.Text = "Secretary_form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_form_FormClosing);
             this.Load += new System.EventHandler(this.Secretary_login_Load);
+            this.Shown += new System.EventHandler(this.Secretary_form_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dbView)).EndInit();
             this.ResumeLayout(false);
 
@@ -135,7 +136,7 @@ namespace LnLBackEndSystem
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dbView;
+        public System.Windows.Forms.DataGridView dbView;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnInsert;

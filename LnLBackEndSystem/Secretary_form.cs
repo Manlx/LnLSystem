@@ -76,5 +76,10 @@ namespace LnLBackEndSystem
             AccountantLogin.Show();
             this.Hide();
         }
+
+        private void Secretary_form_Shown(object sender, EventArgs e)
+        {
+
+        }
     }
 }

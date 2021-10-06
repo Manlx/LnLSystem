@@ -128,12 +128,6 @@
     <Compile Include="Admin_form.Designer.cs">
       <DependentUpon>Admin_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_signup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin_signup.Designer.cs">
-      <DependentUpon>Admin_signup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Booking_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,9 +291,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_form.resx">
       <DependentUpon>Admin_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin_signup.resx">
-      <DependentUpon>Admin_signup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Booking_Management.resx">
       <DependentUpon>Booking_Management.cs</DependentUpon>

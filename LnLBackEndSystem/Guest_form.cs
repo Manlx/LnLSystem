@@ -43,6 +43,7 @@ namespace LnLBackEndSystem
 
         private void btnTab_Click(object sender, EventArgs e)
         {
+            Tab_login.Creator = this;
             Tab_login.tab = this;
             Tab_login frmTab = new Tab_login();
             frmTab.Show();

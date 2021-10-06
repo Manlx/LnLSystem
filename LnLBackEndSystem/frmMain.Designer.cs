@@ -46,6 +46,7 @@ namespace LnLBackEndSystem
             this.btnRequestStock = new System.Windows.Forms.Button();
             this.btnStockOrder = new System.Windows.Forms.Button();
             this.btnStockReport = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -202,11 +203,22 @@ namespace LnLBackEndSystem
             this.btnStockReport.UseVisualStyleBackColor = true;
             this.btnStockReport.Click += new System.EventHandler(this.btnStockReport_Click);
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(636, 562);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(110, 44);
+            this.button9.TabIndex = 14;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 683);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.btnStockOrder);
             this.Controls.Add(this.btnStockReport);
             this.Controls.Add(this.button8);
@@ -255,5 +267,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnRequestStock;
         private System.Windows.Forms.Button btnStockOrder;
         private System.Windows.Forms.Button btnStockReport;
+        private System.Windows.Forms.Button button9;
     }
 }
