@@ -26,7 +26,10 @@ namespace LnLBackEndSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            frmDataManagement.Creator = this;
+            frmDataManagement DataBaseManagement = new frmDataManagement();
+            DataBaseManagement.Show();
+            this.Hide();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -46,7 +49,10 @@ namespace LnLBackEndSystem
 
         private void btnReports_Click(object sender, EventArgs e)
         {
-
+            Accountant_Login.accountant = this;
+            Accountant_Login AccountantLogin = new Accountant_Login();
+            AccountantLogin.Show();
+            this.Hide();
         }
     }
 }
