@@ -47,7 +47,7 @@ namespace LnLBackEndSystem
             UserCart.AddToCart(ObjectSuper);
             UserCart.UpdateListBox(ref lstOrder);
         }
-        StockDisplay[] SDArr;
+        private StockDisplay[] SDArr;
         private void frmStockPurchase_Load(object sender, EventArgs e)
         {
             SDArr = Utils.GenerateStock(pnlStockBox,StockItemClick);
@@ -60,6 +60,24 @@ namespace LnLBackEndSystem
                     UserCart.UpdateListBox(ref lstOrder);
             else
                 UserCart = new Cart();
+        }
+
+        private void btnDecrease_Click(object sender, EventArgs e)
+        {
+            if (lstOrder.SelectedIndex >= 0)
+                UserCart.Decrease(lstOrder.SelectedIndex);
+            else
+                MessageBox.Show("Please sullect");
+            UserCart.UpdateListBox(ref lstOrder);
+        }
+
+        private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+            if (lstOrder.SelectedIndex >= 0)
+                UserCart.Remove(lstOrder.SelectedIndex);
+            else
+                MessageBox.Show("Please sullect");
+            UserCart.UpdateListBox(ref lstOrder);
         }
     }
 }
