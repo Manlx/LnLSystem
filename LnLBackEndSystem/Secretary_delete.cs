@@ -39,8 +39,9 @@ namespace LnLBackEndSystem
             
              string sql = "DELETE FROM tblStaff WHERE Name ='" + txtName.Text + "' AND EncryptedPassword = '" + txtPassword.Text + "'";
 
+            DataGridView Temp = ((Secretary_form)creator).dbView;
             int sucessful = DataModule.ExecuteSQL(sql);
-            DataModule.LoadTable(ref ((Secretary_form)creator).dbView, "SELECT * FROM tblStaff");
+            DataModule.LoadTable(ref Temp, "SELECT * FROM tblStaff");
             if (sucessful == 1)
                 MessageBox.Show("Deleted sucessfully");
             else

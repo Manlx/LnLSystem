@@ -46,7 +46,7 @@ namespace LnLBackEndSystem
             if (File.Exists(ImageOFD.FileName))
             {
                 FilePath = ImageOFD.FileName;
-                img.Image = Image.FromFile(ImageOFD.FileName);
+                imgPreview.Image = Image.FromFile(ImageOFD.FileName);
                 string FilePathOut = $"Images\\{SelectedRow}.png";
                 
                 if (File.Exists(FilePathOut))
@@ -57,8 +57,10 @@ namespace LnLBackEndSystem
                     if (MessageBox.Show("Overwrite file", "Overwrite?", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         imgExsistingImage.Image.Dispose();
-                        File.Delete(FilePathOut);
                         imgExsistingImage.Image = null;
+                        imgPreview.Image.Dispose();
+                        imgPreview.Image = null;
+                        File.Delete(FilePathOut);
                     }
                         
                     else
@@ -67,12 +69,11 @@ namespace LnLBackEndSystem
                         return;
                     }
                 }
-                else
                     File.Copy(ImageOFD.FileName, FilePathOut);
                 dgvInfo_SelectionChanged(dgvInfo, new EventArgs());
                 MessageBox.Show("Success");
             }
-            img.Image = null;
+            imgPreview.Image = null;
         }
 
         private void dgvInfo_SelectionChanged(object sender, EventArgs e)
@@ -83,7 +84,11 @@ namespace LnLBackEndSystem
                     {
                         SelectedRow = dgvInfo.SelectedRows[0].Cells[0].Value.ToString();
                         if (File.Exists($"Images\\{SelectedRow}.png"))
+                        {
+                            if (imgExsistingImage.Image != null)
+                                imgExsistingImage.Image.Dispose();
                             imgExsistingImage.Image = Image.FromFile($"Images\\{SelectedRow}.png");
+                        }
                         else
                         {
                             if (imgExsistingImage.Image != null)
@@ -91,16 +96,6 @@ namespace LnLBackEndSystem
                             imgExsistingImage.Image = null;
                         }
                     }
-        }
-
-        private void img_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
