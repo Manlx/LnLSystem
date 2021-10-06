@@ -57,6 +57,10 @@ namespace StockDisplayAUtils
         {
             return this.StockID.Equals(((StockDisplay)other).StockID);
         }
+        override public int GetHashCode()
+        {
+            return 1;
+        }
     }
     public class Cart
     {
@@ -79,8 +83,11 @@ namespace StockDisplayAUtils
             }
             if (!Looking)
             {
-                arrCount[x]++;
-                arrItems[x].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
+                if (arrCount[x] < arrItems[x].CountInBar)
+                {
+                    arrCount[x]++;
+                    arrItems[x].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
+                }
             }
             else
             {
@@ -89,6 +96,62 @@ namespace StockDisplayAUtils
                 arrItems[arrItems.Count-1].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
             }    
 
+        }
+        public void Decrease(int Index)
+        {
+            arrCount[Index]--;
+            if (arrCount[Index] <= 0)
+            {
+                arrCount.RemoveAt(Index);
+                arrItems.RemoveAt(Index);
+            }
+            else
+                arrItems[Index].lblQuantity.Text = $"{arrItems[Index].CountInBar} ({arrCount[Index]})";
+        }
+        public void Remove(int Index)
+        {
+            arrItems[Index].lblQuantity.Text = $"{arrItems[Index].CountInBar}";
+            arrItems.RemoveAt(Index);
+            arrCount.RemoveAt(Index);
+        }
+        public void Remove(StockDisplay Value)
+        {
+            bool Looking = true;
+            int x = 0;
+            while (Looking && x < arrItems.Count)
+            {
+                Looking = !Value.Equals(arrItems[x]);
+                if (Looking)
+                    x++;
+            }
+            if (!Looking)
+            {
+                arrItems[x].lblQuantity.Text = $"{arrItems[x].CountInBar}";
+                arrCount.RemoveAt(x);
+                arrItems.RemoveAt(x);
+            }
+        }
+        public void Decrease(StockDisplay Value)
+        {
+            bool Looking = true;
+            int x = 0;
+            while (Looking && x < arrItems.Count)
+            {
+                Looking = !Value.Equals(arrItems[x]);
+                if (Looking)
+                    x++;
+            }
+            if (!Looking)
+            {
+                arrCount[x]--;
+                if (arrCount[x] <= 0)
+                {
+                    arrCount.RemoveAt(x);
+                    arrItems.RemoveAt(x);
+                }    
+                else
+                    arrItems[x].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
+            }
         }
         public void UpdateListBox(ref ListBox lst)
         {
