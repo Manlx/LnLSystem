@@ -26,10 +26,10 @@ namespace LnLBackEndSystem
         }
         public void CreateDefaultImage()
         {
-            if (!CheckFilePath() || !File.Exists(@"\Images\Default.png"))
+            if (!CheckFilePath() || !File.Exists(Directory.GetCurrentDirectory()+@"\Images\Default.png"))
             {
-                string temp = @"\Images\Default.png";
-                imgBackUp.Image.Save(temp);
+                string temp = Directory.GetCurrentDirectory()+@"\Images\Default.png";
+                imgBackUp.Image.Save(temp,System.Drawing.Imaging.ImageFormat.Png);
             }
         }
         private void frmStockPurchase_FormClosed(object sender, FormClosedEventArgs e)
