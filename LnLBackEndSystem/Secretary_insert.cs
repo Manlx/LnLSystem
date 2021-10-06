@@ -41,7 +41,8 @@ namespace LnLBackEndSystem
             //else
             //    sql = "INSERT INTO tblStaff VALUES('" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtCellphone.Text + "', '" + 0 + "', '" + 0 + cbRank.SelectedIndex + 1 + "', '" + "')";
             int sucessful = DataModule.ExecuteSQL(sql);
-            DataModule.LoadTable(ref ((Secretary_form)creator).dbView, "SELECT * FROM tblStaff");
+            DataGridView Temp = ((Secretary_form)creator).dbView;
+            DataModule.LoadTable(ref Temp, "SELECT * FROM tblStaff");
             if (sucessful == 1)
                 MessageBox.Show("Added sucessfully");
             else
