@@ -66,6 +66,7 @@ namespace LnLBackEndSystem
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnBack.Location = new System.Drawing.Point(211, 318);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(79, 22);
@@ -228,7 +229,9 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnInsert);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Secretary_insert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secretary_insert";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_insert_FormClosing);
             this.Load += new System.EventHandler(this.Secretary_insert_Load);

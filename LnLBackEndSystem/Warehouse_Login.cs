@@ -14,7 +14,7 @@ namespace LnLBackEndSystem
 {
     public partial class Warehouse_Login : Form
     {
-        public static Form warehouse;
+        public static Form Creator;
         public Warehouse_Login()
         {
             InitializeComponent();
@@ -60,7 +60,7 @@ namespace LnLBackEndSystem
 
         private void Warehouse_Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            warehouse.Show();
+            Creator.Show();
         }
     }
 }

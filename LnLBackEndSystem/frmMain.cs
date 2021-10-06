@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//Manuel A Nunes 34551875 Carla Pretorius
+using System;
 using System.Windows.Forms;
+using NSDataModule;
+using CypherLib;
 
 namespace LnLBackEndSystem
 {
@@ -17,7 +13,7 @@ namespace LnLBackEndSystem
         public frmMain()
         {
             InitializeComponent();
-            frmSQLConsole.frmOwner = this;
+            
             frmDataManagement.Creator = this;
         }
 
@@ -28,6 +24,7 @@ namespace LnLBackEndSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            frmSQLConsole.frmOwner = this;
             frmSQLConsole myCons = new frmSQLConsole();
             this.Hide();
             myCons.Show();
@@ -42,7 +39,7 @@ namespace LnLBackEndSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Secretary_form.creator = this;
+            Secretary_form.Creator = this;
             Secretary_form frmSecretary = new Secretary_form();
             frmSecretary.Show();
             this.Hide();
@@ -50,37 +47,19 @@ namespace LnLBackEndSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Admin_form.admin = this;
+            Admin_form.Creator = this;
             Admin_form frmAdmin = new Admin_form();           
             frmAdmin.Show();
             this.Hide();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Guest_form.guest = this;
-            Guest_form frmGuest = new Guest_form();
-            frmGuest.Show();
-            this.Hide();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
-            Warehouse_Login.warehouse = this;
+            Warehouse_Login.Creator = this;
             Warehouse_Login frmWarehouse = new Warehouse_Login();
             frmWarehouse.Show();
             this.Hide();
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            tabPurchase.tabPurch = this;
-            tabPurchase frmTabPurch = new tabPurchase();
-            frmTabPurch.Show();
-            this.Hide();
-        }
-        
-
         private void btnRequestStock_Click(object sender, EventArgs e)
         {
             frmRequestStock.Creator = this;
@@ -115,11 +94,72 @@ namespace LnLBackEndSystem
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Accountant_Login.accountant = this;
+            Accountant_Login.Creator = this;
             Accountant_Login frmAccountant = new Accountant_Login();
             frmAccountant.Show();
             this.Hide();
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (edtUser.Text == String.Empty)
+            {
+                MessageBox.Show("Please enter a user ID");
+                edtUser.Focus();
+                return;
+            }
+            string Password = DataModule.GetValue<string>(0, $"SELECT EncryptedPassword FROM tblStaff WHERE StaffID = {edtUser.Text}");
+            if (Password != Cypher.Encrypt(edtPassword.Text))
+            {
+                MessageBox.Show("Invalid Information");
+                return;
+            }
+            int StaffRank = DataModule.GetValue<int>(0, $"SELECT RankID FROM tblStaff WHERE StaffID = {edtUser.Text}");
+            switch(StaffRank)
+            {
+                case 1:
+                    frmBarpersonLogin.Creator = this;
+                    frmBarpersonLogin BarLogin = new frmBarpersonLogin();
+                    BarLogin.Show();
+                    break;
+                case 6:
+                case 7:
+                case 2:
+                    Secretary_form.Creator = this;
+                    Secretary_form SecLogin = new Secretary_form();
+                    SecLogin.Show();
+                    break;
+                case 4:
+                case 3:
+                    Accountant_Login.Creator = this;
+                    Accountant_Login AccountLog = new Accountant_Login();
+                    AccountLog.Show();
+                    break;
+                case 8:
+                case 5:
+                    Warehouse_Login.Creator = this;
+                    Warehouse_Login WareLog = new Warehouse_Login();
+                    WareLog.Show();
+                    break;
+
+                case 11:
+                    frmCEO.Creator = this;
+                    frmCEO CEO = new frmCEO();
+                    CEO.Show();
+                    break;
+                default:
+                    MessageBox.Show("Login has encountered an issue. Contact administrator");
+                    return;
+            }
+            this.Hide();
+        }
+
+        private void btnCEO_Click(object sender, EventArgs e)
+        {
+            frmCEO.Creator = this;
+            frmCEO CEO = new frmCEO();
+            this.Hide();
+            CEO.Show();
+        }
     }
 }

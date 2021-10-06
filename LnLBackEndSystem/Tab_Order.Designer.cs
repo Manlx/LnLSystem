@@ -167,7 +167,6 @@ namespace LnLBackEndSystem
             this.btnMakeTabPurchase.TabIndex = 16;
             this.btnMakeTabPurchase.Text = "Make Tab Purchase";
             this.btnMakeTabPurchase.UseVisualStyleBackColor = false;
-            this.btnMakeTabPurchase.Click += new System.EventHandler(this.btnMakeTabPurchase_Click);
             // 
             // Tab_Order
             // 

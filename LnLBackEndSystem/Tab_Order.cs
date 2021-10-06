@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Brendan 32737742
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,14 +17,6 @@ namespace LnLBackEndSystem
         public Tab_Order()
         {
             InitializeComponent();
-        }
-
-        private void btnMakeTabPurchase_Click(object sender, EventArgs e)
-        {
-            Guest_form.guest = this;
-            Guest_form frmGuestForm = new Guest_form();
-            frmGuestForm.Show();
-            this.Hide();
         }
 
         private void linkToHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//M Tolmay 33784507
+using System;
 using System.Windows.Forms;
 using NSDataModule;
 
@@ -13,7 +7,7 @@ namespace LnLBackEndSystem
 {
     public partial class Accountant_Login : Form
     {
-        public static Form accountant;
+        public static Form Creator;
         public Accountant_Login()
         {
             InitializeComponent();
@@ -26,7 +20,7 @@ namespace LnLBackEndSystem
 
         private void Accountant_Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            accountant.Show();
+            Creator.Show();
         }
 
         private void viewStockBalance_Click(object sender, EventArgs e)

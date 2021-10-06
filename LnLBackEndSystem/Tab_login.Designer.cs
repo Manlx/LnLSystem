@@ -51,7 +51,6 @@ namespace LnLBackEndSystem
             this.linkToGuestLogin.TabIndex = 1;
             this.linkToGuestLogin.TabStop = true;
             this.linkToGuestLogin.Text = "Return to guest login screen";
-            this.linkToGuestLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkToGuestLogin_LinkClicked);
             // 
             // label1
             // 
