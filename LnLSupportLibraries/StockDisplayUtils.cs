@@ -171,7 +171,7 @@ namespace StockDisplayAUtils
             if (File.Exists(Path))
                 return Path;
             else
-                return @"\Images\Default.png";
+                return Directory.GetCurrentDirectory() + @"\Images\Default.png";
 
         }
         public static StockDisplay[] GenerateStock(Control BigParent,EventHandler OnClick)
