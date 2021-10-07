@@ -1,4 +1,4 @@
-﻿//M Tolmay 33784507
+﻿//M Tolmay 33784507 Manuel A Nunes 34551875
 using System;
 using System.Windows.Forms;
 using NSDataModule;
@@ -7,7 +7,7 @@ namespace LnLBackEndSystem
 {
     public partial class Booking_Management : Form
     {
-        public static Form make_booking;
+        public static Form Creator;
 
         public string[] LocationID;
         public string[] EventTypes;
@@ -55,7 +55,7 @@ namespace LnLBackEndSystem
         
         private void Booking_Management_FormClosing(object sender, FormClosingEventArgs e)
         {
-            make_booking.Show();
+            Creator.Show();
         }
 
         private void clsRequirements_Click(object sender, EventArgs e)

@@ -40,6 +40,7 @@ namespace LnLBackEndSystem
         private void frmPayConfirm_Load(object sender, EventArgs e)
         {
             isVerified = false;
+            edtStaffID.Focus();
         }
     }
 }

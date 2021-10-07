@@ -43,7 +43,7 @@ namespace LnLBackEndSystem
             this.btnVerify.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.Size = new System.Drawing.Size(344, 45);
-            this.btnVerify.TabIndex = 0;
+            this.btnVerify.TabIndex = 2;
             this.btnVerify.Text = "Verify";
             this.btnVerify.UseVisualStyleBackColor = true;
             this.btnVerify.Click += new System.EventHandler(this.btnVerify_Click);
@@ -72,7 +72,7 @@ namespace LnLBackEndSystem
             this.edtStaffID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.edtStaffID.Name = "edtStaffID";
             this.edtStaffID.Size = new System.Drawing.Size(214, 35);
-            this.edtStaffID.TabIndex = 3;
+            this.edtStaffID.TabIndex = 0;
             // 
             // edtPassword
             // 
@@ -80,10 +80,11 @@ namespace LnLBackEndSystem
             this.edtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.edtPassword.Name = "edtPassword";
             this.edtPassword.Size = new System.Drawing.Size(214, 35);
-            this.edtPassword.TabIndex = 4;
+            this.edtPassword.TabIndex = 1;
             // 
             // frmPayConfirm
             // 
+            this.AcceptButton = this.btnVerify;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -100,6 +101,7 @@ namespace LnLBackEndSystem
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPayConfirm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pay Confirmation";
             this.Load += new System.EventHandler(this.frmPayConfirm_Load);
             this.ResumeLayout(false);

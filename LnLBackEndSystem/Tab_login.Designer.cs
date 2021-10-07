@@ -60,7 +60,7 @@ namespace LnLBackEndSystem
             this.txtTabID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTabID.Name = "txtTabID";
             this.txtTabID.Size = new System.Drawing.Size(185, 27);
-            this.txtTabID.TabIndex = 3;
+            this.txtTabID.TabIndex = 0;
             // 
             // label2
             // 
@@ -91,7 +91,7 @@ namespace LnLBackEndSystem
             this.txtTabPIN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTabPIN.Name = "txtTabPIN";
             this.txtTabPIN.Size = new System.Drawing.Size(185, 27);
-            this.txtTabPIN.TabIndex = 6;
+            this.txtTabPIN.TabIndex = 1;
             // 
             // btnSubmitTab
             // 
@@ -102,7 +102,7 @@ namespace LnLBackEndSystem
             this.btnSubmitTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubmitTab.Name = "btnSubmitTab";
             this.btnSubmitTab.Size = new System.Drawing.Size(143, 51);
-            this.btnSubmitTab.TabIndex = 7;
+            this.btnSubmitTab.TabIndex = 2;
             this.btnSubmitTab.Text = "Submit";
             this.btnSubmitTab.UseVisualStyleBackColor = false;
             this.btnSubmitTab.Click += new System.EventHandler(this.btnSubmitTab_Click);
@@ -126,7 +126,7 @@ namespace LnLBackEndSystem
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(143, 51);
-            this.btnBack.TabIndex = 10;
+            this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);

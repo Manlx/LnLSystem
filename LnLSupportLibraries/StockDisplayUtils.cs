@@ -204,7 +204,16 @@ namespace StockDisplayAUtils
                     Effected += DataModule.ExecuteSQL($"INSERT INTO tblCreditSale (TabID,StockID,Count) VALUES ({TabID},{Item.StockID},{arrCount[x]})");
                 else
                     Effected += DataModule.ExecuteSQL($"UPDATE tblCreditSale SET Count = {int.Parse(temp)+arrCount[x]} WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
+                string strBalance = DataModule.GetValue(0, $"SELECT Balance FROM tblTab WHERE TabID = {TabID}");
+                if (!String.IsNullOrEmpty(strBalance))
+                    DataModule.ExecuteSQL($"UPDATE tblTab SET Balance = {(Double.Parse(strBalance) + arrCount[x] * Item.CalcCost()):F2} WHERE TabID = {TabID}");
+                else
+                {
+                    MessageBox.Show("Error Encountered please call support Code 000-000-001");
+                    return -1;
+                }
                 x++;
+                
             }
             return Effected;
         }

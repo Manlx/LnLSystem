@@ -20,6 +20,7 @@ namespace LnLBackEndSystem
         private void Tab_login_Load(object sender, EventArgs e)
         {
             isValidLogin = false;
+            txtTabID.Focus();
         }
 
         private void linkToHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

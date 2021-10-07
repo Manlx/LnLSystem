@@ -29,9 +29,9 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dbView = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -39,35 +39,36 @@ namespace LnLBackEndSystem
             this.btnBack = new System.Windows.Forms.Button();
             this.btnBooking = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
+            this.btnAddBooking = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dbView)).BeginInit();
             this.SuspendLayout();
             // 
             // dbView
             // 
             this.dbView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dbView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbView.EnableHeadersVisualStyles = false;
             this.dbView.Location = new System.Drawing.Point(0, 0);
             this.dbView.Name = "dbView";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.dbView.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dbView.Size = new System.Drawing.Size(449, 178);
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbView.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dbView.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.dbView.Size = new System.Drawing.Size(641, 210);
             this.dbView.TabIndex = 0;
             // 
             // btnUpdate
@@ -76,9 +77,9 @@ namespace LnLBackEndSystem
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(155, 184);
+            this.btnUpdate.Location = new System.Drawing.Point(230, 215);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(138, 54);
+            this.btnUpdate.Size = new System.Drawing.Size(183, 54);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update Staff Record";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -90,9 +91,9 @@ namespace LnLBackEndSystem
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(301, 184);
+            this.btnDelete.Location = new System.Drawing.Point(437, 215);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(138, 54);
+            this.btnDelete.Size = new System.Drawing.Size(183, 54);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete Staff Record";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -104,9 +105,9 @@ namespace LnLBackEndSystem
             this.btnInsert.FlatAppearance.BorderSize = 0;
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(9, 184);
+            this.btnInsert.Location = new System.Drawing.Point(23, 215);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(138, 54);
+            this.btnInsert.Size = new System.Drawing.Size(183, 54);
             this.btnInsert.TabIndex = 3;
             this.btnInsert.Text = "Insert Staff Record";
             this.btnInsert.UseVisualStyleBackColor = false;
@@ -118,7 +119,7 @@ namespace LnLBackEndSystem
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnBack.Location = new System.Drawing.Point(301, 243);
+            this.btnBack.Location = new System.Drawing.Point(482, 279);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(138, 54);
             this.btnBack.TabIndex = 4;
@@ -132,7 +133,7 @@ namespace LnLBackEndSystem
             this.btnBooking.FlatAppearance.BorderSize = 0;
             this.btnBooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBooking.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBooking.Location = new System.Drawing.Point(9, 243);
+            this.btnBooking.Location = new System.Drawing.Point(23, 279);
             this.btnBooking.Name = "btnBooking";
             this.btnBooking.Size = new System.Drawing.Size(138, 54);
             this.btnBooking.TabIndex = 5;
@@ -146,7 +147,7 @@ namespace LnLBackEndSystem
             this.btnReport.FlatAppearance.BorderSize = 0;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Location = new System.Drawing.Point(155, 243);
+            this.btnReport.Location = new System.Drawing.Point(329, 279);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(138, 54);
             this.btnReport.TabIndex = 6;
@@ -154,12 +155,27 @@ namespace LnLBackEndSystem
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
+            // btnAddBooking
+            // 
+            this.btnAddBooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnAddBooking.FlatAppearance.BorderSize = 0;
+            this.btnAddBooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddBooking.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddBooking.Location = new System.Drawing.Point(176, 279);
+            this.btnAddBooking.Name = "btnAddBooking";
+            this.btnAddBooking.Size = new System.Drawing.Size(138, 54);
+            this.btnAddBooking.TabIndex = 7;
+            this.btnAddBooking.Text = "Direct Add Booking";
+            this.btnAddBooking.UseVisualStyleBackColor = false;
+            this.btnAddBooking.Click += new System.EventHandler(this.btnAddBooking_Click);
+            // 
             // Secretary_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(448, 303);
+            this.ClientSize = new System.Drawing.Size(642, 339);
+            this.Controls.Add(this.btnAddBooking);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnBooking);
             this.Controls.Add(this.btnBack);
@@ -174,7 +190,6 @@ namespace LnLBackEndSystem
             this.Text = "Secretary_form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_form_FormClosing);
             this.Load += new System.EventHandler(this.Secretary_login_Load);
-            this.Shown += new System.EventHandler(this.Secretary_form_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dbView)).EndInit();
             this.ResumeLayout(false);
 
@@ -189,5 +204,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnBooking;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnAddBooking;
     }
 }

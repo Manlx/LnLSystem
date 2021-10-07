@@ -71,9 +71,12 @@ namespace LnLBackEndSystem
             this.Hide();
         }
 
-        private void Secretary_form_Shown(object sender, EventArgs e)
+        private void btnAddBooking_Click(object sender, EventArgs e)
         {
-
+            Booking_Management.Creator = this;
+            Booking_Management frmBookMan = new Booking_Management();
+            frmBookMan.Show();
+            this.Hide();
         }
     }
 }
