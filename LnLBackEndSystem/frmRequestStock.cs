@@ -19,8 +19,7 @@ namespace LnLBackEndSystem
         {
 
             bool bValid = true;
-            int quantity;
-            if (!(int.TryParse(txtQuantity.Text, out quantity)))
+            if (!(int.TryParse(txtQuantity.Text, out int quantity)))
             {
                 errorQuantity.SetError(txtQuantity, "Quantity must be an integer.");
                 bValid = false;
@@ -57,7 +56,6 @@ namespace LnLBackEndSystem
         }
         public void SaveToTextFile()
         {
-            DateTime now = DateTime.Now;
             string fileName = "Stock report_" + DateTime.Now.ToString("MM-dd-yyyy HH-mm") + ".csv";
             try
             {

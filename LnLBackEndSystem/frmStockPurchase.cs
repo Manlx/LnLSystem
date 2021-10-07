@@ -117,7 +117,6 @@ namespace LnLBackEndSystem
             if (!Tab_login.isValidLogin)
                 return;
             //MessageBox.Show(Tab_login.isValidLogin.ToString());
-            
         }
     }
 }

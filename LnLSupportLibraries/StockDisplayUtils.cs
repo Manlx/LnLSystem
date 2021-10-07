@@ -191,7 +191,21 @@ namespace StockDisplayAUtils
                     arrItems[x].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
             }
         }
-       
+        public int UpdateCreditSale(string TabID)
+        {
+            int Effected = 0;
+            int x = 0;
+            foreach (StockDisplay Item in arrItems)
+            {
+                string temp = DataModule.GetValue(0, $"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID});");
+                if (String.IsNullOrEmpty(temp))
+                    Effected += DataModule.ExecuteSQL($"INSERT INTO tblCreditSale (TabID,StockID,Count) VALUES ({TabID},{Item.StockID},{arrCount[x]})");
+                else
+                    Effected += DataModule.ExecuteSQL($"UPDATE tblCreditSale SET Count = {int.Parse(temp)+arrCount[x]} WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
+                x++;
+            }
+            return Effected;
+        }
         public void UpdateListBox(ref ListBox lst)
         {
             lst.Items.Clear();

@@ -61,9 +61,8 @@ namespace LnLBackEndSystem
             }
             else
             {
-                int iSearch;
                 string where = txtSearch.Text;
-                if (int.TryParse(txtSearch.Text, out iSearch))
+                if (int.TryParse(txtSearch.Text, out int iSearch))
                 {
                     WHERE = $"WHERE (stockID = {where})" +
                     $" OR (CostPrice = {where})" +
@@ -128,7 +127,7 @@ namespace LnLBackEndSystem
             Creator.Show();
         }
 
-        private void clearTextBoxes()
+        public void clearTextBoxes()
         {
             txtSearch.Clear();
             txtCountINWareHouse.Clear();

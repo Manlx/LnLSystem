@@ -51,11 +51,9 @@ namespace LnLBackEndSystem
             this.Hide();
         }
 
-        private string[] TempID;
         private void Secretary_update_Load(object sender, EventArgs e)
         {
             string[] temp = DataModule.GetValues<string>(0, "SELECT Description FROM tblStaffRank ; ");
-            TempID = DataModule.GetValues(0, "SELECT RANKID FROM tblStaffRank;");
             for (int x = 0; x < temp.Length; x++)
                 cbRank.Items.Add(temp[x]);
         }

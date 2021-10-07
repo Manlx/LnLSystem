@@ -8,7 +8,6 @@ namespace LnLBackEndSystem
 {
     public partial class frmImageManager : Form
     {
-        string FilePath;
         string SelectedRow;
         static public Form Creator;
         public frmImageManager()
@@ -35,12 +34,10 @@ namespace LnLBackEndSystem
 
         private void btnLoadFromFile_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ImageOFD = new OpenFileDialog();
-            ImageOFD.Filter = "png (*.png)|*.png";
+            OpenFileDialog ImageOFD = new OpenFileDialog() { Filter = "png (*.png)|*.png" };
             ImageOFD.ShowDialog();
             if (File.Exists(ImageOFD.FileName))
             {
-                FilePath = ImageOFD.FileName;
                 imgPreview.Image = Image.FromFile(ImageOFD.FileName);
                 string FilePathOut = $"Images\\{SelectedRow}.png";
                 

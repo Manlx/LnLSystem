@@ -32,14 +32,9 @@ namespace LnLBackEndSystem
             password.Show();
         }
 
-        private void cbRank_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnReset_Click(object sender, EventArgs e)
         {
-            string sql = "";
+            string sql;
             string password = txtPass.Text;
 
             if (txtPass.Text == txtConfirm_pass.Text)

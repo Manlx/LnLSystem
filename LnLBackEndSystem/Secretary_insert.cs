@@ -28,8 +28,7 @@ namespace LnLBackEndSystem
         private void btnInsert_Click(object sender, EventArgs e)
         {
             //Manuel A Nunes 34551875 Adjusted the SQL to work
-            string sql = "";
-            sql = $"INSERT INTO tblStaff (Name,Surname,CellNumber,HasLicense,IsFullTimeMember,RankID,EncryptedPassword) " +
+            string sql = $"INSERT INTO tblStaff (Name,Surname,CellNumber,HasLicense,IsFullTimeMember,RankID,EncryptedPassword) " +
                 $"VALUES('{txtName.Text}','{txtSurname.Text}','{txtCellphone.Text}',{Utilities.BoolToBit(cbLicence.Checked)}," +
                 $"{Utilities.BoolToBit(cbFulltime.Checked)},{TempID[cbRank.SelectedIndex]},'{Cypher.Encrypt( txtPassword.Text)}');";
             //if (cbFulltime.Checked && cbLicence.Checked)
