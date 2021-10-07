@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using NSTableAndUtil;
 using NSDataModule;
+using System.Drawing;
 
 namespace LnLSupportLibraries
 {
@@ -35,7 +36,7 @@ namespace LnLSupportLibraries
             {
                 if (SelField.IsReference)
                 {
-                    InputControl[x] = new ComboBox() { Name=$"cbb{SelField.FieldDesc}", Parent = BigParent, /*Enabled = !SelField.IsPrimaryField*/ };
+                    InputControl[x] = new ComboBox() { Name=$"cbb{SelField.FieldDesc}", Parent = BigParent, /*Enabled = !SelField.IsPrimaryField*/ BackColor = Color.FromArgb(100,100,100)};
                     foreach (string Item in DataModule.GetValues(0, $"SELECT {SelField.FieldPrime.FieldDesc} FROM {SelField.Source.TableName}"))
                         ((ComboBox)InputControl[x]).Items.Add(Item);
                 }
@@ -49,7 +50,7 @@ namespace LnLSupportLibraries
                         case DataTypes.Date:
                         case DataTypes.Number:
                         {
-                            InputControl[x] = new TextBox() { Name = $"edt{SelField.FieldDesc}", Parent = BigParent,/* Enabled = !SelField.IsPrimaryField*/ };
+                            InputControl[x] = new TextBox() { Name = $"edt{SelField.FieldDesc}", Parent = BigParent,/* Enabled = !SelField.IsPrimaryField*/BackColor = Color.FromArgb(100, 100, 100) };
                             if (SelField.DataType == DataTypes.Number)
                                 ((TextBox)InputControl[x]).TextChanged += new EventHandler(NumberOnly);
                         }
@@ -163,7 +164,7 @@ namespace LnLSupportLibraries
         }
         public static string ConfQoutes(Field Col, string Value)
         { //Adds Qoutes if required
-            if (Col.DataType == DataTypes.Number)
+            if (Col.DataType == DataTypes.Number || Col.DataType == DataTypes.Boolean)
                 return Value;
             else
                 return $"'{Value}'";

@@ -1,7 +1,8 @@
-﻿using System;
+﻿//Manuel A Nunes 34551875 - 2021-09-02
+using System;
 using System.Windows.Forms;
 using Serializing;
-//Manuel A Nunes 34551875 - 2021-09-02
+
 namespace LnLBackEndSystem
 {
     public partial class frmConsoleSettings : Form
@@ -21,8 +22,7 @@ namespace LnLBackEndSystem
         public static string SettingsPath = "Settings.bin";
         public void ReadBinFile()
         {//Function To read Bin File and update components
-            object temp;
-            if (!Serializer.DeserializeFromBin(SettingsPath, out temp))
+            if (!Serializer.DeserializeFromBin(SettingsPath, out object temp))
                 return;
             Compdata CompTemp = (Compdata)temp;
             CompTemp.LoadToComps(ref chkClearOnLoad, ref chkClearSQLAfterExecution, ref chkClearAfterSuccessOnly);

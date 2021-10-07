@@ -128,12 +128,6 @@
     <Compile Include="Admin_form.Designer.cs">
       <DependentUpon>Admin_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_signup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin_signup.Designer.cs">
-      <DependentUpon>Admin_signup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Booking_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +145,18 @@
     </Compile>
     <Compile Include="Forgot_password.Designer.cs">
       <DependentUpon>Forgot_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBarpersonLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBarpersonLogin.Designer.cs">
+      <DependentUpon>frmBarpersonLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCEO.Designer.cs">
+      <DependentUpon>frmCEO.cs</DependentUpon>
     </Compile>
     <Compile Include="frmImageManager.cs">
       <SubType>Form</SubType>
@@ -175,6 +181,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPayConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayConfirm.Designer.cs">
+      <DependentUpon>frmPayConfirm.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRequestStock.cs">
       <SubType>Form</SubType>
@@ -218,18 +230,6 @@
     <Compile Include="frmDataManagement.Designer.cs">
       <DependentUpon>frmDataManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Guest_form.Designer.cs">
-      <DependentUpon>Guest_form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Guest_order.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Guest_order.Designer.cs">
-      <DependentUpon>Guest_order.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Secratary_Booking_Management.cs">
@@ -262,12 +262,6 @@
     <Compile Include="Secretary_update.Designer.cs">
       <DependentUpon>Secretary_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="tabPurchase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tabPurchase.Designer.cs">
-      <DependentUpon>tabPurchase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tab_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,9 +292,6 @@
     <EmbeddedResource Include="Admin_form.resx">
       <DependentUpon>Admin_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_signup.resx">
-      <DependentUpon>Admin_signup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Booking_Management.resx">
       <DependentUpon>Booking_Management.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +300,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forgot_password.resx">
       <DependentUpon>Forgot_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBarpersonLogin.resx">
+      <DependentUpon>frmBarpersonLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCEO.resx">
+      <DependentUpon>frmCEO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmImageManager.resx">
       <DependentUpon>frmImageManager.cs</DependentUpon>
@@ -321,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayConfirm.resx">
+      <DependentUpon>frmPayConfirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRequestStock.resx">
       <DependentUpon>frmRequestStock.cs</DependentUpon>
@@ -342,12 +342,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDataManagement.resx">
       <DependentUpon>frmDataManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Guest_form.resx">
-      <DependentUpon>Guest_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Guest_order.resx">
-      <DependentUpon>Guest_order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -373,9 +367,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secretary_update.resx">
       <DependentUpon>Secretary_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tabPurchase.resx">
-      <DependentUpon>tabPurchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tab_login.resx">
       <DependentUpon>Tab_login.cs</DependentUpon>
@@ -407,8 +398,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

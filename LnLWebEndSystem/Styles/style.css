@@ -179,3 +179,9 @@
     .reg-form .inputTextnputText::-moz-placeholder {
         color: #aaa;
     }
+
+    chkRememberMe {
+        width: 2rem;
+        height: 2rem;
+        padding-right: 1rem;
+    }

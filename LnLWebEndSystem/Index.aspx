@@ -26,8 +26,7 @@
 			<nav class="main-nav">
 				<ul class="main-nav-list">
 					<li><a href="login.aspx" class="main-nav-link">Login</a></li>
-					<li><a href="#" class="main-nav-link">Book</a></li>
-					<li><a href="#" class="main-nav-link">Help</a></li>
+					<li><a href="Bookings.aspx" class="main-nav-link">Book</a></li>
 				</ul>
 			</nav>
 		</header>

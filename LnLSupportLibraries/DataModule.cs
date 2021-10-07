@@ -82,6 +82,15 @@ namespace NSDataModule
                 return $"{arrField[ColumnNumber]} {arrType[ColumnNumber]}";
             return "";
         }
+        public static string[][] GetNamesAndColumTypes(string tableName)
+        {
+            string[] arrType = GetValues<string>(1, $"SHOW COLUMNS FROM {tableName}");
+            string[] arrField = GetValues<string>(0, $"SHOW COLUMNS FROM {tableName}");
+            string[][] Outs = new string[arrType.Length][];
+            for (int x = 0; x < arrType.Length; x++)
+                Outs[x] = new string[] {arrField[x],arrType[x] };
+            return Outs;
+        }
         /// <summary>
         /// Gets the datatype of given column number in table
         /// </summary>
@@ -138,6 +147,26 @@ namespace NSDataModule
         /// <param name="Colum">The column/field number starting at 0</param>
         /// <param name="SQL">The sql to be executed if SQL is left empty the function assumes that the SQL has already be set</param>
         /// <returns>Returns the value of selected datatype</returns>
+        public static string GetValue(int Colum, string SQL = "")
+        {
+            string Outs = default;
+            if (OpenConnection())
+            {
+                if (SQL != "")
+                    Com = new MySqlCommand(SQL, Con);
+                else if (Com.CommandText == "")
+                    return Outs;
+                Reader = Com.ExecuteReader();
+                Reader.Read();
+                if (Colum < Reader.FieldCount)
+                    if (Reader.HasRows)
+                        Outs = Reader.GetValue(Colum).ToString();
+                    else
+                        Outs = "";
+            }
+            Reader.Close();
+            return Outs;
+        }
         public static T GetValue<T>(int Colum, string SQL = "")
         {
             T Outs = default;

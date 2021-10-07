@@ -1,4 +1,4 @@
-﻿//Madelein Tolmay 33784507
+﻿//Madelein Tolmay 33784507 Manuel A Nunes 34551875
 using System;
 using System.Windows.Forms;
 using NSDataModule;
@@ -28,8 +28,7 @@ namespace LnLBackEndSystem
         private void btnInsert_Click(object sender, EventArgs e)
         {
             //Manuel A Nunes 34551875 Adjusted the SQL to work
-            string sql = "";
-            sql = $"INSERT INTO tblStaff (Name,Surname,CellNumber,HasLicense,IsFullTimeMember,RankID,EncryptedPassword) " +
+            string sql = $"INSERT INTO tblStaff (Name,Surname,CellNumber,HasLicense,IsFullTimeMember,RankID,EncryptedPassword) " +
                 $"VALUES('{txtName.Text}','{txtSurname.Text}','{txtCellphone.Text}',{Utilities.BoolToBit(cbLicence.Checked)}," +
                 $"{Utilities.BoolToBit(cbFulltime.Checked)},{TempID[cbRank.SelectedIndex]},'{Cypher.Encrypt( txtPassword.Text)}');";
             //if (cbFulltime.Checked && cbLicence.Checked)
@@ -41,10 +40,13 @@ namespace LnLBackEndSystem
             //else
             //    sql = "INSERT INTO tblStaff VALUES('" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtCellphone.Text + "', '" + 0 + "', '" + 0 + cbRank.SelectedIndex + 1 + "', '" + "')";
             int sucessful = DataModule.ExecuteSQL(sql);
+            DataGridView Temp = ((Secretary_form)creator).dbView;
+            DataModule.LoadTable(ref Temp, "SELECT * FROM tblStaff");
             if (sucessful == 1)
                 MessageBox.Show("Added sucessfully");
             else
                 MessageBox.Show("Error was encountered");
+
         }
         private string[] TempID;
         private void Secretary_insert_Load(object sender, EventArgs e)
@@ -56,6 +58,11 @@ namespace LnLBackEndSystem
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbRank_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

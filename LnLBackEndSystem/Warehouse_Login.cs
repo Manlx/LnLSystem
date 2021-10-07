@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Brendan 32737742
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace LnLBackEndSystem
 {
     public partial class Warehouse_Login : Form
     {
-        public static Form warehouse;
+        public static Form Creator;
         public Warehouse_Login()
         {
             InitializeComponent();
@@ -21,9 +22,6 @@ namespace LnLBackEndSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.dgViewWarehouse.DefaultCellStyle.ForeColor = Color.Blue;
-            this.dgViewWarehouse.DefaultCellStyle.BackColor = Color.Beige;
-
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
             //DataModule.LoadTable(ref dgViewWarehouse, "SELECT CountInWareHouse-CountInBar FROM tblStock WHERE CountInBar<20");
 
@@ -39,9 +37,6 @@ namespace LnLBackEndSystem
             else
                 MessageBox.Show("Error was encountered");
 
-            this.dgViewWarehouse.DefaultCellStyle.ForeColor = Color.Blue;
-            this.dgViewWarehouse.DefaultCellStyle.BackColor = Color.Beige;
-
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
 
         }
@@ -55,9 +50,6 @@ namespace LnLBackEndSystem
             else
                 MessageBox.Show("Error was encountered");
 
-            this.dgViewWarehouse.DefaultCellStyle.ForeColor = Color.Blue;
-            this.dgViewWarehouse.DefaultCellStyle.BackColor = Color.Beige;
-
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
         }
 
@@ -68,7 +60,7 @@ namespace LnLBackEndSystem
 
         private void Warehouse_Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            warehouse.Show();
+            Creator.Show();
         }
     }
 }

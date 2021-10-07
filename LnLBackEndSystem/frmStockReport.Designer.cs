@@ -30,6 +30,9 @@ namespace LnLBackEndSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
@@ -84,10 +87,10 @@ namespace LnLBackEndSystem
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 31);
+            this.label1.Size = new System.Drawing.Size(174, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Stock Report";
             // 
@@ -115,14 +118,36 @@ namespace LnLBackEndSystem
             this.dgvStockReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvStockReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStockReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStockReport.EnableHeadersVisualStyles = false;
             this.dgvStockReport.Location = new System.Drawing.Point(0, 50);
             this.dgvStockReport.Name = "dgvStockReport";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.dgvStockReport.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvStockReport.Size = new System.Drawing.Size(868, 655);
             this.dgvStockReport.TabIndex = 3;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.btnClearSearch);
             this.panel2.Controls.Add(this.panel6);
@@ -136,6 +161,7 @@ namespace LnLBackEndSystem
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(863, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(307, 707);
@@ -143,12 +169,15 @@ namespace LnLBackEndSystem
             // 
             // btnClearSearch
             // 
+            this.btnClearSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnClearSearch.FlatAppearance.BorderSize = 0;
+            this.btnClearSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearSearch.Location = new System.Drawing.Point(168, 241);
             this.btnClearSearch.Name = "btnClearSearch";
             this.btnClearSearch.Size = new System.Drawing.Size(75, 23);
             this.btnClearSearch.TabIndex = 2;
             this.btnClearSearch.Text = "Clear search";
-            this.btnClearSearch.UseVisualStyleBackColor = true;
+            this.btnClearSearch.UseVisualStyleBackColor = false;
             this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
             // panel6
@@ -175,22 +204,29 @@ namespace LnLBackEndSystem
             // 
             // btnClear
             // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Location = new System.Drawing.Point(166, 9);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnOrderBy
             // 
+            this.btnOrderBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnOrderBy.FlatAppearance.BorderSize = 0;
+            this.btnOrderBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderBy.Location = new System.Drawing.Point(70, 9);
             this.btnOrderBy.Name = "btnOrderBy";
             this.btnOrderBy.Size = new System.Drawing.Size(75, 23);
             this.btnOrderBy.TabIndex = 0;
             this.btnOrderBy.Text = "OK";
-            this.btnOrderBy.UseVisualStyleBackColor = true;
+            this.btnOrderBy.UseVisualStyleBackColor = false;
             this.btnOrderBy.Click += new System.EventHandler(this.btnOrderBy_Click);
             // 
             // gbAscDesc
@@ -228,6 +264,7 @@ namespace LnLBackEndSystem
             // 
             // gbOrderBy
             // 
+            this.gbOrderBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gbOrderBy.Controls.Add(this.radioButton1);
             this.gbOrderBy.Controls.Add(this.rbCountInBar);
             this.gbOrderBy.Controls.Add(this.rbProfitMargin);
@@ -346,6 +383,9 @@ namespace LnLBackEndSystem
             // 
             // txtCountINWareHouse
             // 
+            this.txtCountINWareHouse.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCountINWareHouse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCountINWareHouse.ForeColor = System.Drawing.Color.White;
             this.txtCountINWareHouse.Location = new System.Drawing.Point(191, 319);
             this.txtCountINWareHouse.Name = "txtCountINWareHouse";
             this.txtCountINWareHouse.Size = new System.Drawing.Size(100, 20);
@@ -363,6 +403,9 @@ namespace LnLBackEndSystem
             // 
             // txtCountInBar
             // 
+            this.txtCountInBar.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCountInBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCountInBar.ForeColor = System.Drawing.Color.White;
             this.txtCountInBar.Location = new System.Drawing.Point(191, 279);
             this.txtCountInBar.Name = "txtCountInBar";
             this.txtCountInBar.Size = new System.Drawing.Size(100, 20);
@@ -380,16 +423,22 @@ namespace LnLBackEndSystem
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(72, 241);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
+            this.txtSearch.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
             this.txtSearch.Location = new System.Drawing.Point(59, 215);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(234, 20);
@@ -406,6 +455,7 @@ namespace LnLBackEndSystem
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lblDate);
@@ -440,6 +490,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvStockReport);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmStockReport";
             this.Text = "Stock Report";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStockReport_FormClosed);

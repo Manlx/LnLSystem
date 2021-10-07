@@ -49,9 +49,12 @@
 							</div>	
 							
 						    <asp:Button class="btn btn--form" runat="server" ID="btnLogin" Text="Login" OnClick="btnLogin_Click"/>
-								
-						        <asp:CheckBox ID="chkRememberMe" runat="server" />
-								<label for="chkRememberMe">Remember me </label>
+							
+							<div>
+								<asp:CheckBox style="width: 2rem; height: 2rem;" ID="chkRememberMe" runat="server" />
+								<label style="display: inline-block; padding-left: 1rem;" for="chkRememberMe">Remember me </label>
+							</div>
+						        
 
 						</form>
 					</div>

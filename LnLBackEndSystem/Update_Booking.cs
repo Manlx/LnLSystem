@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//M Tolmay 33784507
+using System;
 using System.Windows.Forms;
 using NSDataModule;
 
@@ -37,8 +31,6 @@ namespace LnLBackEndSystem
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             int Location = 0;
-            string sql = "";
-
             if (cbBar.Checked && cbKitchen.Checked && cbSwimmingPool.Checked && cbMusic.Checked)
                 Location = 1;
             if (cbOutdoors.Checked && cbBar.Checked && cbLake.Checked && cbSwimmingPool.Checked)
@@ -55,8 +47,8 @@ namespace LnLBackEndSystem
                 Location = 7;
             if (cbOutdoors.Checked && cbBar.Checked)
                 Location = 8;
-               
-            sql = "UPDATE tblEvent SET DateOfBooking = '" + monthCalendar1.SelectionRange.Start.ToShortDateString() + "' , TimeOfBooking = '" + txtTime.Text + "' , LocationID = '" + Location + "' , EventType = '" + cbType.SelectedIndex + 1 + "'";
+
+            string sql = "UPDATE tblEvent SET DateOfBooking = '" + monthCalendar1.SelectionRange.Start.ToShortDateString() + "' , TimeOfBooking = '" + txtTime.Text + "' , LocationID = '" + Location + "' , EventType = '" + cbType.SelectedIndex + 1 + "'";
             int sucessful = DataModule.ExecuteSQL(sql);
             if (sucessful == 1)
                 MessageBox.Show("Updated sucessfully");

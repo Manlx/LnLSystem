@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//M Tolmay 33784507
+using System;
 using System.Windows.Forms;
 
 
@@ -14,19 +8,18 @@ namespace LnLBackEndSystem
 {
     public partial class Admin_form : Form
     {
-        public static Form admin;
+        public static Form Creator;
         public Admin_form()
         {
             InitializeComponent();
         }
 
-        private void btnSignup_Click(object sender, EventArgs e)
-        {
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
+            frmDataManagement.Creator = this;
+            frmDataManagement DataBaseManagement = new frmDataManagement();
+            DataBaseManagement.Show();
+            this.Hide();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -36,17 +29,30 @@ namespace LnLBackEndSystem
 
         private void Admin_form_FormClosing(object sender, FormClosingEventArgs e)
         {
-            admin.Show();
+            Creator.Show();
         }
-
-        private void Admin_form_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnReports_Click(object sender, EventArgs e)
         {
+            Accountant_Login.Creator = this;
+            Accountant_Login AccountantLogin = new Accountant_Login();
+            AccountantLogin.Show();
+            this.Hide();
+        }
 
+        private void btnSQLConsole_Click(object sender, EventArgs e)
+        {
+            frmSQLConsole.frmOwner = this;
+            frmSQLConsole Console = new frmSQLConsole();
+            this.Hide();
+            Console.Show();
+        }
+
+        private void btnImgManager_Click(object sender, EventArgs e)
+        {
+            frmImageManager.Creator = this;
+            frmImageManager imgMan = new frmImageManager();
+            imgMan.Show();
+            this.Hide();
         }
     }
 }

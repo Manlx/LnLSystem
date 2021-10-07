@@ -50,16 +50,21 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(175, 524);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(183, 524);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 34;
             this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // cbType
             // 
+            this.cbType.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cbType.ForeColor = System.Drawing.Color.White;
             this.cbType.FormattingEnabled = true;
             this.cbType.Location = new System.Drawing.Point(58, 253);
             this.cbType.Name = "cbType";
@@ -74,6 +79,9 @@ namespace LnLBackEndSystem
             // 
             // txtTime
             // 
+            this.txtTime.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTime.ForeColor = System.Drawing.Color.White;
             this.txtTime.Location = new System.Drawing.Point(58, 227);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(100, 20);
@@ -198,19 +206,23 @@ namespace LnLBackEndSystem
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(58, 467);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(139, 51);
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "Update booking";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // Update_Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(270, 557);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbType);
@@ -229,6 +241,7 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblHeadings);
             this.Controls.Add(this.btnUpdate);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Update_Booking";
             this.Text = "Update_Booking";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Update_Booking_FormClosing);

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//M Tolmay 33784507
+using System;
 using System.Windows.Forms;
 using NSDataModule;
+using CypherLib;
 
 namespace LnLBackEndSystem
 {
@@ -37,14 +32,17 @@ namespace LnLBackEndSystem
             password.Show();
         }
 
-        private void cbRank_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnReset_Click(object sender, EventArgs e)
         {
+            string sql;
 
+            if (txtPass.Text == txtConfirm_pass.Text)
+            {
+                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , RankID='" + cbRank.SelectedIndex + "', EncryptedPassword'" + Cypher.Encrypt(txtPass.Text) + "'";
+                DataModule.ExecuteSQL(sql);
+            }
+            else
+                MessageBox.Show("Passwords do not match");
         }
     }
 }

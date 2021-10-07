@@ -49,23 +49,30 @@ namespace LnLBackEndSystem
             // 
             // btnInsert
             // 
+            this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnInsert.FlatAppearance.BorderSize = 0;
+            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.Location = new System.Drawing.Point(74, 250);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(141, 45);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "Insert Record";
-            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnBack.Location = new System.Drawing.Point(211, 318);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(79, 22);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblName
@@ -80,7 +87,7 @@ namespace LnLBackEndSystem
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(18, 72);
+            this.lblSurname.Location = new System.Drawing.Point(18, 74);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(52, 13);
             this.lblSurname.TabIndex = 3;
@@ -89,7 +96,7 @@ namespace LnLBackEndSystem
             // lblCellNumber
             // 
             this.lblCellNumber.AutoSize = true;
-            this.lblCellNumber.Location = new System.Drawing.Point(18, 99);
+            this.lblCellNumber.Location = new System.Drawing.Point(18, 101);
             this.lblCellNumber.Name = "lblCellNumber";
             this.lblCellNumber.Size = new System.Drawing.Size(97, 13);
             this.lblCellNumber.TabIndex = 4;
@@ -125,13 +132,17 @@ namespace LnLBackEndSystem
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(144, 44);
+            this.txtName.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Location = new System.Drawing.Point(144, 41);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 8;
             // 
             // txtSurname
             // 
+            this.txtSurname.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSurname.Location = new System.Drawing.Point(144, 69);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(100, 20);
@@ -139,7 +150,9 @@ namespace LnLBackEndSystem
             // 
             // txtCellphone
             // 
-            this.txtCellphone.Location = new System.Drawing.Point(144, 96);
+            this.txtCellphone.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCellphone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCellphone.Location = new System.Drawing.Point(144, 97);
             this.txtCellphone.Name = "txtCellphone";
             this.txtCellphone.Size = new System.Drawing.Size(100, 20);
             this.txtCellphone.TabIndex = 10;
@@ -157,7 +170,7 @@ namespace LnLBackEndSystem
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(18, 126);
+            this.lblPassword.Location = new System.Drawing.Point(18, 128);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(56, 13);
             this.lblPassword.TabIndex = 12;
@@ -165,8 +178,11 @@ namespace LnLBackEndSystem
             // 
             // txtPassword
             // 
+            this.txtPassword.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Location = new System.Drawing.Point(144, 126);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 13;
             // 
@@ -182,16 +198,19 @@ namespace LnLBackEndSystem
             // 
             // cbRank
             // 
+            this.cbRank.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.cbRank.FormattingEnabled = true;
             this.cbRank.Location = new System.Drawing.Point(144, 155);
             this.cbRank.Name = "cbRank";
             this.cbRank.Size = new System.Drawing.Size(100, 21);
             this.cbRank.TabIndex = 15;
+            this.cbRank.SelectedIndexChanged += new System.EventHandler(this.cbRank_SelectedIndexChanged);
             // 
             // Secretary_insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(302, 352);
             this.Controls.Add(this.cbRank);
             this.Controls.Add(this.lblRank);
@@ -209,7 +228,10 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnInsert);
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Secretary_insert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secretary_insert";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_insert_FormClosing);
             this.Load += new System.EventHandler(this.Secretary_insert_Load);

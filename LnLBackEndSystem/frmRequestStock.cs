@@ -1,13 +1,7 @@
-﻿using System;
+﻿//Carla Pretorius 36184950
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using LnLSupportLibraries;
 using NSDataModule;
 using System.IO;
 
@@ -25,8 +19,7 @@ namespace LnLBackEndSystem
         {
 
             bool bValid = true;
-            int quantity;
-            if (!(int.TryParse(txtQuantity.Text, out quantity)))
+            if (!(int.TryParse(txtQuantity.Text, out int quantity)))
             {
                 errorQuantity.SetError(txtQuantity, "Quantity must be an integer.");
                 bValid = false;
@@ -35,10 +28,7 @@ namespace LnLBackEndSystem
             if (bValid)
             {
                 //lstStockRequest.Items.Add($"{stockName} x {quantity}");
-                List<string> temp = new List<string>();
-                temp.Add(stockName);
-                temp.Add(quantity.ToString());
-
+                List<string> temp = new List<string>() { stockName, quantity.ToString()};
                 bool notFound = true;
                 int x = 0;
                 while (notFound && x < DataToSave.Count)
@@ -63,7 +53,6 @@ namespace LnLBackEndSystem
         }
         public void SaveToTextFile()
         {
-            DateTime now = DateTime.Now;
             string fileName = "Stock report_" + DateTime.Now.ToString("MM-dd-yyyy HH-mm") + ".csv";
             try
             {

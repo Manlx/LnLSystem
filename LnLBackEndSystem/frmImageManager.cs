@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿//Manuel A Nunes 34551875 2021-10-03
+using System;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using NSDataModule;
 namespace LnLBackEndSystem
 {
     public partial class frmImageManager : Form
     {
-        string FilePath;
         string SelectedRow;
         static public Form Creator;
         public frmImageManager()
@@ -32,7 +26,7 @@ namespace LnLBackEndSystem
         {
             Creator.Show();
         }
-        private void CheckFilePath()
+        public static void CheckFilePath()
         {
             if (!Directory.Exists(Directory.GetCurrentDirectory()+"\\Images"))
                 Directory.CreateDirectory(Directory.GetCurrentDirectory()+"\\Images");
@@ -40,13 +34,11 @@ namespace LnLBackEndSystem
 
         private void btnLoadFromFile_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ImageOFD = new OpenFileDialog();
-            ImageOFD.Filter = "png (*.png)|*.png";
+            OpenFileDialog ImageOFD = new OpenFileDialog() { Filter = "png (*.png)|*.png" };
             ImageOFD.ShowDialog();
             if (File.Exists(ImageOFD.FileName))
             {
-                FilePath = ImageOFD.FileName;
-                img.Image = Image.FromFile(ImageOFD.FileName);
+                imgPreview.Image = Image.FromFile(ImageOFD.FileName);
                 string FilePathOut = $"Images\\{SelectedRow}.png";
                 
                 if (File.Exists(FilePathOut))
@@ -57,8 +49,10 @@ namespace LnLBackEndSystem
                     if (MessageBox.Show("Overwrite file", "Overwrite?", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         imgExsistingImage.Image.Dispose();
-                        File.Delete(FilePathOut);
                         imgExsistingImage.Image = null;
+                        imgPreview.Image.Dispose();
+                        imgPreview.Image = null;
+                        File.Delete(FilePathOut);
                     }
                         
                     else
@@ -67,12 +61,11 @@ namespace LnLBackEndSystem
                         return;
                     }
                 }
-                else
                     File.Copy(ImageOFD.FileName, FilePathOut);
                 dgvInfo_SelectionChanged(dgvInfo, new EventArgs());
                 MessageBox.Show("Success");
             }
-            img.Image = null;
+            imgPreview.Image = null;
         }
 
         private void dgvInfo_SelectionChanged(object sender, EventArgs e)
@@ -83,7 +76,11 @@ namespace LnLBackEndSystem
                     {
                         SelectedRow = dgvInfo.SelectedRows[0].Cells[0].Value.ToString();
                         if (File.Exists($"Images\\{SelectedRow}.png"))
+                        {
+                            if (imgExsistingImage.Image != null)
+                                imgExsistingImage.Image.Dispose();
                             imgExsistingImage.Image = Image.FromFile($"Images\\{SelectedRow}.png");
+                        }
                         else
                         {
                             if (imgExsistingImage.Image != null)
@@ -91,16 +88,6 @@ namespace LnLBackEndSystem
                             imgExsistingImage.Image = null;
                         }
                     }
-        }
-
-        private void img_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

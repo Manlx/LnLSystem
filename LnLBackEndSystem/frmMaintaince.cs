@@ -1,4 +1,4 @@
-﻿//Manuel A Nunes 34551875
+﻿//Manuel A Nunes 34551875 2021-09-15
 using System;
 using System.Windows.Forms;
 using NSDataModule;
@@ -8,6 +8,7 @@ namespace LnLBackEndSystem
 {
     public partial class frmMaintainces : Form
     {
+        private string WHERE, SORT;
         public Table[] Tables;
         public Table ActiveTable;
         public static Form Creator;
@@ -18,26 +19,42 @@ namespace LnLBackEndSystem
         }
         public static string TableName;
         public static CompsUtilities MyUpdateComps,MyInsertComps;
-        private void frmBank_Load(object sender, EventArgs e)
-        {
-            this.Width = Creator.ClientRectangle.Width - 10;
-            this.Height = ((frmDataManagement)Creator).cbbTable.Top - 10;
-            this.Top = 5;
-            this.Left = 5;
 
-            dgvTableData.Width = ClientRectangle.Width - 10;
-            tbcMain.Width = ClientRectangle.Width - 10;
-            dgvTableData.Left = 5;
-            tbcMain.Left = 5;
+        private string[][] FieldAndCols;
+        private DataTypes[] FieldTypes;
 
-            btnDelete.Left = (btnDelete.Parent.Width - btnDelete.Width) / 2;
-            btnInsert.Left = (btnInsert.Parent.Width - btnInsert.Width) / 2;
-            btnUpdate.Left = (btnUpdate.Parent.Width - btnUpdate.Width) / 2;
+        public void FillTable()
+        {// This code is this way to prevent the date time error
+            FieldAndCols = DataModule.GetNamesAndColumTypes(TableName);
+            FieldTypes = new DataTypes[FieldAndCols.Length];
+            for (int x = 0; x < FieldAndCols.Length; x++)
+                FieldTypes[x] = Utilities.StringToDT(FieldAndCols[x][1]);
 
+            string SQL = "SELECT ";
+            for (int x = 0; x < FieldTypes.Length; x++)
+                switch (FieldTypes[x])
+                {
+                    case DataTypes.Date:
+                        SQL += $" DATE_FORMAT({FieldAndCols[x][0]},'%Y-%m-%d') AS {FieldAndCols[x][0]}, ";
+                        break;
+                    default:
+                        SQL += $" {FieldAndCols[x][0]},";
+                        break;
+                }
 
-            DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
+            SQL = $"{SQL.Remove(SQL.Length - 1, 1)} FROM {TableName} {WHERE} {SORT}";
+            Clipboard.SetText(SQL);
+            DataModule.LoadTable(ref dgvTableData, SQL);
             dgvTableData.AutoResizeColumns();
             dgvTableData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+        private void frmBank_Load(object sender, EventArgs e)
+        {
+            WHERE = "";
+            SORT = "";
+            this.Width = Creator.ClientRectangle.Width - 5;
+
+            FillTable();
 
             Tables = Utilities.GenerateTables();
             Utilities.UpdateFields(Tables);
@@ -48,6 +65,15 @@ namespace LnLBackEndSystem
 
             MyUpdateComps.CreateComs(ActiveTable, tabUpdate,dgvTableData) ;
             MyInsertComps.CreateComs(ActiveTable, tabInsert ,dgvTableData);
+
+            cbbOrderFields.Items.Clear();
+            cbbSearchField.Items.Clear();
+
+            foreach(string[] Row in FieldAndCols)
+            {
+                cbbOrderFields.Items.Add(Row[0]);
+                cbbSearchField.Items.Add(Row[0]);
+            }
         }
 
         private void dgvTableData_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -69,9 +95,7 @@ namespace LnLBackEndSystem
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            string temp ="";
-            InsertErrorCodes ErrorCatcher;
-            if (MyInsertComps.GenerateInsertSQL(out temp, ActiveTable, out ErrorCatcher))
+            if (MyInsertComps.GenerateInsertSQL(out string temp, ActiveTable, out InsertErrorCodes ErrorCatcher))
                 MessageBox.Show($"{DataModule.ExecuteSQL(temp)} Rows were effected");
             switch(ErrorCatcher)
             {
@@ -85,9 +109,63 @@ namespace LnLBackEndSystem
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
         }
 
+        private void btnResetOrder_Click(object sender, EventArgs e)
+        {
+            cbbOrderFields.SelectedIndex = -1;
+            radAsc.Checked = false;
+            radDesc.Checked = false;
+            SORT = "";
+        }
+
+        private void btnResetSearch_Click(object sender, EventArgs e)
+        {
+            cbbSearchField.SelectedIndex = -1;
+            edtSearchValue.Text = "";
+            WHERE = "";
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            SORT = "";
+            WHERE = "";
+            string OrderField= "ORDER BY ",Order = "";
+            if (cbbOrderFields.SelectedIndex >= 0)
+                OrderField += FieldAndCols[cbbOrderFields.SelectedIndex][0];
+            if (radAsc.Checked)
+                Order = "ASC";
+            else if (radDesc.Checked)
+                Order = "DESC";
+            if (Order.Length > 0 && cbbOrderFields.SelectedIndex >= 0)
+                SORT = $"{OrderField} {Order}";
+
+            string WhereField = "WHERE ", WhereValue;
+            if (cbbSearchField.SelectedIndex >= 0)
+            {
+                WhereField += $" {FieldAndCols[cbbSearchField.SelectedIndex][0]} ";
+                if (!String.IsNullOrEmpty(edtSearchValue.Text))
+                {
+                    switch (FieldTypes[cbbSearchField.SelectedIndex])
+                    {
+                        case DataTypes.Number:
+                            WhereValue = $"= {edtSearchValue.Text}";
+                            break;
+                        default:
+                            WhereValue = $"LIKE '%{edtSearchValue.Text}%'";
+                            break;
+                    }
+                    WHERE = $" {WhereField} {WhereValue}";
+                }
+            }
+            FillTable();
+            if (dgvTableData.SelectedRows.Count != 0)
+                if (dgvTableData.SelectedRows[0].Cells[0].Value != null)
+                    MyUpdateComps.UpdateValue(ActiveTable);
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MessageBox.Show( $"{DataModule.ExecuteSQL(MyUpdateComps.GenerateUpdateSQL(ActiveTable))} Rows were effected");
+            Clipboard.SetText(MyUpdateComps.GenerateUpdateSQL(ActiveTable));
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
         }
     }

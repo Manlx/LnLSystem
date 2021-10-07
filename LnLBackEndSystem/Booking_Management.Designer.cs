@@ -34,36 +34,37 @@ namespace LnLBackEndSystem
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
-            this.cbOutdoors = new System.Windows.Forms.CheckBox();
-            this.cbBar = new System.Windows.Forms.CheckBox();
-            this.cbKitchen = new System.Windows.Forms.CheckBox();
-            this.cbLake = new System.Windows.Forms.CheckBox();
-            this.cbSwimmingPool = new System.Windows.Forms.CheckBox();
-            this.cbMusic = new System.Windows.Forms.CheckBox();
             this.lblFacilities = new System.Windows.Forms.Label();
-            this.cbStage = new System.Windows.Forms.CheckBox();
             this.txtTime = new System.Windows.Forms.TextBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.cldDate = new System.Windows.Forms.MonthCalendar();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.clsRequirements = new System.Windows.Forms.CheckedListBox();
+            this.lstVenues = new System.Windows.Forms.ListBox();
+            this.txtClientID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(72, 475);
+            this.btnAdd.Location = new System.Drawing.Point(24, 666);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(113, 51);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add booking";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblHeadings
             // 
             this.lblHeadings.AutoSize = true;
             this.lblHeadings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeadings.Location = new System.Drawing.Point(21, 19);
+            this.lblHeadings.Location = new System.Drawing.Point(22, 80);
             this.lblHeadings.Name = "lblHeadings";
             this.lblHeadings.Size = new System.Drawing.Size(116, 16);
             this.lblHeadings.TabIndex = 1;
@@ -72,17 +73,16 @@ namespace LnLBackEndSystem
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(26, 45);
+            this.lblDate.Location = new System.Drawing.Point(21, 112);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(103, 13);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Please select a date";
-            this.lblDate.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(22, 238);
+            this.lblTime.Location = new System.Drawing.Point(22, 305);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(33, 13);
             this.lblTime.TabIndex = 3;
@@ -91,145 +91,135 @@ namespace LnLBackEndSystem
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(22, 261);
+            this.lblType.Location = new System.Drawing.Point(22, 328);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(34, 13);
             this.lblType.TabIndex = 4;
             this.lblType.Text = "Type:";
             // 
-            // cbOutdoors
-            // 
-            this.cbOutdoors.AutoSize = true;
-            this.cbOutdoors.Location = new System.Drawing.Point(24, 335);
-            this.cbOutdoors.Name = "cbOutdoors";
-            this.cbOutdoors.Size = new System.Drawing.Size(69, 17);
-            this.cbOutdoors.TabIndex = 5;
-            this.cbOutdoors.Text = "Outdoors";
-            this.cbOutdoors.UseVisualStyleBackColor = true;
-            // 
-            // cbBar
-            // 
-            this.cbBar.AutoSize = true;
-            this.cbBar.Location = new System.Drawing.Point(122, 335);
-            this.cbBar.Name = "cbBar";
-            this.cbBar.Size = new System.Drawing.Size(42, 17);
-            this.cbBar.TabIndex = 6;
-            this.cbBar.Text = "Bar";
-            this.cbBar.UseVisualStyleBackColor = true;
-            // 
-            // cbKitchen
-            // 
-            this.cbKitchen.AutoSize = true;
-            this.cbKitchen.Location = new System.Drawing.Point(24, 367);
-            this.cbKitchen.Name = "cbKitchen";
-            this.cbKitchen.Size = new System.Drawing.Size(62, 17);
-            this.cbKitchen.TabIndex = 7;
-            this.cbKitchen.Text = "Kitchen";
-            this.cbKitchen.UseVisualStyleBackColor = true;
-            // 
-            // cbLake
-            // 
-            this.cbLake.AutoSize = true;
-            this.cbLake.Location = new System.Drawing.Point(122, 367);
-            this.cbLake.Name = "cbLake";
-            this.cbLake.Size = new System.Drawing.Size(50, 17);
-            this.cbLake.TabIndex = 8;
-            this.cbLake.Text = "Lake";
-            this.cbLake.UseVisualStyleBackColor = true;
-            // 
-            // cbSwimmingPool
-            // 
-            this.cbSwimmingPool.AutoSize = true;
-            this.cbSwimmingPool.Location = new System.Drawing.Point(122, 402);
-            this.cbSwimmingPool.Name = "cbSwimmingPool";
-            this.cbSwimmingPool.Size = new System.Drawing.Size(96, 17);
-            this.cbSwimmingPool.TabIndex = 9;
-            this.cbSwimmingPool.Text = "Swimming pool";
-            this.cbSwimmingPool.UseVisualStyleBackColor = true;
-            // 
-            // cbMusic
-            // 
-            this.cbMusic.AutoSize = true;
-            this.cbMusic.Location = new System.Drawing.Point(24, 402);
-            this.cbMusic.Name = "cbMusic";
-            this.cbMusic.Size = new System.Drawing.Size(83, 17);
-            this.cbMusic.TabIndex = 10;
-            this.cbMusic.Text = "Music setup";
-            this.cbMusic.UseVisualStyleBackColor = true;
-            // 
             // lblFacilities
             // 
             this.lblFacilities.AutoSize = true;
             this.lblFacilities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacilities.Location = new System.Drawing.Point(22, 299);
+            this.lblFacilities.Location = new System.Drawing.Point(22, 367);
             this.lblFacilities.Name = "lblFacilities";
             this.lblFacilities.Size = new System.Drawing.Size(71, 16);
             this.lblFacilities.TabIndex = 11;
             this.lblFacilities.Text = "Facilities";
             // 
-            // cbStage
-            // 
-            this.cbStage.AutoSize = true;
-            this.cbStage.Location = new System.Drawing.Point(24, 436);
-            this.cbStage.Name = "cbStage";
-            this.cbStage.Size = new System.Drawing.Size(54, 17);
-            this.cbStage.TabIndex = 12;
-            this.cbStage.Text = "Stage";
-            this.cbStage.UseVisualStyleBackColor = true;
-            // 
             // txtTime
             // 
-            this.txtTime.Location = new System.Drawing.Point(64, 235);
+            this.txtTime.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTime.Location = new System.Drawing.Point(64, 302);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(100, 20);
             this.txtTime.TabIndex = 14;
             // 
-            // monthCalendar1
+            // cldDate
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(24, 67);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 15;
+            this.cldDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.cldDate.ForeColor = System.Drawing.Color.White;
+            this.cldDate.Location = new System.Drawing.Point(18, 128);
+            this.cldDate.Name = "cldDate";
+            this.cldDate.TabIndex = 15;
             // 
             // cbType
             // 
+            this.cbType.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cbType.ForeColor = System.Drawing.Color.White;
             this.cbType.FormattingEnabled = true;
-            this.cbType.Location = new System.Drawing.Point(64, 261);
+            this.cbType.Location = new System.Drawing.Point(64, 328);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(100, 21);
             this.cbType.TabIndex = 16;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(181, 532);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(314, 680);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 17;
             this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // clsRequirements
+            // 
+            this.clsRequirements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.clsRequirements.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.clsRequirements.ForeColor = System.Drawing.Color.White;
+            this.clsRequirements.FormattingEnabled = true;
+            this.clsRequirements.Location = new System.Drawing.Point(24, 386);
+            this.clsRequirements.Name = "clsRequirements";
+            this.clsRequirements.Size = new System.Drawing.Size(227, 122);
+            this.clsRequirements.TabIndex = 18;
+            this.clsRequirements.Click += new System.EventHandler(this.clsRequirements_Click);
+            // 
+            // lstVenues
+            // 
+            this.lstVenues.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lstVenues.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstVenues.ForeColor = System.Drawing.Color.White;
+            this.lstVenues.FormattingEnabled = true;
+            this.lstVenues.Location = new System.Drawing.Point(24, 519);
+            this.lstVenues.Name = "lstVenues";
+            this.lstVenues.Size = new System.Drawing.Size(227, 145);
+            this.lstVenues.TabIndex = 19;
+            // 
+            // txtClientID
+            // 
+            this.txtClientID.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtClientID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtClientID.ForeColor = System.Drawing.Color.White;
+            this.txtClientID.Location = new System.Drawing.Point(99, 42);
+            this.txtClientID.Name = "txtClientID";
+            this.txtClientID.Size = new System.Drawing.Size(100, 20);
+            this.txtClientID.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Client Details";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Client Details";
             // 
             // Booking_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 559);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(401, 723);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtClientID);
+            this.Controls.Add(this.lstVenues);
+            this.Controls.Add(this.clsRequirements);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbType);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.cldDate);
             this.Controls.Add(this.txtTime);
-            this.Controls.Add(this.cbStage);
             this.Controls.Add(this.lblFacilities);
-            this.Controls.Add(this.cbMusic);
-            this.Controls.Add(this.cbSwimmingPool);
-            this.Controls.Add(this.cbLake);
-            this.Controls.Add(this.cbKitchen);
-            this.Controls.Add(this.cbBar);
-            this.Controls.Add(this.cbOutdoors);
             this.Controls.Add(this.lblType);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblHeadings);
             this.Controls.Add(this.btnAdd);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Booking_Management";
             this.Text = "Booking_Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Booking_Management_FormClosing);
@@ -246,17 +236,15 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblType;
-        private System.Windows.Forms.CheckBox cbOutdoors;
-        private System.Windows.Forms.CheckBox cbBar;
-        private System.Windows.Forms.CheckBox cbKitchen;
-        private System.Windows.Forms.CheckBox cbLake;
-        private System.Windows.Forms.CheckBox cbSwimmingPool;
-        private System.Windows.Forms.CheckBox cbMusic;
         private System.Windows.Forms.Label lblFacilities;
-        private System.Windows.Forms.CheckBox cbStage;
         private System.Windows.Forms.TextBox txtTime;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar cldDate;
         private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.CheckedListBox clsRequirements;
+        private System.Windows.Forms.ListBox lstVenues;
+        private System.Windows.Forms.TextBox txtClientID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

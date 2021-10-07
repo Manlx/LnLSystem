@@ -30,6 +30,7 @@ namespace LnLBackEndSystem
         {
             rbASC.Checked = true;
             DataModule.LoadTable(ref dgvStockReport, BuildSQL());
+            lblDate.Text = DateTime.Now.ToString();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -60,9 +61,8 @@ namespace LnLBackEndSystem
             }
             else
             {
-                int iSearch;
                 string where = txtSearch.Text;
-                if (int.TryParse(txtSearch.Text, out iSearch))
+                if (int.TryParse(txtSearch.Text, out int iSearch))
                 {
                     WHERE = $"WHERE (stockID = {where})" +
                     $" OR (CostPrice = {where})" +
@@ -85,7 +85,7 @@ namespace LnLBackEndSystem
                 try
                 {
                     int iCountInBar = int.Parse(txtCountInBar.Text);
-                    WHERE = $"WHERE CountInBar < {iCountInBar.ToString()}";
+                    WHERE = $"WHERE CountInBar < {iCountInBar}";
                     DataModule.LoadTable(ref dgvStockReport, BuildSQL());
                 }
                 catch
@@ -102,7 +102,7 @@ namespace LnLBackEndSystem
                 try
                 {
                     int iCountInWarehouse = int.Parse(txtCountINWareHouse.Text);
-                    WHERE =  $"WHERE CountInWarehouse < {iCountInWarehouse.ToString()}";
+                    WHERE =  $"WHERE CountInWarehouse < {iCountInWarehouse}";
                     DataModule.LoadTable(ref dgvStockReport, BuildSQL());
                 }
                 catch
@@ -127,7 +127,7 @@ namespace LnLBackEndSystem
             Creator.Show();
         }
 
-        private void clearTextBoxes()
+        public void clearTextBoxes()
         {
             txtSearch.Clear();
             txtCountINWareHouse.Clear();
