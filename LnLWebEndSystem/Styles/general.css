@@ -1,0 +1,100 @@
+﻿/********************/
+/*******GENERAL*******/
+/********************/
+
+.container {
+    max-width: 1600px;
+    /* padding: 0 32px; */
+    padding: 75px 250px;
+    margin: 0 auto;
+    border: solid 9px #f0dcbf;
+}
+
+.reg-container {
+    max-width: 1400px;
+    /* padding: 0 32px; */
+    /* padding: 5px; */
+    margin: 0 auto;
+    /* height: 46rem; */
+}
+
+.grid {
+    display: grid;
+    column-gap: 200px;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9cda4;
+}
+
+html {
+    font-family: "Rubik", sans-serif;
+    color: #444;
+}
+
+.header-secondary {
+    margin-top: 50px;
+}
+
+.section-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 32px;
+    line-height: 1.05;
+}
+
+p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #3aa7f0;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn--form {
+    background-color: #113248;
+    color: #f3e3cc;
+    padding: 24px 32px;
+}
+
+h2 {
+    font-size: 44px;
+    margin-bottom: 48px;
+    background-color: transparent;
+}
+
+section {
+    padding: 96px 0;
+}
