@@ -1,0 +1,187 @@
+﻿/********************/
+/*******HEADER*******/
+/********************/
+
+.header {
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    /* background-color: #cfb691; */
+}
+
+.logo {
+    width: 400px;
+    height: 100px;
+}
+
+.header-container {
+    width: 1200px;
+    position: absolute;
+    /* In relation to PARENT size */
+    left: 60%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    /* background-color: violet; */
+}
+
+.header-container-inner {
+    width: 50%;
+    padding: 10% 0;
+    margin: 0 5%;
+    background-color: transparent;
+    /* background-color: blue; */
+}
+
+/********************/
+/*****NAVIGATION*****/
+/********************/
+
+.main-nav-list {
+    list-style: none;
+    display: flex;
+    column-gap: 32px;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+    color: #3aa7f0;
+}
+
+/********************/
+/********HERO********/
+/********************/
+
+.hero {
+    /* background-color: orangered; */
+    height: 90vh;
+    width: 90vw;
+    padding: 0 96px;
+    margin: 20px auto;
+    position: relative;
+    background-image: linear-gradient( rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6) ), url('images/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+/********************/
+/****SECTION FOOD****/
+/********************/
+
+.section-food {
+    padding: 96px 0;
+    /* background-color: #cfb691; */
+}
+
+.food-img {
+    width: 110%;
+    height: 100%;
+}
+
+.food-grid {
+    background-color: #cfb691;
+}
+
+/********************/
+/**SECTION LOCATION**/
+/********************/
+
+.section-location {
+    padding: 96px 0;
+}
+
+.location-img {
+    width: 100%;
+}
+
+.location-grid {
+    background-color: #cfb691;
+}
+
+/********************/
+/****REGISTRATION****/
+/********************/
+
+.cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #3aa7f0;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+    background-image: linear-gradient(to right bottom, #3aa7f0, #61b9f3);
+    overflow: hidden;
+    color: #113248;
+}
+
+.reg-img {
+    background-image: linear-gradient( to right bottom, rgba(58, 167, 240, 0.35), rgba(97, 185, 243, 0.35) ), url('images/eating.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-img {
+    background-image: linear-gradient( to right bottom, rgba(58, 167, 240, 0.35), rgba(97, 185, 243, 0.35) ), url('images/cocktails.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.reg-text {
+    background-image: linear-gradient(to right bottom, #3aa7f0, #61b9f3);
+    padding: 4.5rem 6rem 6rem 6rem;
+}
+
+.reg-p-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 4.5rem;
+}
+
+.reg-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    grid-row-gap: 2.4rem;
+    background-color: transparent;
+}
+
+    .reg-form label {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+        background-color: inherit;
+    }
+
+    .reg-form .inputText{
+        width: 100%;
+        padding: 1.2rem;
+        font-size: 1.8rem;
+        font-family: inherit;
+        color: inherit;
+        border: none;
+        background-color: #f3e3cc;
+        border-radius: 9px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    }
+
+    .reg-form .inputTextnputText::-moz-placeholder {
+        color: #aaa;
+    }
+
+    chkRememberMe {
+        width: 2rem;
+        height: 2rem;
+        padding-right: 1rem;
+    }
