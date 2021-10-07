@@ -82,6 +82,15 @@ namespace NSDataModule
                 return $"{arrField[ColumnNumber]} {arrType[ColumnNumber]}";
             return "";
         }
+        public static string[][] GetNamesAndColumTypes(string tableName)
+        {
+            string[] arrType = GetValues<string>(1, $"SHOW COLUMNS FROM {tableName}");
+            string[] arrField = GetValues<string>(0, $"SHOW COLUMNS FROM {tableName}");
+            string[][] Outs = new string[arrType.Length][];
+            for (int x = 0; x < arrType.Length; x++)
+                Outs[x] = new string[] {arrField[x],arrType[x] };
+            return Outs;
+        }
         /// <summary>
         /// Gets the datatype of given column number in table
         /// </summary>

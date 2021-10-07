@@ -85,7 +85,7 @@ namespace LnLBackEndSystem
             this.btnPayCash.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnPayCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayCash.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayCash.Location = new System.Drawing.Point(784, 705);
+            this.btnPayCash.Location = new System.Drawing.Point(771, 705);
             this.btnPayCash.Name = "btnPayCash";
             this.btnPayCash.Size = new System.Drawing.Size(265, 192);
             this.btnPayCash.TabIndex = 5;

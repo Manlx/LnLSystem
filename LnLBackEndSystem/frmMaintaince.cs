@@ -20,17 +20,27 @@ namespace LnLBackEndSystem
         public static CompsUtilities MyUpdateComps,MyInsertComps;
         private void frmBank_Load(object sender, EventArgs e)
         {
-            this.Width = Creator.ClientRectangle.Width - 10;
-            this.Height = ((frmDataManagement)Creator).cbbTable.Top - 10;
-            this.Top = 5;
-            this.Left = 5;
+            this.Width = Creator.ClientRectangle.Width - 5;
+            string[][] FieldAndCols = DataModule.GetNamesAndColumTypes(TableName);
+            DataTypes[] FieldTypes = new DataTypes[FieldAndCols.Length];
+            for (int x = 0; x < FieldAndCols.Length;x++)
+                FieldTypes[x] = Utilities.StringToDT(FieldAndCols[x][1]);
 
-            dgvTableData.Width = ClientRectangle.Width - 10;
-            tbcMain.Width = ClientRectangle.Width - 10;
-            dgvTableData.Left = 5;
-            tbcMain.Left = 5;
-
-            DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
+            string SQL = "SELECT ";
+            for (int x = 0; x < FieldTypes.Length; x++)
+                switch (FieldTypes[x])
+                {
+                    case DataTypes.Date:
+                        SQL += $" DATE_FORMAT({FieldAndCols[x][0]},'%Y-%m-%d') AS {FieldAndCols[x][0]}, ";
+                        break;
+                    default:
+                        SQL += $" {FieldAndCols[x][0]},";
+                        break;
+                }
+                
+            SQL = $"{SQL.Remove(SQL.Length - 1, 1)} FROM {TableName}";
+            Clipboard.SetText(SQL);
+            DataModule.LoadTable(ref dgvTableData, SQL);
             dgvTableData.AutoResizeColumns();
             dgvTableData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
@@ -43,10 +53,6 @@ namespace LnLBackEndSystem
 
             MyUpdateComps.CreateComs(ActiveTable, tabUpdate,dgvTableData) ;
             MyInsertComps.CreateComs(ActiveTable, tabInsert ,dgvTableData);
-
-            btnDelete.Left = (btnDelete.Parent.Width - btnDelete.Width) / 2;
-            btnInsert.Left = (btnInsert.Parent.Width - btnInsert.Width) / 2;
-            btnUpdate.Left = (btnUpdate.Parent.Width - btnUpdate.Width) / 2;
         }
 
         private void dgvTableData_RowEnter(object sender, DataGridViewCellEventArgs e)

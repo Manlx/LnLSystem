@@ -49,6 +49,14 @@ namespace StockDisplayAUtils
             lblQuantity = new Label() { Parent = BigParent, AutoSize = true,Text = CountInBar.ToString(),Top = lblPrice.Top + lblPrice.Height + 5 };
             lblQuantity.Left = (BigWidth - lblQuantity.Width) / 2;
         }
+        public void SoftCopy(StockDisplay Other)
+        {
+            this.CostPrice = Other.CostPrice;
+            this.CountInBar = Other.CountInBar;
+            this.ProfitMargin = Other.ProfitMargin;
+            this.StockID = Other.StockID;
+            this.StockName = Other.StockName;
+        }
         public double CalcCost()
         {
             return this.CostPrice * (1 + this.ProfitMargin / 100.0);
@@ -60,6 +68,18 @@ namespace StockDisplayAUtils
         override public int GetHashCode()
         {
             return 1;
+        }
+        public void ResetQauntityLabel()
+        {
+            this.lblQuantity.Text = $"{this.CountInBar}";
+        }
+        public void Dispose()
+        {
+            this.lblName.Dispose();
+            this.lblPrice.Dispose();
+            this.lblQuantity.Dispose();
+            this.StockImg.Dispose();
+            this.BigParent.Dispose();
         }
     }
     public class Cart
@@ -96,6 +116,24 @@ namespace StockDisplayAUtils
                 arrItems[arrItems.Count-1].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
             }    
 
+        }
+        public string[] CreateUpdateCashPurchaseSQL()
+        {
+            List<string> SQLs = new List<string>();
+            for (int x = 0; x < arrItems.Count;x++)
+                SQLs.Add($"UPDATE tblStock SET CountInBar = {arrItems[x].CountInBar - arrCount[x]} WHERE StockID = {arrItems[x].StockID};");
+            return SQLs.ToArray();
+        }
+        public void UpdateQuantityLables()
+        {
+            for (int x = 0; x < arrItems.Count;x++)
+                arrItems[x].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
+        }
+        public void LoadNewItemList(StockDisplay[] Value)
+        {
+            this.arrItems = new List<StockDisplay>();
+            foreach (StockDisplay x in Value)
+                this.arrItems.Add(x);
         }
         public void Decrease(int Index)
         {
@@ -153,6 +191,7 @@ namespace StockDisplayAUtils
                     arrItems[x].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
             }
         }
+       
         public void UpdateListBox(ref ListBox lst)
         {
             lst.Items.Clear();
@@ -165,6 +204,17 @@ namespace StockDisplayAUtils
     }
     public static class Utils
     {
+        static public void MassDispose(StockDisplay[] Value)
+        {
+            foreach (StockDisplay x in Value)
+                x.Dispose();
+        }
+
+        static public void ResetLables(StockDisplay[] Values)
+        {
+            foreach (StockDisplay x in Values)
+                x.ResetQauntityLabel();
+        }
         private static string CheckImage(string Path )
         {
             Path = Directory.GetCurrentDirectory()+@"\Images\" + Path;
@@ -174,10 +224,44 @@ namespace StockDisplayAUtils
                 return Directory.GetCurrentDirectory() + @"\Images\Default.png";
 
         }
+        public static StockDisplay[] FindNewComps(StockDisplay[] All,StockDisplay[] Sample)
+        {
+            StockDisplay[] arrOut = new StockDisplay[Sample.Length];
+            int InUse = 0;
+            foreach(StockDisplay Item in Sample)
+            {
+                int x = 0;
+                bool Looking = true;
+                while (Looking)
+                {
+                    Looking = Item != All[x];
+                    if (Looking)
+                        x++;
+                }
+                arrOut[InUse] = All[x];
+            }
+            return All;
+        }
+        public static StockDisplay[] CompsTakeOver(StockDisplay[] All, List<StockDisplay> Sample)
+        {
+            for (int SampI = 0; SampI < Sample.Count;SampI++ )
+            {
+                int x = 0;
+                bool Looking = true;
+                while (Looking)
+                {
+                    Looking = !Sample[SampI].Equals(All[x]);
+                    if (Looking)
+                        x++;
+                }
+                Sample[SampI] = All[x];
+            }
+            return All;
+        }
         public static StockDisplay[] GenerateStock(Control BigParent,EventHandler OnClick)
         {
             int Offset = (BigParent.Width - StockDisplay.BigWidth*(BigParent.Width/(StockDisplay.BigWidth+5)))/2,Col = 0,Row =0,ColMax = BigParent.Width/(StockDisplay.BigWidth+5);
-            string[][] Table = DataModule.GetValues("SELECT StockID,StockName,CostPrice,ProfitMargin,CountInBar FROM tblStock",new int[] { 0,1,2,3,4});
+            string[][] Table = DataModule.GetValues("SELECT StockID,StockName,CostPrice,ProfitMargin,CountInBar FROM tblStock WHERE CountInBar > 0",new int[] { 0,1,2,3,4});
             StockDisplay[] SDarr = new StockDisplay[Table.Length];
             int x = 0;
             foreach (string[] strRow in Table)

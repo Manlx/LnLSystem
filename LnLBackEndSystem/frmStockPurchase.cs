@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 using StockDisplayAUtils;
+using NSDataModule;
 
 namespace LnLBackEndSystem
 {
@@ -58,7 +59,12 @@ namespace LnLBackEndSystem
                 if (MessageBox.Show("Clear Tab?", "Clear Tab", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     UserCart = new Cart();
                 else
+                {
                     UserCart.UpdateListBox(ref lstOrder);
+                    Utils.CompsTakeOver(SDArr,UserCart.arrItems);
+                    //UserCart.LoadNewItemList(Utils.FindNewComps(SDArr,UserCart.arrItems.ToArray()));
+                    UserCart.UpdateQuantityLables();
+                }
             else
                 UserCart = new Cart();
         }
@@ -89,7 +95,17 @@ namespace LnLBackEndSystem
             MakePayMent.ShowDialog();
             if (frmPayConfirm.isVerified)
             {
+                string[] SQLs = UserCart.CreateUpdateCashPurchaseSQL();
+                int iEffected = 0;
+                foreach (string x in SQLs)
+                    iEffected += DataModule.ExecuteSQL(x);
+                MessageBox.Show($"{iEffected} Item(s) were sold." );
                 //Update Database
+                Utils.MassDispose(SDArr);
+                SDArr = Utils.GenerateStock(pnlStockBox, StockItemClick);
+                UserCart = new Cart();
+                UserCart.UpdateListBox(ref lstOrder);
+                //Utils.ResetLables(SDArr);
             }
         }
     }
