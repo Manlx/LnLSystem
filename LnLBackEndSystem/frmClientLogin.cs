@@ -31,7 +31,7 @@ namespace LnLBackEndSystem
             }
 
             LastClient.LoadFromDB($"{Value}");
-            if (!LastClient.IsValid())
+            if (!LastClient.DoesExist())
             {
                 MessageBox.Show("Failed to Load Client Error 000-000-002");
                 return;

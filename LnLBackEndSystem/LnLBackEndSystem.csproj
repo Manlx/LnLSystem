@@ -322,6 +322,9 @@
     <EmbeddedResource Include="frmClientLogin.resx">
       <DependentUpon>frmClientLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmClientRecoverPass.resx">
+      <DependentUpon>frmClientRecoverPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmImageManager.resx">
       <DependentUpon>frmImageManager.cs</DependentUpon>
     </EmbeddedResource>

@@ -38,7 +38,7 @@ namespace ClientAndUtils
                 throw;
             }
         }
-        public bool IsValid()
+        public bool DoesExist()
         {
             return (ClientID != "") && (Password != "");
         }

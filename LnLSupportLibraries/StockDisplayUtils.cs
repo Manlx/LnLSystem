@@ -118,6 +118,13 @@ namespace StockDisplayAUtils
             }    
 
         }
+        public double CalculateCartCost()
+        {
+            double Out = 0;
+            for (int x = 0; x < arrItems.Count; x++)
+                Out += arrItems[x].CalcCost() * arrCount[x];
+            return Out;
+        }
         public string[] CreateUpdateCashPurchaseSQL()
         {
             List<string> SQLs = new List<string>();
@@ -200,6 +207,7 @@ namespace StockDisplayAUtils
             {
                 Clipboard.SetText($"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
                 string temp = DataModule.GetValue(0, $"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
+                Clipboard.SetText($"INSERT INTO tblCreditSale (TabID,StockID,Count) VALUES ({TabID},{Item.StockID},{arrCount[x]})");
                 if (String.IsNullOrEmpty(temp))
                     Effected += DataModule.ExecuteSQL($"INSERT INTO tblCreditSale (TabID,StockID,Count) VALUES ({TabID},{Item.StockID},{arrCount[x]})");
                 else

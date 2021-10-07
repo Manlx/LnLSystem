@@ -116,9 +116,12 @@ namespace LnLBackEndSystem
             frmClient.ShowDialog();
             if (!frmClientLogin.LastClient.HasTab)
             {
-                MessageBox.Show("This Client does not have a tab.");
+                if (frmClientLogin.LastClient.DoesExist())
+                    MessageBox.Show("This Client does not have a tab.");
                 if (MessageBox.Show("Register for tab", "Register", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     btnRegisterTab_Click(btnRegisterTab, new EventArgs());
+                else
+                    return;
             }
             TabObj ClientTab = new TabObj();
             if (!ClientTab.LoadFromDB(frmClientLogin.LastClient.ClientID))
@@ -127,13 +130,18 @@ namespace LnLBackEndSystem
                 return;
             }
 
+            if (ClientTab.Balance + UserCart.CalculateCartCost() > ClientTab.CutOffValue)
+            {
+                MessageBox.Show("Sorry this tab will exceed its limit please pay tab or pay cash");
+                return;
+            }
             //Update Stock Table
             string[] SQLs = UserCart.CreateUpdateCashPurchaseSQL();
             int iEffected = 0;
             foreach (string x in SQLs)
                 iEffected += DataModule.ExecuteSQL(x);
 
-            MessageBox.Show($"{UserCart.UpdateCreditSale(frmClientLogin.LastClient.ClientID)} Item(s) were sold."); ;
+            MessageBox.Show($"{UserCart.UpdateCreditSale(ClientTab.TabID)} Item(s) were sold."); ;
 
             //ReloadPage
             Utils.MassDispose(SDArr);
@@ -151,7 +159,16 @@ namespace LnLBackEndSystem
 
         private void btnRegisterTab_Click(object sender, EventArgs e)
         {
-
+            frmClientLogin.Creator = this;
+            frmClientLogin ClientLog = new frmClientLogin();
+            ClientLog.ShowDialog();
+            if (frmClientLogin.CorrectUser)
+            {
+                if (DataModule.ExecuteSQL($"INSERT INTO tblTab (ClientID,Balance,CutOffValue) Values ({frmClientLogin.LastClient.ClientID},0,1000.00)") > 0)
+                    MessageBox.Show("Tab Linked");
+                else
+                    MessageBox.Show("Error encounted 000-000-005");
+            }
         }
     }
 }
