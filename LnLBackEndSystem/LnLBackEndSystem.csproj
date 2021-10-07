@@ -158,6 +158,18 @@
     <Compile Include="frmCEO.Designer.cs">
       <DependentUpon>frmCEO.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmClientLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientLogin.Designer.cs">
+      <DependentUpon>frmClientLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientRecoverPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientRecoverPass.Designer.cs">
+      <DependentUpon>frmClientRecoverPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmImageManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,12 +194,6 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPayConfirm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPayConfirm.Designer.cs">
-      <DependentUpon>frmPayConfirm.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmRequestStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,12 @@
     </Compile>
     <Compile Include="frmSQLConsole.Designer.cs">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffLogin.Designer.cs">
+      <DependentUpon>frmStaffLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStockPurchase.cs">
       <SubType>Form</SubType>
@@ -268,12 +280,6 @@
     <Compile Include="Secretary_update.Designer.cs">
       <DependentUpon>Secretary_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTabLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTabLogin.Designer.cs">
-      <DependentUpon>frmTabLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTabPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +319,9 @@
     <EmbeddedResource Include="frmCEO.resx">
       <DependentUpon>frmCEO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmClientLogin.resx">
+      <DependentUpon>frmClientLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmImageManager.resx">
       <DependentUpon>frmImageManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,9 +334,6 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPayConfirm.resx">
-      <DependentUpon>frmPayConfirm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmRequestStock.resx">
       <DependentUpon>frmRequestStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSQLConsole.resx">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffLogin.resx">
+      <DependentUpon>frmStaffLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStockPurchase.resx">
       <DependentUpon>frmStockPurchase.cs</DependentUpon>
@@ -376,9 +385,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secretary_update.resx">
       <DependentUpon>Secretary_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTabLogin.resx">
-      <DependentUpon>frmTabLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTabPayment.resx">
       <DependentUpon>frmTabPayment.cs</DependentUpon>

@@ -4,7 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using StockDisplayAUtils;
 using NSDataModule;
-
+using TabObjAndUtil;
 namespace LnLBackEndSystem
 {
     public partial class frmStockPurchase : Form
@@ -90,10 +90,10 @@ namespace LnLBackEndSystem
         
         private void btnPayCash_Click(object sender, EventArgs e)
         {
-            frmPayConfirm.Creator = this;
-            frmPayConfirm MakePayMent = new frmPayConfirm();
+            frmStaffLogin.Creator = this;
+            frmStaffLogin MakePayMent = new frmStaffLogin();
             MakePayMent.ShowDialog();
-            if (frmPayConfirm.isVerified)
+            if (frmStaffLogin.isValid)
             {
                 string[] SQLs = UserCart.CreateUpdateCashPurchaseSQL();
                 int iEffected = 0;
@@ -111,18 +111,31 @@ namespace LnLBackEndSystem
 
         private void btnAddToTab_Click(object sender, EventArgs e)
         {
-            frmTabLogin.Creator = this;
-            frmTabLogin TabLog = new frmTabLogin();
-            TabLog.ShowDialog();
-            if (!frmTabLogin.isValidLogin)
+            frmClientLogin.Creator = this;
+            frmClientLogin frmClient = new frmClientLogin();
+            frmClient.ShowDialog();
+            if (!frmClientLogin.LastClient.HasTab)
+            {
+                MessageBox.Show("This Client does not have a tab.");
+                if (MessageBox.Show("Register for tab", "Register", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    btnRegisterTab_Click(btnRegisterTab, new EventArgs());
+            }
+            TabObj ClientTab = new TabObj();
+            if (!ClientTab.LoadFromDB(frmClientLogin.LastClient.ClientID))
+            {
+                MessageBox.Show("An Error Was encountered #000-000-004");
                 return;
+            }
+
+            //Update Stock Table
             string[] SQLs = UserCart.CreateUpdateCashPurchaseSQL();
             int iEffected = 0;
             foreach (string x in SQLs)
                 iEffected += DataModule.ExecuteSQL(x);
-            //MessageBox.Show($"{iEffected} Item(s) were sold.");
-            MessageBox.Show($"{UserCart.UpdateCreditSale(frmTabLogin.ID)} Item(s) were sold."); ;
-            //MessageBox.Show(Tab_login.isValidLogin.ToString());
+
+            MessageBox.Show($"{UserCart.UpdateCreditSale(frmClientLogin.LastClient.ClientID)} Item(s) were sold."); ;
+
+            //ReloadPage
             Utils.MassDispose(SDArr);
             SDArr = Utils.GenerateStock(pnlStockBox, StockItemClick);
             UserCart = new Cart();
@@ -134,6 +147,11 @@ namespace LnLBackEndSystem
             frmTabPayment.Creator = this;
             frmTabPayment TabPay = new frmTabPayment();
             TabPay.ShowDialog();
+        }
+
+        private void btnRegisterTab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

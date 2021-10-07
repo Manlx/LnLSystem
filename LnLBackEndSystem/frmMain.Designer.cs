@@ -107,11 +107,11 @@ namespace LnLBackEndSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 105);
+            this.label1.Location = new System.Drawing.Point(49, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 30);
+            this.label1.Size = new System.Drawing.Size(87, 30);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Username:";
+            this.label1.Text = "Staff ID:";
             // 
             // edtPassword
             // 
@@ -125,7 +125,7 @@ namespace LnLBackEndSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 185);
+            this.label2.Location = new System.Drawing.Point(49, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 30);
             this.label2.TabIndex = 7;

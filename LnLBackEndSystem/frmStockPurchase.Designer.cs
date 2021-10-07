@@ -154,6 +154,7 @@ namespace LnLBackEndSystem
             this.btnRegisterTab.TabIndex = 9;
             this.btnRegisterTab.Text = "Register Tab";
             this.btnRegisterTab.UseVisualStyleBackColor = false;
+            this.btnRegisterTab.Click += new System.EventHandler(this.btnRegisterTab_Click);
             // 
             // frmStockPurchase
             // 
