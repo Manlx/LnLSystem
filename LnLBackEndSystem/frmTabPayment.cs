@@ -52,7 +52,7 @@ namespace LnLBackEndSystem
             if (AmountDue < 0)
             {
                 MessageBox.Show($"Tab will be balanced to {0:C}, as we do not allow debit tabs.");
-                MessageBox.Show($"Please give the following change {}");
+                //MessageBox.Show($"Please give the following change {}");
             }
             if (DataModule.ExecuteSQL($"UPDATE tblTab Balance = {-Amount:2C} SET WHERE TabID = {Tab_login.ID} ") > 0)
             {
