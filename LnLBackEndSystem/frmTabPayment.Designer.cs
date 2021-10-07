@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class Tab_Order
+    partial class frmTabPayment
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace LnLBackEndSystem
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtTabSettleAmount = new System.Windows.Forms.TextBox();
+            this.EdtAmount = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSubmitTotal = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,16 +56,16 @@ namespace LnLBackEndSystem
             this.label5.TabIndex = 6;
             this.label5.Text = "Enter amount you would like to settle:";
             // 
-            // txtTabSettleAmount
+            // EdtAmount
             // 
-            this.txtTabSettleAmount.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtTabSettleAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTabSettleAmount.ForeColor = System.Drawing.Color.White;
-            this.txtTabSettleAmount.Location = new System.Drawing.Point(193, 105);
-            this.txtTabSettleAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTabSettleAmount.Name = "txtTabSettleAmount";
-            this.txtTabSettleAmount.Size = new System.Drawing.Size(149, 29);
-            this.txtTabSettleAmount.TabIndex = 7;
+            this.EdtAmount.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.EdtAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EdtAmount.ForeColor = System.Drawing.Color.White;
+            this.EdtAmount.Location = new System.Drawing.Point(161, 105);
+            this.EdtAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EdtAmount.Name = "EdtAmount";
+            this.EdtAmount.Size = new System.Drawing.Size(149, 29);
+            this.EdtAmount.TabIndex = 7;
             // 
             // label7
             // 
@@ -91,23 +91,23 @@ namespace LnLBackEndSystem
             this.btnSubmitTotal.UseVisualStyleBackColor = false;
             this.btnSubmitTotal.Click += new System.EventHandler(this.btnSubmitTotal_Click);
             // 
-            // Tab_Order
+            // frmTabPayment
             // 
             this.AcceptButton = this.btnSubmitTotal;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(360, 162);
+            this.ClientSize = new System.Drawing.Size(324, 150);
             this.Controls.Add(this.btnSubmitTotal);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtTabSettleAmount);
+            this.Controls.Add(this.EdtAmount);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Tab_Order";
+            this.Name = "frmTabPayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tab Payment";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tab_Order_FormClosing);
@@ -120,7 +120,7 @@ namespace LnLBackEndSystem
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtTabSettleAmount;
+        private System.Windows.Forms.TextBox EdtAmount;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSubmitTotal;
     }

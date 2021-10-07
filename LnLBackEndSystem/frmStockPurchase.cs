@@ -131,11 +131,9 @@ namespace LnLBackEndSystem
 
         private void btnPayOffTab_Click(object sender, EventArgs e)
         {
-            Tab_login.Creator = this;
-            Tab_login TabLog = new Tab_login();
-            TabLog.ShowDialog();
-            if (!Tab_login.isValidLogin)
-                return;
+            frmTabPayment.Creator = this;
+            frmTabPayment TabPay = new frmTabPayment();
+            TabPay.ShowDialog();
         }
     }
 }

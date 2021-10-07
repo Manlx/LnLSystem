@@ -268,11 +268,11 @@
     <Compile Include="Tab_login.Designer.cs">
       <DependentUpon>Tab_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tab_Order.cs">
+    <Compile Include="frmTabPayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tab_Order.Designer.cs">
-      <DependentUpon>Tab_Order.cs</DependentUpon>
+    <Compile Include="frmTabPayment.Designer.cs">
+      <DependentUpon>frmTabPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="Update_Booking.cs">
       <SubType>Form</SubType>
@@ -371,8 +371,8 @@
     <EmbeddedResource Include="Tab_login.resx">
       <DependentUpon>Tab_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tab_Order.resx">
-      <DependentUpon>Tab_Order.cs</DependentUpon>
+    <EmbeddedResource Include="frmTabPayment.resx">
+      <DependentUpon>frmTabPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update_Booking.resx">
       <DependentUpon>Update_Booking.cs</DependentUpon>
