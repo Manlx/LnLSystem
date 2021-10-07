@@ -38,6 +38,7 @@ namespace LnLBackEndSystem
             // 
             // tmrSplash
             // 
+            this.tmrSplash.Interval = 300;
             this.tmrSplash.Tick += new System.EventHandler(this.tmrSplash_Tick);
             // 
             // imgBack

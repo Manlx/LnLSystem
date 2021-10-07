@@ -164,7 +164,7 @@ namespace LnLSupportLibraries
         }
         public static string ConfQoutes(Field Col, string Value)
         { //Adds Qoutes if required
-            if (Col.DataType == DataTypes.Number)
+            if (Col.DataType == DataTypes.Number || Col.DataType == DataTypes.Boolean)
                 return Value;
             else
                 return $"'{Value}'";

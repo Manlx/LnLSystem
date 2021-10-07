@@ -65,6 +65,8 @@ namespace LnLBackEndSystem
             // dgvTableData
             // 
             this.dgvTableData.AllowUserToDeleteRows = false;
+            this.dgvTableData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTableData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -86,6 +88,7 @@ namespace LnLBackEndSystem
             this.dgvTableData.EnableHeadersVisualStyles = false;
             this.dgvTableData.GridColor = System.Drawing.Color.DarkGray;
             this.dgvTableData.Location = new System.Drawing.Point(0, 0);
+            this.dgvTableData.MultiSelect = false;
             this.dgvTableData.Name = "dgvTableData";
             this.dgvTableData.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -97,6 +100,8 @@ namespace LnLBackEndSystem
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTableData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTableData.RowHeadersVisible = false;
+            this.dgvTableData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvTableData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTableData.Size = new System.Drawing.Size(1160, 302);
             this.dgvTableData.TabIndex = 0;
             this.dgvTableData.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTableData_RowEnter);
