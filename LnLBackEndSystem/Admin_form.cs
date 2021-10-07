@@ -31,12 +31,6 @@ namespace LnLBackEndSystem
         {
             Creator.Show();
         }
-
-        private void Admin_form_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnReports_Click(object sender, EventArgs e)
         {
             Accountant_Login.Creator = this;

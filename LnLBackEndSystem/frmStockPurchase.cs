@@ -111,7 +111,13 @@ namespace LnLBackEndSystem
 
         private void btnAddToTab_Click(object sender, EventArgs e)
         {
-
+            Tab_login.Creator = this;
+            Tab_login TabLog = new Tab_login();
+            TabLog.ShowDialog();
+            if (!Tab_login.isValidLogin)
+                return;
+            //MessageBox.Show(Tab_login.isValidLogin.ToString());
+            
         }
     }
 }

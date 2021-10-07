@@ -132,7 +132,6 @@ namespace LnLBackEndSystem
             this.Name = "Secretary_delete";
             this.Text = "Secretary_delete";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_delete_FormClosing);
-            this.Load += new System.EventHandler(this.Secretary_delete_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

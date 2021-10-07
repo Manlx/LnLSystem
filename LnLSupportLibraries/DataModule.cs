@@ -159,7 +159,10 @@ namespace NSDataModule
                 Reader = Com.ExecuteReader();
                 Reader.Read();
                 if (Colum < Reader.FieldCount)
-                    Outs = Reader.GetValue(Colum).ToString();
+                    if (Reader.HasRows)
+                        Outs = Reader.GetValue(Colum).ToString();
+                    else
+                        Outs = "";
             }
             Reader.Close();
             return Outs;

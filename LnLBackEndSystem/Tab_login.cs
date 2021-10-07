@@ -7,7 +7,7 @@ namespace LnLBackEndSystem
 {
     public partial class Tab_login : Form
     {
-        public bool isValidLogin = false;
+        public static bool isValidLogin = false;
         public static Form Creator;
 
         public static Form tab;

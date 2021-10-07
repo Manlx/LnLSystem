@@ -17,12 +17,6 @@ namespace LnLBackEndSystem
         {
             creator.Show();
         }
-
-        private void Secretary_delete_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
