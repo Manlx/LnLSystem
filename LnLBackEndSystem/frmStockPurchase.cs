@@ -111,17 +111,17 @@ namespace LnLBackEndSystem
 
         private void btnAddToTab_Click(object sender, EventArgs e)
         {
-            Tab_login.Creator = this;
-            Tab_login TabLog = new Tab_login();
+            frmTabLogin.Creator = this;
+            frmTabLogin TabLog = new frmTabLogin();
             TabLog.ShowDialog();
-            if (!Tab_login.isValidLogin)
+            if (!frmTabLogin.isValidLogin)
                 return;
             string[] SQLs = UserCart.CreateUpdateCashPurchaseSQL();
             int iEffected = 0;
             foreach (string x in SQLs)
                 iEffected += DataModule.ExecuteSQL(x);
             //MessageBox.Show($"{iEffected} Item(s) were sold.");
-            MessageBox.Show($"{UserCart.UpdateCreditSale(Tab_login.ID)} Item(s) were sold."); ;
+            MessageBox.Show($"{UserCart.UpdateCreditSale(frmTabLogin.ID)} Item(s) were sold."); ;
             //MessageBox.Show(Tab_login.isValidLogin.ToString());
             Utils.MassDispose(SDArr);
             SDArr = Utils.GenerateStock(pnlStockBox, StockItemClick);

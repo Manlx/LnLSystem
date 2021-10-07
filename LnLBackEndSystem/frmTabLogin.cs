@@ -2,17 +2,17 @@
 using System;
 using System.Windows.Forms;
 using NSDataModule;
-
+using CypherLib;
 namespace LnLBackEndSystem
 {
-    public partial class Tab_login : Form
+    public partial class frmTabLogin : Form
     {
         public static bool isValidLogin = false;
         public static string ID;
         public static Form Creator;
 
         public static Form tab;
-        public Tab_login()
+        public frmTabLogin()
         {
             InitializeComponent();
         }
@@ -42,7 +42,7 @@ namespace LnLBackEndSystem
                 string FetchPass = DataModule.GetValue(0, sqlTabPin);
                 if (FetchPass != "")
                 {
-                    isValidLogin = FetchPass == tabPin;
+                    isValidLogin = FetchPass == Cypher.Encrypt(tabPin);
                 }
                 else
                 {

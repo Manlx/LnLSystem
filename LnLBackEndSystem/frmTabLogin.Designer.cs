@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class Tab_login
+    partial class frmTabLogin
     {
         /// <summary>
         /// Required designer variable.
