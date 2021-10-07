@@ -18,7 +18,7 @@ namespace LnLBackEndSystem
 
         private void Tab_login_Load(object sender, EventArgs e)
         {
-
+            isValidLogin = false;
         }
 
         private void linkToHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -31,11 +31,8 @@ namespace LnLBackEndSystem
             string tabID = txtTabID.Text;
             string tabPin = txtTabPIN.Text;
 
-            string sqlTabID = "";
-            string sqlTabPin = "";
-
-            sqlTabID = $"SELECT TabID FROM tblTab WHERE TabID = {tabID}";
-            sqlTabPin = $"SELECT TabPin FROM tblTab WHERE TabID = {tabID}";
+            string sqlTabID = $"SELECT TabID FROM tblTab WHERE TabID = {tabID}";
+            string sqlTabPin = $"SELECT TabPin FROM tblTab WHERE TabID = {tabID}";
             string FetchedID = DataModule.GetValue(0, sqlTabID);
             if (FetchedID != "")
             {
@@ -61,6 +58,11 @@ namespace LnLBackEndSystem
         private void Tab_login_FormClosed(object sender, FormClosedEventArgs e)
         {
             Creator.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

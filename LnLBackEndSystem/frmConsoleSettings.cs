@@ -22,8 +22,7 @@ namespace LnLBackEndSystem
         public static string SettingsPath = "Settings.bin";
         public void ReadBinFile()
         {//Function To read Bin File and update components
-            object temp;
-            if (!Serializer.DeserializeFromBin(SettingsPath, out temp))
+            if (!Serializer.DeserializeFromBin(SettingsPath, out object temp))
                 return;
             Compdata CompTemp = (Compdata)temp;
             CompTemp.LoadToComps(ref chkClearOnLoad, ref chkClearSQLAfterExecution, ref chkClearAfterSuccessOnly);

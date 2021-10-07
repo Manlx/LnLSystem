@@ -43,7 +43,7 @@ namespace StockDisplayAUtils
             StockImg.Image = Image.FromFile(ImgPath);
             lblName.Top = StockImg.Top + StockImg.Height;
             lblName.Left = 5 ;
-            lblPrice = new Label() { Parent = BigParent,AutoSize = true, Text = $"{Math.Ceiling(this.CostPrice*(1+ProfitMargin/100)).ToString("C")}",
+            lblPrice = new Label() { Parent = BigParent,AutoSize = true, Text = $"{Math.Ceiling(this.CostPrice*(1+ProfitMargin/100)):C2}",
                 Top = lblName.Top + lblName.Height + 5};
             lblPrice.Left = (BigWidth - lblPrice.Width) / 2;
             lblQuantity = new Label() { Parent = BigParent, AutoSize = true,Text = CountInBar.ToString(),Top = lblPrice.Top + lblPrice.Height + 5 };
@@ -197,7 +197,7 @@ namespace StockDisplayAUtils
             lst.Items.Clear();
             for (int x = 0; x < arrItems.Count;x++)
             {
-                lst.Items.Add($"{arrItems[x].StockName,-60} x {arrCount[x],-7} = {(arrItems[x].CalcCost() * arrCount[x]).ToString("C"),-10}");
+                lst.Items.Add($"{arrItems[x].StockName,-60} x {arrCount[x],-7} = {(arrItems[x].CalcCost() * arrCount[x]):C2,-10}");
             }
                 
         }

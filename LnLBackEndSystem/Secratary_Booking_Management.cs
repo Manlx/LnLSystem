@@ -48,17 +48,6 @@ namespace LnLBackEndSystem
             lstBookingscon = new List<BookingObject>();
             InsertAllBookings();
         }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void Secratary_Booking_Management_FormClosing(object sender, FormClosingEventArgs e)
         {
             booking.Show();
@@ -104,6 +93,11 @@ namespace LnLBackEndSystem
             UpdateCheckListBox();
             InsertAllBookings();
             MessageBox.Show("Booking approved");
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

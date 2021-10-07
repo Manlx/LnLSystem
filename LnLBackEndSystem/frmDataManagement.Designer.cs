@@ -78,7 +78,6 @@ namespace LnLBackEndSystem
             this.Text = "Database Management";
             this.TransparencyKey = System.Drawing.Color.Aquamarine;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDataManagement_FormClosing);
-            this.Load += new System.EventHandler(this.frmDataManagement_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

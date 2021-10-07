@@ -34,7 +34,7 @@ namespace LnLBackEndSystem
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnApprove = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbBookings
@@ -48,7 +48,6 @@ namespace LnLBackEndSystem
             this.cbBookings.Name = "cbBookings";
             this.cbBookings.Size = new System.Drawing.Size(922, 154);
             this.cbBookings.TabIndex = 0;
-            this.cbBookings.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // lblSelect
             // 
@@ -101,18 +100,18 @@ namespace LnLBackEndSystem
             this.btnApprove.UseVisualStyleBackColor = false;
             this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
-            // btnBack
+            // BtnBack
             // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(852, 301);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 26);
-            this.btnBack.TabIndex = 5;
-            this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.button1_Click);
+            this.BtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Location = new System.Drawing.Point(852, 301);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(75, 26);
+            this.BtnBack.TabIndex = 5;
+            this.BtnBack.Text = "back";
+            this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // Secratary_Booking_Management
             // 
@@ -120,7 +119,7 @@ namespace LnLBackEndSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(939, 339);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.btnApprove);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -143,6 +142,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnApprove;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button BtnBack;
     }
 }

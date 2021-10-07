@@ -108,5 +108,10 @@ namespace LnLBackEndSystem
                 //Utils.ResetLables(SDArr);
             }
         }
+
+        private void btnAddToTab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

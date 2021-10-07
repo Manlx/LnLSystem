@@ -91,7 +91,6 @@ namespace LnLBackEndSystem
             this.lblSurname.Size = new System.Drawing.Size(52, 13);
             this.lblSurname.TabIndex = 3;
             this.lblSurname.Text = "Surname:";
-            this.lblSurname.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblCell
             // 
@@ -101,7 +100,6 @@ namespace LnLBackEndSystem
             this.lblCell.Size = new System.Drawing.Size(97, 13);
             this.lblCell.TabIndex = 4;
             this.lblCell.Text = "Cellphone Number:";
-            this.lblCell.Click += new System.EventHandler(this.label3_Click);
             // 
             // cbFulltime
             // 
@@ -151,7 +149,6 @@ namespace LnLBackEndSystem
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(100, 20);
             this.txtSurname.TabIndex = 10;
-            this.txtSurname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtPassword
             // 
@@ -163,7 +160,6 @@ namespace LnLBackEndSystem
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 11;
-            this.txtPassword.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtCell
             // 

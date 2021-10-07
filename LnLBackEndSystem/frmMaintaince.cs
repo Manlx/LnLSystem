@@ -95,9 +95,7 @@ namespace LnLBackEndSystem
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            string temp ="";
-            InsertErrorCodes ErrorCatcher;
-            if (MyInsertComps.GenerateInsertSQL(out temp, ActiveTable, out ErrorCatcher))
+            if (MyInsertComps.GenerateInsertSQL(out string temp, ActiveTable, out InsertErrorCodes ErrorCatcher))
                 MessageBox.Show($"{DataModule.ExecuteSQL(temp)} Rows were effected");
             switch(ErrorCatcher)
             {
@@ -140,7 +138,7 @@ namespace LnLBackEndSystem
             if (Order.Length > 0 && cbbOrderFields.SelectedIndex >= 0)
                 SORT = $"{OrderField} {Order}";
 
-            string WhereField = "WHERE ", WhereValue= "";
+            string WhereField = "WHERE ", WhereValue;
             if (cbbSearchField.SelectedIndex >= 0)
             {
                 WhereField += $" {FieldAndCols[cbbSearchField.SelectedIndex][0]} ";

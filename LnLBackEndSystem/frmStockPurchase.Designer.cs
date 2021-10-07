@@ -78,6 +78,7 @@ namespace LnLBackEndSystem
             this.btnAddToTab.TabIndex = 4;
             this.btnAddToTab.Text = "Add To Tab";
             this.btnAddToTab.UseVisualStyleBackColor = false;
+            this.btnAddToTab.Click += new System.EventHandler(this.btnAddToTab_Click);
             // 
             // btnPayCash
             // 

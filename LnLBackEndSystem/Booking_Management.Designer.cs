@@ -69,7 +69,6 @@ namespace LnLBackEndSystem
             this.lblHeadings.Size = new System.Drawing.Size(116, 16);
             this.lblHeadings.TabIndex = 1;
             this.lblHeadings.Text = "Booking details";
-            this.lblHeadings.Click += new System.EventHandler(this.lblHeadings_Click);
             // 
             // lblDate
             // 
@@ -79,7 +78,6 @@ namespace LnLBackEndSystem
             this.lblDate.Size = new System.Drawing.Size(103, 13);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Please select a date";
-            this.lblDate.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblTime
             // 
@@ -125,7 +123,6 @@ namespace LnLBackEndSystem
             this.cldDate.Location = new System.Drawing.Point(18, 128);
             this.cldDate.Name = "cldDate";
             this.cldDate.TabIndex = 15;
-            this.cldDate.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // cbType
             // 
@@ -191,7 +188,6 @@ namespace LnLBackEndSystem
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 21;
             this.label1.Text = "Client Details";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 

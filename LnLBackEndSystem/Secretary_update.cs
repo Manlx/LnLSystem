@@ -22,25 +22,9 @@ namespace LnLBackEndSystem
         {
             this.Close();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string sql = "";
+            string sql;
 
             if (cbFulltime.Checked && cbLicence.Checked)
                 sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 1 + "' , IsFullTimeMember='" + 1 + "' , RankID='"+  cbRank.SelectedIndex + 1 + "', '" + "'";
@@ -52,23 +36,13 @@ namespace LnLBackEndSystem
                 sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 0 + "' , IsFullTimeMember='" + 0 + "' , RankID='" + cbRank.SelectedIndex + 1 + "', '" + "'";
 
             int sucessful = DataModule.ExecuteSQL(sql);
-            DataModule.LoadTable(ref ((Secretary_form)creator).dbView, "SELECT * FROM tblStaff");
+            DataGridView Temp = ((Secretary_form)creator).dbView;
+            DataModule.LoadTable(ref Temp, "SELECT * FROM tblStaff");
             if (sucessful == 1)
                 MessageBox.Show("Updated sucessfully");
             else
                 MessageBox.Show("Error was encountered");
         }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Forgot_password.password = this;

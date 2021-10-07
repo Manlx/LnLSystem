@@ -1,5 +1,6 @@
 ﻿// Manuel A Nunes 34551875 2021-09-27
 using System;
+using System.Linq;
 using System.Windows.Forms;
 using NSDataModule;
 
@@ -11,17 +12,16 @@ namespace LnLBackEndSystem
         public frmDataManagement()
         {
             InitializeComponent();
-            
+
             cbbTable.Items.Clear();
             string[] temp = DataModule.GetValues<string>(0, "SHOW TABLES; ");
             for (int x = 0; x < temp.Length; x++)
                 cbbTable.Items.Add(temp[x]);
-            foreach (Control control in this.Controls)
+            foreach (MdiClient control in Controls.OfType<MdiClient>())
             {
-                MdiClient client = control as MdiClient;
-                if (!(client == null))
+                if (!(control == null))
                 {
-                    client.BackColor = System.Drawing.Color.FromArgb(64,64,64);
+                    control.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
                     break;
                 }
             }
@@ -40,17 +40,9 @@ namespace LnLBackEndSystem
                 LastOpened.Close();
             frmMaintainces.Creator = this;
             frmMaintainces.TableName = cbbTable.Text;
-            frmMaintainces Maintance = new frmMaintainces();
-            Maintance.MdiParent = this;
+            frmMaintainces Maintance = new frmMaintainces() { MdiParent = this };
             Maintance.Show();
-            Maintance.Top = 0;
-            Maintance.Left = 0;
             LastOpened = Maintance;
-        }
-
-        private void frmDataManagement_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
