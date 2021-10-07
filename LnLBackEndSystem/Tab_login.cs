@@ -8,6 +8,7 @@ namespace LnLBackEndSystem
     public partial class Tab_login : Form
     {
         public static bool isValidLogin = false;
+        public static string ID;
         public static Form Creator;
 
         public static Form tab;
@@ -34,6 +35,7 @@ namespace LnLBackEndSystem
             string sqlTabID = $"SELECT TabID FROM tblTab WHERE TabID = {tabID}";
             string sqlTabPin = $"SELECT TabPin FROM tblTab WHERE TabID = {tabID}";
             string FetchedID = DataModule.GetValue(0, sqlTabID);
+            ID = FetchedID;
             if (FetchedID != "")
             {
                 string FetchPass = DataModule.GetValue(0, sqlTabPin);

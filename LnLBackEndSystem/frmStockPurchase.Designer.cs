@@ -37,6 +37,7 @@ namespace LnLBackEndSystem
             this.imgBackUp = new System.Windows.Forms.PictureBox();
             this.pnlStockBox = new System.Windows.Forms.Panel();
             this.btnDecrease = new System.Windows.Forms.Button();
+            this.btnPayOffTab = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgBackUp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +59,9 @@ namespace LnLBackEndSystem
             this.btnRemoveItem.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveItem.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveItem.Location = new System.Drawing.Point(279, 705);
+            this.btnRemoveItem.Location = new System.Drawing.Point(249, 705);
             this.btnRemoveItem.Name = "btnRemoveItem";
-            this.btnRemoveItem.Size = new System.Drawing.Size(265, 192);
+            this.btnRemoveItem.Size = new System.Drawing.Size(235, 192);
             this.btnRemoveItem.TabIndex = 3;
             this.btnRemoveItem.Text = "Remove";
             this.btnRemoveItem.UseVisualStyleBackColor = false;
@@ -72,9 +73,9 @@ namespace LnLBackEndSystem
             this.btnAddToTab.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnAddToTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToTab.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToTab.Location = new System.Drawing.Point(1034, 705);
+            this.btnAddToTab.Location = new System.Drawing.Point(1062, 705);
             this.btnAddToTab.Name = "btnAddToTab";
-            this.btnAddToTab.Size = new System.Drawing.Size(265, 192);
+            this.btnAddToTab.Size = new System.Drawing.Size(235, 192);
             this.btnAddToTab.TabIndex = 4;
             this.btnAddToTab.Text = "Add To Tab";
             this.btnAddToTab.UseVisualStyleBackColor = false;
@@ -86,9 +87,9 @@ namespace LnLBackEndSystem
             this.btnPayCash.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnPayCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayCash.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayCash.Location = new System.Drawing.Point(771, 705);
+            this.btnPayCash.Location = new System.Drawing.Point(827, 705);
             this.btnPayCash.Name = "btnPayCash";
-            this.btnPayCash.Size = new System.Drawing.Size(265, 192);
+            this.btnPayCash.Size = new System.Drawing.Size(235, 192);
             this.btnPayCash.TabIndex = 5;
             this.btnPayCash.Text = "Cash Payment";
             this.btnPayCash.UseVisualStyleBackColor = false;
@@ -119,11 +120,25 @@ namespace LnLBackEndSystem
             this.btnDecrease.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecrease.Location = new System.Drawing.Point(14, 705);
             this.btnDecrease.Name = "btnDecrease";
-            this.btnDecrease.Size = new System.Drawing.Size(265, 192);
+            this.btnDecrease.Size = new System.Drawing.Size(235, 192);
             this.btnDecrease.TabIndex = 7;
             this.btnDecrease.Text = "Decrease";
             this.btnDecrease.UseVisualStyleBackColor = false;
             this.btnDecrease.Click += new System.EventHandler(this.btnDecrease_Click);
+            // 
+            // btnPayOffTab
+            // 
+            this.btnPayOffTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnPayOffTab.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnPayOffTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayOffTab.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayOffTab.Location = new System.Drawing.Point(537, 705);
+            this.btnPayOffTab.Name = "btnPayOffTab";
+            this.btnPayOffTab.Size = new System.Drawing.Size(235, 192);
+            this.btnPayOffTab.TabIndex = 8;
+            this.btnPayOffTab.Text = "Pay Tab";
+            this.btnPayOffTab.UseVisualStyleBackColor = false;
+            this.btnPayOffTab.Click += new System.EventHandler(this.btnPayOffTab_Click);
             // 
             // frmStockPurchase
             // 
@@ -131,6 +146,7 @@ namespace LnLBackEndSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1309, 923);
+            this.Controls.Add(this.btnPayOffTab);
             this.Controls.Add(this.btnDecrease);
             this.Controls.Add(this.btnAddToTab);
             this.Controls.Add(this.pnlStockBox);
@@ -160,5 +176,6 @@ namespace LnLBackEndSystem
         public System.Windows.Forms.PictureBox imgBackUp;
         private System.Windows.Forms.Panel pnlStockBox;
         private System.Windows.Forms.Button btnDecrease;
+        private System.Windows.Forms.Button btnPayOffTab;
     }
 }

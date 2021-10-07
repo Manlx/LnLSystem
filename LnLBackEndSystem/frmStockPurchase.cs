@@ -116,7 +116,26 @@ namespace LnLBackEndSystem
             TabLog.ShowDialog();
             if (!Tab_login.isValidLogin)
                 return;
+            string[] SQLs = UserCart.CreateUpdateCashPurchaseSQL();
+            int iEffected = 0;
+            foreach (string x in SQLs)
+                iEffected += DataModule.ExecuteSQL(x);
+            //MessageBox.Show($"{iEffected} Item(s) were sold.");
+            MessageBox.Show($"{UserCart.UpdateCreditSale(Tab_login.ID)} Item(s) were sold."); ;
             //MessageBox.Show(Tab_login.isValidLogin.ToString());
+            Utils.MassDispose(SDArr);
+            SDArr = Utils.GenerateStock(pnlStockBox, StockItemClick);
+            UserCart = new Cart();
+            UserCart.UpdateListBox(ref lstOrder);
+        }
+
+        private void btnPayOffTab_Click(object sender, EventArgs e)
+        {
+            Tab_login.Creator = this;
+            Tab_login TabLog = new Tab_login();
+            TabLog.ShowDialog();
+            if (!Tab_login.isValidLogin)
+                return;
         }
     }
 }

@@ -1,12 +1,5 @@
-﻿//Brendan 32737742
+﻿//Manuel A Nunes 34551875 Brendan 32737742
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LnLBackEndSystem
@@ -27,6 +20,11 @@ namespace LnLBackEndSystem
         private void Tab_Order_FormClosing(object sender, FormClosingEventArgs e)
         {
             tabOrder.Show();
+        }
+
+        private void btnSubmitTotal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

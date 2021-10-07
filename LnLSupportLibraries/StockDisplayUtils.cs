@@ -43,7 +43,7 @@ namespace StockDisplayAUtils
             StockImg.Image = Image.FromFile(ImgPath);
             lblName.Top = StockImg.Top + StockImg.Height;
             lblName.Left = 5 ;
-            lblPrice = new Label() { Parent = BigParent,AutoSize = true, Text = $"{Math.Ceiling(this.CostPrice*(1+ProfitMargin/100)):C2}",
+            lblPrice = new Label() { Parent = BigParent,AutoSize = true, Text = $"{this.CalcCost():C2}",
                 Top = lblName.Top + lblName.Height + 5};
             lblPrice.Left = (BigWidth - lblPrice.Width) / 2;
             lblQuantity = new Label() { Parent = BigParent, AutoSize = true,Text = CountInBar.ToString(),Top = lblPrice.Top + lblPrice.Height + 5 };
@@ -59,7 +59,8 @@ namespace StockDisplayAUtils
         }
         public double CalcCost()
         {
-            return this.CostPrice * (1 + this.ProfitMargin / 100.0);
+            double temp = (double)(1.0 + ProfitMargin / 100.0);
+            return this.CostPrice * temp;
         }
         override public bool Equals(object other)
         {
@@ -197,7 +198,8 @@ namespace StockDisplayAUtils
             int x = 0;
             foreach (StockDisplay Item in arrItems)
             {
-                string temp = DataModule.GetValue(0, $"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID});");
+                Clipboard.SetText($"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
+                string temp = DataModule.GetValue(0, $"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
                 if (String.IsNullOrEmpty(temp))
                     Effected += DataModule.ExecuteSQL($"INSERT INTO tblCreditSale (TabID,StockID,Count) VALUES ({TabID},{Item.StockID},{arrCount[x]})");
                 else
@@ -211,7 +213,7 @@ namespace StockDisplayAUtils
             lst.Items.Clear();
             for (int x = 0; x < arrItems.Count;x++)
             {
-                lst.Items.Add($"{arrItems[x].StockName,-60} x {arrCount[x],-7} = {(arrItems[x].CalcCost() * arrCount[x]):C2,-10}");
+                lst.Items.Add($"{arrItems[x].StockName,-60} x {arrCount[x],-7} = {(arrItems[x].CalcCost() * arrCount[x]),-10:C2}");
             }
                 
         }
