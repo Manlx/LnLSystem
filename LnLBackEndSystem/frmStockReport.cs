@@ -85,7 +85,7 @@ namespace LnLBackEndSystem
                 try
                 {
                     int iCountInBar = int.Parse(txtCountInBar.Text);
-                    WHERE = $"WHERE CountInBar < {iCountInBar.ToString()}";
+                    WHERE = $"WHERE CountInBar < {iCountInBar}";
                     DataModule.LoadTable(ref dgvStockReport, BuildSQL());
                 }
                 catch
@@ -102,7 +102,7 @@ namespace LnLBackEndSystem
                 try
                 {
                     int iCountInWarehouse = int.Parse(txtCountINWareHouse.Text);
-                    WHERE =  $"WHERE CountInWarehouse < {iCountInWarehouse.ToString()}";
+                    WHERE =  $"WHERE CountInWarehouse < {iCountInWarehouse}";
                     DataModule.LoadTable(ref dgvStockReport, BuildSQL());
                 }
                 catch

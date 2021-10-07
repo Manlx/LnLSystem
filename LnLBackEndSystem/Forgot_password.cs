@@ -35,11 +35,11 @@ namespace LnLBackEndSystem
         private void btnReset_Click(object sender, EventArgs e)
         {
             string sql;
-            string password = txtPass.Text;
 
             if (txtPass.Text == txtConfirm_pass.Text)
             {
-                   sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , RankID='" + cbRank.SelectedIndex + "', EncryptedPassword'" + Cypher.Encrypt(txtPass.Text) + "'";
+                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , RankID='" + cbRank.SelectedIndex + "', EncryptedPassword'" + Cypher.Encrypt(txtPass.Text) + "'";
+                DataModule.ExecuteSQL(sql);
             }
             else
                 MessageBox.Show("Passwords do not match");

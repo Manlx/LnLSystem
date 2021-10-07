@@ -35,7 +35,7 @@ namespace LnLBackEndSystem
 
         private void viewOldStock_Click(object sender, EventArgs e)
         {
-            DataModule.LoadTable(ref dgViewAcc, $"SELECT StockName,CountInBar,CountInWareHouse FROM tblStock WHERE DateAcquired < '{DateTime.Today.AddDays(-90).ToString("yyyy-MM-dd")}'");
+            DataModule.LoadTable(ref dgViewAcc, $"SELECT StockName,CountInBar,CountInWareHouse FROM tblStock WHERE DateAcquired < '{DateTime.Today.AddDays(-90):yyyy-MM-dd}'");
         }
 
         private void viewUpcomingBookings_Click(object sender, EventArgs e)

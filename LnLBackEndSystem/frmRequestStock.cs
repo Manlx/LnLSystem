@@ -28,10 +28,7 @@ namespace LnLBackEndSystem
             if (bValid)
             {
                 //lstStockRequest.Items.Add($"{stockName} x {quantity}");
-                List<string> temp = new List<string>();
-                temp.Add(stockName);
-                temp.Add(quantity.ToString());
-
+                List<string> temp = new List<string>() { stockName, quantity.ToString()};
                 bool notFound = true;
                 int x = 0;
                 while (notFound && x < DataToSave.Count)
