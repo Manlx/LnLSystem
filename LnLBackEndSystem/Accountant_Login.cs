@@ -100,6 +100,7 @@ namespace LnLBackEndSystem
 
         private void viewTotalPrice_Click(object sender, EventArgs e)
         {
+            lblStockPrice.Show();
             string price = DataModule.GetValue(0,$"SELECT SUM((ProfitMargin*CountInBar)+(ProfitMargin*CountInWareHouse))FROM tblStock");
                 //DataModule.LoadTable(ref dgViewAcc, $"SELECT SUM((ProfitMargin*CountInBar)+(ProfitMargin*CountInWareHouse))FROM tblStock").ToString();
                
@@ -108,7 +109,12 @@ namespace LnLBackEndSystem
 
         private void Accountant_Login_Load(object sender, EventArgs e)
         {
+            lblStockPrice.Hide();
+        }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
