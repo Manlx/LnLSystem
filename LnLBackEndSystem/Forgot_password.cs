@@ -43,13 +43,20 @@ namespace LnLBackEndSystem
 
             if (txtPass.Text == txtConfirm_pass.Text)
             {
-                   sql = "UPDATE tblStaff SET EncryptedPassword'" + Cypher.Encrypt(txtPass.Text) + "' WHERE Name ='" + txtName.Text + "' AND Surname = '" + txtSurname.Text + "' AND RankID = '" + cbRank.SelectedIndex + 1 + "'";
-                   MessageBox.Show("Password updated sucessfully");
+                   sql = "UPDATE tblStaff SET EncryptedPassword'" + Cypher.Encrypt(txtPass.Text) + "' WHERE Name ='" + txtName.Text + "' AND Surname = '" + txtSurname.Text + "' AND RankID = '" + cbRank.SelectedIndex + 1 + "'";              
             }
             else
                 MessageBox.Show("Passwords do not match");
-          
-           
+
+            int sucessful = DataModule.ExecuteSQL(sql);
+            // DataGridView Temp = ((Secretary_form)password).dbView;
+            //DataModule.LoadTable(ref Temp, "SELECT * FROM tblStaff");
+            if (sucessful == 1)
+                MessageBox.Show("Added sucessfully");
+            else
+                MessageBox.Show("Error was encountered");
+
+
         }
 
     }
