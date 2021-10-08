@@ -33,6 +33,7 @@ namespace LnLBackEndSystem
             this.btnNavidateToSecretary = new System.Windows.Forms.Button();
             this.NavigateToAccountant = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnWarehouse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNavigateBartender
@@ -41,7 +42,7 @@ namespace LnLBackEndSystem
             this.btnNavigateBartender.FlatAppearance.BorderSize = 0;
             this.btnNavigateBartender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavigateBartender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavigateBartender.Location = new System.Drawing.Point(12, 183);
+            this.btnNavigateBartender.Location = new System.Drawing.Point(12, 240);
             this.btnNavigateBartender.Name = "btnNavigateBartender";
             this.btnNavigateBartender.Size = new System.Drawing.Size(139, 51);
             this.btnNavigateBartender.TabIndex = 39;
@@ -91,12 +92,27 @@ namespace LnLBackEndSystem
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
+            // btnWarehouse
+            // 
+            this.btnWarehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnWarehouse.FlatAppearance.BorderSize = 0;
+            this.btnWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWarehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWarehouse.Location = new System.Drawing.Point(12, 183);
+            this.btnWarehouse.Name = "btnWarehouse";
+            this.btnWarehouse.Size = new System.Drawing.Size(139, 51);
+            this.btnWarehouse.TabIndex = 43;
+            this.btnWarehouse.Text = "Navigate To Warehouse";
+            this.btnWarehouse.UseVisualStyleBackColor = false;
+            this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
+            // 
             // frmCEO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(160, 240);
+            this.ClientSize = new System.Drawing.Size(160, 298);
+            this.Controls.Add(this.btnWarehouse);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.NavigateToAccountant);
             this.Controls.Add(this.btnNavidateToSecretary);
@@ -116,5 +132,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnNavidateToSecretary;
         private System.Windows.Forms.Button NavigateToAccountant;
         private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.Button btnWarehouse;
     }
 }

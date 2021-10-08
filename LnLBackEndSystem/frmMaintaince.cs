@@ -43,7 +43,6 @@ namespace LnLBackEndSystem
                 }
 
             SQL = $"{SQL.Remove(SQL.Length - 1, 1)} FROM {TableName} {WHERE} {SORT}";
-            Clipboard.SetText(SQL);
             DataModule.LoadTable(ref dgvTableData, SQL);
             dgvTableData.AutoResizeColumns();
             dgvTableData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
