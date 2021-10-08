@@ -222,7 +222,9 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblHeadings);
             this.Controls.Add(this.btnAdd);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Update_Booking";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update_Booking";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Update_Booking_FormClosing);
             this.Load += new System.EventHandler(this.Update_Booking_Load);

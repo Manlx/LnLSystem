@@ -15,7 +15,8 @@ namespace LnLBackEndSystem
         public frmMaintainces()
         {
             InitializeComponent();
-            
+            Top = 0;
+            Left = 0;
         }
         public static string TableName;
         public static CompsUtilities MyUpdateComps,MyInsertComps;
