@@ -74,7 +74,7 @@ namespace LnLBackEndSystem
             if (lstOrder.SelectedIndex >= 0)
                 UserCart.Decrease(lstOrder.SelectedIndex);
             else
-                MessageBox.Show("Please sullect");
+                MessageBox.Show("Please Select");
             UserCart.UpdateListBox(ref lstOrder);
         }
 
@@ -83,7 +83,7 @@ namespace LnLBackEndSystem
             if (lstOrder.SelectedIndex >= 0)
                 UserCart.Remove(lstOrder.SelectedIndex);
             else
-                MessageBox.Show("Please sullect");
+                MessageBox.Show("Please Select");
             UserCart.UpdateListBox(ref lstOrder);
         }
 

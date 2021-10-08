@@ -121,6 +121,7 @@ namespace LnLBackEndSystem
             this.Name = "frmBarpersonLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bartender";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBarpersonLogin_FormClosed);
             this.ResumeLayout(false);
 
         }

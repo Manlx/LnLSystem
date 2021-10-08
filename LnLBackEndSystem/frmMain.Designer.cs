@@ -102,7 +102,7 @@ namespace LnLBackEndSystem
             this.edtUser.Location = new System.Drawing.Point(159, 100);
             this.edtUser.Name = "edtUser";
             this.edtUser.Size = new System.Drawing.Size(182, 28);
-            this.edtUser.TabIndex = 3;
+            this.edtUser.TabIndex = 0;
             // 
             // label1
             // 
@@ -119,8 +119,9 @@ namespace LnLBackEndSystem
             this.edtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.edtPassword.Location = new System.Drawing.Point(159, 182);
             this.edtPassword.Name = "edtPassword";
+            this.edtPassword.PasswordChar = '#';
             this.edtPassword.Size = new System.Drawing.Size(182, 28);
-            this.edtPassword.TabIndex = 6;
+            this.edtPassword.TabIndex = 1;
             // 
             // label2
             // 
@@ -241,7 +242,7 @@ namespace LnLBackEndSystem
             this.panel1.Location = new System.Drawing.Point(298, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 315);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 0;
             // 
             // btnLogin
             // 
@@ -251,7 +252,7 @@ namespace LnLBackEndSystem
             this.btnLogin.Location = new System.Drawing.Point(283, 255);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(87, 42);
-            this.btnLogin.TabIndex = 9;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -292,6 +293,7 @@ namespace LnLBackEndSystem
             // 
             // frmMain
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));

@@ -41,10 +41,11 @@ namespace LnLBackEndSystem
             this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnModify.FlatAppearance.BorderSize = 0;
             this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModify.Location = new System.Drawing.Point(55, 13);
+            this.btnModify.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnModify.Location = new System.Drawing.Point(15, 16);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(128, 50);
+            this.btnModify.Size = new System.Drawing.Size(154, 58);
             this.btnModify.TabIndex = 0;
             this.btnModify.Text = "Modify database";
             this.btnModify.UseVisualStyleBackColor = false;
@@ -55,10 +56,11 @@ namespace LnLBackEndSystem
             this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnReports.FlatAppearance.BorderSize = 0;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.Location = new System.Drawing.Point(55, 71);
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnReports.Location = new System.Drawing.Point(15, 82);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(128, 48);
+            this.btnReports.Size = new System.Drawing.Size(154, 58);
             this.btnReports.TabIndex = 1;
             this.btnReports.Text = "Generate reports";
             this.btnReports.UseVisualStyleBackColor = false;
@@ -69,9 +71,11 @@ namespace LnLBackEndSystem
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(55, 238);
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnBack.Location = new System.Drawing.Point(15, 280);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(128, 48);
+            this.btnBack.Size = new System.Drawing.Size(154, 58);
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -82,10 +86,11 @@ namespace LnLBackEndSystem
             this.btnSQLConsole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnSQLConsole.FlatAppearance.BorderSize = 0;
             this.btnSQLConsole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSQLConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSQLConsole.Location = new System.Drawing.Point(55, 125);
+            this.btnSQLConsole.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnSQLConsole.Location = new System.Drawing.Point(15, 148);
+            this.btnSQLConsole.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnSQLConsole.Name = "btnSQLConsole";
-            this.btnSQLConsole.Size = new System.Drawing.Size(128, 48);
+            this.btnSQLConsole.Size = new System.Drawing.Size(154, 58);
             this.btnSQLConsole.TabIndex = 3;
             this.btnSQLConsole.Text = "SQL Console";
             this.btnSQLConsole.UseVisualStyleBackColor = false;
@@ -96,9 +101,11 @@ namespace LnLBackEndSystem
             this.btnImgManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnImgManager.FlatAppearance.BorderSize = 0;
             this.btnImgManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImgManager.Location = new System.Drawing.Point(55, 179);
+            this.btnImgManager.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnImgManager.Location = new System.Drawing.Point(15, 214);
+            this.btnImgManager.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnImgManager.Name = "btnImgManager";
-            this.btnImgManager.Size = new System.Drawing.Size(128, 48);
+            this.btnImgManager.Size = new System.Drawing.Size(154, 58);
             this.btnImgManager.TabIndex = 4;
             this.btnImgManager.Text = "Image Management";
             this.btnImgManager.UseVisualStyleBackColor = false;
@@ -106,17 +113,19 @@ namespace LnLBackEndSystem
             // 
             // Admin_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(239, 298);
+            this.ClientSize = new System.Drawing.Size(186, 346);
             this.Controls.Add(this.btnImgManager);
             this.Controls.Add(this.btnSQLConsole);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnModify);
+            this.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "Admin_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_form";

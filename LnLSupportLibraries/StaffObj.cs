@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//Manuel A Nunes 34551875
+using System;
 using NSDataModule;
+using NSTableAndUtil;
 
 namespace StaffObjAndUtils
 {
@@ -32,6 +30,45 @@ namespace StaffObjAndUtils
                     EncryptedPassword = Row[7];
                 }
                 return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
+        public bool InsertSelf()
+        {
+            try
+            {
+                return DataModule.ExecuteSQL($"INSERT INTO tblStaff (Name,Surname,CellNumber,HasLicense,IsFullTimeMember,RankID,EncryptedPassword) VALUES " +
+                    $"('{Name}','{SurName}','{CellNumber}','{Utilities.BoolToBit(HasLicense)}','{Utilities.BoolToBit(IsFullTimeMember)}',{RankID},'{EncryptedPassword}')") > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
+        public bool UpdateSelf()
+        {
+            try
+            {
+                return DataModule.ExecuteSQL($"UPDATE tblStaff SET Name = '{Name}',Surname = '{SurName}',CellNumber = '{CellNumber}' ," +
+                    $"HasLicense = {Utilities.BoolToBit(HasLicense)},IsFullTimeMember = {Utilities.BoolToBit(IsFullTimeMember)},RankID = {RankID}," +
+                    $"EncryptedPassword = '{EncryptedPassword}' WHERE StaffID = {StaffID} ")> 0;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
+        public bool DeleteSelf()
+        {
+            try
+            {
+                return DataModule.ExecuteSQL($"DELETE FROM tblStaff WHERE StaffID = {StaffID}") > 0;
             }
             catch (Exception)
             {
