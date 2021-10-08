@@ -44,7 +44,7 @@ namespace LnLBackEndSystem
 
         private void btnWarehouseRestock_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE tblStock SET CountInWarehouse=100 WHERE CountInWareHouse<30";
+            string sql = "UPDATE tblStock SET CountInWareHouse=100 WHERE CountInWareHouse<50";
             int sucessful = DataModule.ExecuteSQL(sql);
             if (sucessful == 1)
                 MessageBox.Show("Updated sucessfully");
