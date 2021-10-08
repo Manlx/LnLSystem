@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 using NSDataModule;
+using BookingUtil;
+using System.Collections.Generic;
 
 namespace LnLBackEndSystem
 {
@@ -23,6 +25,8 @@ namespace LnLBackEndSystem
 
         private void Update_Booking_Load(object sender, EventArgs e)
         {
+            lstBook = new List<BookingObject>();
+            gpbOptions.Enabled = false;
             cbType.Items.Clear();
             string[] temp = DataModule.GetValues<string>(0, "SELECT Description FROM tblEventType ; ");
             for (int x = 0; x < temp.Length; x++)
@@ -38,10 +42,7 @@ namespace LnLBackEndSystem
         private void Update_Booking_FormClosing(object sender, FormClosingEventArgs e)
         {
             update_booking.Show();
-
         }
-
-       
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
@@ -52,18 +53,15 @@ namespace LnLBackEndSystem
         {
 
             string sql;
-            if (lstVenues.SelectedIndex < 0)
-            {
-                MessageBox.Show("Select a Location please");
-                return;
-            }
-            MessageBox.Show(cldDate.SelectionStart.ToShortDateString());
-            sql = $"UPDATE tblEvent (DateOfBooking,TimeOfBooking,LocationID,ClientID,EventType) VALUES(" +
-                $"'{cldDate.SelectionStart:yyyy-MM-dd}', '{txtTime.Text}',{LocationID[lstVenues.SelectedIndex]}" +
-                $",{txtClientID.Text},{EventTypes[cbType.SelectedIndex]}) WHERE ClientID = txtClientID.text";
-            int sucessful = DataModule.ExecuteSQL(sql);
-            Clipboard.SetText(sql);
-            if (sucessful == 1)
+            lstBook[lstBooking.SelectedIndex].TimeOfBooking = $"{DTPTime.Value:HH:mm}";
+            lstBook[lstBooking.SelectedIndex].DateOfBooking = $"{DTPTime.Value:yyyy-MM-dd}";
+            lstBook[lstBooking.SelectedIndex].EventType = $"{EventTypes[cbType.SelectedIndex]}";
+            if (cbType.SelectedIndex >= 0)
+                lstBook[lstBooking.SelectedIndex].EventType = EventTypes[cbType.SelectedIndex];
+            if (lstVenues.SelectedIndex >= 0)
+                lstBook[lstBooking.SelectedIndex].Location = LocationID[lstVenues.SelectedIndex];
+
+            if (lstBook[lstBooking.SelectedIndex].UpdateSelfInEvent())
                 MessageBox.Show("Booking added sucessfully");
             else
                 MessageBox.Show("Error was encountered");
@@ -86,7 +84,34 @@ namespace LnLBackEndSystem
             foreach (string x in Values)
                 lstVenues.Items.Add(x);
         }
+
+        List<BookingObject> lstBook;
+        private void btnSelectClient_Click(object sender, EventArgs e)
+        {
+            
+            frmClientLogin.Creator = this;
+            frmClientLogin ClienTog = new frmClientLogin();
+            ClienTog.ShowDialog();
+            if (!frmClientLogin.LastClient.DoesExist())
+            {
+                MessageBox.Show("No Client Selected");
+                return;
+            }
+            string[] Bookings = DataModule.GetValues(0, $"SELECT EventID FROM tblEvent WHERE ClientID = {frmClientLogin.LastClient.ClientID}");
+            foreach(string x in Bookings)
+            {
+                lstBook.Add(new BookingObject());
+                lstBook[lstBook.Count - 1].LoadFromDB(x);
+                lstBooking.Items.Add(lstBook[lstBook.Count - 1].toString());
+            }
+            gpbOptions.Enabled = true;
+        }
+
+        private void gpbOptions_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
  
-    }
+}
 
