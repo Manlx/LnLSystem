@@ -12,16 +12,24 @@ namespace LnLWebEndSystem
 {
     public partial class Bookings : System.Web.UI.Page
     {
-        public string[] LocationID;
-        public string[] EventTypes;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                string[] LocationIDS = DataModule.GetValues(0,$"SELECT LocationID FROM tblLocation");
+                Session["LocationIDS"] = LocationIDS;
+                string[] EventTypes = DataModule.GetValues(0, $"SELECT EventType FROM tblEventType");
+                Session["EventType"] = EventTypes;
+            }
         }
 
         protected void btnBook_Click(object sender, EventArgs e)
         {
-            string sql = $"INSERT INTO tblEvent (DateOfBooking,TimeOfBooking,LocationID,ClientID,EventType) VALUES(" +
+            string[] LocationID = (string[])Session["LocationIDS"];
+            string[] EventTypes = (string[])Session["EventType"];
+            string sql = $"INSERT INTO tblBooking (Da" +
+                $"teOfBooking,TimeOfBooking,Location,ClientID,EventType) VALUES(" +
                 $"'{cldDate.SelectedDate:yyyy-MM-dd}', '{txtTime.Text}',{LocationID[locationList.SelectedIndex]}" +
                 $",{txtID.Text},{EventTypes[eventList.SelectedIndex]})";
             int sucessful = DataModule.ExecuteSQL(sql);
@@ -34,7 +42,7 @@ namespace LnLWebEndSystem
             }
             else
             {
-                lblMessage.Text = "Booking added successfully!";
+                lblMessage.Text = "Booking failed!";
                 lblMessage.Visible = true;
                 //MessageBox.Show("Error was encountered");
             }

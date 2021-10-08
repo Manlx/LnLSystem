@@ -52,6 +52,8 @@ namespace LnLWebEndSystem
                   Response.Cookies.Add(_userCookie);
                   Response.Redirect("Bookings.aspx");
              }
+
+            Response.Redirect("Bookings.aspx");
                 
         }
     }
