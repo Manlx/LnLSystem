@@ -26,28 +26,36 @@ namespace LnLBackEndSystem
         private void viewStockBalance_Click(object sender, EventArgs e)
         {
 
+            try
+            {
 
-            if(cbMoreThan.Checked&&cbLessThan.Checked)
-            {
-                int startVal = int.Parse(txtStartStock.Text);
-                int endVal = int.Parse(txtEndStock.Text);
-                DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock WHERE CountInBar >'"+startVal+ "' AND CountInBar < '"+endVal+"'");
+
+                if (cbMoreThan.Checked && cbLessThan.Checked)
+                {
+                    int startVal = int.Parse(txtStartStock.Text);
+                    int endVal = int.Parse(txtEndStock.Text);
+                    DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock WHERE CountInBar >'" + startVal + "' AND CountInBar < '" + endVal + "'");
+                }
+                else if (cbMoreThan.Checked)
+                {
+                    int startVal = int.Parse(txtStartStock.Text);
+                    DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock WHERE CountInBar >'" + startVal + "'");
+                }
+                else if (cbLessThan.Checked)
+                {
+                    int endVal = int.Parse(txtEndStock.Text);
+                    DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock WHERE CountInBar <'" + endVal + "'");
+                }
+                else
+                {
+                    DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock");
+                }
+                //DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock");
             }
-            else if(cbMoreThan.Checked)
+            catch
             {
-                int startVal = int.Parse(txtStartStock.Text);
-                DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock WHERE CountInBar >'" + startVal + "'");
+                MessageBox.Show("Enter value in  the provided textbox.");
             }
-            else if(cbLessThan.Checked)
-            {
-                int endVal = int.Parse(txtEndStock.Text);
-                DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock WHERE CountInBar <'" + endVal + "'");
-            }
-            else
-            {
-                DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock");
-            }
-            //DataModule.LoadTable(ref dgViewAcc, "SELECT StockName,CountInBar,CountInWareHouse FROM tblStock");
         }
 
         private void viewHighTab_Click(object sender, EventArgs e)

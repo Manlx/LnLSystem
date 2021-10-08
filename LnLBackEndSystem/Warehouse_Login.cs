@@ -31,7 +31,7 @@ namespace LnLBackEndSystem
         private void btnBarRestock_Click(object sender, EventArgs e)
         {
             //string sql = "UPDATE tblStock SET CountInBar=30,CountInWarehouse=CountInWarehouse-30+CountInBar WHERE CountInWareHouse>50";
-            string sql = "UPDATE tblStock SET CountInBar=30,CountInWareHouse=CountInWareHouse-30+CountInBar WHERE CountInWareHouse>=50 AND CountInBar<10";
+            string sql = "UPDATE tblStock SET CountInBar=30,CountInWareHouse=CountInWareHouse-30+CountInBar WHERE (CountInWareHouse>=50) AND (CountInBar<20)";
             int sucessful = DataModule.ExecuteSQL(sql);
             if (sucessful == 1)
                 MessageBox.Show("Updated sucessfully");
