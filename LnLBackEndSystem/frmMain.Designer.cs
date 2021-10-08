@@ -65,6 +65,7 @@ namespace LnLBackEndSystem
             this.button1.TabIndex = 0;
             this.button1.Text = "SQL Console";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -79,6 +80,7 @@ namespace LnLBackEndSystem
             this.button2.TabIndex = 1;
             this.button2.Text = "Database Management";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
@@ -93,6 +95,7 @@ namespace LnLBackEndSystem
             this.button3.TabIndex = 2;
             this.button3.Text = "Secretary";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // edtUser
@@ -144,6 +147,7 @@ namespace LnLBackEndSystem
             this.button4.TabIndex = 8;
             this.button4.Text = "Admin Login";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
@@ -158,6 +162,7 @@ namespace LnLBackEndSystem
             this.button6.TabIndex = 10;
             this.button6.Text = "Warehouse";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button8
@@ -172,6 +177,7 @@ namespace LnLBackEndSystem
             this.button8.TabIndex = 12;
             this.button8.Text = "Image Manager";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Visible = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnRequestStock
@@ -186,6 +192,7 @@ namespace LnLBackEndSystem
             this.btnRequestStock.TabIndex = 12;
             this.btnRequestStock.Text = "Request Stock";
             this.btnRequestStock.UseVisualStyleBackColor = false;
+            this.btnRequestStock.Visible = false;
             this.btnRequestStock.Click += new System.EventHandler(this.btnRequestStock_Click);
             // 
             // btnStockOrder
@@ -200,6 +207,7 @@ namespace LnLBackEndSystem
             this.btnStockOrder.TabIndex = 13;
             this.btnStockOrder.Text = "Stock Purchase";
             this.btnStockOrder.UseVisualStyleBackColor = false;
+            this.btnStockOrder.Visible = false;
             this.btnStockOrder.Click += new System.EventHandler(this.btnStockOrder_Click);
             // 
             // btnStockReport
@@ -214,6 +222,7 @@ namespace LnLBackEndSystem
             this.btnStockReport.TabIndex = 13;
             this.btnStockReport.Text = "StockReport";
             this.btnStockReport.UseVisualStyleBackColor = false;
+            this.btnStockReport.Visible = false;
             this.btnStockReport.Click += new System.EventHandler(this.btnStockReport_Click);
             // 
             // button9
@@ -228,6 +237,7 @@ namespace LnLBackEndSystem
             this.button9.TabIndex = 14;
             this.button9.Text = "Accountant Login";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel1
@@ -289,6 +299,7 @@ namespace LnLBackEndSystem
             this.btnCEO.TabIndex = 17;
             this.btnCEO.Text = "CEO";
             this.btnCEO.UseVisualStyleBackColor = false;
+            this.btnCEO.Visible = false;
             this.btnCEO.Click += new System.EventHandler(this.btnCEO_Click);
             // 
             // frmMain
