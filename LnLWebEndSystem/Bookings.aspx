@@ -43,12 +43,12 @@
 			<form class="reg-form"  id="form1" runat="server">
 				<div>
 					<label for="txtID">ID</label>
-		            <asp:TextBox class="inputText" runat="server" ID="txtID" placeholder="Eugene Coetzee" required="true"></asp:TextBox>
+		            <asp:TextBox class="inputText" runat="server" ID="txtID" placeholder="01" required="true"></asp:TextBox>
 				</div>
 
 				<div>
 					<label for="txtTime">What time is your event</label>
-		            <asp:TextBox class="inputText" runat="server" ID="txtTime" placeholder="Eugene Coetzee" required="true"></asp:TextBox>
+		            <asp:TextBox class="inputText" runat="server" ID="txtTime" placeholder="14:00" required="true"></asp:TextBox>
 				</div>
 
 		        <div>
