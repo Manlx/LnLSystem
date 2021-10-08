@@ -36,7 +36,7 @@ namespace LnLBackEndSystem
             if (sucessful == 1)
                 MessageBox.Show("Updated sucessfully");
             else
-                MessageBox.Show("Error was encountered");
+                MessageBox.Show("Restock Unnecesary");
 
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
 
@@ -49,7 +49,7 @@ namespace LnLBackEndSystem
             if (sucessful == 1)
                 MessageBox.Show("Updated sucessfully");
             else
-                MessageBox.Show("Error was encountered");
+                MessageBox.Show("Restock Unnecesary");
 
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
         }
