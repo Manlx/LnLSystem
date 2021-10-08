@@ -42,6 +42,7 @@ namespace LnLBackEndSystem
             this.label3 = new System.Windows.Forms.Label();
             this.btnWarehouseRestock = new System.Windows.Forms.Button();
             this.ttGenerate = new System.Windows.Forms.ToolTip(this.components);
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewWarehouse)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,12 +154,27 @@ namespace LnLBackEndSystem
             this.btnWarehouseRestock.UseVisualStyleBackColor = false;
             this.btnWarehouseRestock.Click += new System.EventHandler(this.btnWarehouseRestock_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(485, 523);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(112, 37);
+            this.btnBack.TabIndex = 16;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Warehouse_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(610, 574);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnWarehouseRestock);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBarRestock);
@@ -190,5 +206,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnWarehouseRestock;
         private System.Windows.Forms.ToolTip ttGenerate;
+        private System.Windows.Forms.Button btnBack;
     }
 }
