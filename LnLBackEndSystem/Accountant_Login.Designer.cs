@@ -29,10 +29,10 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgViewAcc = new System.Windows.Forms.DataGridView();
             this.viewHighTab = new System.Windows.Forms.Button();
             this.viewOldStock = new System.Windows.Forms.Button();
@@ -44,45 +44,44 @@ namespace LnLBackEndSystem
             this.linkToHome = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtStartStock = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cbMoreThan = new System.Windows.Forms.CheckBox();
+            this.cbLessThan = new System.Windows.Forms.CheckBox();
             this.txtEndStock = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewAcc)).BeginInit();
             this.SuspendLayout();
             // 
             // dgViewAcc
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            this.dgViewAcc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.dgViewAcc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgViewAcc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgViewAcc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgViewAcc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgViewAcc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgViewAcc.EnableHeadersVisualStyles = false;
             this.dgViewAcc.Location = new System.Drawing.Point(28, 212);
             this.dgViewAcc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgViewAcc.Name = "dgViewAcc";
             this.dgViewAcc.ReadOnly = true;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgViewAcc.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            this.dgViewAcc.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgViewAcc.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            this.dgViewAcc.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgViewAcc.Size = new System.Drawing.Size(551, 375);
             this.dgViewAcc.TabIndex = 1;
             // 
@@ -194,11 +193,11 @@ namespace LnLBackEndSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(337, 29);
+            this.label1.Location = new System.Drawing.Point(312, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 17);
+            this.label1.Size = new System.Drawing.Size(282, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Enter stock range you would like to view";
+            this.label1.Text = "Enter stock range of bar you would like to view";
             // 
             // txtStartStock
             // 
@@ -211,27 +210,27 @@ namespace LnLBackEndSystem
             this.txtStartStock.Size = new System.Drawing.Size(117, 18);
             this.txtStartStock.TabIndex = 11;
             // 
-            // checkBox1
+            // cbMoreThan
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(358, 66);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(88, 21);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "More than";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbMoreThan.AutoSize = true;
+            this.cbMoreThan.Location = new System.Drawing.Point(358, 66);
+            this.cbMoreThan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbMoreThan.Name = "cbMoreThan";
+            this.cbMoreThan.Size = new System.Drawing.Size(88, 21);
+            this.cbMoreThan.TabIndex = 12;
+            this.cbMoreThan.Text = "More than";
+            this.cbMoreThan.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbLessThan
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(358, 125);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(81, 21);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.Text = "Less than";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbLessThan.AutoSize = true;
+            this.cbLessThan.Location = new System.Drawing.Point(358, 125);
+            this.cbLessThan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbLessThan.Name = "cbLessThan";
+            this.cbLessThan.Size = new System.Drawing.Size(81, 21);
+            this.cbLessThan.TabIndex = 13;
+            this.cbLessThan.Text = "Less than";
+            this.cbLessThan.UseVisualStyleBackColor = true;
             // 
             // txtEndStock
             // 
@@ -253,15 +252,6 @@ namespace LnLBackEndSystem
             this.label2.TabIndex = 15;
             this.label2.Text = "To";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(484, 187);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "label3";
-            // 
             // Accountant_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -269,11 +259,10 @@ namespace LnLBackEndSystem
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(606, 670);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEndStock);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cbLessThan);
+            this.Controls.Add(this.cbMoreThan);
             this.Controls.Add(this.txtStartStock);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkToHome);
@@ -312,10 +301,9 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.LinkLabel linkToHome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtStartStock;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox cbMoreThan;
+        private System.Windows.Forms.CheckBox cbLessThan;
         private System.Windows.Forms.TextBox txtEndStock;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }
