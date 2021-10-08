@@ -40,8 +40,12 @@ namespace LnLBackEndSystem
                 LastOpened.Close();
             frmMaintainces.Creator = this;
             frmMaintainces.TableName = cbbTable.Text;
-            frmMaintainces Maintance = new frmMaintainces() { MdiParent = this };
+            frmMaintainces Maintance = new frmMaintainces() { MdiParent = this,Left = 0,Top = 0 };
             Maintance.Show();
+            Maintance.Top = 0;
+            Maintance.Left = 0;
+            this.MdiChildren[0].Top = 0;
+            this.MdiChildren[0].Left = 0;
             LastOpened = Maintance;
         }
     }
