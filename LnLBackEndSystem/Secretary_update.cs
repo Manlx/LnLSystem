@@ -27,13 +27,13 @@ namespace LnLBackEndSystem
             string sql;
 
             if (cbFulltime.Checked && cbLicence.Checked)
-                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 1 + "' , IsFullTimeMember='" + 1 + "' , RankID='"+  cbRank.SelectedIndex + 1 + "', '" + "'";
+                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 1 + "' , IsFullTimeMember='" + 1 + "' , RankID='"+  cbRank.SelectedIndex + 1 + "' WHERE Name ='" + txtName.Text + "'";
             else if (cbFulltime.Checked)
-                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 1 + "' , IsFullTimeMember='" + 0 + "' , RankID='"+ cbRank.SelectedIndex + 1 + "', '" + "'";
+                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 1 + "' , IsFullTimeMember='" + 0 + "' , RankID='"+ cbRank.SelectedIndex + 1 + "'WHERE Name ='" + txtName.Text  + "'";
             else if (cbLicence.Checked)
-                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 0 + "' , IsFullTimeMember='" + 1 + "' , RankID='"+ cbRank.SelectedIndex + 1 + "', '" + "'";
+                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 0 + "' , IsFullTimeMember='" + 1 + "' , RankID='"+ cbRank.SelectedIndex + 1 + "'WHERE Name ='" + txtName.Text + "'";
             else
-                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 0 + "' , IsFullTimeMember='" + 0 + "' , RankID='" + cbRank.SelectedIndex + 1 + "', '" + "'";
+                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 0 + "' , IsFullTimeMember='" + 0 + "' , RankID='" + cbRank.SelectedIndex + 1 + "'WHERE Name ='" + txtName.Text + "'";
 
             int sucessful = DataModule.ExecuteSQL(sql);
             DataGridView Temp = ((Secretary_form)creator).dbView;

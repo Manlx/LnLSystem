@@ -42,8 +42,7 @@ namespace LnLBackEndSystem
         private void Secratary_Booking_Management_Load(object sender, EventArgs e)
         {
 
-            btnDelete.Visible = false;
-            btnUpdate.Visible = false;
+          
             UpdateCheckListBox();
             lstBookingscon = new List<BookingObject>();
             InsertAllBookings();
@@ -77,8 +76,7 @@ namespace LnLBackEndSystem
                 if (cbBookings.GetItemChecked(x))
                     lstBookingscon.Add(AllBookings[x]);
             }
-            btnUpdate.Visible = true;
-            btnDelete.Visible = true;
+            
             foreach(BookingObject x in lstBookingscon)
             {
                 string[] SQLs = x.MoveToEventTable();

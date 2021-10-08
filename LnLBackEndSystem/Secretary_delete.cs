@@ -29,9 +29,8 @@ namespace LnLBackEndSystem
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {
-            
-             string sql = "DELETE FROM tblStaff WHERE Name ='" + txtName.Text + "' AND EncryptedPassword = '" + txtPassword.Text + "'";
+        {     
+            string sql = "DELETE FROM tblStaff WHERE Name ='" + txtName.Text + "' AND EncryptedPassword = '" + txtPassword.Text + "'";
 
             DataGridView Temp = ((Secretary_form)creator).dbView;
             int sucessful = DataModule.ExecuteSQL(sql);

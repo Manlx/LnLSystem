@@ -69,6 +69,7 @@ namespace LnLBackEndSystem
             this.lblHeadings.Size = new System.Drawing.Size(116, 16);
             this.lblHeadings.TabIndex = 1;
             this.lblHeadings.Text = "Booking details";
+            this.lblHeadings.Click += new System.EventHandler(this.lblHeadings_Click);
             // 
             // lblDate
             // 
@@ -78,6 +79,7 @@ namespace LnLBackEndSystem
             this.lblDate.Size = new System.Drawing.Size(103, 13);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Please select a date";
+            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // lblTime
             // 
@@ -87,6 +89,7 @@ namespace LnLBackEndSystem
             this.lblTime.Size = new System.Drawing.Size(33, 13);
             this.lblTime.TabIndex = 3;
             this.lblTime.Text = "Time:";
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
             // lblType
             // 
@@ -96,6 +99,7 @@ namespace LnLBackEndSystem
             this.lblType.Size = new System.Drawing.Size(34, 13);
             this.lblType.TabIndex = 4;
             this.lblType.Text = "Type:";
+            this.lblType.Click += new System.EventHandler(this.lblType_Click);
             // 
             // lblFacilities
             // 
@@ -106,6 +110,7 @@ namespace LnLBackEndSystem
             this.lblFacilities.Size = new System.Drawing.Size(71, 16);
             this.lblFacilities.TabIndex = 11;
             this.lblFacilities.Text = "Facilities";
+            this.lblFacilities.Click += new System.EventHandler(this.lblFacilities_Click);
             // 
             // txtTime
             // 
@@ -115,6 +120,8 @@ namespace LnLBackEndSystem
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(100, 20);
             this.txtTime.TabIndex = 14;
+            this.txtTime.Text = "00:00:00";
+            this.txtTime.TextChanged += new System.EventHandler(this.txtTime_TextChanged);
             // 
             // cldDate
             // 
@@ -123,6 +130,7 @@ namespace LnLBackEndSystem
             this.cldDate.Location = new System.Drawing.Point(18, 128);
             this.cldDate.Name = "cldDate";
             this.cldDate.TabIndex = 15;
+            this.cldDate.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.cldDate_DateChanged);
             // 
             // cbType
             // 
@@ -133,6 +141,7 @@ namespace LnLBackEndSystem
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(100, 21);
             this.cbType.TabIndex = 16;
+            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
             // btnBack
             // 
@@ -158,6 +167,7 @@ namespace LnLBackEndSystem
             this.clsRequirements.Size = new System.Drawing.Size(227, 122);
             this.clsRequirements.TabIndex = 18;
             this.clsRequirements.Click += new System.EventHandler(this.clsRequirements_Click);
+            this.clsRequirements.SelectedIndexChanged += new System.EventHandler(this.clsRequirements_SelectedIndexChanged);
             // 
             // lstVenues
             // 
@@ -169,6 +179,7 @@ namespace LnLBackEndSystem
             this.lstVenues.Name = "lstVenues";
             this.lstVenues.Size = new System.Drawing.Size(227, 145);
             this.lstVenues.TabIndex = 19;
+            this.lstVenues.SelectedIndexChanged += new System.EventHandler(this.lstVenues_SelectedIndexChanged);
             // 
             // txtClientID
             // 
@@ -179,24 +190,28 @@ namespace LnLBackEndSystem
             this.txtClientID.Name = "txtClientID";
             this.txtClientID.Size = new System.Drawing.Size(100, 20);
             this.txtClientID.TabIndex = 20;
+            this.txtClientID.TextChanged += new System.EventHandler(this.txtClientID_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(108, 18);
             this.label1.TabIndex = 21;
             this.label1.Text = "Client Details";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Client Details";
+            this.label2.Text = "Client ID:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Booking_Management
             // 

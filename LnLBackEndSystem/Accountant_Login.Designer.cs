@@ -277,6 +277,7 @@ namespace LnLBackEndSystem
             this.Name = "Accountant_Login";
             this.Text = "Accountant_Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Accountant_Login_FormClosing);
+            this.Load += new System.EventHandler(this.Accountant_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgViewAcc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

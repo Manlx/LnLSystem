@@ -66,7 +66,6 @@ namespace LnLBackEndSystem
                     WHERE += $" ({clsRequirements.Items[x]} = 1) AND ";
             if (WHERE.Length > 0)
                 WHERE = WHERE.Remove(WHERE.Length-5, 4);
-            //MessageBox.Show(WHERE);
             if (WHERE.Length <= 6)
                 WHERE = "";
             string[] Values = DataModule.GetValues(0,$"SELECT Description FROM tblLocation {WHERE}");
@@ -74,6 +73,71 @@ namespace LnLBackEndSystem
             lstVenues.Items.Clear();
             foreach (string x in Values)
                 lstVenues.Items.Add(x);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstVenues_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHeadings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cldDate_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFacilities_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clsRequirements_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
