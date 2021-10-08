@@ -105,5 +105,10 @@ namespace LnLBackEndSystem
                
             lblStockPrice.Text = "R " + price;
         }
+
+        private void Accountant_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

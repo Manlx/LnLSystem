@@ -66,9 +66,9 @@ namespace LnLBackEndSystem
             this.label1.Location = new System.Drawing.Point(29, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 30);
+            this.label1.Size = new System.Drawing.Size(88, 30);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Client ID:";
+            this.label1.Text = "Staff ID:";
             // 
             // edtPassword
             // 
