@@ -51,11 +51,10 @@ namespace LnLBackEndSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
-            string sql;
             lstBook[lstBooking.SelectedIndex].TimeOfBooking = $"{DTPTime.Value:HH:mm}";
             lstBook[lstBooking.SelectedIndex].DateOfBooking = $"{DTPTime.Value:yyyy-MM-dd}";
-            lstBook[lstBooking.SelectedIndex].EventType = $"{EventTypes[cbType.SelectedIndex]}";
+            if (cbType.SelectedIndex >= 0)
+                lstBook[lstBooking.SelectedIndex].EventType = $"{EventTypes[cbType.SelectedIndex]}";
             if (cbType.SelectedIndex >= 0)
                 lstBook[lstBooking.SelectedIndex].EventType = EventTypes[cbType.SelectedIndex];
             if (lstVenues.SelectedIndex >= 0)
