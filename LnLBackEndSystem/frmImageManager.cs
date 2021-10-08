@@ -43,6 +43,11 @@ namespace LnLBackEndSystem
                 
                 if (File.Exists(FilePathOut))
                 {
+                    if ($"{Directory.GetCurrentDirectory()}\\{FilePathOut}" == ImageOFD.FileName)
+                    {
+                        MessageBox.Show("Source Image can't be used to overwrite.");
+                        return;
+                    }
                     if (imgExsistingImage.Image != null)
                         imgExsistingImage.Image.Dispose();
                     imgExsistingImage.Image = Image.FromFile(FilePathOut);

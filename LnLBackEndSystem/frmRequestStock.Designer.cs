@@ -154,7 +154,7 @@ namespace LnLBackEndSystem
             this.txtQuantity.ForeColor = System.Drawing.Color.White;
             this.txtQuantity.Location = new System.Drawing.Point(148, 91);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(103, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(103, 22);
             this.txtQuantity.TabIndex = 10;
             // 
             // errorQuantity
@@ -186,8 +186,11 @@ namespace LnLBackEndSystem
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(430, 432);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmRequestStock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Request Stock";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmRequestStock_FormClosed);
             this.Load += new System.EventHandler(this.frmRequestStock_Load);

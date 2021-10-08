@@ -1,16 +1,18 @@
 ﻿//Manuel A Nunes 34551875 Brendan 32737742
 using System;
 using System.Windows.Forms;
-using NSDataModule;
+using TabObjAndUtil;
 
 namespace LnLBackEndSystem
 {
     public partial class frmTabPayment : Form
     {
         public static Form Creator;
+        public static TabObj CurrentTab;
         public frmTabPayment()
         {
             InitializeComponent();
+            CurrentTab = new TabObj();
         }
 
         private void linkToHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -31,37 +33,40 @@ namespace LnLBackEndSystem
                 EdtAmount.Focus();
                 return;
             }
-            frmPayConfirm.Creator = this;
-            frmPayConfirm PayConf = new frmPayConfirm();
+            frmStaffLogin.Creator = this;
+            frmStaffLogin PayConf = new frmStaffLogin();
             PayConf.ShowDialog();
-            if (!frmPayConfirm.isVerified)
+
+            if (!frmStaffLogin.isValid)
             {
                 MessageBox.Show("Invalid Information");
                 return;
             }
-            Tab_login.Creator = this;
-            Tab_login TabL = new Tab_login();
-            TabL.ShowDialog();
-            if (!Tab_login.isValidLogin)
+            if (CurrentTab.AdjustBalance(Amount, out bool QualForIncrease,out double ChangeAmount))
             {
-                MessageBox.Show("Invalid TabLogin");
-                return;
-            }
-            string Balance = DataModule.GetValue(0, $"SELECT Balance FROM tblTab WHERE TabID = {Tab_login.ID}");
-            double BalanceAmount = double.Parse(Balance), AmountDue = BalanceAmount - Amount;
-            if (AmountDue < 0)
-            {
-                MessageBox.Show($"Tab will be balanced to {0:C}, as we do not allow debit tabs.");
-                //MessageBox.Show($"Please give the following change {}");
-            }
-            if (DataModule.ExecuteSQL($"UPDATE tblTab Balance = {-Amount:2C} SET WHERE TabID = {Tab_login.ID} ") > 0)
-            {
+                MessageBox.Show($"Payed Tab Successfully. Change Amount: {ChangeAmount:C2}");
+                if (QualForIncrease)
+                    MessageBox.Show("Your account has been rewarded with a higher Cut off Value");
             }
             else
-            {
+                MessageBox.Show("Error was encountered 000-000-003");
+            UpdateLabels();
+        }
 
-            }
-                
+        private void frmTabPayment_Load(object sender, EventArgs e)
+        {
+            frmClientLogin.Creator = this;
+            frmClientLogin TabL = new frmClientLogin();
+            TabL.ShowDialog();
+            if (!frmClientLogin.CorrectUser)
+                this.Close();
+            CurrentTab.LoadFromDB(frmClientLogin.LastClient.ClientID);
+            UpdateLabels();
+        }
+        private void UpdateLabels()
+        {
+            lblBalance.Text = $"{CurrentTab.Balance:C2}";
+            lblCutOffValue.Text = $"{CurrentTab.CutOffValue:C2}";
         }
     }
 }

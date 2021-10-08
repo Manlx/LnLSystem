@@ -32,17 +32,32 @@ namespace LnLBackEndSystem
             password.Show();
         }
 
+        private void cbRank_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnReset_Click(object sender, EventArgs e)
         {
-            string sql;
+            string sql = "";
 
             if (txtPass.Text == txtConfirm_pass.Text)
             {
-                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , RankID='" + cbRank.SelectedIndex + "', EncryptedPassword'" + Cypher.Encrypt(txtPass.Text) + "'";
-                DataModule.ExecuteSQL(sql);
+                   sql = "UPDATE tblStaff SET EncryptedPassword'" + Cypher.Encrypt(txtPass.Text) + "' WHERE Name ='" + txtName.Text + "' AND Surname = '" + txtSurname.Text + "' AND RankID = '" + cbRank.SelectedIndex + 1 + "'";              
             }
             else
                 MessageBox.Show("Passwords do not match");
+
+            int sucessful = DataModule.ExecuteSQL(sql);
+            // DataGridView Temp = ((Secretary_form)password).dbView;
+            //DataModule.LoadTable(ref Temp, "SELECT * FROM tblStaff");
+            if (sucessful == 1)
+                MessageBox.Show("Added sucessfully");
+            else
+                MessageBox.Show("Error was encountered");
+
+
         }
+
     }
 }

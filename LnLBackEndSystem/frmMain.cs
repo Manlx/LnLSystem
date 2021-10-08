@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using NSDataModule;
 using CypherLib;
+using StaffObjAndUtils;
 
 namespace LnLBackEndSystem
 {
@@ -102,20 +103,20 @@ namespace LnLBackEndSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (edtUser.Text == String.Empty)
+            if (!int.TryParse(edtUser.Text, out int ID) )
             {
-                MessageBox.Show("Please enter a user ID");
+                MessageBox.Show("Please enter a valid user ID");
                 edtUser.Focus();
                 return;
             }
-            string Password = DataModule.GetValue<string>(0, $"SELECT EncryptedPassword FROM tblStaff WHERE StaffID = {edtUser.Text}");
-            if (Password != Cypher.Encrypt(edtPassword.Text))
+            StaffObj StaffMem = new StaffObj();
+            StaffMem.LoadFromDB($"{ID}");
+            if (StaffMem.EncryptedPassword != Cypher.Encrypt(edtPassword.Text) )
             {
-                MessageBox.Show("Invalid Information");
+                MessageBox.Show("Credentials are inncorrect");
                 return;
             }
-            int StaffRank = DataModule.GetValue<int>(0, $"SELECT RankID FROM tblStaff WHERE StaffID = {edtUser.Text}");
-            switch(StaffRank)
+            switch(int.Parse(StaffMem.RankID))
             {
                 case 1:
                     frmBarpersonLogin.Creator = this;

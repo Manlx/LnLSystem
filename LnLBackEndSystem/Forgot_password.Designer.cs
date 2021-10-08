@@ -49,7 +49,7 @@ namespace LnLBackEndSystem
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(12, 37);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(39, 13);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             // 
@@ -58,7 +58,7 @@ namespace LnLBackEndSystem
             this.lblSurname.AutoSize = true;
             this.lblSurname.Location = new System.Drawing.Point(12, 66);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(52, 13);
+            this.lblSurname.Size = new System.Drawing.Size(55, 13);
             this.lblSurname.TabIndex = 1;
             this.lblSurname.Text = "Surname:";
             // 
@@ -98,7 +98,7 @@ namespace LnLBackEndSystem
             this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(166, 34);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.Size = new System.Drawing.Size(100, 22);
             this.txtName.TabIndex = 0;
             // 
             // txtSurname
@@ -108,7 +108,7 @@ namespace LnLBackEndSystem
             this.txtSurname.ForeColor = System.Drawing.Color.White;
             this.txtSurname.Location = new System.Drawing.Point(166, 63);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtSurname.Size = new System.Drawing.Size(100, 22);
             this.txtSurname.TabIndex = 1;
             // 
             // btnReset
@@ -130,7 +130,7 @@ namespace LnLBackEndSystem
             this.lblPassword.AutoSize = true;
             this.lblPassword.Location = new System.Drawing.Point(12, 133);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(80, 13);
+            this.lblPassword.Size = new System.Drawing.Size(86, 13);
             this.lblPassword.TabIndex = 8;
             this.lblPassword.Text = "New password:";
             // 
@@ -139,7 +139,7 @@ namespace LnLBackEndSystem
             this.lblConfirm.AutoSize = true;
             this.lblConfirm.Location = new System.Drawing.Point(12, 164);
             this.lblConfirm.Name = "lblConfirm";
-            this.lblConfirm.Size = new System.Drawing.Size(116, 13);
+            this.lblConfirm.Size = new System.Drawing.Size(129, 13);
             this.lblConfirm.TabIndex = 9;
             this.lblConfirm.Text = "Confirm new password:";
             // 
@@ -151,7 +151,7 @@ namespace LnLBackEndSystem
             this.txtPass.Location = new System.Drawing.Point(166, 130);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(100, 20);
+            this.txtPass.Size = new System.Drawing.Size(100, 22);
             this.txtPass.TabIndex = 3;
             // 
             // txtConfirm_pass
@@ -162,7 +162,7 @@ namespace LnLBackEndSystem
             this.txtConfirm_pass.Location = new System.Drawing.Point(166, 162);
             this.txtConfirm_pass.Name = "txtConfirm_pass";
             this.txtConfirm_pass.PasswordChar = '*';
-            this.txtConfirm_pass.Size = new System.Drawing.Size(100, 20);
+            this.txtConfirm_pass.Size = new System.Drawing.Size(100, 22);
             this.txtConfirm_pass.TabIndex = 4;
             // 
             // btnBack
@@ -197,7 +197,9 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblRank);
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblName);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Forgot_password";
             this.Text = "Forgot_password";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Forgot_password_FormClosing);

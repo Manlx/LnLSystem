@@ -41,9 +41,6 @@ namespace LnLBackEndSystem
         }
         private void Secratary_Booking_Management_Load(object sender, EventArgs e)
         {
-
-            btnDelete.Visible = false;
-            btnUpdate.Visible = false;
             UpdateCheckListBox();
             lstBookingscon = new List<BookingObject>();
             InsertAllBookings();

@@ -194,7 +194,6 @@ namespace LnLBackEndSystem
             this.lblRank.Size = new System.Drawing.Size(36, 13);
             this.lblRank.TabIndex = 14;
             this.lblRank.Text = "Rank:";
-            this.lblRank.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbRank
             // 
@@ -204,7 +203,6 @@ namespace LnLBackEndSystem
             this.cbRank.Name = "cbRank";
             this.cbRank.Size = new System.Drawing.Size(100, 21);
             this.cbRank.TabIndex = 15;
-            this.cbRank.SelectedIndexChanged += new System.EventHandler(this.cbRank_SelectedIndexChanged);
             // 
             // Secretary_insert
             // 

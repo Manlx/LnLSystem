@@ -18,8 +18,6 @@ namespace LnLBackEndSystem
             string[] temp = DataModule.GetValues<string>(0, "SELECT Description FROM tblEventType ; ");
             for (int x = 0; x < temp.Length; x++)
                cbType.Items.Add(temp[x]);
-         
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -40,7 +38,7 @@ namespace LnLBackEndSystem
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
-            string sql = "DELETE FROM tblBooking WHERE Date ='" + monthCalendar1.SelectionRange.Start.ToShortDateString() + "' AND Time = '" + txtTime.Text + "' AND Type = '" + cbType.SelectedIndex + 1 + "'";
+            string sql = "DELETE FROM tblBooking WHERE DateOfBooking ='" + monthCalendar1.SelectionRange.Start.ToShortDateString() + "' AND TimeOfBooking = '" + txtTime.Text + "' AND EventType = '" + cbType.SelectedIndex + 1 + "'";
 
             int sucessful = DataModule.ExecuteSQL(sql);
             if (sucessful == 1)

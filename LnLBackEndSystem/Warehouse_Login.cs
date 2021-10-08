@@ -1,4 +1,4 @@
-﻿//Brendan 32737742
+﻿//Brendan Viljoen 32737742
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,12 +30,13 @@ namespace LnLBackEndSystem
 
         private void btnBarRestock_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE tblStock SET CountInBar=30,CountInWarehouse=CountInWarehouse-30+CountInBar WHERE CountInWareHouse>50";
+            //string sql = "UPDATE tblStock SET CountInBar=30,CountInWarehouse=CountInWarehouse-30+CountInBar WHERE CountInWareHouse>50";
+            string sql = "UPDATE tblStock SET CountInBar=30,CountInWareHouse=CountInWareHouse-30+CountInBar WHERE (CountInWareHouse>=50) AND (CountInBar<20)";
             int sucessful = DataModule.ExecuteSQL(sql);
             if (sucessful == 1)
                 MessageBox.Show("Updated sucessfully");
             else
-                MessageBox.Show("Error was encountered");
+                MessageBox.Show("Restock Unnecesary");
 
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
 
@@ -43,12 +44,12 @@ namespace LnLBackEndSystem
 
         private void btnWarehouseRestock_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE tblStock SET CountInWarehouse=100 WHERE CountInWareHouse<30";
+            string sql = "UPDATE tblStock SET CountInWareHouse=100 WHERE CountInWareHouse<50";
             int sucessful = DataModule.ExecuteSQL(sql);
             if (sucessful == 1)
                 MessageBox.Show("Updated sucessfully");
             else
-                MessageBox.Show("Error was encountered");
+                MessageBox.Show("Restock Unnecesary");
 
             DataModule.LoadTable(ref dgViewWarehouse, "SELECT StockName,DateAcquired,CountInBar,CountInWareHouse FROM tblStock");
         }
@@ -61,6 +62,11 @@ namespace LnLBackEndSystem
         private void Warehouse_Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Creator.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

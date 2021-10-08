@@ -43,5 +43,15 @@ namespace LnLBackEndSystem
             stockReport.Show();
             this.Hide();
         }
+
+        private void frmBarpersonLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Creator.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

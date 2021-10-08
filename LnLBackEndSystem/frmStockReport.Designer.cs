@@ -30,9 +30,9 @@ namespace LnLBackEndSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
@@ -119,29 +119,30 @@ namespace LnLBackEndSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStockReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStockReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvStockReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStockReport.EnableHeadersVisualStyles = false;
             this.dgvStockReport.Location = new System.Drawing.Point(0, 50);
             this.dgvStockReport.Name = "dgvStockReport";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStockReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.dgvStockReport.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvStockReport.ReadOnly = true;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            this.dgvStockReport.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvStockReport.Size = new System.Drawing.Size(868, 655);
             this.dgvStockReport.TabIndex = 3;
             // 
@@ -245,7 +246,7 @@ namespace LnLBackEndSystem
             this.rbDesc.AutoSize = true;
             this.rbDesc.Location = new System.Drawing.Point(19, 63);
             this.rbDesc.Name = "rbDesc";
-            this.rbDesc.Size = new System.Drawing.Size(54, 17);
+            this.rbDesc.Size = new System.Drawing.Size(52, 17);
             this.rbDesc.TabIndex = 1;
             this.rbDesc.TabStop = true;
             this.rbDesc.Text = "DESC";
@@ -256,7 +257,7 @@ namespace LnLBackEndSystem
             this.rbASC.AutoSize = true;
             this.rbASC.Location = new System.Drawing.Point(19, 37);
             this.rbASC.Name = "rbASC";
-            this.rbASC.Size = new System.Drawing.Size(46, 17);
+            this.rbASC.Size = new System.Drawing.Size(45, 17);
             this.rbASC.TabIndex = 0;
             this.rbASC.TabStop = true;
             this.rbASC.Text = "ASC";
@@ -283,7 +284,7 @@ namespace LnLBackEndSystem
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(39, 72);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(122, 17);
+            this.radioButton1.Size = new System.Drawing.Size(132, 17);
             this.radioButton1.TabIndex = 18;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Count in Warehouse";
@@ -294,7 +295,7 @@ namespace LnLBackEndSystem
             this.rbCountInBar.AutoSize = true;
             this.rbCountInBar.Location = new System.Drawing.Point(39, 49);
             this.rbCountInBar.Name = "rbCountInBar";
-            this.rbCountInBar.Size = new System.Drawing.Size(83, 17);
+            this.rbCountInBar.Size = new System.Drawing.Size(89, 17);
             this.rbCountInBar.TabIndex = 17;
             this.rbCountInBar.TabStop = true;
             this.rbCountInBar.Text = "Count in Bar";
@@ -305,7 +306,7 @@ namespace LnLBackEndSystem
             this.rbProfitMargin.AutoSize = true;
             this.rbProfitMargin.Location = new System.Drawing.Point(39, 95);
             this.rbProfitMargin.Name = "rbProfitMargin";
-            this.rbProfitMargin.Size = new System.Drawing.Size(84, 17);
+            this.rbProfitMargin.Size = new System.Drawing.Size(93, 17);
             this.rbProfitMargin.TabIndex = 16;
             this.rbProfitMargin.TabStop = true;
             this.rbProfitMargin.Text = "Profit Margin";
@@ -316,7 +317,7 @@ namespace LnLBackEndSystem
             this.rbCostPrice.AutoSize = true;
             this.rbCostPrice.Location = new System.Drawing.Point(39, 26);
             this.rbCostPrice.Name = "rbCostPrice";
-            this.rbCostPrice.Size = new System.Drawing.Size(73, 17);
+            this.rbCostPrice.Size = new System.Drawing.Size(75, 17);
             this.rbCostPrice.TabIndex = 15;
             this.rbCostPrice.TabStop = true;
             this.rbCostPrice.Text = "Cost Price";
@@ -327,7 +328,7 @@ namespace LnLBackEndSystem
             this.rbDateAquired.AutoSize = true;
             this.rbDateAquired.Location = new System.Drawing.Point(39, -16);
             this.rbDateAquired.Name = "rbDateAquired";
-            this.rbDateAquired.Size = new System.Drawing.Size(93, 17);
+            this.rbDateAquired.Size = new System.Drawing.Size(98, 17);
             this.rbDateAquired.TabIndex = 14;
             this.rbDateAquired.TabStop = true;
             this.rbDateAquired.Text = "Date Acquired";
@@ -338,7 +339,7 @@ namespace LnLBackEndSystem
             this.rbStockName.AutoSize = true;
             this.rbStockName.Location = new System.Drawing.Point(39, 118);
             this.rbStockName.Name = "rbStockName";
-            this.rbStockName.Size = new System.Drawing.Size(82, 17);
+            this.rbStockName.Size = new System.Drawing.Size(84, 17);
             this.rbStockName.TabIndex = 13;
             this.rbStockName.TabStop = true;
             this.rbStockName.Text = "Stock name";
@@ -364,22 +365,28 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(15, 67);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(15, 42);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(75, 48);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(216, 67);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(216, 42);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(75, 48);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "CLose";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // txtCountINWareHouse
             // 
@@ -388,7 +395,7 @@ namespace LnLBackEndSystem
             this.txtCountINWareHouse.ForeColor = System.Drawing.Color.White;
             this.txtCountINWareHouse.Location = new System.Drawing.Point(191, 319);
             this.txtCountINWareHouse.Name = "txtCountINWareHouse";
-            this.txtCountINWareHouse.Size = new System.Drawing.Size(100, 20);
+            this.txtCountINWareHouse.Size = new System.Drawing.Size(100, 22);
             this.txtCountINWareHouse.TabIndex = 11;
             this.txtCountINWareHouse.TextChanged += new System.EventHandler(this.txtCountINWareHouse_TextChanged);
             // 
@@ -397,7 +404,7 @@ namespace LnLBackEndSystem
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 324);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 13);
+            this.label4.Size = new System.Drawing.Size(150, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Count in warehouse below:";
             // 
@@ -408,7 +415,7 @@ namespace LnLBackEndSystem
             this.txtCountInBar.ForeColor = System.Drawing.Color.White;
             this.txtCountInBar.Location = new System.Drawing.Point(191, 279);
             this.txtCountInBar.Name = "txtCountInBar";
-            this.txtCountInBar.Size = new System.Drawing.Size(100, 20);
+            this.txtCountInBar.Size = new System.Drawing.Size(100, 22);
             this.txtCountInBar.TabIndex = 9;
             this.txtCountInBar.TextChanged += new System.EventHandler(this.txtCountInBar_TextChanged);
             // 
@@ -417,7 +424,7 @@ namespace LnLBackEndSystem
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 282);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.Size = new System.Drawing.Size(110, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Count in bar below:";
             // 
@@ -441,7 +448,7 @@ namespace LnLBackEndSystem
             this.txtSearch.ForeColor = System.Drawing.Color.White;
             this.txtSearch.Location = new System.Drawing.Point(59, 215);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(234, 20);
+            this.txtSearch.Size = new System.Drawing.Size(234, 22);
             this.txtSearch.TabIndex = 6;
             // 
             // label2
@@ -490,7 +497,9 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvStockReport);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmStockReport";
             this.Text = "Stock Report";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStockReport_FormClosed);

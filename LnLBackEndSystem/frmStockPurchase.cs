@@ -4,7 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using StockDisplayAUtils;
 using NSDataModule;
-
+using TabObjAndUtil;
 namespace LnLBackEndSystem
 {
     public partial class frmStockPurchase : Form
@@ -74,7 +74,7 @@ namespace LnLBackEndSystem
             if (lstOrder.SelectedIndex >= 0)
                 UserCart.Decrease(lstOrder.SelectedIndex);
             else
-                MessageBox.Show("Please sullect");
+                MessageBox.Show("Please Select");
             UserCart.UpdateListBox(ref lstOrder);
         }
 
@@ -83,17 +83,17 @@ namespace LnLBackEndSystem
             if (lstOrder.SelectedIndex >= 0)
                 UserCart.Remove(lstOrder.SelectedIndex);
             else
-                MessageBox.Show("Please sullect");
+                MessageBox.Show("Please Select");
             UserCart.UpdateListBox(ref lstOrder);
         }
 
         
         private void btnPayCash_Click(object sender, EventArgs e)
         {
-            frmPayConfirm.Creator = this;
-            frmPayConfirm MakePayMent = new frmPayConfirm();
+            frmStaffLogin.Creator = this;
+            frmStaffLogin MakePayMent = new frmStaffLogin();
             MakePayMent.ShowDialog();
-            if (frmPayConfirm.isVerified)
+            if (frmStaffLogin.isValid)
             {
                 string[] SQLs = UserCart.CreateUpdateCashPurchaseSQL();
                 int iEffected = 0;
@@ -111,18 +111,39 @@ namespace LnLBackEndSystem
 
         private void btnAddToTab_Click(object sender, EventArgs e)
         {
-            Tab_login.Creator = this;
-            Tab_login TabLog = new Tab_login();
-            TabLog.ShowDialog();
-            if (!Tab_login.isValidLogin)
+            frmClientLogin.Creator = this;
+            frmClientLogin frmClient = new frmClientLogin();
+            frmClient.ShowDialog();
+            if (!frmClientLogin.LastClient.HasTab)
+            {
+                if (frmClientLogin.LastClient.DoesExist())
+                    MessageBox.Show("This Client does not have a tab.");
+                if (MessageBox.Show("Register for tab", "Register", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    btnRegisterTab_Click(btnRegisterTab, new EventArgs());
+                else
+                    return;
+            }
+            TabObj ClientTab = new TabObj();
+            if (!ClientTab.LoadFromDB(frmClientLogin.LastClient.ClientID))
+            {
+                MessageBox.Show("An Error Was encountered #000-000-004");
                 return;
+            }
+
+            if (ClientTab.Balance + UserCart.CalculateCartCost() > ClientTab.CutOffValue)
+            {
+                MessageBox.Show("Sorry this tab will exceed its limit please pay tab or pay cash");
+                return;
+            }
+            //Update Stock Table
             string[] SQLs = UserCart.CreateUpdateCashPurchaseSQL();
             int iEffected = 0;
             foreach (string x in SQLs)
                 iEffected += DataModule.ExecuteSQL(x);
-            //MessageBox.Show($"{iEffected} Item(s) were sold.");
-            MessageBox.Show($"{UserCart.UpdateCreditSale(Tab_login.ID)} Item(s) were sold."); ;
-            //MessageBox.Show(Tab_login.isValidLogin.ToString());
+
+            MessageBox.Show($"{UserCart.UpdateCreditSale(ClientTab.TabID)} Item(s) were sold."); ;
+
+            //ReloadPage
             Utils.MassDispose(SDArr);
             SDArr = Utils.GenerateStock(pnlStockBox, StockItemClick);
             UserCart = new Cart();
@@ -134,6 +155,20 @@ namespace LnLBackEndSystem
             frmTabPayment.Creator = this;
             frmTabPayment TabPay = new frmTabPayment();
             TabPay.ShowDialog();
+        }
+
+        private void btnRegisterTab_Click(object sender, EventArgs e)
+        {
+            frmClientLogin.Creator = this;
+            frmClientLogin ClientLog = new frmClientLogin();
+            ClientLog.ShowDialog();
+            if (frmClientLogin.CorrectUser)
+            {
+                if (DataModule.ExecuteSQL($"INSERT INTO tblTab (ClientID,Balance,CutOffValue) Values ({frmClientLogin.LastClient.ClientID},0,1000.00)") > 0)
+                    MessageBox.Show("Tab Linked");
+                else
+                    MessageBox.Show("Error encounted 000-000-005");
+            }
         }
     }
 }

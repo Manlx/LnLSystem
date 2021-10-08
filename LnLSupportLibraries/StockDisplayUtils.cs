@@ -118,6 +118,13 @@ namespace StockDisplayAUtils
             }    
 
         }
+        public double CalculateCartCost()
+        {
+            double Out = 0;
+            for (int x = 0; x < arrItems.Count; x++)
+                Out += arrItems[x].CalcCost() * arrCount[x];
+            return Out;
+        }
         public string[] CreateUpdateCashPurchaseSQL()
         {
             List<string> SQLs = new List<string>();
@@ -200,11 +207,21 @@ namespace StockDisplayAUtils
             {
                 Clipboard.SetText($"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
                 string temp = DataModule.GetValue(0, $"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
+                Clipboard.SetText($"INSERT INTO tblCreditSale (TabID,StockID,Count) VALUES ({TabID},{Item.StockID},{arrCount[x]})");
                 if (String.IsNullOrEmpty(temp))
                     Effected += DataModule.ExecuteSQL($"INSERT INTO tblCreditSale (TabID,StockID,Count) VALUES ({TabID},{Item.StockID},{arrCount[x]})");
                 else
                     Effected += DataModule.ExecuteSQL($"UPDATE tblCreditSale SET Count = {int.Parse(temp)+arrCount[x]} WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
+                string strBalance = DataModule.GetValue(0, $"SELECT Balance FROM tblTab WHERE TabID = {TabID}");
+                if (!String.IsNullOrEmpty(strBalance))
+                    DataModule.ExecuteSQL($"UPDATE tblTab SET Balance = {(Double.Parse(strBalance) + arrCount[x] * Item.CalcCost()):F2} WHERE TabID = {TabID}");
+                else
+                {
+                    MessageBox.Show("Error Encountered please call support Code 000-000-001");
+                    return -1;
+                }
                 x++;
+                
             }
             return Effected;
         }

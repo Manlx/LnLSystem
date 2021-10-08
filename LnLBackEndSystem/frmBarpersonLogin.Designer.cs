@@ -70,12 +70,13 @@ namespace LnLBackEndSystem
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(14, 216);
+            this.btnBack.Location = new System.Drawing.Point(15, 215);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(141, 45);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnPointOfSale
             // 
@@ -121,6 +122,7 @@ namespace LnLBackEndSystem
             this.Name = "frmBarpersonLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bartender";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBarpersonLogin_FormClosed);
             this.ResumeLayout(false);
 
         }

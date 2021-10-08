@@ -41,7 +41,20 @@ namespace LnLBackEndSystem
             frmBarpersonLogin.Creator = this;
             frmBarpersonLogin BarLog = new frmBarpersonLogin();
             BarLog.Show();
-            this.Show();
+            this.Hide();
+        }
+
+        private void frmCEO_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Creator.Show();
+        }
+
+        private void btnWarehouse_Click(object sender, EventArgs e)
+        {
+            Warehouse_Login.Creator = this;
+            Warehouse_Login WarLog = new Warehouse_Login();
+            WarLog.Show();
+            this.Hide();
         }
     }
 }

@@ -65,6 +65,7 @@ namespace LnLBackEndSystem
             this.button1.TabIndex = 0;
             this.button1.Text = "SQL Console";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -79,6 +80,7 @@ namespace LnLBackEndSystem
             this.button2.TabIndex = 1;
             this.button2.Text = "Database Management";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
@@ -93,6 +95,7 @@ namespace LnLBackEndSystem
             this.button3.TabIndex = 2;
             this.button3.Text = "Secretary";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // edtUser
@@ -102,16 +105,16 @@ namespace LnLBackEndSystem
             this.edtUser.Location = new System.Drawing.Point(159, 100);
             this.edtUser.Name = "edtUser";
             this.edtUser.Size = new System.Drawing.Size(182, 28);
-            this.edtUser.TabIndex = 3;
+            this.edtUser.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 105);
+            this.label1.Location = new System.Drawing.Point(49, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 30);
+            this.label1.Size = new System.Drawing.Size(87, 30);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Username:";
+            this.label1.Text = "Staff ID:";
             // 
             // edtPassword
             // 
@@ -119,13 +122,14 @@ namespace LnLBackEndSystem
             this.edtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.edtPassword.Location = new System.Drawing.Point(159, 182);
             this.edtPassword.Name = "edtPassword";
+            this.edtPassword.PasswordChar = '#';
             this.edtPassword.Size = new System.Drawing.Size(182, 28);
-            this.edtPassword.TabIndex = 6;
+            this.edtPassword.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 185);
+            this.label2.Location = new System.Drawing.Point(49, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 30);
             this.label2.TabIndex = 7;
@@ -143,6 +147,7 @@ namespace LnLBackEndSystem
             this.button4.TabIndex = 8;
             this.button4.Text = "Admin Login";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
@@ -157,6 +162,7 @@ namespace LnLBackEndSystem
             this.button6.TabIndex = 10;
             this.button6.Text = "Warehouse";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button8
@@ -171,6 +177,7 @@ namespace LnLBackEndSystem
             this.button8.TabIndex = 12;
             this.button8.Text = "Image Manager";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Visible = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnRequestStock
@@ -185,6 +192,7 @@ namespace LnLBackEndSystem
             this.btnRequestStock.TabIndex = 12;
             this.btnRequestStock.Text = "Request Stock";
             this.btnRequestStock.UseVisualStyleBackColor = false;
+            this.btnRequestStock.Visible = false;
             this.btnRequestStock.Click += new System.EventHandler(this.btnRequestStock_Click);
             // 
             // btnStockOrder
@@ -199,6 +207,7 @@ namespace LnLBackEndSystem
             this.btnStockOrder.TabIndex = 13;
             this.btnStockOrder.Text = "Stock Purchase";
             this.btnStockOrder.UseVisualStyleBackColor = false;
+            this.btnStockOrder.Visible = false;
             this.btnStockOrder.Click += new System.EventHandler(this.btnStockOrder_Click);
             // 
             // btnStockReport
@@ -213,6 +222,7 @@ namespace LnLBackEndSystem
             this.btnStockReport.TabIndex = 13;
             this.btnStockReport.Text = "StockReport";
             this.btnStockReport.UseVisualStyleBackColor = false;
+            this.btnStockReport.Visible = false;
             this.btnStockReport.Click += new System.EventHandler(this.btnStockReport_Click);
             // 
             // button9
@@ -227,6 +237,7 @@ namespace LnLBackEndSystem
             this.button9.TabIndex = 14;
             this.button9.Text = "Accountant Login";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel1
@@ -241,7 +252,7 @@ namespace LnLBackEndSystem
             this.panel1.Location = new System.Drawing.Point(298, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 315);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 0;
             // 
             // btnLogin
             // 
@@ -251,7 +262,7 @@ namespace LnLBackEndSystem
             this.btnLogin.Location = new System.Drawing.Point(283, 255);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(87, 42);
-            this.btnLogin.TabIndex = 9;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -288,10 +299,12 @@ namespace LnLBackEndSystem
             this.btnCEO.TabIndex = 17;
             this.btnCEO.Text = "CEO";
             this.btnCEO.UseVisualStyleBackColor = false;
+            this.btnCEO.Visible = false;
             this.btnCEO.Click += new System.EventHandler(this.btnCEO_Click);
             // 
             // frmMain
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));

@@ -1,4 +1,4 @@
-﻿//M Tolmay 33784507
+﻿//M Tolmay 33784507 Manuel A Nunes 34551875
 using System;
 using System.Windows.Forms;
 using NSDataModule;
@@ -7,7 +7,7 @@ namespace LnLBackEndSystem
 {
     public partial class Booking_Management : Form
     {
-        public static Form make_booking;
+        public static Form Creator;
 
         public string[] LocationID;
         public string[] EventTypes;
@@ -21,11 +21,30 @@ namespace LnLBackEndSystem
             if (lstVenues.SelectedIndex <0)
             {
                 MessageBox.Show("Select a Location please");
+                lstVenues.Focus();
+                return;
+            }
+            if (DTPDate.Value < DateTime.Now)
+            {
+                MessageBox.Show("Please Select a proper time");
+                DTPDate.Focus();
+                return;
+            }
+            if (cbType.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please Select an Event Type");
+                cbType.Focus();
+                return;
+            }    
+            if (!HasSelectedClient)
+            {
+                MessageBox.Show("Select a user");
+                btnClient.PerformClick();
                 return;
             }
             string sql = $"INSERT INTO tblEvent (DateOfBooking,TimeOfBooking,LocationID,ClientID,EventType) VALUES(" +
-                $"'{cldDate.SelectionStart:yyyy-MM-dd}', '{txtTime.Text}',{LocationID[lstVenues.SelectedIndex]}" +
-                $",{txtClientID.Text},{EventTypes[cbType.SelectedIndex]})";
+                $"'{DTPDate.Value:yyyy-MM-dd}', '{DTPTime.Value:HH:mm}',{LocationID[lstVenues.SelectedIndex]}" +
+                $",{frmClientLogin.LastClient.ClientID},{EventTypes[cbType.SelectedIndex]})";
             int sucessful = DataModule.ExecuteSQL(sql);
             Clipboard.SetText(sql);
             if (sucessful == 1)
@@ -55,7 +74,7 @@ namespace LnLBackEndSystem
         
         private void Booking_Management_FormClosing(object sender, FormClosingEventArgs e)
         {
-            make_booking.Show();
+            Creator.Show();
         }
 
         private void clsRequirements_Click(object sender, EventArgs e)
@@ -74,6 +93,14 @@ namespace LnLBackEndSystem
             lstVenues.Items.Clear();
             foreach (string x in Values)
                 lstVenues.Items.Add(x);
+        }
+        bool HasSelectedClient = false;
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            frmClientLogin.Creator = this;
+            frmClientLogin ClientLog = new frmClientLogin();
+            ClientLog.ShowDialog();
+            HasSelectedClient = frmClientLogin.LastClient.DoesExist();
         }
     }
 }

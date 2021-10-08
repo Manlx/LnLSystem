@@ -75,7 +75,6 @@ namespace LnLBackEndSystem
                 }
             }
             DataModule.LoadTable(ref dgvStockReport, BuildSQL());
-            MessageBox.Show(BuildSQL());
         }
         
         private void txtCountInBar_TextChanged(object sender, EventArgs e)

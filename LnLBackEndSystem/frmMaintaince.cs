@@ -15,7 +15,8 @@ namespace LnLBackEndSystem
         public frmMaintainces()
         {
             InitializeComponent();
-            
+            Top = 0;
+            Left = 0;
         }
         public static string TableName;
         public static CompsUtilities MyUpdateComps,MyInsertComps;
@@ -43,7 +44,6 @@ namespace LnLBackEndSystem
                 }
 
             SQL = $"{SQL.Remove(SQL.Length - 1, 1)} FROM {TableName} {WHERE} {SORT}";
-            Clipboard.SetText(SQL);
             DataModule.LoadTable(ref dgvTableData, SQL);
             dgvTableData.AutoResizeColumns();
             dgvTableData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -165,7 +165,6 @@ namespace LnLBackEndSystem
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MessageBox.Show( $"{DataModule.ExecuteSQL(MyUpdateComps.GenerateUpdateSQL(ActiveTable))} Rows were effected");
-            Clipboard.SetText(MyUpdateComps.GenerateUpdateSQL(ActiveTable));
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
         }
     }
