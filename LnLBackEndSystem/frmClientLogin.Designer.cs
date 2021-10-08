@@ -126,6 +126,8 @@ namespace LnLBackEndSystem
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmClientLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Client Login";
