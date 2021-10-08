@@ -73,6 +73,7 @@ namespace LnLBackEndSystem
                     MessageBox.Show("No Client Selected");
                     return;
                 }
+                lstBooking.Items.Clear();
                 string[] Bookings = DataModule.GetValues(0, $"SELECT EventID FROM tblEvent WHERE ClientID = {frmClientLogin.LastClient.ClientID}");
                 foreach (string x in Bookings)
                 {
