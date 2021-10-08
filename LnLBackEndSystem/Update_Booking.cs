@@ -66,7 +66,22 @@ namespace LnLBackEndSystem
                 lstBook[lstBooking.SelectedIndex].Location = LocationID[lstVenues.SelectedIndex];
 
             if (lstBook[lstBooking.SelectedIndex].UpdateSelfInEvent())
+            {
                 MessageBox.Show("Booking added sucessfully");
+                if (!frmClientLogin.LastClient.DoesExist())
+                {
+                    MessageBox.Show("No Client Selected");
+                    return;
+                }
+                string[] Bookings = DataModule.GetValues(0, $"SELECT EventID FROM tblEvent WHERE ClientID = {frmClientLogin.LastClient.ClientID}");
+                foreach (string x in Bookings)
+                {
+                    lstBook.Add(new BookingObject());
+                    lstBook[lstBook.Count - 1].LoadFromDB(x);
+                    lstBooking.Items.Add(lstBook[lstBook.Count - 1].toString());
+                }
+                gpbOptions.Enabled = true;
+            }
             else
                 MessageBox.Show("Error was encountered");
         }
@@ -110,7 +125,6 @@ namespace LnLBackEndSystem
             }
             gpbOptions.Enabled = true;
         }
-
         private void gpbOptions_Enter(object sender, EventArgs e)
         {
 
