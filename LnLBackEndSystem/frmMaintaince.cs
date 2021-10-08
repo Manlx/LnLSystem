@@ -38,6 +38,9 @@ namespace LnLBackEndSystem
                     case DataTypes.Date:
                         SQL += $" DATE_FORMAT({FieldAndCols[x][0]},'%Y-%m-%d') AS {FieldAndCols[x][0]}, ";
                         break;
+                    case DataTypes.Time:
+                        SQL += $" TIME_FORMAT({FieldAndCols[x][0]},'%H:%i') AS {FieldAndCols[x][0]}, ";
+                        break;
                     default:
                         SQL += $" {FieldAndCols[x][0]},";
                         break;

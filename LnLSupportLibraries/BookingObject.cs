@@ -57,6 +57,18 @@ namespace BookingUtil
                 throw;
             }
         }
+        public bool DeleteSelfFromEvents()
+        {
+            try
+            {
+                return DataModule.ExecuteSQL($"DELETE FROM tblEvent WHERE EventID = {BookingID}") > 0;
+            }
+            catch (System.Exception)
+            {
+                return false;   
+                throw;
+            }
+        }
         public string[] MoveToEventTable()
         {
             string Delete = $"DELETE FROM tblBooking WHERE BookingID = {BookingID}";

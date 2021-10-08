@@ -9,7 +9,8 @@ namespace NSTableAndUtil
         String,
         Number,
         Boolean,
-        Date
+        Date,
+        Time
     }
     public static class Utilities
     {
@@ -46,7 +47,8 @@ namespace NSTableAndUtil
             string[] Strings = { "VARCHAR(", "VARCHAR", "CHAR(", "TINYTEXT", "TEXT(", "MEDIUMTEXT", "LONGTEXT", "NVARCHAR", "TEXT" },
                 Number = { "TINYINT", "SMALLINT", "INT", "BIGINT", "DECIMAL", "INTEGER(", "DOUBLE(", "FLOAT(", "DECIMAL(", "DEC(","FLOAT" },
                 Booleans = { "BOOL", "BIT", "BIT(" },
-                DATE = { "DATE", "DATETIME(", "TIMESTAMP(", "TIME(", "YEAR","TIME"};
+                DATE = { "DATE", "DATETIME(", "YEAR"},
+                TIME = { "TIMESTAMP(", "TIME(","TIME"};
             Out = -1;
             bool bLooking = true;
 
@@ -71,6 +73,10 @@ namespace NSTableAndUtil
                     case 3:
                         while (bLooking && x < DATE.Length)
                             bLooking = Input.IndexOf(DATE[x++]) < 0;
+                        break;
+                    case 4:
+                        while (bLooking && x < TIME.Length)
+                            bLooking = Input.IndexOf(TIME[x++]) < 0;
                         break;
                 }
             }

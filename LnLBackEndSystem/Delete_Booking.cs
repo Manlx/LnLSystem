@@ -1,7 +1,9 @@
-﻿//M Tolmay 33784507
+﻿//Manuel A Nunes 34551875
 using System;
 using System.Windows.Forms;
 using NSDataModule;
+using BookingUtil;
+using System.Collections.Generic;
 
 namespace LnLBackEndSystem
 {
@@ -12,14 +14,6 @@ namespace LnLBackEndSystem
         {
             InitializeComponent();
         }
-
-        private void Delete_Booking_Load(object sender, EventArgs e)
-        {
-            string[] temp = DataModule.GetValues<string>(0, "SELECT Description FROM tblEventType ; ");
-            for (int x = 0; x < temp.Length; x++)
-               cbType.Items.Add(temp[x]);
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -29,22 +23,47 @@ namespace LnLBackEndSystem
         {
             delete_booking.Show();
         }
-
-        private void cbType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
-            string sql = "DELETE FROM tblBooking WHERE DateOfBooking ='" + monthCalendar1.SelectionRange.Start.ToShortDateString() + "' AND TimeOfBooking = '" + txtTime.Text + "' AND EventType = '" + cbType.SelectedIndex + 1 + "'";
-
-            int sucessful = DataModule.ExecuteSQL(sql);
-            if (sucessful == 1)
-                MessageBox.Show("Deleted sucessfully");
+            if (lstBookings.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please select a booking to remove");
+                return;
+            }
+            if (lstBooking[lstBookings.SelectedIndex].DeleteSelfFromEvents())
+            {
+                MessageBox.Show("Success");
+                lstBookings.Items.Clear();
+                lstBooking = new List<BookingObject>();
+                string[] IDs = DataModule.GetValues(0, $"SELECT EventID FROM tblEvent WHERE (DateOfBooking > '{cldTime.SelectionStart:yyyy-MM-dd}') AND ('{cldTime.SelectionEnd:yyyy-MM-dd}' > DateOfBooking)");
+                foreach (string x in IDs)
+                {
+                    lstBooking.Add(new BookingObject());
+                    lstBooking[lstBooking.Count - 1].LoadFromDB(x);
+                    lstBookings.Items.Add(lstBooking[lstBooking.Count - 1].toString());
+                }
+            }
+                
             else
-                MessageBox.Show("Error was encountered");
+                MessageBox.Show("Failure");
+        }
+        List<BookingObject> lstBooking;
+        private void cldTime_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            lstBookings.Items.Clear();
+            lstBooking = new List<BookingObject>();
+            string[] IDs = DataModule.GetValues(0, $"SELECT EventID FROM tblEvent WHERE (DateOfBooking > '{cldTime.SelectionStart:yyyy-MM-dd}') AND ('{cldTime.SelectionEnd:yyyy-MM-dd}' > DateOfBooking)");
+            foreach (string x in IDs)
+            {
+                lstBooking.Add(new BookingObject());
+                lstBooking[lstBooking.Count - 1].LoadFromDB(x);
+                lstBookings.Items.Add(lstBooking[lstBooking.Count - 1].toString());
+            }
+        }
+
+        private void Delete_Booking_Load(object sender, EventArgs e)
+        {
+            lstBooking = new List<BookingObject>();
         }
     }
 }

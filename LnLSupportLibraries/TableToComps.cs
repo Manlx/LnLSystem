@@ -46,6 +46,7 @@ namespace LnLSupportLibraries
                     {
                         case DataTypes.Boolean: InputControl[x] = new CheckBox() { Name = $"chk{SelField.FieldDesc}",Text = ".", Parent =BigParent, AutoSize = true,/*Enabled = !SelField.IsPrimaryField*/ };
                             break;
+                        case DataTypes.Time:
                         case DataTypes.String:
                         case DataTypes.Date:
                         case DataTypes.Number:
