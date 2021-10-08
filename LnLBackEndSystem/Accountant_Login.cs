@@ -108,7 +108,7 @@ namespace LnLBackEndSystem
 
         private void Accountant_Login_Load(object sender, EventArgs e)
         {
-
+            lblStockPrice.Hide();
         }
     }
 }
