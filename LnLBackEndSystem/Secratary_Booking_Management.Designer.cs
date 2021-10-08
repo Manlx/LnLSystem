@@ -126,7 +126,9 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblSelect);
             this.Controls.Add(this.cbBookings);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Secratary_Booking_Management";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secratary_Booking_Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secratary_Booking_Management_FormClosing);
             this.Load += new System.EventHandler(this.Secratary_Booking_Management_Load);
