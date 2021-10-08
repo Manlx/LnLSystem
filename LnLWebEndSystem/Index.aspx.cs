@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 using NSDataModule;
 using CypherLib;
-
+//E Coetzee - 34374469
 namespace LnLWebEndSystem
 {
     public partial class WebForm1 : System.Web.UI.Page
@@ -31,7 +31,7 @@ namespace LnLWebEndSystem
                     $"'{txtSurname.Text}') AND (CellNumber = '{txtCell.Text}')").ToString();
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", $"alert('Successfully Registered\n Your ID is {ID}')", true);
                 lblMessage.Visible = true;
-                lblMessage.Text = "Your ID is "+ID;
+                lblMessage.Text = "Successfully registered. Your ID is "+ID;
                 //Display Success message
             }
             else
@@ -39,22 +39,6 @@ namespace LnLWebEndSystem
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registration Failed')", true);
                 //Display Failure message
             }
-
-
-            /*conn = new SqlConnection(constr);
-            try
-            {
-                conn.Open();
-                comm = new SqlCommand("INSERT INTO tblAdmin (Username,Password) Values ( ' " + txtName.Text + " ' ,'" + txtSurname.Text + "')", conn);
-                comm.ExecuteNonQuery();
-                conn.Close();
-                Response.Redirect("Login.aspx");
-            }
-            catch (Exception)
-            {
-                Response.Write("<script>alert('Error connecting to database');</script>");
-            }
-            conn.Close();*/
         }
     }
 }

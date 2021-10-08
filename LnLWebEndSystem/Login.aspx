@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="LnLWebEndSystem.Login" %>
+﻿<!--E Coetzee - 34374469-->
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="LnLWebEndSystem.Login" %>
 
 <!DOCTYPE html>
 
@@ -40,12 +42,12 @@
 						<form class="reg-form" id="form1" runat="server">
 							<div>
 								<label for="txtID">ID</label>
-								<asp:TextBox class="inputText" runat="server" ID="txtID" placeholder="Eugene Coetzee" required="true"></asp:TextBox>
+								<asp:TextBox class="inputText" runat="server" ID="txtID" placeholder="01" required="true"></asp:TextBox>
 							</div>
 
 							<div>
 								<label for="txtPass">Password</label>
-								<asp:TextBox class="inputText" runat="server" ID="txtPass" placeholder="ID here" type="email" required="true"></asp:TextBox>
+								<asp:TextBox class="inputText" runat="server" ID="txtPass" type="Password" required="true"></asp:TextBox>
 							</div>	
 							
 						    <asp:Button class="btn btn--form" runat="server" ID="btnLogin" Text="Login" OnClick="btnLogin_Click"/>
