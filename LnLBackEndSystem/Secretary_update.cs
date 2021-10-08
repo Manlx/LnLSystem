@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 using NSDataModule;
+using StaffObjAndUtils;
+using CypherLib;
 
 namespace LnLBackEndSystem
 {
@@ -24,21 +26,30 @@ namespace LnLBackEndSystem
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string sql;
-
-            if (cbFulltime.Checked && cbLicence.Checked)
-                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 1 + "' , IsFullTimeMember='" + 1 + "' , RankID='"+  cbRank.SelectedIndex + 1 + "' WHERE Name ='" + txtName.Text + "'";
-            else if (cbFulltime.Checked)
-                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 1 + "' , IsFullTimeMember='" + 0 + "' , RankID='"+ cbRank.SelectedIndex + 1 + "'WHERE Name ='" + txtName.Text  + "'";
-            else if (cbLicence.Checked)
-                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 0 + "' , IsFullTimeMember='" + 1 + "' , RankID='"+ cbRank.SelectedIndex + 1 + "'WHERE Name ='" + txtName.Text + "'";
-            else
-                sql = "UPDATE tblStaff SET Name ='" + txtName.Text + "' , Surname='" + txtSurname.Text + "' , CellNumber='" + txtCell.Text + "' , HasLicense='" + 0 + "' , IsFullTimeMember='" + 0 + "' , RankID='" + cbRank.SelectedIndex + 1 + "'WHERE Name ='" + txtName.Text + "'";
-
-            int sucessful = DataModule.ExecuteSQL(sql);
-            DataGridView Temp = ((Secretary_form)creator).dbView;
-            DataModule.LoadTable(ref Temp, "SELECT * FROM tblStaff");
-            if (sucessful == 1)
+            frmStaffLogin.Creator = this;
+            frmStaffLogin StaffLog = new frmStaffLogin();
+            StaffLog.ShowDialog();
+            if (!frmStaffLogin.LastStaff.IsValid())
+            {
+                MessageBox.Show("No user Selected");
+                return;
+            }
+            if (txtCell.Text != "")
+                frmStaffLogin.LastStaff.CellNumber = txtCell.Text;
+            if (txtName.Text != "")
+                frmStaffLogin.LastStaff.Name = txtName.Text;
+            if (txtPassword.Text != "")
+                frmStaffLogin.LastStaff.EncryptedPassword = Cypher.Encrypt(txtPassword.Text);
+            if (txtSurname.Text != "")
+                frmStaffLogin.LastStaff.SurName = txtSurname.Text;
+            if (cbRank.SelectedIndex >= 0)
+            {
+                string[] Ranks = DataModule.GetValues(0, "SELECT RankID FROM tblStaffRank ;");
+                frmStaffLogin.LastStaff.RankID = Ranks[cbRank.SelectedIndex];
+            }
+            frmStaffLogin.LastStaff.IsFullTimeMember = cbFulltime.Checked;
+            frmStaffLogin.LastStaff.HasLicense = cbLicence.Checked;
+            if (frmStaffLogin.LastStaff.UpdateSelf())
                 MessageBox.Show("Updated sucessfully");
             else
                 MessageBox.Show("Error was encountered");
@@ -51,11 +62,9 @@ namespace LnLBackEndSystem
             this.Hide();
         }
 
-        private string[] TempID;
         private void Secretary_update_Load(object sender, EventArgs e)
         {
             string[] temp = DataModule.GetValues<string>(0, "SELECT Description FROM tblStaffRank ; ");
-            TempID = DataModule.GetValues(0, "SELECT RANKID FROM tblStaffRank;");
             for (int x = 0; x < temp.Length; x++)
                 cbRank.Items.Add(temp[x]);
         }
