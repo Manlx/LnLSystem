@@ -24,7 +24,7 @@ namespace BookingUtil
                 string[][] Data = DataModule.GetValues($"SELECT EventID,DATE_FORMAT(DateOfBooking,'%Y-%m-%d'),TIME_FORMAT( TimeOfBooking,'%H:%i'),LocationID,ClientID,EventType FROM tblEvent WHERE EventID = {BookingID} ", new int[] {0,1,2,3,4,5});
                 foreach(string[] Row in Data)
                 {
-                    BookingID = Row[0];
+                    this.BookingID = Row[0];
                     DateOfBooking = Row[1];
                     TimeOfBooking = Row[2];
                     Location = Row[3];
@@ -49,7 +49,7 @@ namespace BookingUtil
             try
             {
                 return DataModule.ExecuteSQL($"UPDATE tblEvent SET DateOfBooking = '{DateOfBooking}', TimeOfBooking= '{TimeOfBooking}', " +
-                    $"LocationID = {Location}, ClientID = {ClientID},EventType = {EventType} FROM tblEvent WHERE EventID = {BookingID}") > 0;
+                    $"LocationID = {Location}, ClientID = {ClientID},EventType = {EventType} WHERE EventID = {BookingID}") > 0;
             }
             catch
             {

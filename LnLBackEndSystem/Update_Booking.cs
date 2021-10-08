@@ -51,18 +51,38 @@ namespace LnLBackEndSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
-            string sql;
+            if (lstBooking.SelectedIndex < 0)
+            {
+                MessageBox.Show("Select a booking to change");
+                return;
+            }
             lstBook[lstBooking.SelectedIndex].TimeOfBooking = $"{DTPTime.Value:HH:mm}";
             lstBook[lstBooking.SelectedIndex].DateOfBooking = $"{DTPTime.Value:yyyy-MM-dd}";
-            lstBook[lstBooking.SelectedIndex].EventType = $"{EventTypes[cbType.SelectedIndex]}";
+            if (cbType.SelectedIndex >= 0)
+                lstBook[lstBooking.SelectedIndex].EventType = $"{EventTypes[cbType.SelectedIndex]}";
             if (cbType.SelectedIndex >= 0)
                 lstBook[lstBooking.SelectedIndex].EventType = EventTypes[cbType.SelectedIndex];
             if (lstVenues.SelectedIndex >= 0)
                 lstBook[lstBooking.SelectedIndex].Location = LocationID[lstVenues.SelectedIndex];
 
             if (lstBook[lstBooking.SelectedIndex].UpdateSelfInEvent())
+            {
                 MessageBox.Show("Booking added sucessfully");
+                if (!frmClientLogin.LastClient.DoesExist())
+                {
+                    MessageBox.Show("No Client Selected");
+                    return;
+                }
+                lstBooking.Items.Clear();
+                string[] Bookings = DataModule.GetValues(0, $"SELECT EventID FROM tblEvent WHERE ClientID = {frmClientLogin.LastClient.ClientID}");
+                foreach (string x in Bookings)
+                {
+                    lstBook.Add(new BookingObject());
+                    lstBook[lstBook.Count - 1].LoadFromDB(x);
+                    lstBooking.Items.Add(lstBook[lstBook.Count - 1].toString());
+                }
+                gpbOptions.Enabled = true;
+            }
             else
                 MessageBox.Show("Error was encountered");
         }
@@ -106,7 +126,6 @@ namespace LnLBackEndSystem
             }
             gpbOptions.Enabled = true;
         }
-
         private void gpbOptions_Enter(object sender, EventArgs e)
         {
 

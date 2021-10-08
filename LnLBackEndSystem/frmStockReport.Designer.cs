@@ -30,9 +30,9 @@ namespace LnLBackEndSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
@@ -119,30 +119,30 @@ namespace LnLBackEndSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStockReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStockReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvStockReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStockReport.EnableHeadersVisualStyles = false;
             this.dgvStockReport.Location = new System.Drawing.Point(0, 50);
             this.dgvStockReport.Name = "dgvStockReport";
             this.dgvStockReport.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStockReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            this.dgvStockReport.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            this.dgvStockReport.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvStockReport.Size = new System.Drawing.Size(868, 655);
             this.dgvStockReport.TabIndex = 3;
             // 
@@ -282,7 +282,7 @@ namespace LnLBackEndSystem
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(39, 72);
+            this.radioButton1.Location = new System.Drawing.Point(25, 67);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(132, 17);
             this.radioButton1.TabIndex = 18;
@@ -293,7 +293,7 @@ namespace LnLBackEndSystem
             // rbCountInBar
             // 
             this.rbCountInBar.AutoSize = true;
-            this.rbCountInBar.Location = new System.Drawing.Point(39, 49);
+            this.rbCountInBar.Location = new System.Drawing.Point(25, 44);
             this.rbCountInBar.Name = "rbCountInBar";
             this.rbCountInBar.Size = new System.Drawing.Size(89, 17);
             this.rbCountInBar.TabIndex = 17;
@@ -304,7 +304,7 @@ namespace LnLBackEndSystem
             // rbProfitMargin
             // 
             this.rbProfitMargin.AutoSize = true;
-            this.rbProfitMargin.Location = new System.Drawing.Point(39, 95);
+            this.rbProfitMargin.Location = new System.Drawing.Point(25, 90);
             this.rbProfitMargin.Name = "rbProfitMargin";
             this.rbProfitMargin.Size = new System.Drawing.Size(93, 17);
             this.rbProfitMargin.TabIndex = 16;
@@ -315,7 +315,7 @@ namespace LnLBackEndSystem
             // rbCostPrice
             // 
             this.rbCostPrice.AutoSize = true;
-            this.rbCostPrice.Location = new System.Drawing.Point(39, 26);
+            this.rbCostPrice.Location = new System.Drawing.Point(25, 21);
             this.rbCostPrice.Name = "rbCostPrice";
             this.rbCostPrice.Size = new System.Drawing.Size(75, 17);
             this.rbCostPrice.TabIndex = 15;
@@ -337,7 +337,7 @@ namespace LnLBackEndSystem
             // rbStockName
             // 
             this.rbStockName.AutoSize = true;
-            this.rbStockName.Location = new System.Drawing.Point(39, 118);
+            this.rbStockName.Location = new System.Drawing.Point(25, 113);
             this.rbStockName.Name = "rbStockName";
             this.rbStockName.Size = new System.Drawing.Size(84, 17);
             this.rbStockName.TabIndex = 13;
@@ -385,8 +385,9 @@ namespace LnLBackEndSystem
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 48);
             this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "CLose";
+            this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtCountINWareHouse
             // 

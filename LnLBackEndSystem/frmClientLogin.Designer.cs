@@ -42,7 +42,7 @@ namespace LnLBackEndSystem
             // edtID
             // 
             this.edtID.Location = new System.Drawing.Point(152, 13);
-            this.edtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edtID.Margin = new System.Windows.Forms.Padding(4);
             this.edtID.Name = "edtID";
             this.edtID.Size = new System.Drawing.Size(204, 35);
             this.edtID.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace LnLBackEndSystem
             // edtPassword
             // 
             this.edtPassword.Location = new System.Drawing.Point(152, 72);
-            this.edtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.edtPassword.Name = "edtPassword";
             this.edtPassword.PasswordChar = '#';
             this.edtPassword.Size = new System.Drawing.Size(204, 35);
@@ -102,6 +102,7 @@ namespace LnLBackEndSystem
             this.btnClientForgot.TabIndex = 5;
             this.btnClientForgot.Text = "Forgot password";
             this.btnClientForgot.UseVisualStyleBackColor = false;
+            this.btnClientForgot.Visible = false;
             // 
             // ttTips
             // 
