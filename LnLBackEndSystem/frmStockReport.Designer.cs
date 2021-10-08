@@ -131,6 +131,7 @@ namespace LnLBackEndSystem
             this.dgvStockReport.EnableHeadersVisualStyles = false;
             this.dgvStockReport.Location = new System.Drawing.Point(0, 50);
             this.dgvStockReport.Name = "dgvStockReport";
+            this.dgvStockReport.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,22 +365,28 @@ namespace LnLBackEndSystem
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(15, 67);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(15, 42);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(75, 48);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(216, 67);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(216, 42);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(75, 48);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "CLose";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // txtCountINWareHouse
             // 

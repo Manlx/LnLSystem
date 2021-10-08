@@ -43,5 +43,10 @@ namespace LnLBackEndSystem
             BarLog.Show();
             this.Show();
         }
+
+        private void frmCEO_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Creator.Show();
+        }
     }
 }

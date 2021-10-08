@@ -53,9 +53,10 @@ namespace LnLBackEndSystem
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(114, 263);
+            this.btnUpdate.Location = new System.Drawing.Point(200, 401);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(144, 45);
+            this.btnUpdate.Size = new System.Drawing.Size(180, 44);
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Update Record";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -66,9 +67,10 @@ namespace LnLBackEndSystem
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(276, 349);
+            this.btnBack.Location = new System.Drawing.Point(23, 401);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(138, 44);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -77,36 +79,40 @@ namespace LnLBackEndSystem
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(11, 41);
+            this.lblName.Location = new System.Drawing.Point(18, 44);
+            this.lblName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(66, 25);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name:";
             // 
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(11, 71);
+            this.lblSurname.Location = new System.Drawing.Point(18, 93);
+            this.lblSurname.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(52, 13);
+            this.lblSurname.Size = new System.Drawing.Size(91, 25);
             this.lblSurname.TabIndex = 3;
             this.lblSurname.Text = "Surname:";
             // 
             // lblCell
             // 
             this.lblCell.AutoSize = true;
-            this.lblCell.Location = new System.Drawing.Point(11, 129);
+            this.lblCell.Location = new System.Drawing.Point(18, 191);
+            this.lblCell.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblCell.Name = "lblCell";
-            this.lblCell.Size = new System.Drawing.Size(97, 13);
+            this.lblCell.Size = new System.Drawing.Size(176, 25);
             this.lblCell.TabIndex = 4;
             this.lblCell.Text = "Cellphone Number:";
             // 
             // cbFulltime
             // 
             this.cbFulltime.AutoSize = true;
-            this.cbFulltime.Location = new System.Drawing.Point(10, 198);
+            this.cbFulltime.Location = new System.Drawing.Point(23, 293);
+            this.cbFulltime.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cbFulltime.Name = "cbFulltime";
-            this.cbFulltime.Size = new System.Drawing.Size(133, 17);
+            this.cbFulltime.Size = new System.Drawing.Size(231, 29);
             this.cbFulltime.TabIndex = 5;
             this.cbFulltime.Text = "I am a full time member";
             this.cbFulltime.UseVisualStyleBackColor = true;
@@ -114,9 +120,10 @@ namespace LnLBackEndSystem
             // cbLicence
             // 
             this.cbLicence.AutoSize = true;
-            this.cbLicence.Location = new System.Drawing.Point(10, 230);
+            this.cbLicence.Location = new System.Drawing.Point(23, 348);
+            this.cbLicence.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cbLicence.Name = "cbLicence";
-            this.cbLicence.Size = new System.Drawing.Size(102, 17);
+            this.cbLicence.Size = new System.Drawing.Size(160, 29);
             this.cbLicence.TabIndex = 6;
             this.cbLicence.Text = "I have a licence";
             this.cbLicence.UseVisualStyleBackColor = true;
@@ -124,9 +131,10 @@ namespace LnLBackEndSystem
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(11, 100);
+            this.lblPassword.Location = new System.Drawing.Point(18, 142);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(56, 13);
+            this.lblPassword.Size = new System.Drawing.Size(95, 25);
             this.lblPassword.TabIndex = 7;
             this.lblPassword.Text = "Password:";
             // 
@@ -135,9 +143,10 @@ namespace LnLBackEndSystem
             this.txtName.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(143, 38);
+            this.txtName.Location = new System.Drawing.Point(200, 42);
+            this.txtName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.Size = new System.Drawing.Size(182, 33);
             this.txtName.TabIndex = 9;
             // 
             // txtSurname
@@ -145,9 +154,10 @@ namespace LnLBackEndSystem
             this.txtSurname.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSurname.ForeColor = System.Drawing.Color.White;
-            this.txtSurname.Location = new System.Drawing.Point(143, 68);
+            this.txtSurname.Location = new System.Drawing.Point(200, 91);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtSurname.Size = new System.Drawing.Size(182, 33);
             this.txtSurname.TabIndex = 10;
             // 
             // txtPassword
@@ -155,10 +165,11 @@ namespace LnLBackEndSystem
             this.txtPassword.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(143, 97);
+            this.txtPassword.Location = new System.Drawing.Point(200, 140);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.Size = new System.Drawing.Size(182, 33);
             this.txtPassword.TabIndex = 11;
             // 
             // txtCell
@@ -166,17 +177,19 @@ namespace LnLBackEndSystem
             this.txtCell.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtCell.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCell.ForeColor = System.Drawing.Color.White;
-            this.txtCell.Location = new System.Drawing.Point(143, 126);
+            this.txtCell.Location = new System.Drawing.Point(200, 189);
+            this.txtCell.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtCell.Name = "txtCell";
-            this.txtCell.Size = new System.Drawing.Size(100, 20);
+            this.txtCell.Size = new System.Drawing.Size(182, 33);
             this.txtCell.TabIndex = 12;
             // 
             // lblForgot
             // 
             this.lblForgot.AutoSize = true;
-            this.lblForgot.Location = new System.Drawing.Point(265, 104);
+            this.lblForgot.Location = new System.Drawing.Point(221, 348);
+            this.lblForgot.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblForgot.Name = "lblForgot";
-            this.lblForgot.Size = new System.Drawing.Size(91, 13);
+            this.lblForgot.Size = new System.Drawing.Size(161, 25);
             this.lblForgot.TabIndex = 13;
             this.lblForgot.TabStop = true;
             this.lblForgot.Text = "Forgot password?";
@@ -186,7 +199,8 @@ namespace LnLBackEndSystem
             // 
             this.lblHeading.AutoSize = true;
             this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(11, 9);
+            this.lblHeading.Location = new System.Drawing.Point(110, 9);
+            this.lblHeading.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblHeading.Name = "lblHeading";
             this.lblHeading.Size = new System.Drawing.Size(150, 16);
             this.lblHeading.TabIndex = 14;
@@ -197,26 +211,28 @@ namespace LnLBackEndSystem
             this.cbRank.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.cbRank.ForeColor = System.Drawing.Color.White;
             this.cbRank.FormattingEnabled = true;
-            this.cbRank.Location = new System.Drawing.Point(143, 152);
+            this.cbRank.Location = new System.Drawing.Point(200, 238);
+            this.cbRank.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cbRank.Name = "cbRank";
-            this.cbRank.Size = new System.Drawing.Size(100, 21);
+            this.cbRank.Size = new System.Drawing.Size(180, 33);
             this.cbRank.TabIndex = 17;
             // 
             // lblRank
             // 
             this.lblRank.AutoSize = true;
-            this.lblRank.Location = new System.Drawing.Point(11, 155);
+            this.lblRank.Location = new System.Drawing.Point(18, 240);
+            this.lblRank.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblRank.Name = "lblRank";
-            this.lblRank.Size = new System.Drawing.Size(36, 13);
+            this.lblRank.Size = new System.Drawing.Size(57, 25);
             this.lblRank.TabIndex = 16;
             this.lblRank.Text = "Rank:";
             // 
             // Secretary_update
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(361, 392);
+            this.ClientSize = new System.Drawing.Size(404, 452);
             this.Controls.Add(this.cbRank);
             this.Controls.Add(this.lblRank);
             this.Controls.Add(this.lblHeading);
@@ -233,8 +249,12 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdate);
+            this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Secretary_update";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secretary_update";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Secretary_update_FormClosing);
             this.Load += new System.EventHandler(this.Secretary_update_Load);

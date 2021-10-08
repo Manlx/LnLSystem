@@ -76,6 +76,7 @@ namespace LnLBackEndSystem
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnPointOfSale
             // 
@@ -121,6 +122,7 @@ namespace LnLBackEndSystem
             this.Name = "frmBarpersonLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bartender";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBarpersonLogin_FormClosed);
             this.ResumeLayout(false);
 
         }

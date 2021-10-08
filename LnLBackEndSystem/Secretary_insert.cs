@@ -3,7 +3,7 @@ using System;
 using System.Windows.Forms;
 using NSDataModule;
 using CypherLib;
-using NSTableAndUtil;
+using StaffObjAndUtils;
 namespace LnLBackEndSystem
 {
     public partial class Secretary_insert : Form
@@ -28,22 +28,38 @@ namespace LnLBackEndSystem
         private void btnInsert_Click(object sender, EventArgs e)
         {
             //Manuel A Nunes 34551875 Adjusted the SQL to work
-            string sql = "";
-            sql = $"INSERT INTO tblStaff (Name,Surname,CellNumber,HasLicense,IsFullTimeMember,RankID,EncryptedPassword) " +
-                $"VALUES('{txtName.Text}','{txtSurname.Text}','{txtCellphone.Text}',{Utilities.BoolToBit(cbLicence.Checked)}," +
-                $"{Utilities.BoolToBit(cbFulltime.Checked)},{TempID[cbRank.SelectedIndex]},'{Cypher.Encrypt( txtPassword.Text)}');";
-            //if (cbFulltime.Checked && cbLicence.Checked)
-            //    sql = "INSERT INTO tblStaff VALUES('" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtCellphone.Text + "', '" + 1 + "', '" +  1 + cbRank.SelectedIndex + 1 + "', '" + "')";
-            //else if (cbFulltime.Checked)
-            //    sql = "INSERT INTO tblStaff VALUES('" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtCellphone.Text + "', '" + 1 + "', '" + 0 + cbRank.SelectedIndex + 1 + "', '" + "')";
-            //else if (cbLicence.Checked)
-            //    sql = "INSERT INTO tblStaff VALUES('" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtCellphone.Text + "', '" + 0 + "', '" + 1 + cbRank.SelectedIndex + 1 + "', '" + "')";
-            //else
-            //    sql = "INSERT INTO tblStaff VALUES('" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtCellphone.Text + "', '" + 0 + "', '" + 0 + cbRank.SelectedIndex + 1 + "', '" + "')";
-            int sucessful = DataModule.ExecuteSQL(sql);
+            if (String.IsNullOrEmpty(txtName.Text))
+            {
+                MessageBox.Show("Please Fill in Name");
+                txtName.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(txtSurname.Text))
+            {
+                MessageBox.Show("Please Fill in Surname");
+                txtSurname.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(txtCellphone.Text))
+            {
+                MessageBox.Show("Please Fill in Cellphone Number");
+                txtCellphone.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Please Fill in Password");
+                txtPassword.Focus();
+                return;
+            }
+            StaffObj NewStaff = new StaffObj() { CellNumber = txtCellphone.Text,
+                EncryptedPassword= Cypher.Encrypt(txtPassword.Text),HasLicense=cbLicence.Checked,
+                IsFullTimeMember = cbFulltime.Checked,Name = txtName.Text,RankID = TempID[cbRank.SelectedIndex],SurName = txtSurname.Text };
+            bool wasSuccess = NewStaff.InsertSelf();
+
             DataGridView Temp = ((Secretary_form)creator).dbView;
             DataModule.LoadTable(ref Temp, "SELECT * FROM tblStaff");
-            if (sucessful == 1)
+            if (wasSuccess)
                 MessageBox.Show("Added sucessfully");
             else
                 MessageBox.Show("Error was encountered");
@@ -56,16 +72,6 @@ namespace LnLBackEndSystem
             TempID = DataModule.GetValues(0, "SELECT RANKID FROM tblStaffRank;");
             for (int x = 0; x < temp.Length; x++)
                 cbRank.Items.Add(temp[x]);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbRank_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

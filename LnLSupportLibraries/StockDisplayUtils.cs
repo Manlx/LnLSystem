@@ -43,7 +43,7 @@ namespace StockDisplayAUtils
             StockImg.Image = Image.FromFile(ImgPath);
             lblName.Top = StockImg.Top + StockImg.Height;
             lblName.Left = 5 ;
-            lblPrice = new Label() { Parent = BigParent,AutoSize = true, Text = $"{Math.Ceiling(this.CostPrice*(1+ProfitMargin/100)):C2}",
+            lblPrice = new Label() { Parent = BigParent,AutoSize = true, Text = $"{this.CalcCost():C2}",
                 Top = lblName.Top + lblName.Height + 5};
             lblPrice.Left = (BigWidth - lblPrice.Width) / 2;
             lblQuantity = new Label() { Parent = BigParent, AutoSize = true,Text = CountInBar.ToString(),Top = lblPrice.Top + lblPrice.Height + 5 };
@@ -59,7 +59,8 @@ namespace StockDisplayAUtils
         }
         public double CalcCost()
         {
-            return this.CostPrice * (1 + this.ProfitMargin / 100.0);
+            double temp = (double)(1.0 + ProfitMargin / 100.0);
+            return this.CostPrice * temp;
         }
         override public bool Equals(object other)
         {
@@ -116,6 +117,13 @@ namespace StockDisplayAUtils
                 arrItems[arrItems.Count-1].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
             }    
 
+        }
+        public double CalculateCartCost()
+        {
+            double Out = 0;
+            for (int x = 0; x < arrItems.Count; x++)
+                Out += arrItems[x].CalcCost() * arrCount[x];
+            return Out;
         }
         public string[] CreateUpdateCashPurchaseSQL()
         {
@@ -191,13 +199,38 @@ namespace StockDisplayAUtils
                     arrItems[x].lblQuantity.Text = $"{arrItems[x].CountInBar} ({arrCount[x]})";
             }
         }
-       
+        public int UpdateCreditSale(string TabID)
+        {
+            int Effected = 0;
+            int x = 0;
+            foreach (StockDisplay Item in arrItems)
+            {
+                Clipboard.SetText($"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
+                string temp = DataModule.GetValue(0, $"SELECT Count,TabID,StockID FROM tblCreditSale WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
+                Clipboard.SetText($"INSERT INTO tblCreditSale (TabID,StockID,Count) VALUES ({TabID},{Item.StockID},{arrCount[x]})");
+                if (String.IsNullOrEmpty(temp))
+                    Effected += DataModule.ExecuteSQL($"INSERT INTO tblCreditSale (TabID,StockID,Count) VALUES ({TabID},{Item.StockID},{arrCount[x]})");
+                else
+                    Effected += DataModule.ExecuteSQL($"UPDATE tblCreditSale SET Count = {int.Parse(temp)+arrCount[x]} WHERE (TabID = {TabID}) AND (StockID = {Item.StockID})");
+                string strBalance = DataModule.GetValue(0, $"SELECT Balance FROM tblTab WHERE TabID = {TabID}");
+                if (!String.IsNullOrEmpty(strBalance))
+                    DataModule.ExecuteSQL($"UPDATE tblTab SET Balance = {(Double.Parse(strBalance) + arrCount[x] * Item.CalcCost()):F2} WHERE TabID = {TabID}");
+                else
+                {
+                    MessageBox.Show("Error Encountered please call support Code 000-000-001");
+                    return -1;
+                }
+                x++;
+                
+            }
+            return Effected;
+        }
         public void UpdateListBox(ref ListBox lst)
         {
             lst.Items.Clear();
             for (int x = 0; x < arrItems.Count;x++)
             {
-                lst.Items.Add($"{arrItems[x].StockName,-60} x {arrCount[x],-7} = {(arrItems[x].CalcCost() * arrCount[x]):C2,-10}");
+                lst.Items.Add($"{arrItems[x].StockName,-60} x {arrCount[x],-7} = {(arrItems[x].CalcCost() * arrCount[x]),-10:C2}");
             }
                 
         }

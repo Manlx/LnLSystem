@@ -106,6 +106,7 @@ namespace LnLBackEndSystem
             this.Name = "frmCEO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CEO ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmCEO_FormClosed);
             this.ResumeLayout(false);
 
         }

@@ -90,11 +90,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookingObject.cs" />
+    <Compile Include="ClientObj.cs" />
     <Compile Include="Cypher.cs" />
     <Compile Include="DataModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializing.cs" />
+    <Compile Include="StaffObj.cs" />
     <Compile Include="StockDisplayUtils.cs" />
+    <Compile Include="TabObj.cs" />
     <Compile Include="TableObjects.cs" />
     <Compile Include="TableToComps.cs" />
   </ItemGroup>

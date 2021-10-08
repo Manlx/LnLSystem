@@ -165,7 +165,6 @@ namespace LnLBackEndSystem
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MessageBox.Show( $"{DataModule.ExecuteSQL(MyUpdateComps.GenerateUpdateSQL(ActiveTable))} Rows were effected");
-            Clipboard.SetText(MyUpdateComps.GenerateUpdateSQL(ActiveTable));
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
         }
     }

@@ -159,7 +159,10 @@ namespace NSDataModule
                 Reader = Com.ExecuteReader();
                 Reader.Read();
                 if (Colum < Reader.FieldCount)
-                    Outs = Reader.GetValue(Colum).ToString();
+                    if (Reader.HasRows)
+                        Outs = Reader.GetValue(Colum).ToString();
+                    else
+                        Outs = "";
             }
             Reader.Close();
             return Outs;
@@ -167,18 +170,26 @@ namespace NSDataModule
         public static T GetValue<T>(int Colum, string SQL = "")
         {
             T Outs = default;
-            if (OpenConnection())
+            try
             {
-                if (SQL != "")
-                    Com = new MySqlCommand(SQL, Con);
-                else if (Com.CommandText == "")
-                    return Outs;
-                Reader = Com.ExecuteReader();
-                Reader.Read();
-                if (Colum < Reader.FieldCount)
-                    Outs = (T)Reader.GetValue(Colum);
+                if (OpenConnection())
+                {
+                    if (SQL != "")
+                        Com = new MySqlCommand(SQL, Con);
+                    else if (Com.CommandText == "")
+                        return Outs;
+                    Reader = Com.ExecuteReader();
+                    Reader.Read();
+                    if (Colum < Reader.FieldCount)
+                        Outs = (T)Reader.GetValue(Colum);
+                }
+                Reader.Close();
             }
-            Reader.Close();
+            catch (Exception E)
+            {
+                throw E;
+            }
+
             return Outs;
         }
         ///<summary>
@@ -187,28 +198,32 @@ namespace NSDataModule
         ///<returns>Returns an array of the generic data type</returns>
         public static T[] GetValues<T>(int Colum, string SQL = "")
         {
-
-            System.Collections.Generic.List<T> Outs = new System.Collections.Generic.List<T>();
-
-            if (OpenConnection())
+            List<T> Outs = new List<T>();
+            try
             {
-                if (SQL != "")
-                    Com = new MySqlCommand(SQL, Con);
-                else if (Com.CommandText == "")
-                    return Outs.ToArray();
-                Reader = Com.ExecuteReader();
-                if (Colum < Reader.FieldCount)
-                    while (Reader.Read())
-                        Outs.Add((T)Reader.GetValue(Colum));
-                Reader.Close();
+                if (OpenConnection())
+                {
+                    if (SQL != "")
+                        Com = new MySqlCommand(SQL, Con);
+                    else if (Com.CommandText == "")
+                        return Outs.ToArray();
+                    Reader = Com.ExecuteReader();
+                    if (Colum < Reader.FieldCount)
+                        while (Reader.Read())
+                            Outs.Add((T)Reader.GetValue(Colum));
+                    Reader.Close();
+                }
             }
+            catch (Exception E)
+            {
 
+                throw E;
+            }
             return Outs.ToArray();
         }
         public static string[] GetValues(int Colum, string SQL = "")
         {
-
-            System.Collections.Generic.List<string> Outs = new System.Collections.Generic.List<string>();
+            List<string> Outs = new List<string>();
 
             if (OpenConnection())
             {

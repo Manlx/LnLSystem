@@ -80,7 +80,6 @@ namespace LnLBackEndSystem
             this.cbRank.Name = "cbRank";
             this.cbRank.Size = new System.Drawing.Size(100, 21);
             this.cbRank.TabIndex = 2;
-            this.cbRank.SelectedIndexChanged += new System.EventHandler(this.cbRank_SelectedIndexChanged);
             // 
             // lblHeading
             // 

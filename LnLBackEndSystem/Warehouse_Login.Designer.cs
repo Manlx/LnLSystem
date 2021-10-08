@@ -29,18 +29,19 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgViewWarehouse = new System.Windows.Forms.DataGridView();
             this.btnGenerateReport = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.linktoHome = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBarRestock = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnWarehouseRestock = new System.Windows.Forms.Button();
+            this.ttGenerate = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgViewWarehouse)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@ namespace LnLBackEndSystem
             this.dgViewWarehouse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -59,11 +60,12 @@ namespace LnLBackEndSystem
             this.dgViewWarehouse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgViewWarehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgViewWarehouse.EnableHeadersVisualStyles = false;
-            this.dgViewWarehouse.Location = new System.Drawing.Point(15, 105);
+            this.dgViewWarehouse.Location = new System.Drawing.Point(23, 61);
+            this.dgViewWarehouse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgViewWarehouse.Name = "dgViewWarehouse";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -72,7 +74,7 @@ namespace LnLBackEndSystem
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             this.dgViewWarehouse.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgViewWarehouse.Size = new System.Drawing.Size(512, 279);
+            this.dgViewWarehouse.Size = new System.Drawing.Size(568, 339);
             this.dgViewWarehouse.TabIndex = 0;
             // 
             // btnGenerateReport
@@ -80,31 +82,24 @@ namespace LnLBackEndSystem
             this.btnGenerateReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnGenerateReport.FlatAppearance.BorderSize = 0;
             this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateReport.Location = new System.Drawing.Point(199, 64);
+            this.btnGenerateReport.Location = new System.Drawing.Point(235, 14);
+            this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGenerateReport.Name = "btnGenerateReport";
-            this.btnGenerateReport.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerateReport.Size = new System.Drawing.Size(144, 37);
             this.btnGenerateReport.TabIndex = 1;
-            this.btnGenerateReport.Text = "Generate";
+            this.btnGenerateReport.Text = "Generate Report";
+            this.ttGenerate.SetToolTip(this.btnGenerateReport, "Generates Table");
             this.btnGenerateReport.UseVisualStyleBackColor = false;
             this.btnGenerateReport.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Click \'Generate\' to create and view the stock report.";
             // 
             // linktoHome
             // 
             this.linktoHome.AutoSize = true;
             this.linktoHome.LinkColor = System.Drawing.Color.LightBlue;
-            this.linktoHome.Location = new System.Drawing.Point(21, 516);
+            this.linktoHome.Location = new System.Drawing.Point(19, 542);
+            this.linktoHome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linktoHome.Name = "linktoHome";
-            this.linktoHome.Size = new System.Drawing.Size(119, 13);
+            this.linktoHome.Size = new System.Drawing.Size(182, 21);
             this.linktoHome.TabIndex = 11;
             this.linktoHome.TabStop = true;
             this.linktoHome.Text = "Return to Home Screen";
@@ -113,9 +108,10 @@ namespace LnLBackEndSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 406);
+            this.label2.Location = new System.Drawing.Point(19, 405);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(96, 21);
             this.label2.TabIndex = 12;
             this.label2.Text = "Restock bar";
             // 
@@ -124,9 +120,10 @@ namespace LnLBackEndSystem
             this.btnBarRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnBarRestock.FlatAppearance.BorderSize = 0;
             this.btnBarRestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBarRestock.Location = new System.Drawing.Point(24, 423);
+            this.btnBarRestock.Location = new System.Drawing.Point(23, 432);
+            this.btnBarRestock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBarRestock.Name = "btnBarRestock";
-            this.btnBarRestock.Size = new System.Drawing.Size(75, 23);
+            this.btnBarRestock.Size = new System.Drawing.Size(112, 37);
             this.btnBarRestock.TabIndex = 13;
             this.btnBarRestock.Text = "Restock";
             this.btnBarRestock.UseVisualStyleBackColor = false;
@@ -135,9 +132,10 @@ namespace LnLBackEndSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 459);
+            this.label3.Location = new System.Drawing.Point(19, 474);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 13);
+            this.label3.Size = new System.Drawing.Size(151, 21);
             this.label3.TabIndex = 14;
             this.label3.Text = "Restock warehouse";
             // 
@@ -146,9 +144,10 @@ namespace LnLBackEndSystem
             this.btnWarehouseRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnWarehouseRestock.FlatAppearance.BorderSize = 0;
             this.btnWarehouseRestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWarehouseRestock.Location = new System.Drawing.Point(24, 475);
+            this.btnWarehouseRestock.Location = new System.Drawing.Point(23, 500);
+            this.btnWarehouseRestock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnWarehouseRestock.Name = "btnWarehouseRestock";
-            this.btnWarehouseRestock.Size = new System.Drawing.Size(75, 23);
+            this.btnWarehouseRestock.Size = new System.Drawing.Size(112, 37);
             this.btnWarehouseRestock.TabIndex = 15;
             this.btnWarehouseRestock.Text = "Restock";
             this.btnWarehouseRestock.UseVisualStyleBackColor = false;
@@ -156,20 +155,23 @@ namespace LnLBackEndSystem
             // 
             // Warehouse_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(539, 537);
+            this.ClientSize = new System.Drawing.Size(610, 574);
             this.Controls.Add(this.btnWarehouseRestock);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBarRestock);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linktoHome);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.dgViewWarehouse);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Warehouse_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Warehouse_Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Warehouse_Login_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgViewWarehouse)).EndInit();
@@ -182,11 +184,11 @@ namespace LnLBackEndSystem
 
         private System.Windows.Forms.DataGridView dgViewWarehouse;
         private System.Windows.Forms.Button btnGenerateReport;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linktoHome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBarRestock;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnWarehouseRestock;
+        private System.Windows.Forms.ToolTip ttGenerate;
     }
 }
