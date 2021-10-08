@@ -138,6 +138,11 @@ namespace LnLBackEndSystem
             txtSearch.Clear();
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void order()
         {
             string orderBy,ascDesc;

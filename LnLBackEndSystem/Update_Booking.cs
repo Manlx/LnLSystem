@@ -51,6 +51,11 @@ namespace LnLBackEndSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (lstBooking.SelectedIndex < 0)
+            {
+                MessageBox.Show("Select a booking to change");
+                return;
+            }
             lstBook[lstBooking.SelectedIndex].TimeOfBooking = $"{DTPTime.Value:HH:mm}";
             lstBook[lstBooking.SelectedIndex].DateOfBooking = $"{DTPTime.Value:yyyy-MM-dd}";
             if (cbType.SelectedIndex >= 0)
