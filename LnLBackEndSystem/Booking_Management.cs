@@ -21,11 +21,30 @@ namespace LnLBackEndSystem
             if (lstVenues.SelectedIndex <0)
             {
                 MessageBox.Show("Select a Location please");
+                lstVenues.Focus();
+                return;
+            }
+            if (DTPDate.Value < DateTime.Now)
+            {
+                MessageBox.Show("Please Select a proper time");
+                DTPDate.Focus();
+                return;
+            }
+            if (cbType.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please Select an Event Type");
+                cbType.Focus();
+                return;
+            }    
+            if (!HasSelectedClient)
+            {
+                MessageBox.Show("Select a user");
+                btnClient.PerformClick();
                 return;
             }
             string sql = $"INSERT INTO tblEvent (DateOfBooking,TimeOfBooking,LocationID,ClientID,EventType) VALUES(" +
-                $"'{cldDate.SelectionStart:yyyy-MM-dd}', '{txtTime.Text}',{LocationID[lstVenues.SelectedIndex]}" +
-                $",{txtClientID.Text},{EventTypes[cbType.SelectedIndex]})";
+                $"'{DTPDate.Value:yyyy-MM-dd}', '{DTPTime.Value:HH:mm}',{LocationID[lstVenues.SelectedIndex]}" +
+                $",{frmClientLogin.LastClient.ClientID},{EventTypes[cbType.SelectedIndex]})";
             int sucessful = DataModule.ExecuteSQL(sql);
             Clipboard.SetText(sql);
             if (sucessful == 1)
@@ -74,6 +93,14 @@ namespace LnLBackEndSystem
             lstVenues.Items.Clear();
             foreach (string x in Values)
                 lstVenues.Items.Add(x);
+        }
+        bool HasSelectedClient = false;
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            frmClientLogin.Creator = this;
+            frmClientLogin ClientLog = new frmClientLogin();
+            ClientLog.ShowDialog();
+            HasSelectedClient = frmClientLogin.LastClient.DoesExist();
         }
     }
 }

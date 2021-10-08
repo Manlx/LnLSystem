@@ -149,7 +149,9 @@ namespace LnLBackEndSystem
             this.Controls.Add(this.lblHeadings);
             this.Controls.Add(this.btnDelete);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Delete_Booking";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete_Booking";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Delete_Booking_FormClosing);
             this.Load += new System.EventHandler(this.Delete_Booking_Load);
