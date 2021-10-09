@@ -49,5 +49,13 @@ namespace LnLBackEndSystem
         {
             Creator.Show();
         }
+
+        private void btnClientForgot_Click(object sender, EventArgs e)
+        {
+            frmClientRecoverPass.Creator = this;
+            frmClientRecoverPass ClientRec = new frmClientRecoverPass();
+            this.Hide();
+            ClientRec.ShowDialog();
+        }
     }
 }

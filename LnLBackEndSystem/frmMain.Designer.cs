@@ -49,6 +49,7 @@ namespace LnLBackEndSystem
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCEO = new System.Windows.Forms.Button();
+            this.btnForgotPassword = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -302,6 +303,21 @@ namespace LnLBackEndSystem
             this.btnCEO.Visible = false;
             this.btnCEO.Click += new System.EventHandler(this.btnCEO_Click);
             // 
+            // btnForgotPassword
+            // 
+            this.btnForgotPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnForgotPassword.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnForgotPassword.FlatAppearance.BorderSize = 0;
+            this.btnForgotPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForgotPassword.Location = new System.Drawing.Point(298, 518);
+            this.btnForgotPassword.Name = "btnForgotPassword";
+            this.btnForgotPassword.Size = new System.Drawing.Size(279, 43);
+            this.btnForgotPassword.TabIndex = 18;
+            this.btnForgotPassword.Text = "Forgot Password";
+            this.btnForgotPassword.UseVisualStyleBackColor = false;
+            this.btnForgotPassword.Visible = false;
+            this.btnForgotPassword.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmMain
             // 
             this.AcceptButton = this.btnLogin;
@@ -309,6 +325,7 @@ namespace LnLBackEndSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(990, 567);
+            this.Controls.Add(this.btnForgotPassword);
             this.Controls.Add(this.btnCEO);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
@@ -361,5 +378,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCEO;
+        private System.Windows.Forms.Button btnForgotPassword;
     }
 }

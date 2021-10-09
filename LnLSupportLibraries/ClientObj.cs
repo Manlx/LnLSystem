@@ -1,6 +1,7 @@
 ﻿//Manuel A Nunes 34551875
 using System;
 using NSDataModule;
+using NSTableAndUtil;
 namespace ClientAndUtils
 {
     public enum ClientErrors
@@ -37,6 +38,21 @@ namespace ClientAndUtils
                 return false; 
                 throw;
             }
+        }
+        public bool UpdateSelf()
+        {
+            try
+            {
+                return DataModule.ExecuteSQL($"UPDATE tblClient SET ClientID = {ClientID}, Name= '{Name}', " +
+                    $"Surname = '{SurName}',CellNumber = '{CellNumber}',EmailAddress = '{EmailAddress}',IsBlackList = {Utilities.BoolToBit(IsBlackListed)}, Password = '{Password}'" +
+                    $" WHERE ClientID = {ClientID}") >0;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+
         }
         public bool DoesExist()
         {

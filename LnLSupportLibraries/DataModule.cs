@@ -377,7 +377,7 @@ namespace NSDataModule
         }
         public static string[][] GetValues(string SQL, int[] ArrColums)
         {//Returns an array of array of selected columns and cells
-            string[][] Out = default;
+            string[][] Out = new string[0][];
 
             int TableMax = GetColumCount(SQL);
             for (int x = 0; x < ArrColums.Length; x++)

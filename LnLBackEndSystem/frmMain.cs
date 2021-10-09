@@ -162,5 +162,13 @@ namespace LnLBackEndSystem
             this.Hide();
             CEO.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmClientRecoverPass.Creator = this;
+            frmClientRecoverPass Temp = new frmClientRecoverPass();
+            Temp.Show();
+            this.Hide();
+        }
     }
 }

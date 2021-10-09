@@ -102,7 +102,7 @@ namespace LnLBackEndSystem
             this.btnClientForgot.TabIndex = 5;
             this.btnClientForgot.Text = "Forgot password";
             this.btnClientForgot.UseVisualStyleBackColor = false;
-            this.btnClientForgot.Visible = false;
+            this.btnClientForgot.Click += new System.EventHandler(this.btnClientForgot_Click);
             // 
             // ttTips
             // 
