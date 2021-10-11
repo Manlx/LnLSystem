@@ -56,8 +56,8 @@ namespace LnLBackEndSystem
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Warehouse_Login.Creator = this;
-            Warehouse_Login frmWarehouse = new Warehouse_Login();
+            Warehouse_Restock.Creator = this;
+            Warehouse_Restock frmWarehouse = new Warehouse_Restock();
             frmWarehouse.Show();
             this.Hide();
         }
@@ -138,8 +138,8 @@ namespace LnLBackEndSystem
                     break;
                 case 8:
                 case 5:
-                    Warehouse_Login.Creator = this;
-                    Warehouse_Login WareLog = new Warehouse_Login();
+                    Warehouse_Restock.Creator = this;
+                    Warehouse_Restock WareLog = new Warehouse_Restock();
                     WareLog.Show();
                     break;
 

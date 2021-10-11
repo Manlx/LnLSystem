@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class Warehouse_Login
+    partial class Warehouse_Restock
     {
         /// <summary>
         /// Required designer variable.

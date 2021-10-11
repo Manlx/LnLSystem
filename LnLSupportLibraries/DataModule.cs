@@ -160,7 +160,7 @@ namespace NSDataModule
                 Reader.Read();
                 if (Colum < Reader.FieldCount)
                     if (Reader.HasRows)
-                        Outs = Reader.GetValue(Colum).ToString();
+                        Outs = Reader[Colum].ToString();
                     else
                         Outs = "";
             }
@@ -181,7 +181,7 @@ namespace NSDataModule
                     Reader = Com.ExecuteReader();
                     Reader.Read();
                     if (Colum < Reader.FieldCount)
-                        Outs = (T)Reader.GetValue(Colum);
+                        Outs = (T)Reader[Colum];
                 }
                 Reader.Close();
             }
@@ -210,7 +210,7 @@ namespace NSDataModule
                     Reader = Com.ExecuteReader();
                     if (Colum < Reader.FieldCount)
                         while (Reader.Read())
-                            Outs.Add((T)Reader.GetValue(Colum));
+                            Outs.Add((T)Reader[Colum]);
                     Reader.Close();
                 }
             }
@@ -234,7 +234,7 @@ namespace NSDataModule
                 Reader = Com.ExecuteReader();
                 if (Colum < Reader.FieldCount)
                     while (Reader.Read())
-                        Outs.Add(Reader.GetValue(Colum).ToString());
+                        Outs.Add(Reader[Colum].ToString());
                 Reader.Close();
             }
 
@@ -303,7 +303,7 @@ namespace NSDataModule
                     OutPut.Add(new string[Reader.VisibleFieldCount]);
                     for (int x = 0; x < Reader.FieldCount; x++)
                     {
-                        OutPut[OutPut.Count - 1][x] += Reader.GetValue(x).ToString();
+                        OutPut[OutPut.Count - 1][x] += Reader[x].ToString();
                         if (OutPut[OutPut.Count - 1][x].Length > Sizing[x])
                             Sizing[x] = OutPut[OutPut.Count - 1][x].Length;
                     }

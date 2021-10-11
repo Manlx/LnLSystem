@@ -230,6 +230,12 @@
     <Compile Include="frmStockReport.Designer.cs">
       <DependentUpon>frmStockReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSupplierOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplierOrder.Designer.cs">
+      <DependentUpon>frmSupplierOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTableSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,11 +298,17 @@
     <Compile Include="Update_Booking.Designer.cs">
       <DependentUpon>Update_Booking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Warehouse_Login.cs">
+    <Compile Include="WarehouseLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Warehouse_Login.Designer.cs">
-      <DependentUpon>Warehouse_Login.cs</DependentUpon>
+    <Compile Include="WarehouseLogin.Designer.cs">
+      <DependentUpon>WarehouseLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse_Restock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse_Restock.Designer.cs">
+      <DependentUpon>Warehouse_Restock.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Accountant_Login.resx">
       <DependentUpon>Accountant_Login.cs</DependentUpon>
@@ -355,6 +367,9 @@
     <EmbeddedResource Include="frmStockReport.resx">
       <DependentUpon>frmStockReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierOrder.resx">
+      <DependentUpon>frmSupplierOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTableSelect.resx">
       <DependentUpon>frmTableSelect.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,8 +410,11 @@
     <EmbeddedResource Include="Update_Booking.resx">
       <DependentUpon>Update_Booking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Warehouse_Login.resx">
-      <DependentUpon>Warehouse_Login.cs</DependentUpon>
+    <EmbeddedResource Include="WarehouseLogin.resx">
+      <DependentUpon>WarehouseLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse_Restock.resx">
+      <DependentUpon>Warehouse_Restock.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

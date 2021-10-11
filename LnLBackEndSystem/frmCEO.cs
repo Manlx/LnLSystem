@@ -51,10 +51,11 @@ namespace LnLBackEndSystem
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
-            Warehouse_Login.Creator = this;
-            Warehouse_Login WarLog = new Warehouse_Login();
-            WarLog.Show();
+            WarehouseLogin.Creator = this;
+            WarehouseLogin WarLog = new WarehouseLogin();
             this.Hide();
+            WarLog.Show();
+            
         }
     }
 }

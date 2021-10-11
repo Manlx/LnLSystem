@@ -97,6 +97,7 @@
     <Compile Include="Serializing.cs" />
     <Compile Include="StaffObj.cs" />
     <Compile Include="StockDisplayUtils.cs" />
+    <Compile Include="SupplierObj.cs" />
     <Compile Include="TabObj.cs" />
     <Compile Include="TableObjects.cs" />
     <Compile Include="TableToComps.cs" />

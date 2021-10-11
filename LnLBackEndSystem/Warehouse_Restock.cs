@@ -12,10 +12,10 @@ using NSDataModule;
 
 namespace LnLBackEndSystem
 {
-    public partial class Warehouse_Login : Form
+    public partial class Warehouse_Restock : Form
     {
         public static Form Creator;
-        public Warehouse_Login()
+        public Warehouse_Restock()
         {
             InitializeComponent();
         }
