@@ -25,5 +25,13 @@ namespace LnLBackEndSystem
             Temp.Show();
 
         }
+
+        private void btnRemoveSupplier_Click(object sender, EventArgs e)
+        {
+            frmSupplierRemove.Creator = this;
+            frmSupplierRemove Temp = new frmSupplierRemove();
+            this.Hide();
+            Temp.Show();
+        }
     }
 }

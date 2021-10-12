@@ -67,5 +67,17 @@ namespace SupplierAndUtils
                 throw;
             }
         }
+        public bool DeleteSelf()
+        {
+            try
+            {
+                return DataModule.ExecuteSQL($"DELETE FROM tblSupplier WHERE SupplierID = {SupplierID}")>0;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
     }
 }

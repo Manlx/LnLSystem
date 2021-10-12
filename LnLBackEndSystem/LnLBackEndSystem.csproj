@@ -272,6 +272,12 @@
     <Compile Include="frmSupplierRegister.Designer.cs">
       <DependentUpon>frmSupplierRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSupplierRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplierRemove.Designer.cs">
+      <DependentUpon>frmSupplierRemove.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTableSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupplierRegister.resx">
       <DependentUpon>frmSupplierRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierRemove.resx">
+      <DependentUpon>frmSupplierRemove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTableSelect.resx">
       <DependentUpon>frmTableSelect.cs</DependentUpon>

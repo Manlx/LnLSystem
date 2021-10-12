@@ -62,6 +62,7 @@ namespace LnLBackEndSystem
             this.btnRemoveSupplier.TabIndex = 45;
             this.btnRemoveSupplier.Text = "Remove Supplier";
             this.btnRemoveSupplier.UseVisualStyleBackColor = false;
+            this.btnRemoveSupplier.Click += new System.EventHandler(this.btnRemoveSupplier_Click);
             // 
             // btnUpdateSupplier
             // 
