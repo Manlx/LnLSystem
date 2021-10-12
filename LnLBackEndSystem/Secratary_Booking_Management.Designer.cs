@@ -66,7 +66,7 @@ namespace LnLBackEndSystem
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(162, 237);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(144, 61);
+            this.btnUpdate.Size = new System.Drawing.Size(144, 63);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update booking";
             this.btnUpdate.UseVisualStyleBackColor = false;

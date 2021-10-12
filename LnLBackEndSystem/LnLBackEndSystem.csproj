@@ -146,6 +146,18 @@
     <Compile Include="Forgot_password.Designer.cs">
       <DependentUpon>Forgot_password.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBankSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankSupplier.Designer.cs">
+      <DependentUpon>frmBankSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankSupplierPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankSupplierPage.Designer.cs">
+      <DependentUpon>frmBankSupplierPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBarpersonLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +212,12 @@
     <Compile Include="frmRequestStock.designer.cs">
       <DependentUpon>frmRequestStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSecretaryLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSecretaryLogin.Designer.cs">
+      <DependentUpon>frmSecretaryLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +235,12 @@
     </Compile>
     <Compile Include="frmStaffLogin.Designer.cs">
       <DependentUpon>frmStaffLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffManagement.Designer.cs">
+      <DependentUpon>frmStaffManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStockPurchase.cs">
       <SubType>Form</SubType>
@@ -241,6 +265,12 @@
     </Compile>
     <Compile Include="frmSupplierOrder.Designer.cs">
       <DependentUpon>frmSupplierOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplierPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplierPage.Designer.cs">
+      <DependentUpon>frmSupplierPage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSupplierRegister.cs">
       <SubType>Form</SubType>
@@ -337,6 +367,12 @@
     <EmbeddedResource Include="Forgot_password.resx">
       <DependentUpon>Forgot_password.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBankSupplier.resx">
+      <DependentUpon>frmBankSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankSupplierPage.resx">
+      <DependentUpon>frmBankSupplierPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBarpersonLogin.resx">
       <DependentUpon>frmBarpersonLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,6 +400,9 @@
     <EmbeddedResource Include="frmRequestStock.resx">
       <DependentUpon>frmRequestStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSecretaryLogin.resx">
+      <DependentUpon>frmSecretaryLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
@@ -372,6 +411,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmStaffLogin.resx">
       <DependentUpon>frmStaffLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffManagement.resx">
+      <DependentUpon>frmStaffManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStockPurchase.resx">
       <DependentUpon>frmStockPurchase.cs</DependentUpon>
@@ -384,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupplierOrder.resx">
       <DependentUpon>frmSupplierOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierPage.resx">
+      <DependentUpon>frmSupplierPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupplierRegister.resx">
       <DependentUpon>frmSupplierRegister.cs</DependentUpon>

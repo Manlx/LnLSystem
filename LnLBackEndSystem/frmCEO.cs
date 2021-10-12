@@ -30,8 +30,8 @@ namespace LnLBackEndSystem
 
         private void btnNavidateToSecretary_Click(object sender, EventArgs e)
         {
-            Secretary_form.Creator = this;
-            Secretary_form SecForm = new Secretary_form();
+            frmSecretaryLogin.Creator = this;
+            frmSecretaryLogin SecForm = new frmSecretaryLogin();
             SecForm.Show();
             this.Hide();
         }

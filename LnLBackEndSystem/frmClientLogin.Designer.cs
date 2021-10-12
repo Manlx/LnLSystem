@@ -41,6 +41,7 @@ namespace LnLBackEndSystem
             // 
             // edtID
             // 
+            this.edtID.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.edtID.Location = new System.Drawing.Point(152, 13);
             this.edtID.Margin = new System.Windows.Forms.Padding(4);
             this.edtID.Name = "edtID";
@@ -50,6 +51,7 @@ namespace LnLBackEndSystem
             // 
             // edtPassword
             // 
+            this.edtPassword.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.edtPassword.Location = new System.Drawing.Point(152, 72);
             this.edtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.edtPassword.Name = "edtPassword";

@@ -41,10 +41,11 @@ namespace LnLBackEndSystem
             this.btnNavigateBartender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnNavigateBartender.FlatAppearance.BorderSize = 0;
             this.btnNavigateBartender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavigateBartender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavigateBartender.Location = new System.Drawing.Point(12, 240);
+            this.btnNavigateBartender.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnNavigateBartender.Location = new System.Drawing.Point(17, 407);
+            this.btnNavigateBartender.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnNavigateBartender.Name = "btnNavigateBartender";
-            this.btnNavigateBartender.Size = new System.Drawing.Size(139, 51);
+            this.btnNavigateBartender.Size = new System.Drawing.Size(208, 92);
             this.btnNavigateBartender.TabIndex = 39;
             this.btnNavigateBartender.Text = "Navigate To Bartender";
             this.btnNavigateBartender.UseVisualStyleBackColor = false;
@@ -55,10 +56,11 @@ namespace LnLBackEndSystem
             this.btnNavidateToSecretary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnNavidateToSecretary.FlatAppearance.BorderSize = 0;
             this.btnNavidateToSecretary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavidateToSecretary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavidateToSecretary.Location = new System.Drawing.Point(12, 126);
+            this.btnNavidateToSecretary.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnNavidateToSecretary.Location = new System.Drawing.Point(17, 207);
+            this.btnNavidateToSecretary.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnNavidateToSecretary.Name = "btnNavidateToSecretary";
-            this.btnNavidateToSecretary.Size = new System.Drawing.Size(139, 51);
+            this.btnNavidateToSecretary.Size = new System.Drawing.Size(208, 92);
             this.btnNavidateToSecretary.TabIndex = 40;
             this.btnNavidateToSecretary.Text = "Navigate To Secretary";
             this.btnNavidateToSecretary.UseVisualStyleBackColor = false;
@@ -69,10 +71,11 @@ namespace LnLBackEndSystem
             this.NavigateToAccountant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.NavigateToAccountant.FlatAppearance.BorderSize = 0;
             this.NavigateToAccountant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NavigateToAccountant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NavigateToAccountant.Location = new System.Drawing.Point(12, 69);
+            this.NavigateToAccountant.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.NavigateToAccountant.Location = new System.Drawing.Point(17, 107);
+            this.NavigateToAccountant.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.NavigateToAccountant.Name = "NavigateToAccountant";
-            this.NavigateToAccountant.Size = new System.Drawing.Size(139, 51);
+            this.NavigateToAccountant.Size = new System.Drawing.Size(208, 92);
             this.NavigateToAccountant.TabIndex = 41;
             this.NavigateToAccountant.Text = "Navigate To Accountant";
             this.NavigateToAccountant.UseVisualStyleBackColor = false;
@@ -83,10 +86,11 @@ namespace LnLBackEndSystem
             this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnAdmin.FlatAppearance.BorderSize = 0;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.Location = new System.Drawing.Point(12, 12);
+            this.btnAdmin.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdmin.Location = new System.Drawing.Point(17, 7);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(139, 51);
+            this.btnAdmin.Size = new System.Drawing.Size(208, 92);
             this.btnAdmin.TabIndex = 42;
             this.btnAdmin.Text = "Navigate To Admin";
             this.btnAdmin.UseVisualStyleBackColor = false;
@@ -97,10 +101,11 @@ namespace LnLBackEndSystem
             this.btnWarehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnWarehouse.FlatAppearance.BorderSize = 0;
             this.btnWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWarehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWarehouse.Location = new System.Drawing.Point(12, 183);
+            this.btnWarehouse.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnWarehouse.Location = new System.Drawing.Point(17, 307);
+            this.btnWarehouse.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnWarehouse.Name = "btnWarehouse";
-            this.btnWarehouse.Size = new System.Drawing.Size(139, 51);
+            this.btnWarehouse.Size = new System.Drawing.Size(208, 92);
             this.btnWarehouse.TabIndex = 43;
             this.btnWarehouse.Text = "Navigate To Warehouse";
             this.btnWarehouse.UseVisualStyleBackColor = false;
@@ -108,17 +113,19 @@ namespace LnLBackEndSystem
             // 
             // frmCEO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(160, 298);
+            this.ClientSize = new System.Drawing.Size(242, 507);
             this.Controls.Add(this.btnWarehouse);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.NavigateToAccountant);
             this.Controls.Add(this.btnNavidateToSecretary);
             this.Controls.Add(this.btnNavigateBartender);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCEO";

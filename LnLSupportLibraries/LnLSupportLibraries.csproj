@@ -100,6 +100,7 @@
     <Compile Include="StaffObj.cs" />
     <Compile Include="StockDisplayUtils.cs" />
     <Compile Include="StockObj.cs" />
+    <Compile Include="SupplierBankObj.cs" />
     <Compile Include="SupplierObj.cs" />
     <Compile Include="TabObj.cs" />
     <Compile Include="TableObjects.cs" />

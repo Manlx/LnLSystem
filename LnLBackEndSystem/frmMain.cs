@@ -126,8 +126,8 @@ namespace LnLBackEndSystem
                 case 6:
                 case 7:
                 case 2:
-                    Secretary_form.Creator = this;
-                    Secretary_form SecLogin = new Secretary_form();
+                    frmSecretaryLogin.Creator = this;
+                    frmSecretaryLogin SecLogin = new frmSecretaryLogin();
                     SecLogin.Show();
                     break;
                 case 4:

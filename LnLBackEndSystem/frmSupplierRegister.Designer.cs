@@ -38,6 +38,8 @@ namespace LnLBackEndSystem
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.pnlSupplierInfo = new System.Windows.Forms.Panel();
+            this.pnlSupplierInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // EdtName
@@ -45,7 +47,7 @@ namespace LnLBackEndSystem
             this.EdtName.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.EdtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EdtName.ForeColor = System.Drawing.Color.White;
-            this.EdtName.Location = new System.Drawing.Point(191, 7);
+            this.EdtName.Location = new System.Drawing.Point(188, 22);
             this.EdtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EdtName.Name = "EdtName";
             this.EdtName.Size = new System.Drawing.Size(222, 35);
@@ -56,7 +58,7 @@ namespace LnLBackEndSystem
             this.EdtPhoneNumber.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.EdtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EdtPhoneNumber.ForeColor = System.Drawing.Color.White;
-            this.EdtPhoneNumber.Location = new System.Drawing.Point(191, 58);
+            this.EdtPhoneNumber.Location = new System.Drawing.Point(188, 72);
             this.EdtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EdtPhoneNumber.Name = "EdtPhoneNumber";
             this.EdtPhoneNumber.Size = new System.Drawing.Size(222, 35);
@@ -67,7 +69,7 @@ namespace LnLBackEndSystem
             this.EdtWebsite.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.EdtWebsite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EdtWebsite.ForeColor = System.Drawing.Color.White;
-            this.EdtWebsite.Location = new System.Drawing.Point(191, 109);
+            this.EdtWebsite.Location = new System.Drawing.Point(188, 122);
             this.EdtWebsite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EdtWebsite.Name = "EdtWebsite";
             this.EdtWebsite.Size = new System.Drawing.Size(222, 35);
@@ -78,7 +80,7 @@ namespace LnLBackEndSystem
             this.EdtWarehouseContactname.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.EdtWarehouseContactname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EdtWarehouseContactname.ForeColor = System.Drawing.Color.White;
-            this.EdtWarehouseContactname.Location = new System.Drawing.Point(191, 160);
+            this.EdtWarehouseContactname.Location = new System.Drawing.Point(188, 172);
             this.EdtWarehouseContactname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EdtWarehouseContactname.Name = "EdtWarehouseContactname";
             this.EdtWarehouseContactname.Size = new System.Drawing.Size(222, 35);
@@ -87,7 +89,7 @@ namespace LnLBackEndSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 9);
+            this.label1.Location = new System.Drawing.Point(108, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 30);
             this.label1.TabIndex = 5;
@@ -96,7 +98,7 @@ namespace LnLBackEndSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 60);
+            this.label2.Location = new System.Drawing.Point(19, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 30);
             this.label2.TabIndex = 6;
@@ -105,7 +107,7 @@ namespace LnLBackEndSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 111);
+            this.label3.Location = new System.Drawing.Point(89, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 30);
             this.label3.TabIndex = 7;
@@ -114,7 +116,7 @@ namespace LnLBackEndSystem
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 162);
+            this.label4.Location = new System.Drawing.Point(27, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(156, 30);
             this.label4.TabIndex = 8;
@@ -125,30 +127,39 @@ namespace LnLBackEndSystem
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Location = new System.Drawing.Point(191, 205);
+            this.btnSubmit.Location = new System.Drawing.Point(280, 254);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(222, 46);
+            this.btnSubmit.Size = new System.Drawing.Size(160, 46);
             this.btnSubmit.TabIndex = 9;
             this.btnSubmit.Text = "Submit list";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // pnlSupplierInfo
+            // 
+            this.pnlSupplierInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.pnlSupplierInfo.Controls.Add(this.EdtName);
+            this.pnlSupplierInfo.Controls.Add(this.EdtPhoneNumber);
+            this.pnlSupplierInfo.Controls.Add(this.EdtWebsite);
+            this.pnlSupplierInfo.Controls.Add(this.EdtWarehouseContactname);
+            this.pnlSupplierInfo.Controls.Add(this.label1);
+            this.pnlSupplierInfo.Controls.Add(this.label4);
+            this.pnlSupplierInfo.Controls.Add(this.label2);
+            this.pnlSupplierInfo.Controls.Add(this.label3);
+            this.pnlSupplierInfo.Location = new System.Drawing.Point(12, 12);
+            this.pnlSupplierInfo.Name = "pnlSupplierInfo";
+            this.pnlSupplierInfo.Size = new System.Drawing.Size(428, 234);
+            this.pnlSupplierInfo.TabIndex = 13;
             // 
             // frmSupplierRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(435, 259);
+            this.ClientSize = new System.Drawing.Size(451, 307);
+            this.Controls.Add(this.pnlSupplierInfo);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.EdtWarehouseContactname);
-            this.Controls.Add(this.EdtWebsite);
-            this.Controls.Add(this.EdtPhoneNumber);
-            this.Controls.Add(this.EdtName);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -158,8 +169,10 @@ namespace LnLBackEndSystem
             this.Name = "frmSupplierRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supplier Register";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSupplierRegister_FormClosed);
+            this.pnlSupplierInfo.ResumeLayout(false);
+            this.pnlSupplierInfo.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -174,5 +187,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Panel pnlSupplierInfo;
     }
 }
