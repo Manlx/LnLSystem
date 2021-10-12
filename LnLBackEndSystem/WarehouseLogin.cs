@@ -1,12 +1,5 @@
 ﻿//Manuel A Nunes 34551875
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LnLBackEndSystem
@@ -28,6 +21,14 @@ namespace LnLBackEndSystem
         {
             Warehouse_Restock.Creator = this;
             Warehouse_Restock Temp = new Warehouse_Restock();
+            this.Hide();
+            Temp.Show();
+        }
+
+        private void btnOrderSupplier_Click(object sender, EventArgs e)
+        {
+            frmSupplierOrder.Creator = this;
+            frmSupplierOrder Temp = new frmSupplierOrder();
             this.Hide();
             Temp.Show();
         }

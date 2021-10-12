@@ -57,6 +57,7 @@ namespace LnLBackEndSystem
             this.btnOrderSupplier.TabIndex = 5;
             this.btnOrderSupplier.Text = "Order Stock";
             this.btnOrderSupplier.UseVisualStyleBackColor = false;
+            this.btnOrderSupplier.Click += new System.EventHandler(this.btnOrderSupplier_Click);
             // 
             // WarehouseLogin
             // 

@@ -1,7 +1,7 @@
 ﻿//Manuel A Nunes 34551875
 using System;
 using NSDataModule;
-namespace LnLSupportLibraries
+namespace SupplierAndUtils
 {
     public class SupplierObj
     {
@@ -38,7 +38,7 @@ namespace LnLSupportLibraries
         {
             try
             {
-                return DataModule.ExecuteSQL($"UPDATE SET tblSupplier Name = '{Name}',Balance = {Balance:F2},PhoneNumber = '{PhoneNumber}',Website = '{Website}',WarehouseContactName = '{WarehouseContactName}' ")>0 ;
+                return DataModule.ExecuteSQL($"UPDATE SET tblSupplier Name = '{Name}',Balance = {Balance:F2},PhoneNumber = '{PhoneNumber}',Website = '{Website}',WarehouseContactName = '{WarehouseContactName}' WHERE SupplierID = {SupplierID}")>0 ;
             }
             catch (Exception)
             {
@@ -50,7 +50,7 @@ namespace LnLSupportLibraries
         {
             try
             {
-                string[] Row = DataModule.GetValues($"SELECT SupplierID, Name, Balance,PhoneNumber,Website,WarehouseContactName FROM tblSupplier WHERE SupplierID = {SupplierID}",new int[] { })[0];
+                string[] Row = DataModule.GetValues($"SELECT SupplierID,Name,Balance,PhoneNumber,Website,WarehouseContactName FROM tblSupplier WHERE SupplierID = {SupplierID}",new int[] {0,1,2,3,4,5 })[0];
                 if (Row.Length <= 0)
                     return false;
                 this.SupplierID = Row[0];

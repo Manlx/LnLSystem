@@ -77,9 +77,9 @@ namespace LnLBackEndSystem
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(230, 215);
+            this.btnUpdate.Location = new System.Drawing.Point(176, 215);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(183, 54);
+            this.btnUpdate.Size = new System.Drawing.Size(138, 54);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update Staff Record";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -91,9 +91,9 @@ namespace LnLBackEndSystem
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(437, 215);
+            this.btnDelete.Location = new System.Drawing.Point(329, 215);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(183, 54);
+            this.btnDelete.Size = new System.Drawing.Size(138, 54);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete Staff Record";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -107,7 +107,7 @@ namespace LnLBackEndSystem
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.Location = new System.Drawing.Point(23, 215);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(183, 54);
+            this.btnInsert.Size = new System.Drawing.Size(138, 54);
             this.btnInsert.TabIndex = 3;
             this.btnInsert.Text = "Insert Staff Record";
             this.btnInsert.UseVisualStyleBackColor = false;

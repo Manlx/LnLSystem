@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace LnLBackEndSystem
 {
-    public partial class frmTabRegister : Form
+    public partial class frmStockRegister : Form
     {
-        public frmTabRegister()
+        public frmStockRegister()
         {
             InitializeComponent();
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

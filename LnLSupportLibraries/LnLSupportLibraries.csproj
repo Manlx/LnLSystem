@@ -89,14 +89,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankObj.cs" />
     <Compile Include="BookingObject.cs" />
     <Compile Include="ClientObj.cs" />
     <Compile Include="Cypher.cs" />
     <Compile Include="DataModule.cs" />
+    <Compile Include="PaymentMethodObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializing.cs" />
     <Compile Include="StaffObj.cs" />
     <Compile Include="StockDisplayUtils.cs" />
+    <Compile Include="StockObj.cs" />
     <Compile Include="SupplierObj.cs" />
     <Compile Include="TabObj.cs" />
     <Compile Include="TableObjects.cs" />
