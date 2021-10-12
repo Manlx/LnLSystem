@@ -92,6 +92,7 @@ namespace LnLBackEndSystem
                         if (DataModule.ExecuteSQL($"DELETE FROM {TableName} {CompsUtilities.BuildWHERE(ActiveTable, dgvTableData)}") == -1)
                             MessageBox.Show("Deletion was restricted or has encountered an error");
                         DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
+                        MyUpdateComps.UpdateValue(ActiveTable);
                     }
         }
         private void btnInsert_Click(object sender, EventArgs e)
@@ -108,6 +109,7 @@ namespace LnLBackEndSystem
                     break;
             }
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
+            MyUpdateComps.UpdateValue(ActiveTable);
         }
 
         private void btnResetOrder_Click(object sender, EventArgs e)
@@ -167,6 +169,7 @@ namespace LnLBackEndSystem
         {
             MessageBox.Show( $"{DataModule.ExecuteSQL(MyUpdateComps.GenerateUpdateSQL(ActiveTable))} Rows were effected");
             DataModule.LoadTable(ref dgvTableData, $"SELECT * FROM {TableName}");
+            MyUpdateComps.UpdateValue(ActiveTable);
         }
     }
 }

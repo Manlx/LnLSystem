@@ -10,6 +10,10 @@ namespace BankObjAndUtil
         {
             return (!String.IsNullOrEmpty(BankID) && !String.IsNullOrEmpty(BankName));
         }
+        public bool Equals(BankObj Other)
+        {
+            return (BankID == Other.BankID) && (BankName == Other.BankName);
+        }
         public bool InsertSelf()
         {
             try

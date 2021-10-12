@@ -97,6 +97,7 @@ namespace LnLBackEndSystem
             this.Name = "frmSecretaryLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secretary Main";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSecretaryLogin_FormClosed);
             this.ResumeLayout(false);
 
         }

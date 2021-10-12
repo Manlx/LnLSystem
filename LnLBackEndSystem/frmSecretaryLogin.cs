@@ -30,10 +30,15 @@ namespace LnLBackEndSystem
 
         private void btnBankSupplier_Click(object sender, EventArgs e)
         {
-            frmBankSupplierPage.Creator = this;
-            frmBankSupplierPage Temp = new frmBankSupplierPage();
+            frmBankSupplier.Creator = this;
+            frmBankSupplier Temp = new frmBankSupplier();
             this.Hide();
             Temp.Show();
+        }
+
+        private void frmSecretaryLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Creator.Show();
         }
     }
 }

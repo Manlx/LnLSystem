@@ -57,10 +57,12 @@ namespace LnLBackEndSystem
                 IsFullTimeMember = cbFulltime.Checked,Name = txtName.Text,RankID = TempID[cbRank.SelectedIndex],SurName = txtSurname.Text };
             bool wasSuccess = NewStaff.InsertSelf();
 
-            DataGridView Temp = ((Secretary_form)creator).dbView;
-            DataModule.LoadTable(ref Temp, "SELECT * FROM tblStaff");
             if (wasSuccess)
+            {
                 MessageBox.Show("Added sucessfully");
+                MessageBox.Show($"Staff ID: {DataModule.GetValue(0,$"SELECT StaffID FROM tblStaff WHERE (Surname = '{NewStaff.SurName}')AND (Name = '{NewStaff.Name}') AND (CellNumber = '{NewStaff.CellNumber}') ")}");
+            }    
+                
             else
                 MessageBox.Show("Error was encountered");
 

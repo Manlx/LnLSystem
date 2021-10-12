@@ -152,12 +152,6 @@
     <Compile Include="frmBankSupplier.Designer.cs">
       <DependentUpon>frmBankSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBankSupplierPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBankSupplierPage.Designer.cs">
-      <DependentUpon>frmBankSupplierPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmBarpersonLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,9 +363,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBankSupplier.resx">
       <DependentUpon>frmBankSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBankSupplierPage.resx">
-      <DependentUpon>frmBankSupplierPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBarpersonLogin.resx">
       <DependentUpon>frmBarpersonLogin.cs</DependentUpon>

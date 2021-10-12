@@ -31,6 +31,8 @@ namespace SupplierBankUtils
                 this.Supplier = new SupplierObj();
                 this.Supplier.LoadFromDB(SupplierID);
                 string[] Row = DataModule.GetValues($"SELECT BankBranch, AccountNumber FROM tblSupplierBank WHERE (BankID = {Bank.BankID}) AND (SupplierID = {Supplier.SupplierID})", new int[] { 0, 1 })[0];
+                this.BankBranch = Row[0];
+                this.AccountNumber = Row[1];
                 return isFilled();
             }
             catch (Exception)
@@ -39,11 +41,27 @@ namespace SupplierBankUtils
                 throw;
             }
         }
+        public bool InsertSelf()
+        {
+            try
+            {
+                return DataModule.ExecuteSQL($"INSERT INTO tblSupplierBank (SupplierID,BankID,BankBranch,AccountNumber) VALUES ({Supplier.SupplierID},{Bank.BankID},'{BankBranch}','{AccountNumber}') ") > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
         public bool LoadFromDB(BankObj Bank, SupplierObj Supplier)
         {
             try
             {
+                this.Bank = Bank;
+                this.Supplier = Supplier;
                 string[] Row = DataModule.GetValues($"SELECT BankBranch, AccountNumber FROM tblSupplierBank WHERE (BankID = {Bank.BankID}) AND (SupplierID = {Supplier.SupplierID})",new int[] {0,1 })[0];
+                this.BankBranch = Row[0];
+                this.AccountNumber = Row[1];
                 return isFilled();
             }
             catch (Exception)
