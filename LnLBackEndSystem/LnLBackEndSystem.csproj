@@ -278,6 +278,12 @@
     <Compile Include="frmSupplierRemove.Designer.cs">
       <DependentUpon>frmSupplierRemove.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSupplierUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplierUpdate.Designer.cs">
+      <DependentUpon>frmSupplierUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTableSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupplierRemove.resx">
       <DependentUpon>frmSupplierRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierUpdate.resx">
+      <DependentUpon>frmSupplierUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTableSelect.resx">
       <DependentUpon>frmTableSelect.cs</DependentUpon>

@@ -29,6 +29,7 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.edtClientID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlIsValid = new System.Windows.Forms.Panel();
@@ -42,13 +43,14 @@ namespace LnLBackEndSystem
             this.btnUpdatePassword = new System.Windows.Forms.Button();
             this.edtPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlIsValid.SuspendLayout();
             this.SuspendLayout();
             // 
             // edtClientID
             // 
             this.edtClientID.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.edtClientID.Location = new System.Drawing.Point(185, 22);
+            this.edtClientID.Location = new System.Drawing.Point(186, 19);
             this.edtClientID.Name = "edtClientID";
             this.edtClientID.Size = new System.Drawing.Size(148, 35);
             this.edtClientID.TabIndex = 0;
@@ -57,7 +59,7 @@ namespace LnLBackEndSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 25);
+            this.label1.Location = new System.Drawing.Point(81, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 30);
             this.label1.TabIndex = 1;
@@ -66,7 +68,7 @@ namespace LnLBackEndSystem
             // pnlIsValid
             // 
             this.pnlIsValid.Controls.Add(this.lblIsValid);
-            this.pnlIsValid.Location = new System.Drawing.Point(44, 218);
+            this.pnlIsValid.Location = new System.Drawing.Point(45, 215);
             this.pnlIsValid.Name = "pnlIsValid";
             this.pnlIsValid.Size = new System.Drawing.Size(391, 50);
             this.pnlIsValid.TabIndex = 2;
@@ -83,16 +85,16 @@ namespace LnLBackEndSystem
             // edtName
             // 
             this.edtName.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.edtName.Location = new System.Drawing.Point(185, 73);
+            this.edtName.Location = new System.Drawing.Point(186, 70);
             this.edtName.Name = "edtName";
             this.edtName.Size = new System.Drawing.Size(148, 35);
-            this.edtName.TabIndex = 3;
+            this.edtName.TabIndex = 1;
             this.edtName.TextChanged += new System.EventHandler(this.AllEditChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(102, 76);
+            this.label2.Location = new System.Drawing.Point(103, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 30);
             this.label2.TabIndex = 4;
@@ -101,16 +103,16 @@ namespace LnLBackEndSystem
             // edtSurname
             // 
             this.edtSurname.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.edtSurname.Location = new System.Drawing.Point(185, 124);
+            this.edtSurname.Location = new System.Drawing.Point(186, 121);
             this.edtSurname.Name = "edtSurname";
             this.edtSurname.Size = new System.Drawing.Size(148, 35);
-            this.edtSurname.TabIndex = 5;
+            this.edtSurname.TabIndex = 2;
             this.edtSurname.TextChanged += new System.EventHandler(this.AllEditChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 127);
+            this.label3.Location = new System.Drawing.Point(78, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 30);
             this.label3.TabIndex = 6;
@@ -119,16 +121,16 @@ namespace LnLBackEndSystem
             // edtCellphone
             // 
             this.edtCellphone.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.edtCellphone.Location = new System.Drawing.Point(185, 175);
+            this.edtCellphone.Location = new System.Drawing.Point(186, 172);
             this.edtCellphone.Name = "edtCellphone";
             this.edtCellphone.Size = new System.Drawing.Size(148, 35);
-            this.edtCellphone.TabIndex = 7;
+            this.edtCellphone.TabIndex = 3;
             this.edtCellphone.TextChanged += new System.EventHandler(this.AllEditChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 178);
+            this.label4.Location = new System.Drawing.Point(42, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 30);
             this.label4.TabIndex = 8;
@@ -139,27 +141,28 @@ namespace LnLBackEndSystem
             this.btnUpdatePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnUpdatePassword.FlatAppearance.BorderSize = 0;
             this.btnUpdatePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdatePassword.Location = new System.Drawing.Point(44, 335);
+            this.btnUpdatePassword.Location = new System.Drawing.Point(45, 332);
             this.btnUpdatePassword.Name = "btnUpdatePassword";
             this.btnUpdatePassword.Size = new System.Drawing.Size(391, 39);
-            this.btnUpdatePassword.TabIndex = 9;
+            this.btnUpdatePassword.TabIndex = 5;
             this.btnUpdatePassword.Text = "Update Password";
+            this.toolTip1.SetToolTip(this.btnUpdatePassword, "Overwrites Old password with new one");
             this.btnUpdatePassword.UseVisualStyleBackColor = false;
             this.btnUpdatePassword.Click += new System.EventHandler(this.btnUpdatePassword_Click);
             // 
             // edtPassword
             // 
             this.edtPassword.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.edtPassword.Location = new System.Drawing.Point(185, 284);
+            this.edtPassword.Location = new System.Drawing.Point(186, 281);
             this.edtPassword.Name = "edtPassword";
             this.edtPassword.PasswordChar = '#';
             this.edtPassword.Size = new System.Drawing.Size(148, 35);
-            this.edtPassword.TabIndex = 10;
+            this.edtPassword.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 287);
+            this.label5.Location = new System.Drawing.Point(72, 284);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 30);
             this.label5.TabIndex = 11;
@@ -216,5 +219,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnUpdatePassword;
         private System.Windows.Forms.TextBox edtPassword;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

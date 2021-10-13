@@ -41,7 +41,7 @@ namespace LnLBackEndSystem
             this.btnRestock.Location = new System.Drawing.Point(10, 12);
             this.btnRestock.Name = "btnRestock";
             this.btnRestock.Size = new System.Drawing.Size(209, 55);
-            this.btnRestock.TabIndex = 4;
+            this.btnRestock.TabIndex = 0;
             this.btnRestock.Text = "Restock";
             this.btnRestock.UseVisualStyleBackColor = false;
             this.btnRestock.Click += new System.EventHandler(this.btnRestock_Click);
@@ -54,7 +54,7 @@ namespace LnLBackEndSystem
             this.btnOrderSupplier.Location = new System.Drawing.Point(10, 73);
             this.btnOrderSupplier.Name = "btnOrderSupplier";
             this.btnOrderSupplier.Size = new System.Drawing.Size(209, 55);
-            this.btnOrderSupplier.TabIndex = 5;
+            this.btnOrderSupplier.TabIndex = 1;
             this.btnOrderSupplier.Text = "Order Stock";
             this.btnOrderSupplier.UseVisualStyleBackColor = false;
             this.btnOrderSupplier.Click += new System.EventHandler(this.btnOrderSupplier_Click);

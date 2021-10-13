@@ -77,7 +77,7 @@ namespace LnLBackEndSystem
             this.btnAddToTab.Location = new System.Drawing.Point(1096, 705);
             this.btnAddToTab.Name = "btnAddToTab";
             this.btnAddToTab.Size = new System.Drawing.Size(203, 192);
-            this.btnAddToTab.TabIndex = 4;
+            this.btnAddToTab.TabIndex = 7;
             this.btnAddToTab.Text = "Add To Tab";
             this.btnAddToTab.UseVisualStyleBackColor = false;
             this.btnAddToTab.Click += new System.EventHandler(this.btnAddToTab_Click);
@@ -91,7 +91,7 @@ namespace LnLBackEndSystem
             this.btnPayCash.Location = new System.Drawing.Point(893, 705);
             this.btnPayCash.Name = "btnPayCash";
             this.btnPayCash.Size = new System.Drawing.Size(203, 192);
-            this.btnPayCash.TabIndex = 5;
+            this.btnPayCash.TabIndex = 6;
             this.btnPayCash.Text = "Cash Payment";
             this.btnPayCash.UseVisualStyleBackColor = false;
             this.btnPayCash.Click += new System.EventHandler(this.btnPayCash_Click);
@@ -111,7 +111,7 @@ namespace LnLBackEndSystem
             this.pnlStockBox.Location = new System.Drawing.Point(14, 11);
             this.pnlStockBox.Name = "pnlStockBox";
             this.pnlStockBox.Size = new System.Drawing.Size(1285, 439);
-            this.pnlStockBox.TabIndex = 6;
+            this.pnlStockBox.TabIndex = 0;
             // 
             // btnDecrease
             // 
@@ -122,7 +122,7 @@ namespace LnLBackEndSystem
             this.btnDecrease.Location = new System.Drawing.Point(14, 705);
             this.btnDecrease.Name = "btnDecrease";
             this.btnDecrease.Size = new System.Drawing.Size(203, 192);
-            this.btnDecrease.TabIndex = 7;
+            this.btnDecrease.TabIndex = 2;
             this.btnDecrease.Text = "Decrease";
             this.btnDecrease.UseVisualStyleBackColor = false;
             this.btnDecrease.Click += new System.EventHandler(this.btnDecrease_Click);
@@ -136,7 +136,7 @@ namespace LnLBackEndSystem
             this.btnPayOffTab.Location = new System.Drawing.Point(451, 704);
             this.btnPayOffTab.Name = "btnPayOffTab";
             this.btnPayOffTab.Size = new System.Drawing.Size(203, 192);
-            this.btnPayOffTab.TabIndex = 8;
+            this.btnPayOffTab.TabIndex = 4;
             this.btnPayOffTab.Text = "Pay Tab";
             this.btnPayOffTab.UseVisualStyleBackColor = false;
             this.btnPayOffTab.Click += new System.EventHandler(this.btnPayOffTab_Click);
@@ -151,7 +151,7 @@ namespace LnLBackEndSystem
             this.btnRegisterTab.Location = new System.Drawing.Point(654, 705);
             this.btnRegisterTab.Name = "btnRegisterTab";
             this.btnRegisterTab.Size = new System.Drawing.Size(203, 192);
-            this.btnRegisterTab.TabIndex = 9;
+            this.btnRegisterTab.TabIndex = 5;
             this.btnRegisterTab.Text = "Register Tab";
             this.btnRegisterTab.UseVisualStyleBackColor = false;
             this.btnRegisterTab.Click += new System.EventHandler(this.btnRegisterTab_Click);

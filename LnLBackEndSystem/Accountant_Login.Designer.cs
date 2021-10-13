@@ -85,6 +85,7 @@ namespace LnLBackEndSystem
             this.dgViewAcc.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgViewAcc.Size = new System.Drawing.Size(551, 375);
             this.dgViewAcc.TabIndex = 1;
+            this.dgViewAcc.TabStop = false;
             // 
             // viewHighTab
             // 
@@ -95,7 +96,7 @@ namespace LnLBackEndSystem
             this.viewHighTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.viewHighTab.Name = "viewHighTab";
             this.viewHighTab.Size = new System.Drawing.Size(163, 30);
-            this.viewHighTab.TabIndex = 2;
+            this.viewHighTab.TabIndex = 1;
             this.viewHighTab.Text = "View High Balance Tabs";
             this.viewHighTab.UseVisualStyleBackColor = false;
             this.viewHighTab.Click += new System.EventHandler(this.viewHighTab_Click);
@@ -109,7 +110,7 @@ namespace LnLBackEndSystem
             this.viewOldStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.viewOldStock.Name = "viewOldStock";
             this.viewOldStock.Size = new System.Drawing.Size(163, 30);
-            this.viewOldStock.TabIndex = 3;
+            this.viewOldStock.TabIndex = 2;
             this.viewOldStock.Text = "View Old Stock";
             this.viewOldStock.UseVisualStyleBackColor = false;
             this.viewOldStock.Click += new System.EventHandler(this.viewOldStock_Click);
@@ -123,7 +124,7 @@ namespace LnLBackEndSystem
             this.viewIncomplete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.viewIncomplete.Name = "viewIncomplete";
             this.viewIncomplete.Size = new System.Drawing.Size(163, 30);
-            this.viewIncomplete.TabIndex = 4;
+            this.viewIncomplete.TabIndex = 3;
             this.viewIncomplete.Text = "View Incomplete Orders";
             this.viewIncomplete.UseVisualStyleBackColor = false;
             this.viewIncomplete.Click += new System.EventHandler(this.viewIncomplete_Click);
@@ -137,7 +138,7 @@ namespace LnLBackEndSystem
             this.viewUpcomingBookings.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.viewUpcomingBookings.Name = "viewUpcomingBookings";
             this.viewUpcomingBookings.Size = new System.Drawing.Size(163, 30);
-            this.viewUpcomingBookings.TabIndex = 5;
+            this.viewUpcomingBookings.TabIndex = 4;
             this.viewUpcomingBookings.Text = "View Upcoming Bookings";
             this.viewUpcomingBookings.UseVisualStyleBackColor = false;
             this.viewUpcomingBookings.Click += new System.EventHandler(this.viewUpcomingBookings_Click);
@@ -151,7 +152,7 @@ namespace LnLBackEndSystem
             this.viewStockBalance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.viewStockBalance.Name = "viewStockBalance";
             this.viewStockBalance.Size = new System.Drawing.Size(163, 30);
-            this.viewStockBalance.TabIndex = 6;
+            this.viewStockBalance.TabIndex = 0;
             this.viewStockBalance.Text = "View Stock Balance";
             this.viewStockBalance.UseVisualStyleBackColor = false;
             this.viewStockBalance.Click += new System.EventHandler(this.viewStockBalance_Click);
@@ -209,7 +210,7 @@ namespace LnLBackEndSystem
             this.txtStartStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStartStock.Name = "txtStartStock";
             this.txtStartStock.Size = new System.Drawing.Size(117, 18);
-            this.txtStartStock.TabIndex = 11;
+            this.txtStartStock.TabIndex = 5;
             // 
             // cbMoreThan
             // 
@@ -242,7 +243,7 @@ namespace LnLBackEndSystem
             this.txtEndStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEndStock.Name = "txtEndStock";
             this.txtEndStock.Size = new System.Drawing.Size(117, 18);
-            this.txtEndStock.TabIndex = 14;
+            this.txtEndStock.TabIndex = 6;
             // 
             // label2
             // 
@@ -262,7 +263,7 @@ namespace LnLBackEndSystem
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(69, 30);
-            this.btnBack.TabIndex = 16;
+            this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);

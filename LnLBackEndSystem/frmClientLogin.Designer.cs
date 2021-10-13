@@ -88,7 +88,7 @@ namespace LnLBackEndSystem
             this.btnLogin.Location = new System.Drawing.Point(33, 172);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(323, 43);
-            this.btnLogin.TabIndex = 4;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -101,7 +101,7 @@ namespace LnLBackEndSystem
             this.btnClientForgot.Location = new System.Drawing.Point(33, 123);
             this.btnClientForgot.Name = "btnClientForgot";
             this.btnClientForgot.Size = new System.Drawing.Size(323, 43);
-            this.btnClientForgot.TabIndex = 5;
+            this.btnClientForgot.TabIndex = 2;
             this.btnClientForgot.Text = "Forgot password";
             this.btnClientForgot.UseVisualStyleBackColor = false;
             this.btnClientForgot.Click += new System.EventHandler(this.btnClientForgot_Click);

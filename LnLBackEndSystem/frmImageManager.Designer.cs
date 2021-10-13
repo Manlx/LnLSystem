@@ -29,6 +29,7 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,6 +41,7 @@ namespace LnLBackEndSystem
             this.imgExsistingImage = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgExsistingImage)).BeginInit();
@@ -87,6 +89,7 @@ namespace LnLBackEndSystem
             this.dgvInfo.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvInfo.Size = new System.Drawing.Size(958, 329);
             this.dgvInfo.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.dgvInfo, "List of Stock");
             this.dgvInfo.SelectionChanged += new System.EventHandler(this.dgvInfo_SelectionChanged);
             // 
             // imgPreview
@@ -97,6 +100,7 @@ namespace LnLBackEndSystem
             this.imgPreview.Size = new System.Drawing.Size(300, 326);
             this.imgPreview.TabIndex = 1;
             this.imgPreview.TabStop = false;
+            this.toolTip1.SetToolTip(this.imgPreview, "Image to change");
             // 
             // btnLoadFromFile
             // 
@@ -107,8 +111,9 @@ namespace LnLBackEndSystem
             this.btnLoadFromFile.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnLoadFromFile.Name = "btnLoadFromFile";
             this.btnLoadFromFile.Size = new System.Drawing.Size(190, 53);
-            this.btnLoadFromFile.TabIndex = 2;
+            this.btnLoadFromFile.TabIndex = 1;
             this.btnLoadFromFile.Text = "Load From File";
+            this.toolTip1.SetToolTip(this.btnLoadFromFile, "Commits Image  and overwrites existing ones");
             this.btnLoadFromFile.UseVisualStyleBackColor = false;
             this.btnLoadFromFile.Click += new System.EventHandler(this.btnLoadFromFile_Click);
             // 
@@ -120,6 +125,7 @@ namespace LnLBackEndSystem
             this.imgExsistingImage.Size = new System.Drawing.Size(300, 326);
             this.imgExsistingImage.TabIndex = 3;
             this.imgExsistingImage.TabStop = false;
+            this.toolTip1.SetToolTip(this.imgExsistingImage, "Current Image");
             // 
             // label1
             // 
@@ -181,5 +187,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.PictureBox imgExsistingImage;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

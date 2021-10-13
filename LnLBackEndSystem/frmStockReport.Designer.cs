@@ -191,7 +191,7 @@ namespace LnLBackEndSystem
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(303, 194);
-            this.panel6.TabIndex = 15;
+            this.panel6.TabIndex = 0;
             // 
             // panel7
             // 
@@ -275,7 +275,7 @@ namespace LnLBackEndSystem
             this.gbOrderBy.Location = new System.Drawing.Point(0, 3);
             this.gbOrderBy.Name = "gbOrderBy";
             this.gbOrderBy.Size = new System.Drawing.Size(169, 145);
-            this.gbOrderBy.TabIndex = 14;
+            this.gbOrderBy.TabIndex = 1;
             this.gbOrderBy.TabStop = false;
             this.gbOrderBy.Text = "Order by";
             // 

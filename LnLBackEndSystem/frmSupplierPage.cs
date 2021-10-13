@@ -23,13 +23,20 @@ namespace LnLBackEndSystem
             frmSupplierRegister Temp = new frmSupplierRegister();
             this.Hide();
             Temp.Show();
-
         }
 
         private void btnRemoveSupplier_Click(object sender, EventArgs e)
         {
             frmSupplierRemove.Creator = this;
             frmSupplierRemove Temp = new frmSupplierRemove();
+            this.Hide();
+            Temp.Show();
+        }
+
+        private void btnUpdateSupplier_Click(object sender, EventArgs e)
+        {
+            frmSupplierUpdate.Creator = this;
+            frmSupplierUpdate Temp = new frmSupplierUpdate();
             this.Hide();
             Temp.Show();
         }

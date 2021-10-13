@@ -48,7 +48,8 @@ namespace LnLBackEndSystem
             this.redSqlOut.ForeColor = System.Drawing.Color.Silver;
             this.redSqlOut.Location = new System.Drawing.Point(0, 0);
             this.redSqlOut.Name = "redSqlOut";
-            this.redSqlOut.Size = new System.Drawing.Size(1262, 248);
+            this.redSqlOut.ReadOnly = true;
+            this.redSqlOut.Size = new System.Drawing.Size(1262, 264);
             this.redSqlOut.TabIndex = 6;
             this.redSqlOut.TabStop = false;
             this.redSqlOut.Text = "";
@@ -61,10 +62,10 @@ namespace LnLBackEndSystem
             this.edtSqlInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.edtSqlInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.edtSqlInput.ForeColor = System.Drawing.Color.White;
-            this.edtSqlInput.Location = new System.Drawing.Point(0, 242);
+            this.edtSqlInput.Location = new System.Drawing.Point(0, 262);
             this.edtSqlInput.Multiline = true;
             this.edtSqlInput.Name = "edtSqlInput";
-            this.edtSqlInput.Size = new System.Drawing.Size(1262, 203);
+            this.edtSqlInput.Size = new System.Drawing.Size(1262, 183);
             this.edtSqlInput.TabIndex = 0;
             // 
             // btnGOSQL

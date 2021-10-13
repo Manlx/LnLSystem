@@ -44,8 +44,8 @@ namespace LnLBackEndSystem
             this.btnAddSupplier.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnAddSupplier.Name = "btnAddSupplier";
             this.btnAddSupplier.Size = new System.Drawing.Size(182, 82);
-            this.btnAddSupplier.TabIndex = 44;
-            this.btnAddSupplier.Text = "Add Supplier";
+            this.btnAddSupplier.TabIndex = 0;
+            this.btnAddSupplier.Text = "&Add Supplier";
             this.btnAddSupplier.UseVisualStyleBackColor = false;
             this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click);
             // 
@@ -59,8 +59,8 @@ namespace LnLBackEndSystem
             this.btnRemoveSupplier.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnRemoveSupplier.Name = "btnRemoveSupplier";
             this.btnRemoveSupplier.Size = new System.Drawing.Size(182, 82);
-            this.btnRemoveSupplier.TabIndex = 45;
-            this.btnRemoveSupplier.Text = "Remove Supplier";
+            this.btnRemoveSupplier.TabIndex = 1;
+            this.btnRemoveSupplier.Text = "&Remove Supplier";
             this.btnRemoveSupplier.UseVisualStyleBackColor = false;
             this.btnRemoveSupplier.Click += new System.EventHandler(this.btnRemoveSupplier_Click);
             // 
@@ -74,9 +74,10 @@ namespace LnLBackEndSystem
             this.btnUpdateSupplier.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnUpdateSupplier.Name = "btnUpdateSupplier";
             this.btnUpdateSupplier.Size = new System.Drawing.Size(182, 82);
-            this.btnUpdateSupplier.TabIndex = 46;
-            this.btnUpdateSupplier.Text = "Update Supplier";
+            this.btnUpdateSupplier.TabIndex = 2;
+            this.btnUpdateSupplier.Text = "&Update Supplier";
             this.btnUpdateSupplier.UseVisualStyleBackColor = false;
+            this.btnUpdateSupplier.Click += new System.EventHandler(this.btnUpdateSupplier_Click);
             // 
             // frmSupplierPage
             // 

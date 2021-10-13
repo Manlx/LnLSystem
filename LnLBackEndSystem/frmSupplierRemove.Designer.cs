@@ -53,7 +53,7 @@ namespace LnLBackEndSystem
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(160, 46);
-            this.btnDelete.TabIndex = 10;
+            this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnSubmit_Click);

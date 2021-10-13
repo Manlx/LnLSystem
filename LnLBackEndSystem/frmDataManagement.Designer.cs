@@ -41,7 +41,7 @@ namespace LnLBackEndSystem
             this.cbbTable.Items.AddRange(new object[] {
             "Hi",
             "Gamer"});
-            this.cbbTable.Location = new System.Drawing.Point(131, 638);
+            this.cbbTable.Location = new System.Drawing.Point(131, 633);
             this.cbbTable.Name = "cbbTable";
             this.cbbTable.Size = new System.Drawing.Size(1008, 32);
             this.cbbTable.TabIndex = 1;
@@ -52,7 +52,7 @@ namespace LnLBackEndSystem
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 643);
+            this.label1.Location = new System.Drawing.Point(8, 637);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 24);
             this.label1.TabIndex = 2;

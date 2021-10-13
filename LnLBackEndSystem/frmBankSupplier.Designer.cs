@@ -29,6 +29,7 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlBankingInfo = new System.Windows.Forms.Panel();
             this.cbbSupplier = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@ namespace LnLBackEndSystem
             this.label5 = new System.Windows.Forms.Label();
             this.lstBankInfo = new System.Windows.Forms.ListBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlBankingInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@ namespace LnLBackEndSystem
             this.pnlBankingInfo.Location = new System.Drawing.Point(11, 12);
             this.pnlBankingInfo.Name = "pnlBankingInfo";
             this.pnlBankingInfo.Size = new System.Drawing.Size(571, 343);
-            this.pnlBankingInfo.TabIndex = 15;
+            this.pnlBankingInfo.TabIndex = 0;
             // 
             // cbbSupplier
             // 
@@ -73,7 +75,8 @@ namespace LnLBackEndSystem
             this.cbbSupplier.Location = new System.Drawing.Point(119, 13);
             this.cbbSupplier.Name = "cbbSupplier";
             this.cbbSupplier.Size = new System.Drawing.Size(433, 38);
-            this.cbbSupplier.TabIndex = 17;
+            this.cbbSupplier.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.cbbSupplier, "Select Supplier to add bank");
             this.cbbSupplier.SelectedIndexChanged += new System.EventHandler(this.cbbSupplier_SelectedIndexChanged);
             // 
             // label1
@@ -94,8 +97,9 @@ namespace LnLBackEndSystem
             this.btnAddInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddInfo.Name = "btnAddInfo";
             this.btnAddInfo.Size = new System.Drawing.Size(160, 46);
-            this.btnAddInfo.TabIndex = 16;
-            this.btnAddInfo.Text = "Add Info";
+            this.btnAddInfo.TabIndex = 4;
+            this.btnAddInfo.Text = "&Add Info";
+            this.toolTip1.SetToolTip(this.btnAddInfo, "Adds Banking information");
             this.btnAddInfo.UseVisualStyleBackColor = false;
             this.btnAddInfo.Click += new System.EventHandler(this.btnAddInfo_Click);
             // 
@@ -108,8 +112,9 @@ namespace LnLBackEndSystem
             this.btnRemoveInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRemoveInfo.Name = "btnRemoveInfo";
             this.btnRemoveInfo.Size = new System.Drawing.Size(160, 46);
-            this.btnRemoveInfo.TabIndex = 15;
-            this.btnRemoveInfo.Text = "Remove Info";
+            this.btnRemoveInfo.TabIndex = 5;
+            this.btnRemoveInfo.Text = "&Remove Info";
+            this.toolTip1.SetToolTip(this.btnRemoveInfo, "Removes Selected banking information");
             this.btnRemoveInfo.UseVisualStyleBackColor = false;
             this.btnRemoveInfo.Click += new System.EventHandler(this.btnRemoveInfo_Click);
             // 
@@ -140,7 +145,8 @@ namespace LnLBackEndSystem
             this.edtBankNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.edtBankNumber.Name = "edtBankNumber";
             this.edtBankNumber.Size = new System.Drawing.Size(256, 35);
-            this.edtBankNumber.TabIndex = 13;
+            this.edtBankNumber.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.edtBankNumber, "Bank Account Number");
             // 
             // EdtBankBranch
             // 
@@ -151,7 +157,8 @@ namespace LnLBackEndSystem
             this.EdtBankBranch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EdtBankBranch.Name = "EdtBankBranch";
             this.EdtBankBranch.Size = new System.Drawing.Size(256, 35);
-            this.EdtBankBranch.TabIndex = 9;
+            this.EdtBankBranch.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.EdtBankBranch, "Bank Branch");
             // 
             // cbbBanks
             // 
@@ -162,7 +169,8 @@ namespace LnLBackEndSystem
             this.cbbBanks.Location = new System.Drawing.Point(119, 60);
             this.cbbBanks.Name = "cbbBanks";
             this.cbbBanks.Size = new System.Drawing.Size(433, 38);
-            this.cbbBanks.TabIndex = 10;
+            this.cbbBanks.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.cbbBanks, "Select From Supported Banks");
             // 
             // label5
             // 
@@ -183,7 +191,8 @@ namespace LnLBackEndSystem
             this.lstBankInfo.Location = new System.Drawing.Point(18, 231);
             this.lstBankInfo.Name = "lstBankInfo";
             this.lstBankInfo.Size = new System.Drawing.Size(532, 94);
-            this.lstBankInfo.TabIndex = 12;
+            this.lstBankInfo.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.lstBankInfo, "List of Banking Information");
             // 
             // btnSubmit
             // 
@@ -194,8 +203,9 @@ namespace LnLBackEndSystem
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(571, 46);
-            this.btnSubmit.TabIndex = 16;
-            this.btnSubmit.Text = "Submit list";
+            this.btnSubmit.TabIndex = 1;
+            this.btnSubmit.Text = "&Commit Changes";
+            this.toolTip1.SetToolTip(this.btnSubmit, "Commit all information Entered");
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
@@ -239,5 +249,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbbSupplier;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

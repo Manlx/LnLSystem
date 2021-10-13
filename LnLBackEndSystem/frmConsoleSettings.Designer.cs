@@ -45,8 +45,9 @@ namespace LnLBackEndSystem
             this.btnApply.Location = new System.Drawing.Point(237, 65);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(110, 42);
-            this.btnApply.TabIndex = 0;
+            this.btnApply.TabIndex = 3;
             this.btnApply.Text = "Apply";
+            this.ttHints.SetToolTip(this.btnApply, "Saves Settings");
             this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
@@ -56,9 +57,9 @@ namespace LnLBackEndSystem
             this.chkClearOnLoad.Location = new System.Drawing.Point(12, 7);
             this.chkClearOnLoad.Name = "chkClearOnLoad";
             this.chkClearOnLoad.Size = new System.Drawing.Size(151, 29);
-            this.chkClearOnLoad.TabIndex = 1;
+            this.chkClearOnLoad.TabIndex = 0;
             this.chkClearOnLoad.Text = "Clear On Load";
-            this.ttHints.SetToolTip(this.chkClearOnLoad, "\"Displays Damage\"");
+            this.ttHints.SetToolTip(this.chkClearOnLoad, "Clears Form on load");
             this.chkClearOnLoad.UseVisualStyleBackColor = true;
             // 
             // chkClearSQLAfterExecution
@@ -67,9 +68,9 @@ namespace LnLBackEndSystem
             this.chkClearSQLAfterExecution.Location = new System.Drawing.Point(12, 42);
             this.chkClearSQLAfterExecution.Name = "chkClearSQLAfterExecution";
             this.chkClearSQLAfterExecution.Size = new System.Drawing.Size(208, 29);
-            this.chkClearSQLAfterExecution.TabIndex = 2;
+            this.chkClearSQLAfterExecution.TabIndex = 1;
             this.chkClearSQLAfterExecution.Text = "Clear After Execution";
-            this.ttHints.SetToolTip(this.chkClearSQLAfterExecution, "\"Displays Damage\"");
+            this.ttHints.SetToolTip(this.chkClearSQLAfterExecution, "Clear Console after each Execution");
             this.chkClearSQLAfterExecution.UseVisualStyleBackColor = true;
             // 
             // chkClearAfterSuccessOnly
@@ -78,9 +79,9 @@ namespace LnLBackEndSystem
             this.chkClearAfterSuccessOnly.Location = new System.Drawing.Point(12, 77);
             this.chkClearAfterSuccessOnly.Name = "chkClearAfterSuccessOnly";
             this.chkClearAfterSuccessOnly.Size = new System.Drawing.Size(175, 29);
-            this.chkClearAfterSuccessOnly.TabIndex = 3;
+            this.chkClearAfterSuccessOnly.TabIndex = 2;
             this.chkClearAfterSuccessOnly.Text = "Clear On Success";
-            this.ttHints.SetToolTip(this.chkClearAfterSuccessOnly, "\"Displays Damage\"");
+            this.ttHints.SetToolTip(this.chkClearAfterSuccessOnly, "Clears Input Console if SQL Was successfull");
             this.chkClearAfterSuccessOnly.UseVisualStyleBackColor = true;
             // 
             // frmConsoleSettings

@@ -51,7 +51,7 @@ namespace LnLBackEndSystem
             this.EdtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EdtName.Name = "EdtName";
             this.EdtName.Size = new System.Drawing.Size(222, 35);
-            this.EdtName.TabIndex = 1;
+            this.EdtName.TabIndex = 0;
             // 
             // EdtPhoneNumber
             // 
@@ -62,7 +62,7 @@ namespace LnLBackEndSystem
             this.EdtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EdtPhoneNumber.Name = "EdtPhoneNumber";
             this.EdtPhoneNumber.Size = new System.Drawing.Size(222, 35);
-            this.EdtPhoneNumber.TabIndex = 2;
+            this.EdtPhoneNumber.TabIndex = 1;
             // 
             // EdtWebsite
             // 
@@ -73,7 +73,7 @@ namespace LnLBackEndSystem
             this.EdtWebsite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EdtWebsite.Name = "EdtWebsite";
             this.EdtWebsite.Size = new System.Drawing.Size(222, 35);
-            this.EdtWebsite.TabIndex = 3;
+            this.EdtWebsite.TabIndex = 2;
             // 
             // EdtWarehouseContactname
             // 
@@ -84,7 +84,7 @@ namespace LnLBackEndSystem
             this.EdtWarehouseContactname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EdtWarehouseContactname.Name = "EdtWarehouseContactname";
             this.EdtWarehouseContactname.Size = new System.Drawing.Size(222, 35);
-            this.EdtWarehouseContactname.TabIndex = 4;
+            this.EdtWarehouseContactname.TabIndex = 3;
             // 
             // label1
             // 
@@ -131,7 +131,7 @@ namespace LnLBackEndSystem
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(160, 46);
-            this.btnSubmit.TabIndex = 9;
+            this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit list";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);

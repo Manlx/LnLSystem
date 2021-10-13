@@ -29,11 +29,13 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnNavigateBartender = new System.Windows.Forms.Button();
             this.btnNavidateToSecretary = new System.Windows.Forms.Button();
             this.NavigateToAccountant = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnWarehouse = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnNavigateBartender
@@ -46,8 +48,9 @@ namespace LnLBackEndSystem
             this.btnNavigateBartender.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnNavigateBartender.Name = "btnNavigateBartender";
             this.btnNavigateBartender.Size = new System.Drawing.Size(208, 92);
-            this.btnNavigateBartender.TabIndex = 39;
-            this.btnNavigateBartender.Text = "Navigate To Bartender";
+            this.btnNavigateBartender.TabIndex = 4;
+            this.btnNavigateBartender.Text = "Navigate To &Bartender";
+            this.toolTip1.SetToolTip(this.btnNavigateBartender, "Go To Bartender Page");
             this.btnNavigateBartender.UseVisualStyleBackColor = false;
             this.btnNavigateBartender.Click += new System.EventHandler(this.btnNavigateBartender_Click);
             // 
@@ -61,8 +64,9 @@ namespace LnLBackEndSystem
             this.btnNavidateToSecretary.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnNavidateToSecretary.Name = "btnNavidateToSecretary";
             this.btnNavidateToSecretary.Size = new System.Drawing.Size(208, 92);
-            this.btnNavidateToSecretary.TabIndex = 40;
-            this.btnNavidateToSecretary.Text = "Navigate To Secretary";
+            this.btnNavidateToSecretary.TabIndex = 2;
+            this.btnNavidateToSecretary.Text = "Navigate To &Secretary";
+            this.toolTip1.SetToolTip(this.btnNavidateToSecretary, "Go TO Secretary Page");
             this.btnNavidateToSecretary.UseVisualStyleBackColor = false;
             this.btnNavidateToSecretary.Click += new System.EventHandler(this.btnNavidateToSecretary_Click);
             // 
@@ -76,8 +80,9 @@ namespace LnLBackEndSystem
             this.NavigateToAccountant.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.NavigateToAccountant.Name = "NavigateToAccountant";
             this.NavigateToAccountant.Size = new System.Drawing.Size(208, 92);
-            this.NavigateToAccountant.TabIndex = 41;
-            this.NavigateToAccountant.Text = "Navigate To Accountant";
+            this.NavigateToAccountant.TabIndex = 1;
+            this.NavigateToAccountant.Text = "Navigate To A&ccountant";
+            this.toolTip1.SetToolTip(this.NavigateToAccountant, "Go To Accountant Page");
             this.NavigateToAccountant.UseVisualStyleBackColor = false;
             this.NavigateToAccountant.Click += new System.EventHandler(this.NavigateToAccountant_Click);
             // 
@@ -91,8 +96,9 @@ namespace LnLBackEndSystem
             this.btnAdmin.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(208, 92);
-            this.btnAdmin.TabIndex = 42;
-            this.btnAdmin.Text = "Navigate To Admin";
+            this.btnAdmin.TabIndex = 0;
+            this.btnAdmin.Text = "Navigate To &Admin";
+            this.toolTip1.SetToolTip(this.btnAdmin, "Go to Admin Page");
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
@@ -106,8 +112,9 @@ namespace LnLBackEndSystem
             this.btnWarehouse.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnWarehouse.Name = "btnWarehouse";
             this.btnWarehouse.Size = new System.Drawing.Size(208, 92);
-            this.btnWarehouse.TabIndex = 43;
-            this.btnWarehouse.Text = "Navigate To Warehouse";
+            this.btnWarehouse.TabIndex = 3;
+            this.btnWarehouse.Text = "Navigate To &Warehouse";
+            this.toolTip1.SetToolTip(this.btnWarehouse, "Go To Warehouse Page");
             this.btnWarehouse.UseVisualStyleBackColor = false;
             this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
             // 
@@ -142,5 +149,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button NavigateToAccountant;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnWarehouse;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

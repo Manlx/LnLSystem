@@ -29,9 +29,10 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTableData = new System.Windows.Forms.DataGridView();
             this.tbcMain = new System.Windows.Forms.TabControl();
             this.tabUpdate = new System.Windows.Forms.TabPage();
@@ -53,6 +54,7 @@ namespace LnLBackEndSystem
             this.label2 = new System.Windows.Forms.Label();
             this.cbbSearchField = new System.Windows.Forms.ComboBox();
             this.btnApply = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableData)).BeginInit();
             this.tbcMain.SuspendLayout();
             this.tabUpdate.SuspendLayout();
@@ -68,37 +70,37 @@ namespace LnLBackEndSystem
             this.dgvTableData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTableData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTableData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTableData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvTableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTableData.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTableData.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvTableData.EnableHeadersVisualStyles = false;
             this.dgvTableData.GridColor = System.Drawing.Color.DarkGray;
             this.dgvTableData.Location = new System.Drawing.Point(0, 0);
             this.dgvTableData.MultiSelect = false;
             this.dgvTableData.Name = "dgvTableData";
             this.dgvTableData.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTableData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTableData.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvTableData.RowHeadersVisible = false;
             this.dgvTableData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvTableData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -118,7 +120,8 @@ namespace LnLBackEndSystem
             this.tbcMain.Name = "tbcMain";
             this.tbcMain.SelectedIndex = 0;
             this.tbcMain.Size = new System.Drawing.Size(1160, 275);
-            this.tbcMain.TabIndex = 1;
+            this.tbcMain.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.tbcMain, "Deletes Selected Record");
             // 
             // tabUpdate
             // 
@@ -141,8 +144,9 @@ namespace LnLBackEndSystem
             this.btnUpdate.Location = new System.Drawing.Point(479, 182);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(195, 43);
-            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Update Record";
+            this.toolTip1.SetToolTip(this.btnUpdate, "Updates Selected Record");
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -151,10 +155,10 @@ namespace LnLBackEndSystem
             this.tabInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabInsert.Controls.Add(this.btnInsert);
             this.tabInsert.ForeColor = System.Drawing.Color.White;
-            this.tabInsert.Location = new System.Drawing.Point(4, 25);
+            this.tabInsert.Location = new System.Drawing.Point(4, 36);
             this.tabInsert.Name = "tabInsert";
             this.tabInsert.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInsert.Size = new System.Drawing.Size(1152, 246);
+            this.tabInsert.Size = new System.Drawing.Size(1152, 235);
             this.tabInsert.TabIndex = 1;
             this.tabInsert.Text = "Insert";
             // 
@@ -168,6 +172,7 @@ namespace LnLBackEndSystem
             this.btnInsert.Size = new System.Drawing.Size(143, 43);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "Insert Row";
+            this.toolTip1.SetToolTip(this.btnInsert, "Inserts Entered Data");
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -176,10 +181,10 @@ namespace LnLBackEndSystem
             this.tabDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabDelete.Controls.Add(this.btnDelete);
             this.tabDelete.ForeColor = System.Drawing.Color.White;
-            this.tabDelete.Location = new System.Drawing.Point(4, 25);
+            this.tabDelete.Location = new System.Drawing.Point(4, 36);
             this.tabDelete.Name = "tabDelete";
             this.tabDelete.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDelete.Size = new System.Drawing.Size(1152, 246);
+            this.tabDelete.Size = new System.Drawing.Size(1152, 235);
             this.tabDelete.TabIndex = 2;
             this.tabDelete.Text = "Delete";
             // 
@@ -202,7 +207,8 @@ namespace LnLBackEndSystem
             this.cbbOrderFields.Location = new System.Drawing.Point(3, 31);
             this.cbbOrderFields.Name = "cbbOrderFields";
             this.cbbOrderFields.Size = new System.Drawing.Size(216, 32);
-            this.cbbOrderFields.TabIndex = 2;
+            this.cbbOrderFields.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.cbbOrderFields, "Order acording to the following field");
             // 
             // radAsc
             // 
@@ -210,7 +216,7 @@ namespace LnLBackEndSystem
             this.radAsc.Location = new System.Drawing.Point(252, 4);
             this.radAsc.Name = "radAsc";
             this.radAsc.Size = new System.Drawing.Size(157, 28);
-            this.radAsc.TabIndex = 3;
+            this.radAsc.TabIndex = 2;
             this.radAsc.TabStop = true;
             this.radAsc.Text = "Sort Ascending";
             this.radAsc.UseVisualStyleBackColor = true;
@@ -221,7 +227,7 @@ namespace LnLBackEndSystem
             this.radDesc.Location = new System.Drawing.Point(252, 36);
             this.radDesc.Name = "radDesc";
             this.radDesc.Size = new System.Drawing.Size(168, 28);
-            this.radDesc.TabIndex = 4;
+            this.radDesc.TabIndex = 1;
             this.radDesc.TabStop = true;
             this.radDesc.Text = "Sort Descending";
             this.radDesc.UseVisualStyleBackColor = true;
@@ -237,7 +243,7 @@ namespace LnLBackEndSystem
             this.panel1.Location = new System.Drawing.Point(4, 304);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(456, 66);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 1;
             // 
             // btnResetOrder
             // 
@@ -249,7 +255,7 @@ namespace LnLBackEndSystem
             this.btnResetOrder.Location = new System.Drawing.Point(55, 3);
             this.btnResetOrder.Name = "btnResetOrder";
             this.btnResetOrder.Size = new System.Drawing.Size(54, 26);
-            this.btnResetOrder.TabIndex = 8;
+            this.btnResetOrder.TabIndex = 3;
             this.btnResetOrder.Text = "Reset";
             this.btnResetOrder.UseVisualStyleBackColor = false;
             this.btnResetOrder.Click += new System.EventHandler(this.btnResetOrder_Click);
@@ -274,7 +280,7 @@ namespace LnLBackEndSystem
             this.panel2.Location = new System.Drawing.Point(702, 304);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(456, 66);
-            this.panel2.TabIndex = 6;
+            this.panel2.TabIndex = 3;
             // 
             // btnResetSearch
             // 
@@ -286,7 +292,7 @@ namespace LnLBackEndSystem
             this.btnResetSearch.Location = new System.Drawing.Point(56, 3);
             this.btnResetSearch.Name = "btnResetSearch";
             this.btnResetSearch.Size = new System.Drawing.Size(54, 26);
-            this.btnResetSearch.TabIndex = 9;
+            this.btnResetSearch.TabIndex = 2;
             this.btnResetSearch.Text = "Reset";
             this.btnResetSearch.UseVisualStyleBackColor = false;
             this.btnResetSearch.Click += new System.EventHandler(this.btnResetSearch_Click);
@@ -302,10 +308,11 @@ namespace LnLBackEndSystem
             // 
             // edtSearchValue
             // 
-            this.edtSearchValue.Location = new System.Drawing.Point(225, 34);
+            this.edtSearchValue.Location = new System.Drawing.Point(225, 31);
             this.edtSearchValue.Name = "edtSearchValue";
             this.edtSearchValue.Size = new System.Drawing.Size(228, 29);
-            this.edtSearchValue.TabIndex = 7;
+            this.edtSearchValue.TabIndex = 1;
+            this.edtSearchValue.Text = "Search For";
             // 
             // label2
             // 
@@ -322,7 +329,8 @@ namespace LnLBackEndSystem
             this.cbbSearchField.Location = new System.Drawing.Point(3, 31);
             this.cbbSearchField.Name = "cbbSearchField";
             this.cbbSearchField.Size = new System.Drawing.Size(216, 32);
-            this.cbbSearchField.TabIndex = 2;
+            this.cbbSearchField.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.cbbSearchField, "Search in the following Field");
             // 
             // btnApply
             // 
@@ -333,8 +341,9 @@ namespace LnLBackEndSystem
             this.btnApply.Location = new System.Drawing.Point(460, 304);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(243, 66);
-            this.btnApply.TabIndex = 7;
+            this.btnApply.TabIndex = 2;
             this.btnApply.Text = "Apply";
+            this.toolTip1.SetToolTip(this.btnApply, "Applies Search and Sorts");
             this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
@@ -394,5 +403,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Button btnResetOrder;
         private System.Windows.Forms.Button btnResetSearch;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

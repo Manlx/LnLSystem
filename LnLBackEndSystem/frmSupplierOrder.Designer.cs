@@ -44,9 +44,9 @@ namespace LnLBackEndSystem
             this.edtAmount = new System.Windows.Forms.TextBox();
             this.lblAmountOf = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lstPayment = new System.Windows.Forms.ListBox();
             this.btnGenerateFile = new System.Windows.Forms.Button();
             this.lstOrder = new System.Windows.Forms.ListBox();
-            this.lstPayment = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -73,7 +73,7 @@ namespace LnLBackEndSystem
             this.lstSuppliers.Location = new System.Drawing.Point(6, 80);
             this.lstSuppliers.Name = "lstSuppliers";
             this.lstSuppliers.Size = new System.Drawing.Size(432, 328);
-            this.lstSuppliers.TabIndex = 1;
+            this.lstSuppliers.TabIndex = 0;
             this.lstSuppliers.SelectedIndexChanged += new System.EventHandler(this.lstSuppliers_SelectedIndexChanged);
             // 
             // label1
@@ -105,7 +105,7 @@ namespace LnLBackEndSystem
             this.btnAdd.Location = new System.Drawing.Point(9, 269);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(239, 139);
-            this.btnAdd.TabIndex = 4;
+            this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add Product";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -118,7 +118,7 @@ namespace LnLBackEndSystem
             this.btnRemove.Location = new System.Drawing.Point(9, 80);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(239, 139);
-            this.btnRemove.TabIndex = 3;
+            this.btnRemove.TabIndex = 0;
             this.btnRemove.Text = "Remove Product";
             this.btnRemove.UseVisualStyleBackColor = false;
             // 
@@ -152,7 +152,7 @@ namespace LnLBackEndSystem
             this.lstProducts.Location = new System.Drawing.Point(7, 80);
             this.lstProducts.Name = "lstProducts";
             this.lstProducts.Size = new System.Drawing.Size(405, 328);
-            this.lstProducts.TabIndex = 2;
+            this.lstProducts.TabIndex = 0;
             // 
             // label2
             // 
@@ -172,7 +172,7 @@ namespace LnLBackEndSystem
             this.btnDecrease.Location = new System.Drawing.Point(862, 44);
             this.btnDecrease.Name = "btnDecrease";
             this.btnDecrease.Size = new System.Drawing.Size(255, 57);
-            this.btnDecrease.TabIndex = 5;
+            this.btnDecrease.TabIndex = 3;
             this.btnDecrease.Text = "Decrease Product";
             this.btnDecrease.UseVisualStyleBackColor = false;
             this.btnDecrease.Click += new System.EventHandler(this.btnDecrease_Click);
@@ -185,7 +185,7 @@ namespace LnLBackEndSystem
             this.btnIncrease.Location = new System.Drawing.Point(862, 105);
             this.btnIncrease.Name = "btnIncrease";
             this.btnIncrease.Size = new System.Drawing.Size(255, 57);
-            this.btnIncrease.TabIndex = 6;
+            this.btnIncrease.TabIndex = 4;
             this.btnIncrease.Text = "Increase Product";
             this.btnIncrease.UseVisualStyleBackColor = false;
             this.btnIncrease.Click += new System.EventHandler(this.btnIncrease_Click);
@@ -195,7 +195,7 @@ namespace LnLBackEndSystem
             this.edtAmount.Location = new System.Drawing.Point(990, 5);
             this.edtAmount.Name = "edtAmount";
             this.edtAmount.Size = new System.Drawing.Size(127, 33);
-            this.edtAmount.TabIndex = 7;
+            this.edtAmount.TabIndex = 2;
             // 
             // lblAmountOf
             // 
@@ -221,6 +221,18 @@ namespace LnLBackEndSystem
             this.panel4.Size = new System.Drawing.Size(1125, 236);
             this.panel4.TabIndex = 2;
             // 
+            // lstPayment
+            // 
+            this.lstPayment.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.lstPayment.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstPayment.ForeColor = System.Drawing.Color.White;
+            this.lstPayment.FormattingEnabled = true;
+            this.lstPayment.ItemHeight = 18;
+            this.lstPayment.Location = new System.Drawing.Point(646, 5);
+            this.lstPayment.Name = "lstPayment";
+            this.lstPayment.Size = new System.Drawing.Size(210, 220);
+            this.lstPayment.TabIndex = 1;
+            // 
             // btnGenerateFile
             // 
             this.btnGenerateFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
@@ -229,7 +241,7 @@ namespace LnLBackEndSystem
             this.btnGenerateFile.Location = new System.Drawing.Point(862, 166);
             this.btnGenerateFile.Name = "btnGenerateFile";
             this.btnGenerateFile.Size = new System.Drawing.Size(255, 57);
-            this.btnGenerateFile.TabIndex = 9;
+            this.btnGenerateFile.TabIndex = 5;
             this.btnGenerateFile.Text = "Generate File/Place Order";
             this.btnGenerateFile.UseVisualStyleBackColor = false;
             this.btnGenerateFile.Click += new System.EventHandler(this.btnGenerateFile_Click);
@@ -244,19 +256,7 @@ namespace LnLBackEndSystem
             this.lstOrder.Location = new System.Drawing.Point(6, 5);
             this.lstOrder.Name = "lstOrder";
             this.lstOrder.Size = new System.Drawing.Size(634, 220);
-            this.lstOrder.TabIndex = 3;
-            // 
-            // lstPayment
-            // 
-            this.lstPayment.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.lstPayment.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstPayment.ForeColor = System.Drawing.Color.White;
-            this.lstPayment.FormattingEnabled = true;
-            this.lstPayment.ItemHeight = 18;
-            this.lstPayment.Location = new System.Drawing.Point(646, 5);
-            this.lstPayment.Name = "lstPayment";
-            this.lstPayment.Size = new System.Drawing.Size(210, 220);
-            this.lstPayment.TabIndex = 10;
+            this.lstOrder.TabIndex = 0;
             // 
             // frmSupplierOrder
             // 

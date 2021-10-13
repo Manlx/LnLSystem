@@ -69,7 +69,7 @@ namespace LnLBackEndSystem
             this.lstVenues.Location = new System.Drawing.Point(17, 319);
             this.lstVenues.Name = "lstVenues";
             this.lstVenues.Size = new System.Drawing.Size(227, 127);
-            this.lstVenues.TabIndex = 34;
+            this.lstVenues.TabIndex = 4;
             // 
             // clsRequirements
             // 
@@ -81,7 +81,7 @@ namespace LnLBackEndSystem
             this.clsRequirements.Location = new System.Drawing.Point(17, 195);
             this.clsRequirements.Name = "clsRequirements";
             this.clsRequirements.Size = new System.Drawing.Size(227, 114);
-            this.clsRequirements.TabIndex = 33;
+            this.clsRequirements.TabIndex = 3;
             this.clsRequirements.Click += new System.EventHandler(this.clsRequirements_Click);
             // 
             // btnBack
@@ -93,7 +93,7 @@ namespace LnLBackEndSystem
             this.btnBack.Location = new System.Drawing.Point(354, 41);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(147, 47);
-            this.btnBack.TabIndex = 32;
+            this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
@@ -107,7 +107,7 @@ namespace LnLBackEndSystem
             this.cbType.Location = new System.Drawing.Point(93, 132);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(100, 33);
-            this.cbType.TabIndex = 31;
+            this.cbType.TabIndex = 2;
             // 
             // lblFacilities
             // 
@@ -168,7 +168,7 @@ namespace LnLBackEndSystem
             this.btnAdd.Location = new System.Drawing.Point(17, 452);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(136, 67);
-            this.btnAdd.TabIndex = 23;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Update booking";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -181,7 +181,7 @@ namespace LnLBackEndSystem
             this.DTPTime.Location = new System.Drawing.Point(93, 100);
             this.DTPTime.Name = "DTPTime";
             this.DTPTime.Size = new System.Drawing.Size(200, 33);
-            this.DTPTime.TabIndex = 39;
+            this.DTPTime.TabIndex = 1;
             // 
             // gpbOptions
             // 
@@ -200,7 +200,7 @@ namespace LnLBackEndSystem
             this.gpbOptions.Location = new System.Drawing.Point(12, 187);
             this.gpbOptions.Name = "gpbOptions";
             this.gpbOptions.Size = new System.Drawing.Size(489, 537);
-            this.gpbOptions.TabIndex = 40;
+            this.gpbOptions.TabIndex = 2;
             this.gpbOptions.TabStop = false;
             this.gpbOptions.Enter += new System.EventHandler(this.gpbOptions_Enter);
             // 
@@ -212,7 +212,7 @@ namespace LnLBackEndSystem
             this.DTPDate.Location = new System.Drawing.Point(93, 68);
             this.DTPDate.Name = "DTPDate";
             this.DTPDate.Size = new System.Drawing.Size(200, 33);
-            this.DTPDate.TabIndex = 40;
+            this.DTPDate.TabIndex = 0;
             // 
             // btnSelectClient
             // 
@@ -223,7 +223,7 @@ namespace LnLBackEndSystem
             this.btnSelectClient.Location = new System.Drawing.Point(12, 41);
             this.btnSelectClient.Name = "btnSelectClient";
             this.btnSelectClient.Size = new System.Drawing.Size(147, 47);
-            this.btnSelectClient.TabIndex = 38;
+            this.btnSelectClient.TabIndex = 0;
             this.btnSelectClient.Text = "Client Login";
             this.btnSelectClient.UseVisualStyleBackColor = false;
             this.btnSelectClient.Click += new System.EventHandler(this.btnSelectClient_Click);
@@ -238,7 +238,7 @@ namespace LnLBackEndSystem
             this.lstBooking.Location = new System.Drawing.Point(12, 94);
             this.lstBooking.Name = "lstBooking";
             this.lstBooking.Size = new System.Drawing.Size(489, 94);
-            this.lstBooking.TabIndex = 41;
+            this.lstBooking.TabIndex = 1;
             // 
             // Update_Booking
             // 

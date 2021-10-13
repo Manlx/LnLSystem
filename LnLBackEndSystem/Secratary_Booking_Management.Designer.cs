@@ -95,7 +95,7 @@ namespace LnLBackEndSystem
             this.btnApprove.Location = new System.Drawing.Point(12, 237);
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.Size = new System.Drawing.Size(144, 63);
-            this.btnApprove.TabIndex = 4;
+            this.btnApprove.TabIndex = 1;
             this.btnApprove.Text = "Approve booking";
             this.btnApprove.UseVisualStyleBackColor = false;
             this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
@@ -105,11 +105,12 @@ namespace LnLBackEndSystem
             this.BtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(852, 301);
+            this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BtnBack.Location = new System.Drawing.Point(790, 237);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(75, 26);
-            this.BtnBack.TabIndex = 5;
-            this.BtnBack.Text = "back";
+            this.BtnBack.Size = new System.Drawing.Size(144, 63);
+            this.BtnBack.TabIndex = 4;
+            this.BtnBack.Text = "Back";
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
@@ -118,7 +119,7 @@ namespace LnLBackEndSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(939, 339);
+            this.ClientSize = new System.Drawing.Size(939, 307);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.btnApprove);
             this.Controls.Add(this.btnDelete);

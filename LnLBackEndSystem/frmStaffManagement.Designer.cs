@@ -44,8 +44,8 @@ namespace LnLBackEndSystem
             this.btnInsert.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(182, 82);
-            this.btnInsert.TabIndex = 6;
-            this.btnInsert.Text = "Insert Staff Record";
+            this.btnInsert.TabIndex = 0;
+            this.btnInsert.Text = "&Insert Staff Record";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -59,8 +59,8 @@ namespace LnLBackEndSystem
             this.btnDelete.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(182, 82);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "Delete Staff Record";
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "&Delete Staff Record";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -74,8 +74,8 @@ namespace LnLBackEndSystem
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(182, 82);
-            this.btnUpdate.TabIndex = 4;
-            this.btnUpdate.Text = "Update Staff Record";
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "&Update Staff Record";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 

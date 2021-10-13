@@ -46,8 +46,8 @@ namespace LnLBackEndSystem
             this.btnBack.Margin = new System.Windows.Forms.Padding(6);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(87, 45);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "back";
+            this.btnBack.TabIndex = 2;
+            this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -62,7 +62,7 @@ namespace LnLBackEndSystem
             this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(572, 48);
-            this.btnDelete.TabIndex = 2;
+            this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete Record";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -95,7 +95,7 @@ namespace LnLBackEndSystem
             this.lstStaff.Location = new System.Drawing.Point(20, 53);
             this.lstStaff.Name = "lstStaff";
             this.lstStaff.Size = new System.Drawing.Size(671, 180);
-            this.lstStaff.TabIndex = 9;
+            this.lstStaff.TabIndex = 0;
             // 
             // Secretary_delete
             // 

@@ -91,7 +91,7 @@ namespace LnLBackEndSystem
             this.btnBooking.Location = new System.Drawing.Point(21, 227);
             this.btnBooking.Name = "btnBooking";
             this.btnBooking.Size = new System.Drawing.Size(138, 54);
-            this.btnBooking.TabIndex = 5;
+            this.btnBooking.TabIndex = 1;
             this.btnBooking.Text = "Manage Bookings";
             this.btnBooking.UseVisualStyleBackColor = false;
             this.btnBooking.Click += new System.EventHandler(this.btnBooking_Click);
@@ -105,7 +105,7 @@ namespace LnLBackEndSystem
             this.btnReport.Location = new System.Drawing.Point(329, 227);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(138, 54);
-            this.btnReport.TabIndex = 6;
+            this.btnReport.TabIndex = 3;
             this.btnReport.Text = "Generate Reports";
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
@@ -119,7 +119,7 @@ namespace LnLBackEndSystem
             this.btnAddBooking.Location = new System.Drawing.Point(175, 227);
             this.btnAddBooking.Name = "btnAddBooking";
             this.btnAddBooking.Size = new System.Drawing.Size(138, 54);
-            this.btnAddBooking.TabIndex = 7;
+            this.btnAddBooking.TabIndex = 2;
             this.btnAddBooking.Text = "Direct Add Booking";
             this.btnAddBooking.UseVisualStyleBackColor = false;
             this.btnAddBooking.Click += new System.EventHandler(this.btnAddBooking_Click);

@@ -44,8 +44,8 @@ namespace LnLBackEndSystem
             this.btnStaff.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(182, 82);
-            this.btnStaff.TabIndex = 43;
-            this.btnStaff.Text = "Staff Management";
+            this.btnStaff.TabIndex = 0;
+            this.btnStaff.Text = "&Staff Management";
             this.btnStaff.UseVisualStyleBackColor = false;
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
@@ -59,8 +59,8 @@ namespace LnLBackEndSystem
             this.btnSupplier.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(182, 82);
-            this.btnSupplier.TabIndex = 44;
-            this.btnSupplier.Text = "Supplier Management";
+            this.btnSupplier.TabIndex = 1;
+            this.btnSupplier.Text = "S&upplier Management";
             this.btnSupplier.UseVisualStyleBackColor = false;
             this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
@@ -74,8 +74,8 @@ namespace LnLBackEndSystem
             this.btnBankSupplier.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnBankSupplier.Name = "btnBankSupplier";
             this.btnBankSupplier.Size = new System.Drawing.Size(182, 82);
-            this.btnBankSupplier.TabIndex = 45;
-            this.btnBankSupplier.Text = "Bank Supplier Management";
+            this.btnBankSupplier.TabIndex = 2;
+            this.btnBankSupplier.Text = "&Bank Supplier Management";
             this.btnBankSupplier.UseVisualStyleBackColor = false;
             this.btnBankSupplier.Click += new System.EventHandler(this.btnBankSupplier_Click);
             // 

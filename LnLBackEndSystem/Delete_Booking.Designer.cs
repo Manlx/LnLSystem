@@ -29,9 +29,11 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnDelete = new System.Windows.Forms.Button();
             this.cldTime = new System.Windows.Forms.MonthCalendar();
             this.lstBookings = new System.Windows.Forms.ListBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnDelete
@@ -44,8 +46,9 @@ namespace LnLBackEndSystem
             this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(209, 42);
-            this.btnDelete.TabIndex = 35;
+            this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete booking";
+            this.toolTip1.SetToolTip(this.btnDelete, "Delete selected Booking");
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -53,7 +56,8 @@ namespace LnLBackEndSystem
             // 
             this.cldTime.Location = new System.Drawing.Point(69, 18);
             this.cldTime.Name = "cldTime";
-            this.cldTime.TabIndex = 36;
+            this.cldTime.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.cldTime, "Select a week and see all bookings");
             this.cldTime.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.cldTime_DateSelected);
             // 
             // lstBookings
@@ -65,7 +69,8 @@ namespace LnLBackEndSystem
             this.lstBookings.Location = new System.Drawing.Point(12, 192);
             this.lstBookings.Name = "lstBookings";
             this.lstBookings.Size = new System.Drawing.Size(341, 179);
-            this.lstBookings.TabIndex = 37;
+            this.lstBookings.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.lstBookings, "List of all bookings in selected Time");
             // 
             // Delete_Booking
             // 
@@ -95,5 +100,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.MonthCalendar cldTime;
         private System.Windows.Forms.ListBox lstBookings;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

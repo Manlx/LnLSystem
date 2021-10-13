@@ -64,6 +64,7 @@ namespace LnLBackEndSystem
             this.dgViewWarehouse.Location = new System.Drawing.Point(23, 61);
             this.dgViewWarehouse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgViewWarehouse.Name = "dgViewWarehouse";
+            this.dgViewWarehouse.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,7 +77,8 @@ namespace LnLBackEndSystem
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             this.dgViewWarehouse.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgViewWarehouse.Size = new System.Drawing.Size(568, 339);
-            this.dgViewWarehouse.TabIndex = 0;
+            this.dgViewWarehouse.TabIndex = 5;
+            this.dgViewWarehouse.TabStop = false;
             // 
             // btnGenerateReport
             // 
@@ -87,7 +89,7 @@ namespace LnLBackEndSystem
             this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(144, 37);
-            this.btnGenerateReport.TabIndex = 1;
+            this.btnGenerateReport.TabIndex = 0;
             this.btnGenerateReport.Text = "Generate Report";
             this.ttGenerate.SetToolTip(this.btnGenerateReport, "Generates Table");
             this.btnGenerateReport.UseVisualStyleBackColor = false;
@@ -101,7 +103,7 @@ namespace LnLBackEndSystem
             this.linktoHome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linktoHome.Name = "linktoHome";
             this.linktoHome.Size = new System.Drawing.Size(182, 21);
-            this.linktoHome.TabIndex = 11;
+            this.linktoHome.TabIndex = 4;
             this.linktoHome.TabStop = true;
             this.linktoHome.Text = "Return to Home Screen";
             this.linktoHome.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linktoHome_LinkClicked);
@@ -125,7 +127,7 @@ namespace LnLBackEndSystem
             this.btnBarRestock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBarRestock.Name = "btnBarRestock";
             this.btnBarRestock.Size = new System.Drawing.Size(112, 37);
-            this.btnBarRestock.TabIndex = 13;
+            this.btnBarRestock.TabIndex = 1;
             this.btnBarRestock.Text = "Restock";
             this.btnBarRestock.UseVisualStyleBackColor = false;
             this.btnBarRestock.Click += new System.EventHandler(this.btnBarRestock_Click);
@@ -149,7 +151,7 @@ namespace LnLBackEndSystem
             this.btnWarehouseRestock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnWarehouseRestock.Name = "btnWarehouseRestock";
             this.btnWarehouseRestock.Size = new System.Drawing.Size(112, 37);
-            this.btnWarehouseRestock.TabIndex = 15;
+            this.btnWarehouseRestock.TabIndex = 2;
             this.btnWarehouseRestock.Text = "Restock";
             this.btnWarehouseRestock.UseVisualStyleBackColor = false;
             this.btnWarehouseRestock.Click += new System.EventHandler(this.btnWarehouseRestock_Click);
@@ -163,12 +165,12 @@ namespace LnLBackEndSystem
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(112, 37);
-            this.btnBack.TabIndex = 16;
+            this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // Warehouse_Login
+            // Warehouse_Restock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,7 +190,7 @@ namespace LnLBackEndSystem
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Warehouse_Login";
+            this.Name = "Warehouse_Restock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Warehouse_Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Warehouse_Login_FormClosing);

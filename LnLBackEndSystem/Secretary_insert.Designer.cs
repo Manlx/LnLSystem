@@ -52,11 +52,11 @@ namespace LnLBackEndSystem
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnInsert.FlatAppearance.BorderSize = 0;
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(74, 250);
+            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnInsert.Location = new System.Drawing.Point(31, 324);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(141, 45);
-            this.btnInsert.TabIndex = 0;
+            this.btnInsert.TabIndex = 7;
             this.btnInsert.Text = "Insert Record";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -66,11 +66,11 @@ namespace LnLBackEndSystem
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnBack.Location = new System.Drawing.Point(211, 318);
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnBack.Location = new System.Drawing.Point(180, 324);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(79, 22);
-            this.btnBack.TabIndex = 1;
+            this.btnBack.Size = new System.Drawing.Size(141, 45);
+            this.btnBack.TabIndex = 8;
             this.btnBack.Text = "back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -78,55 +78,61 @@ namespace LnLBackEndSystem
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(18, 47);
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblName.Location = new System.Drawing.Point(26, 51);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(66, 25);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name:";
             // 
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(18, 74);
+            this.lblSurname.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblSurname.Location = new System.Drawing.Point(26, 86);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(52, 13);
+            this.lblSurname.Size = new System.Drawing.Size(91, 25);
             this.lblSurname.TabIndex = 3;
             this.lblSurname.Text = "Surname:";
             // 
             // lblCellNumber
             // 
             this.lblCellNumber.AutoSize = true;
-            this.lblCellNumber.Location = new System.Drawing.Point(18, 101);
+            this.lblCellNumber.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblCellNumber.Location = new System.Drawing.Point(26, 127);
             this.lblCellNumber.Name = "lblCellNumber";
-            this.lblCellNumber.Size = new System.Drawing.Size(97, 13);
+            this.lblCellNumber.Size = new System.Drawing.Size(176, 25);
             this.lblCellNumber.TabIndex = 4;
             this.lblCellNumber.Text = "Cellphone Number:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 126);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(26, 130);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.Size = new System.Drawing.Size(0, 16);
             this.label4.TabIndex = 5;
             // 
             // cbLicence
             // 
             this.cbLicence.AutoSize = true;
-            this.cbLicence.Location = new System.Drawing.Point(21, 195);
+            this.cbLicence.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cbLicence.Location = new System.Drawing.Point(31, 254);
             this.cbLicence.Name = "cbLicence";
-            this.cbLicence.Size = new System.Drawing.Size(102, 17);
-            this.cbLicence.TabIndex = 6;
+            this.cbLicence.Size = new System.Drawing.Size(160, 29);
+            this.cbLicence.TabIndex = 5;
             this.cbLicence.Text = "I have a licence";
             this.cbLicence.UseVisualStyleBackColor = true;
             // 
             // cbFulltime
             // 
             this.cbFulltime.AutoSize = true;
-            this.cbFulltime.Location = new System.Drawing.Point(21, 218);
+            this.cbFulltime.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cbFulltime.Location = new System.Drawing.Point(31, 289);
             this.cbFulltime.Name = "cbFulltime";
-            this.cbFulltime.Size = new System.Drawing.Size(133, 17);
-            this.cbFulltime.TabIndex = 7;
+            this.cbFulltime.Size = new System.Drawing.Size(234, 29);
+            this.cbFulltime.TabIndex = 6;
             this.cbFulltime.Text = "I am a full-time member";
             this.cbFulltime.UseVisualStyleBackColor = true;
             // 
@@ -134,45 +140,49 @@ namespace LnLBackEndSystem
             // 
             this.txtName.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(144, 41);
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtName.Location = new System.Drawing.Point(221, 43);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 8;
+            this.txtName.Size = new System.Drawing.Size(100, 33);
+            this.txtName.TabIndex = 0;
             // 
             // txtSurname
             // 
             this.txtSurname.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSurname.Location = new System.Drawing.Point(144, 69);
+            this.txtSurname.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtSurname.Location = new System.Drawing.Point(221, 84);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(100, 20);
-            this.txtSurname.TabIndex = 9;
+            this.txtSurname.Size = new System.Drawing.Size(100, 33);
+            this.txtSurname.TabIndex = 1;
             // 
             // txtCellphone
             // 
             this.txtCellphone.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtCellphone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCellphone.Location = new System.Drawing.Point(144, 97);
+            this.txtCellphone.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtCellphone.Location = new System.Drawing.Point(221, 125);
             this.txtCellphone.Name = "txtCellphone";
-            this.txtCellphone.Size = new System.Drawing.Size(100, 20);
-            this.txtCellphone.TabIndex = 10;
+            this.txtCellphone.Size = new System.Drawing.Size(100, 33);
+            this.txtCellphone.TabIndex = 2;
             // 
             // lblHeading
             // 
             this.lblHeading.AutoSize = true;
-            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(21, 9);
+            this.lblHeading.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblHeading.Location = new System.Drawing.Point(26, 10);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(123, 16);
+            this.lblHeading.Size = new System.Drawing.Size(146, 25);
             this.lblHeading.TabIndex = 11;
             this.lblHeading.Text = "Personal Details";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(18, 128);
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblPassword.Location = new System.Drawing.Point(26, 168);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(56, 13);
+            this.lblPassword.Size = new System.Drawing.Size(95, 25);
             this.lblPassword.TabIndex = 12;
             this.lblPassword.Text = "Password:";
             // 
@@ -180,36 +190,39 @@ namespace LnLBackEndSystem
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Location = new System.Drawing.Point(144, 126);
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtPassword.Location = new System.Drawing.Point(221, 166);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 13;
+            this.txtPassword.Size = new System.Drawing.Size(100, 33);
+            this.txtPassword.TabIndex = 3;
             // 
             // lblRank
             // 
             this.lblRank.AutoSize = true;
-            this.lblRank.Location = new System.Drawing.Point(18, 158);
+            this.lblRank.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblRank.Location = new System.Drawing.Point(26, 215);
             this.lblRank.Name = "lblRank";
-            this.lblRank.Size = new System.Drawing.Size(36, 13);
+            this.lblRank.Size = new System.Drawing.Size(57, 25);
             this.lblRank.TabIndex = 14;
             this.lblRank.Text = "Rank:";
             // 
             // cbRank
             // 
             this.cbRank.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cbRank.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.cbRank.FormattingEnabled = true;
-            this.cbRank.Location = new System.Drawing.Point(144, 155);
+            this.cbRank.Location = new System.Drawing.Point(221, 207);
             this.cbRank.Name = "cbRank";
-            this.cbRank.Size = new System.Drawing.Size(100, 21);
-            this.cbRank.TabIndex = 15;
+            this.cbRank.Size = new System.Drawing.Size(100, 33);
+            this.cbRank.TabIndex = 4;
             // 
             // Secretary_insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(302, 352);
+            this.ClientSize = new System.Drawing.Size(346, 378);
             this.Controls.Add(this.cbRank);
             this.Controls.Add(this.lblRank);
             this.Controls.Add(this.txtPassword);

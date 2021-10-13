@@ -74,7 +74,7 @@ namespace LnLBackEndSystem
             this.addToList.Location = new System.Drawing.Point(317, 123);
             this.addToList.Name = "addToList";
             this.addToList.Size = new System.Drawing.Size(75, 23);
-            this.addToList.TabIndex = 4;
+            this.addToList.TabIndex = 2;
             this.addToList.Text = "Add to list";
             this.addToList.UseVisualStyleBackColor = false;
             this.addToList.Click += new System.EventHandler(this.addToList_Click);
@@ -88,7 +88,7 @@ namespace LnLBackEndSystem
             this.lstStockRequest.Location = new System.Drawing.Point(18, 230);
             this.lstStockRequest.Name = "lstStockRequest";
             this.lstStockRequest.Size = new System.Drawing.Size(320, 93);
-            this.lstStockRequest.TabIndex = 5;
+            this.lstStockRequest.TabIndex = 3;
             // 
             // label3
             // 
@@ -108,7 +108,7 @@ namespace LnLBackEndSystem
             this.btnSubmit.Location = new System.Drawing.Point(317, 345);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 7;
+            this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit list";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -121,7 +121,7 @@ namespace LnLBackEndSystem
             this.btnDeleteItem.Location = new System.Drawing.Point(227, 345);
             this.btnDeleteItem.Name = "btnDeleteItem";
             this.btnDeleteItem.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteItem.TabIndex = 8;
+            this.btnDeleteItem.TabIndex = 4;
             this.btnDeleteItem.Text = "Delete item";
             this.btnDeleteItem.UseVisualStyleBackColor = false;
             this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
@@ -145,7 +145,7 @@ namespace LnLBackEndSystem
             this.cmbStock.Location = new System.Drawing.Point(148, 51);
             this.cmbStock.Name = "cmbStock";
             this.cmbStock.Size = new System.Drawing.Size(244, 21);
-            this.cmbStock.TabIndex = 11;
+            this.cmbStock.TabIndex = 0;
             // 
             // txtQuantity
             // 
@@ -155,7 +155,7 @@ namespace LnLBackEndSystem
             this.txtQuantity.Location = new System.Drawing.Point(148, 91);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(103, 22);
-            this.txtQuantity.TabIndex = 10;
+            this.txtQuantity.TabIndex = 1;
             // 
             // errorQuantity
             // 
@@ -177,7 +177,7 @@ namespace LnLBackEndSystem
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(406, 408);
-            this.panel1.TabIndex = 12;
+            this.panel1.TabIndex = 0;
             // 
             // frmRequestStock
             // 

@@ -57,7 +57,7 @@ namespace LnLBackEndSystem
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(180, 44);
-            this.btnUpdate.TabIndex = 0;
+            this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update Record";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -71,7 +71,7 @@ namespace LnLBackEndSystem
             this.btnBack.Margin = new System.Windows.Forms.Padding(6);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(138, 44);
-            this.btnBack.TabIndex = 1;
+            this.btnBack.TabIndex = 9;
             this.btnBack.Text = "back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -147,7 +147,7 @@ namespace LnLBackEndSystem
             this.txtName.Margin = new System.Windows.Forms.Padding(6);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(182, 33);
-            this.txtName.TabIndex = 9;
+            this.txtName.TabIndex = 0;
             // 
             // txtSurname
             // 
@@ -158,7 +158,7 @@ namespace LnLBackEndSystem
             this.txtSurname.Margin = new System.Windows.Forms.Padding(6);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(182, 33);
-            this.txtSurname.TabIndex = 10;
+            this.txtSurname.TabIndex = 1;
             // 
             // txtPassword
             // 
@@ -170,7 +170,7 @@ namespace LnLBackEndSystem
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(182, 33);
-            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TabIndex = 2;
             // 
             // txtCell
             // 
@@ -181,7 +181,7 @@ namespace LnLBackEndSystem
             this.txtCell.Margin = new System.Windows.Forms.Padding(6);
             this.txtCell.Name = "txtCell";
             this.txtCell.Size = new System.Drawing.Size(182, 33);
-            this.txtCell.TabIndex = 12;
+            this.txtCell.TabIndex = 3;
             // 
             // lblForgot
             // 
@@ -190,7 +190,7 @@ namespace LnLBackEndSystem
             this.lblForgot.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblForgot.Name = "lblForgot";
             this.lblForgot.Size = new System.Drawing.Size(161, 25);
-            this.lblForgot.TabIndex = 13;
+            this.lblForgot.TabIndex = 8;
             this.lblForgot.TabStop = true;
             this.lblForgot.Text = "Forgot password?";
             this.lblForgot.Visible = false;
@@ -216,7 +216,7 @@ namespace LnLBackEndSystem
             this.cbRank.Margin = new System.Windows.Forms.Padding(6);
             this.cbRank.Name = "cbRank";
             this.cbRank.Size = new System.Drawing.Size(180, 33);
-            this.cbRank.TabIndex = 17;
+            this.cbRank.TabIndex = 4;
             // 
             // lblRank
             // 
