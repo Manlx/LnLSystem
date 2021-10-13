@@ -255,10 +255,10 @@ namespace NSDataModule
             {
                 return Com.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception E)
             {
                 return -1;
-                throw;
+                throw new Exception( E.ToString());
             }
 
         }

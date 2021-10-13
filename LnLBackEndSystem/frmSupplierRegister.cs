@@ -35,6 +35,7 @@ namespace LnLBackEndSystem
             Value.Website = EdtWebsite.Text;
             Value.WarehouseContactName = EdtWarehouseContactname.Text;
             Value.InsertSelf();
+            MessageBox.Show("Supplier Registered");
         }
 
         private void frmSupplierRegister_FormClosed(object sender, FormClosedEventArgs e)

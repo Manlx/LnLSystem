@@ -38,12 +38,12 @@ namespace SupplierAndUtils
         {
             try
             {
-                return DataModule.ExecuteSQL($"UPDATE SET tblSupplier Name = '{Name}',Balance = {Balance:F2},PhoneNumber = '{PhoneNumber}',Website = '{Website}',WarehouseContactName = '{WarehouseContactName}' WHERE SupplierID = {SupplierID}")>0 ;
+                return DataModule.ExecuteSQL($"UPDATE tblSupplier SET Name = '{Name}',Balance = {Balance:F2},PhoneNumber = '{PhoneNumber}',Website = '{Website}',WarehouseContactName = '{WarehouseContactName}' WHERE SupplierID = {SupplierID}")>0 ;
             }
-            catch (Exception)
+            catch (Exception E)
             {
                 return false;
-                throw;
+                throw new Exception(E.ToString());
             }
         }
         public bool LoadFromDB(string SupplierID)

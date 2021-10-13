@@ -22,10 +22,10 @@ namespace LnLBackEndSystem
             edtPhoneNumber.Text = Supplier.PhoneNumber;
             edtWebsite.Text = Supplier.Website;
         }
-        private void frmSupplierUpdate_Load(object sender, EventArgs e)
+        private void UpdateSupplierList()
         {
             string[] IDs = DataModule.GetValues(0, "SELECT SupplierID FROM tblSupplier");
-            foreach(string x in IDs)
+            foreach (string x in IDs)
             {
                 SupplierObj Temp = new SupplierObj();
                 Temp.LoadFromDB(x);
@@ -34,6 +34,10 @@ namespace LnLBackEndSystem
             lstSuppliers.Items.Clear();
             foreach (SupplierObj x in SupplierList)
                 lstSuppliers.Items.Add(x.Name);
+        }
+        private void frmSupplierUpdate_Load(object sender, EventArgs e)
+        {
+            UpdateSupplierList();
         }
 
         private void lstSuppliers_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,9 +62,19 @@ namespace LnLBackEndSystem
             SupplierList[lstSuppliers.SelectedIndex].WarehouseContactName = edtContactName.Text;
             SupplierList[lstSuppliers.SelectedIndex].Website = edtWebsite.Text;
             if (SupplierList[lstSuppliers.SelectedIndex].UpdateSelf())
+            {
                 MessageBox.Show("Update Successfully");
+                UpdateSupplierList();
+                lstSuppliers.SelectedIndex = 0;
+                UpdateComps(SupplierList[lstSuppliers.SelectedIndex]);
+            }
             else
                 MessageBox.Show("Update Failed");
+        }
+
+        private void frmSupplierUpdate_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Creator.Show();
         }
     }
 }

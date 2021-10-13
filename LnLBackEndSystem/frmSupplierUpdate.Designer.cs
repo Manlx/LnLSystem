@@ -157,6 +157,7 @@ namespace LnLBackEndSystem
             this.Name = "frmSupplierUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supplier Update";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSupplierUpdate_FormClosed);
             this.Load += new System.EventHandler(this.frmSupplierUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
