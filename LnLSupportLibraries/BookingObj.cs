@@ -1,5 +1,7 @@
 ﻿//M Tolmay 33784507 Manuel A Nunes 34551875
 using NSDataModule;
+using System;
+
 namespace BookingUtil
 {
     public class BookingObject
@@ -39,6 +41,10 @@ namespace BookingUtil
                 throw;
             }
 
+        }
+        public bool isFilled()
+        {
+            return !String.IsNullOrEmpty(BookingID) && !String.IsNullOrEmpty(ClientID);
         }
         public string toString()
         {

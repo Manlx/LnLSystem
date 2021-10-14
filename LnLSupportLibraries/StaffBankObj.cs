@@ -1,10 +1,5 @@
 ﻿//Manuel A Nunes 34551875
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using NSDataModule;
 using BankObjAndUtil;
 using StaffObjAndUtils;
@@ -37,7 +32,7 @@ namespace StaffBankObjUtil
         {
             try
             {
-                string[] Row = DataModule.GetValues($"SELECT `StaffID`, `BankID`, `BranchNumber`, `AccountNumber` FROM `tblStaffBank` {gWHERE}",new int[] { 0,1,2,3})[0];
+                string[] Row = DataModule.GetValues($"SELECT StaffID, BankID, BranchNumber, AccountNumber FROM tblStaffBank WHERE (StaffID = {StaffID})AND (BankID = {BankID})",new int[] { 0,1,2,3})[0];
                 Staff = new StaffObj();
                 Staff.LoadFromDB(Row[0]);
                 this.Bank = new BankObj();
@@ -56,7 +51,7 @@ namespace StaffBankObjUtil
         {
             try
             {
-                return DataModule.ExecuteSQL($"DELETE FROM `tblStaffBank` {gWHERE}")>0;
+                return DataModule.ExecuteSQL($"DELETE FROM tblStaffBank {gWHERE}")>0;
             }
             catch (Exception E)
             {
@@ -68,7 +63,7 @@ namespace StaffBankObjUtil
         {
             try
             {
-                return DataModule.ExecuteSQL($"INSERT INTO `tblStaffBank`(`StaffID`, `BankID`, `BranchNumber`, `AccountNumber`) VALUES ({Staff.StaffID},{Bank.BankID},'{BranchNumber}','{AccountNumber}')")>0;
+                return DataModule.ExecuteSQL($"INSERT INTO tblStaffBank(StaffID, BankID, BranchNumber, AccountNumber) VALUES ({Staff.StaffID},{Bank.BankID},'{BranchNumber}','{AccountNumber}')")>0;
             }
             catch (Exception E)
             {
@@ -80,7 +75,7 @@ namespace StaffBankObjUtil
         {
             try
             {
-                return DataModule.ExecuteSQL($"UPDATE `tblStaffBank` SET `StaffID`={Staff.StaffID},`BankID`={Bank.BankID},`BranchNumber`='{BranchNumber}',`AccountNumber`={AccountNumber} {gWHERE}")>0;
+                return DataModule.ExecuteSQL($"UPDATE tblStaffBank SET StaffID={Staff.StaffID},BankID={Bank.BankID},BranchNumber='{BranchNumber}',AccountNumber={AccountNumber} {gWHERE}")>0;
             }
             catch (Exception E)
             {
