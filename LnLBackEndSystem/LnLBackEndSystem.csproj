@@ -176,6 +176,12 @@
     <Compile Include="frmClientRecoverPass.Designer.cs">
       <DependentUpon>frmClientRecoverPass.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHRAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHRAdmin.Designer.cs">
+      <DependentUpon>frmHRAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmImageManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,12 @@
     </Compile>
     <Compile Include="frmSQLConsole.Designer.cs">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffBankManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffBankManagement.Designer.cs">
+      <DependentUpon>frmStaffBankManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStaffLogin.cs">
       <SubType>Form</SubType>
@@ -388,6 +400,9 @@
     <EmbeddedResource Include="frmClientRecoverPass.resx">
       <DependentUpon>frmClientRecoverPass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHRAdmin.resx">
+      <DependentUpon>frmHRAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmImageManager.resx">
       <DependentUpon>frmImageManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSQLConsole.resx">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffBankManagement.resx">
+      <DependentUpon>frmStaffBankManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStaffLogin.resx">
       <DependentUpon>frmStaffLogin.cs</DependentUpon>

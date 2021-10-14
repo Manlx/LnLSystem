@@ -32,6 +32,8 @@ namespace LnLBackEndSystem
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnSupplier = new System.Windows.Forms.Button();
             this.btnBankSupplier = new System.Windows.Forms.Button();
+            this.BtnBankManagement = new System.Windows.Forms.Button();
+            this.btnStaffBank = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStaff
@@ -40,7 +42,7 @@ namespace LnLBackEndSystem
             this.btnStaff.FlatAppearance.BorderSize = 0;
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaff.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnStaff.Location = new System.Drawing.Point(13, 7);
+            this.btnStaff.Location = new System.Drawing.Point(13, 9);
             this.btnStaff.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(182, 82);
@@ -55,7 +57,7 @@ namespace LnLBackEndSystem
             this.btnSupplier.FlatAppearance.BorderSize = 0;
             this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnSupplier.Location = new System.Drawing.Point(13, 97);
+            this.btnSupplier.Location = new System.Drawing.Point(13, 401);
             this.btnSupplier.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(182, 82);
@@ -70,21 +72,51 @@ namespace LnLBackEndSystem
             this.btnBankSupplier.FlatAppearance.BorderSize = 0;
             this.btnBankSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBankSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnBankSupplier.Location = new System.Drawing.Point(13, 187);
+            this.btnBankSupplier.Location = new System.Drawing.Point(13, 303);
             this.btnBankSupplier.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnBankSupplier.Name = "btnBankSupplier";
             this.btnBankSupplier.Size = new System.Drawing.Size(182, 82);
             this.btnBankSupplier.TabIndex = 2;
-            this.btnBankSupplier.Text = "&Bank Supplier Management";
+            this.btnBankSupplier.Text = "Bank Su&pplier Management";
             this.btnBankSupplier.UseVisualStyleBackColor = false;
             this.btnBankSupplier.Click += new System.EventHandler(this.btnBankSupplier_Click);
+            // 
+            // BtnBankManagement
+            // 
+            this.BtnBankManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.BtnBankManagement.FlatAppearance.BorderSize = 0;
+            this.BtnBankManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBankManagement.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.BtnBankManagement.Location = new System.Drawing.Point(13, 205);
+            this.BtnBankManagement.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.BtnBankManagement.Name = "BtnBankManagement";
+            this.BtnBankManagement.Size = new System.Drawing.Size(182, 82);
+            this.BtnBankManagement.TabIndex = 3;
+            this.BtnBankManagement.Text = "&Bank Management";
+            this.BtnBankManagement.UseVisualStyleBackColor = false;
+            // 
+            // btnStaffBank
+            // 
+            this.btnStaffBank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnStaffBank.FlatAppearance.BorderSize = 0;
+            this.btnStaffBank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaffBank.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnStaffBank.Location = new System.Drawing.Point(13, 107);
+            this.btnStaffBank.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnStaffBank.Name = "btnStaffBank";
+            this.btnStaffBank.Size = new System.Drawing.Size(182, 82);
+            this.btnStaffBank.TabIndex = 4;
+            this.btnStaffBank.Text = "S&taff Bank Management";
+            this.btnStaffBank.UseVisualStyleBackColor = false;
             // 
             // frmSecretaryLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(208, 276);
+            this.ClientSize = new System.Drawing.Size(208, 492);
+            this.Controls.Add(this.btnStaffBank);
+            this.Controls.Add(this.BtnBankManagement);
             this.Controls.Add(this.btnBankSupplier);
             this.Controls.Add(this.btnSupplier);
             this.Controls.Add(this.btnStaff);
@@ -107,5 +139,7 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnStaff;
         private System.Windows.Forms.Button btnSupplier;
         private System.Windows.Forms.Button btnBankSupplier;
+        private System.Windows.Forms.Button BtnBankManagement;
+        private System.Windows.Forms.Button btnStaffBank;
     }
 }

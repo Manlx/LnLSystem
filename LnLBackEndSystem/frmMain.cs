@@ -116,16 +116,21 @@ namespace LnLBackEndSystem
                 MessageBox.Show("Credentials are inncorrect");
                 return;
             }
-            switch(int.Parse(StaffMem.RankID))
+            this.Hide();
+            switch (int.Parse(StaffMem.RankID))
             {
                 case 1:
                     frmBarpersonLogin.Creator = this;
                     frmBarpersonLogin BarLogin = new frmBarpersonLogin();
                     BarLogin.Show();
                     break;
+                case 2:
+                    frmHRAdmin.Creator = this;
+                    frmHRAdmin Temp = new frmHRAdmin();
+                    Temp.Show();
+                    break;
                 case 6:
                 case 7:
-                case 2:
                     frmSecretaryLogin.Creator = this;
                     frmSecretaryLogin SecLogin = new frmSecretaryLogin();
                     SecLogin.Show();
@@ -149,10 +154,11 @@ namespace LnLBackEndSystem
                     CEO.Show();
                     break;
                 default:
+                    this.Show();
                     MessageBox.Show("Login has encountered an issue. Contact administrator");
                     return;
             }
-            this.Hide();
+            
         }
 
         private void btnCEO_Click(object sender, EventArgs e)
