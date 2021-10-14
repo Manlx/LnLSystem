@@ -96,9 +96,12 @@
     <Compile Include="Cypher.cs" />
     <Compile Include="DataModule.cs" />
     <Compile Include="EventTypeObj.cs" />
+    <Compile Include="LocationObj.cs" />
+    <Compile Include="OrderObj.cs" />
     <Compile Include="PaymentMethodObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializing.cs" />
+    <Compile Include="StaffBankObj.cs" />
     <Compile Include="StaffObj.cs" />
     <Compile Include="StockDisplayUtils.cs" />
     <Compile Include="StockObj.cs" />
@@ -107,6 +110,7 @@
     <Compile Include="TabObj.cs" />
     <Compile Include="TableObjects.cs" />
     <Compile Include="TableToComps.cs" />
+    <Compile Include="TransactionObj.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
