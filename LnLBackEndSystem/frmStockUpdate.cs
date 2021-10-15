@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Manuel A Nunes 34551875
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,17 @@ using System.Windows.Forms;
 
 namespace LnLBackEndSystem
 {
-    public partial class frmStockRegister : Form
+    public partial class frmStockUpdate : Form
     {
-        public frmStockRegister()
+        public static Form Creator;
+        public frmStockUpdate()
         {
             InitializeComponent();
+        }
+
+        private void frmStockUpdate_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Creator.Show();
         }
     }
 }

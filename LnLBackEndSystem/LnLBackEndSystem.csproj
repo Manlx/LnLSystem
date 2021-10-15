@@ -302,23 +302,41 @@
     <Compile Include="frmStaffManagement.Designer.cs">
       <DependentUpon>frmStaffManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStockAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockAdd.Designer.cs">
+      <DependentUpon>frmStockAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStockPurchase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmStockPurchase.Designer.cs">
       <DependentUpon>frmStockPurchase.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStockRegister.cs">
+    <Compile Include="frmStockPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockRegister.Designer.cs">
-      <DependentUpon>frmStockRegister.cs</DependentUpon>
+    <Compile Include="frmStockPage.Designer.cs">
+      <DependentUpon>frmStockPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockRemove.Designer.cs">
+      <DependentUpon>frmStockRemove.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStockReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmStockReport.Designer.cs">
       <DependentUpon>frmStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockUpdate.Designer.cs">
+      <DependentUpon>frmStockUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSupplierOrder.cs">
       <SubType>Form</SubType>
@@ -517,14 +535,23 @@
     <EmbeddedResource Include="frmStaffManagement.resx">
       <DependentUpon>frmStaffManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmStockAdd.resx">
+      <DependentUpon>frmStockAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStockPurchase.resx">
       <DependentUpon>frmStockPurchase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockRegister.resx">
-      <DependentUpon>frmStockRegister.cs</DependentUpon>
+    <EmbeddedResource Include="frmStockPage.resx">
+      <DependentUpon>frmStockPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockRemove.resx">
+      <DependentUpon>frmStockRemove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStockReport.resx">
       <DependentUpon>frmStockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockUpdate.resx">
+      <DependentUpon>frmStockUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupplierOrder.resx">
       <DependentUpon>frmSupplierOrder.cs</DependentUpon>

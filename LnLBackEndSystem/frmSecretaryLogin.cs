@@ -56,5 +56,13 @@ namespace LnLBackEndSystem
             this.Hide();
             Temp.Show();
         }
+
+        private void BtnStockManagement_Click(object sender, EventArgs e)
+        {
+            frmStockPage.Creator = this;
+            frmStockPage Temp = new frmStockPage();
+            this.Hide();
+            Temp.Show();
+        }
     }
 }

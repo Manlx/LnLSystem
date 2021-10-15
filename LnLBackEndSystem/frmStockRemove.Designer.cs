@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class frmStockRegister
+    partial class frmStockRemove
     {
         /// <summary>
         /// Required designer variable.
@@ -31,20 +31,22 @@ namespace LnLBackEndSystem
         {
             this.SuspendLayout();
             // 
-            // frmStockRegister
+            // frmStockRemove
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(681, 505);
-            this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientSize = new System.Drawing.Size(517, 500);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmStockRegister";
+            this.Name = "frmStockRemove";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Stock Register";
+            this.Text = "frmStockRemove";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStockRemove_FormClosed);
             this.ResumeLayout(false);
 
         }
