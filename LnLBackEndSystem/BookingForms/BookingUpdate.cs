@@ -7,13 +7,13 @@ using System.Collections.Generic;
 
 namespace LnLBackEndSystem
 {
-    public partial class Update_Booking : Form
+    public partial class BookingUpdate : Form
     {
         public static Form update_booking;
 
         public string[] LocationID;
         public string[] EventTypes;
-        public Update_Booking()
+        public BookingUpdate()
         {
             InitializeComponent();
         }

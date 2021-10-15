@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class Delete_Booking
+    partial class BookingDelete
     {
         /// <summary>
         /// Required designer variable.

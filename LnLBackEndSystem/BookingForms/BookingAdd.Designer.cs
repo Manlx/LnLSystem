@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class Booking_Management
+    partial class BookingAdd
     {
         /// <summary>
         /// Required designer variable.

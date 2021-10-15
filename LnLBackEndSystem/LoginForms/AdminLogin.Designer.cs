@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class Admin_form
+    partial class AdminLogin
     {
         /// <summary>
         /// Required designer variable.

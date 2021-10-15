@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace LnLBackEndSystem
 {
-    public partial class frmHRAdmin : Form
+    public partial class frmHRAdminLogin : Form
     {
         public static Form Creator;
-        public frmHRAdmin()
+        public frmHRAdminLogin()
         {
             InitializeComponent();
         }

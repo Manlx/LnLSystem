@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace LnLBackEndSystem
 {
-    public partial class Admin_form : Form
+    public partial class AdminLogin : Form
     {
         public static Form Creator;
-        public Admin_form()
+        public AdminLogin()
         {
             InitializeComponent();
         }

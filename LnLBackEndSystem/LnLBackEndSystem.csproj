@@ -116,465 +116,465 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accountant_Reports.cs">
+    <Compile Include="Misc\Accountant_Reports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Accountant_Reports.Designer.cs">
+    <Compile Include="Misc\Accountant_Reports.Designer.cs">
       <DependentUpon>Accountant_Reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_form.cs">
+    <Compile Include="LoginForms\AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_form.Designer.cs">
-      <DependentUpon>Admin_form.cs</DependentUpon>
+    <Compile Include="LoginForms\AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Booking_Management.cs">
+    <Compile Include="BookingForms\BookingAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Booking_Management.Designer.cs">
-      <DependentUpon>Booking_Management.cs</DependentUpon>
+    <Compile Include="BookingForms\BookingAdd.Designer.cs">
+      <DependentUpon>BookingAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delete_Booking.cs">
+    <Compile Include="BookingForms\BookingDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Delete_Booking.Designer.cs">
-      <DependentUpon>Delete_Booking.cs</DependentUpon>
+    <Compile Include="BookingForms\BookingDelete.Designer.cs">
+      <DependentUpon>BookingDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forgot_password.cs">
+    <Compile Include="Misc\Forgot_password.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forgot_password.Designer.cs">
+    <Compile Include="Misc\Forgot_password.Designer.cs">
       <DependentUpon>Forgot_password.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAccountantLogin.cs">
+    <Compile Include="LoginForms\frmAccountantLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAccountantLogin.Designer.cs">
+    <Compile Include="LoginForms\frmAccountantLogin.Designer.cs">
       <DependentUpon>frmAccountantLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBankAdd.cs">
+    <Compile Include="BankForms\frmBankAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBankAdd.Designer.cs">
+    <Compile Include="BankForms\frmBankAdd.Designer.cs">
       <DependentUpon>frmBankAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBankPage.cs">
+    <Compile Include="BankForms\frmBankPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBankPage.Designer.cs">
+    <Compile Include="BankForms\frmBankPage.Designer.cs">
       <DependentUpon>frmBankPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBankRemove.cs">
+    <Compile Include="BankForms\frmBankRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBankRemove.Designer.cs">
+    <Compile Include="BankForms\frmBankRemove.Designer.cs">
       <DependentUpon>frmBankRemove.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBankSupplier.cs">
+    <Compile Include="BankForms\frmBankSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBankSupplier.Designer.cs">
+    <Compile Include="BankForms\frmBankSupplier.Designer.cs">
       <DependentUpon>frmBankSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBankUpdate.cs">
+    <Compile Include="BankForms\frmBankUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBankUpdate.Designer.cs">
+    <Compile Include="BankForms\frmBankUpdate.Designer.cs">
       <DependentUpon>frmBankUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBarpersonLogin.cs">
+    <Compile Include="LoginForms\frmBarpersonLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBarpersonLogin.Designer.cs">
+    <Compile Include="LoginForms\frmBarpersonLogin.Designer.cs">
       <DependentUpon>frmBarpersonLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCEO.cs">
+    <Compile Include="LoginForms\frmCEOLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCEO.Designer.cs">
-      <DependentUpon>frmCEO.cs</DependentUpon>
+    <Compile Include="LoginForms\frmCEOLogin.Designer.cs">
+      <DependentUpon>frmCEOLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmClientLogin.cs">
+    <Compile Include="LoginForms\frmClientLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClientLogin.Designer.cs">
+    <Compile Include="LoginForms\frmClientLogin.Designer.cs">
       <DependentUpon>frmClientLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmClientRecoverPass.cs">
+    <Compile Include="Misc\frmClientRecoverPass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClientRecoverPass.Designer.cs">
+    <Compile Include="Misc\frmClientRecoverPass.Designer.cs">
       <DependentUpon>frmClientRecoverPass.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHRAdmin.cs">
+    <Compile Include="LoginForms\frmHRAdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHRAdmin.Designer.cs">
-      <DependentUpon>frmHRAdmin.cs</DependentUpon>
+    <Compile Include="LoginForms\frmHRAdminLogin.Designer.cs">
+      <DependentUpon>frmHRAdminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmImageManager.cs">
+    <Compile Include="Misc\frmImageManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmImageManager.Designer.cs">
+    <Compile Include="Misc\frmImageManager.Designer.cs">
       <DependentUpon>frmImageManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLocationAdd.cs">
+    <Compile Include="LocationForms\frmLocationAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLocationAdd.Designer.cs">
+    <Compile Include="LocationForms\frmLocationAdd.Designer.cs">
       <DependentUpon>frmLocationAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLocationPage.cs">
+    <Compile Include="LocationForms\frmLocationPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLocationPage.Designer.cs">
+    <Compile Include="LocationForms\frmLocationPage.Designer.cs">
       <DependentUpon>frmLocationPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLocationRemove.cs">
+    <Compile Include="LocationForms\frmLocationRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLocationRemove.Designer.cs">
+    <Compile Include="LocationForms\frmLocationRemove.Designer.cs">
       <DependentUpon>frmLocationRemove.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLocationUpdate.cs">
+    <Compile Include="LocationForms\frmLocationUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLocationUpdate.Designer.cs">
+    <Compile Include="LocationForms\frmLocationUpdate.Designer.cs">
       <DependentUpon>frmLocationUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMaintaince.cs">
+    <Compile Include="Misc\frmMaintaince.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMaintaince.Designer.cs">
+    <Compile Include="Misc\frmMaintaince.Designer.cs">
       <DependentUpon>frmMaintaince.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsoleSettings.cs">
+    <Compile Include="Misc\frmConsoleSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsoleSettings.Designer.cs">
+    <Compile Include="Misc\frmConsoleSettings.Designer.cs">
       <DependentUpon>frmConsoleSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Misc\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Misc\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRequestStock.cs">
+    <Compile Include="Misc\frmRequestStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRequestStock.designer.cs">
+    <Compile Include="Misc\frmRequestStock.designer.cs">
       <DependentUpon>frmRequestStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSecretaryLogin.cs">
+    <Compile Include="LoginForms\frmSecretaryLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSecretaryLogin.Designer.cs">
+    <Compile Include="LoginForms\frmSecretaryLogin.Designer.cs">
       <DependentUpon>frmSecretaryLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSplash.cs">
+    <Compile Include="Misc\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSplash.Designer.cs">
+    <Compile Include="Misc\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSQLConsole.cs">
+    <Compile Include="StaffForms\frmSQLConsole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSQLConsole.Designer.cs">
+    <Compile Include="StaffForms\frmSQLConsole.Designer.cs">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaffBankManagement.cs">
+    <Compile Include="StaffForms\frmStaffBankManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaffBankManagement.Designer.cs">
+    <Compile Include="StaffForms\frmStaffBankManagement.Designer.cs">
       <DependentUpon>frmStaffBankManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaffLogin.cs">
+    <Compile Include="LoginForms\frmStaffLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaffLogin.Designer.cs">
+    <Compile Include="LoginForms\frmStaffLogin.Designer.cs">
       <DependentUpon>frmStaffLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaffManagement.cs">
+    <Compile Include="StaffForms\frmStaffManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaffManagement.Designer.cs">
+    <Compile Include="StaffForms\frmStaffManagement.Designer.cs">
       <DependentUpon>frmStaffManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStockAdd.cs">
+    <Compile Include="StockForms\frmStockAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockAdd.Designer.cs">
+    <Compile Include="StockForms\frmStockAdd.Designer.cs">
       <DependentUpon>frmStockAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStockPurchase.cs">
+    <Compile Include="StockForms\frmStockPurchase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockPurchase.Designer.cs">
+    <Compile Include="StockForms\frmStockPurchase.Designer.cs">
       <DependentUpon>frmStockPurchase.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStockPage.cs">
+    <Compile Include="StockForms\frmStockPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockPage.Designer.cs">
+    <Compile Include="StockForms\frmStockPage.Designer.cs">
       <DependentUpon>frmStockPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStockRemove.cs">
+    <Compile Include="StockForms\frmStockRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockRemove.Designer.cs">
+    <Compile Include="StockForms\frmStockRemove.Designer.cs">
       <DependentUpon>frmStockRemove.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStockReport.cs">
+    <Compile Include="StockForms\frmStockReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockReport.Designer.cs">
+    <Compile Include="StockForms\frmStockReport.Designer.cs">
       <DependentUpon>frmStockReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStockUpdate.cs">
+    <Compile Include="StockForms\frmStockUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockUpdate.Designer.cs">
+    <Compile Include="StockForms\frmStockUpdate.Designer.cs">
       <DependentUpon>frmStockUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSupplierOrder.cs">
+    <Compile Include="SupplierForms\frmSupplierOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSupplierOrder.Designer.cs">
+    <Compile Include="SupplierForms\frmSupplierOrder.Designer.cs">
       <DependentUpon>frmSupplierOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSupplierPage.cs">
+    <Compile Include="SupplierForms\frmSupplierPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSupplierPage.Designer.cs">
+    <Compile Include="SupplierForms\frmSupplierPage.Designer.cs">
       <DependentUpon>frmSupplierPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSupplierRegister.cs">
+    <Compile Include="SupplierForms\frmSupplierRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSupplierRegister.Designer.cs">
+    <Compile Include="SupplierForms\frmSupplierRegister.Designer.cs">
       <DependentUpon>frmSupplierRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSupplierRemove.cs">
+    <Compile Include="SupplierForms\frmSupplierRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSupplierRemove.Designer.cs">
+    <Compile Include="SupplierForms\frmSupplierRemove.Designer.cs">
       <DependentUpon>frmSupplierRemove.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSupplierUpdate.cs">
+    <Compile Include="SupplierForms\frmSupplierUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSupplierUpdate.Designer.cs">
+    <Compile Include="SupplierForms\frmSupplierUpdate.Designer.cs">
       <DependentUpon>frmSupplierUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTableSelect.cs">
+    <Compile Include="Misc\frmTableSelect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTableSelect.Designer.cs">
+    <Compile Include="Misc\frmTableSelect.Designer.cs">
       <DependentUpon>frmTableSelect.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDataManagement.cs">
+    <Compile Include="Misc\frmDataManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDataManagement.Designer.cs">
+    <Compile Include="Misc\frmDataManagement.Designer.cs">
       <DependentUpon>frmDataManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTabRegister.cs">
+    <Compile Include="Misc\frmTabRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTabRegister.Designer.cs">
+    <Compile Include="Misc\frmTabRegister.Designer.cs">
       <DependentUpon>frmTabRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Secratary_Booking_Management.cs">
+    <Compile Include="BookingForms\Booking_Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Secratary_Booking_Management.Designer.cs">
-      <DependentUpon>Secratary_Booking_Management.cs</DependentUpon>
+    <Compile Include="BookingForms\Booking_Management.Designer.cs">
+      <DependentUpon>Booking_Management.cs</DependentUpon>
     </Compile>
-    <Compile Include="Secretary_delete.cs">
+    <Compile Include="StaffForms\Secretary_delete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Secretary_delete.Designer.cs">
+    <Compile Include="StaffForms\Secretary_delete.Designer.cs">
       <DependentUpon>Secretary_delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Secretary_form.cs">
+    <Compile Include="BookingForms\BookingPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Secretary_form.Designer.cs">
-      <DependentUpon>Secretary_form.cs</DependentUpon>
+    <Compile Include="BookingForms\BookingPage.Designer.cs">
+      <DependentUpon>BookingPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Secretary_insert.cs">
+    <Compile Include="StaffForms\Secretary_insert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Secretary_insert.Designer.cs">
+    <Compile Include="StaffForms\Secretary_insert.Designer.cs">
       <DependentUpon>Secretary_insert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Secretary_update.cs">
+    <Compile Include="StaffForms\Secretary_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Secretary_update.Designer.cs">
+    <Compile Include="StaffForms\Secretary_update.Designer.cs">
       <DependentUpon>Secretary_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTabPayment.cs">
+    <Compile Include="Misc\frmTabPayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTabPayment.Designer.cs">
+    <Compile Include="Misc\frmTabPayment.Designer.cs">
       <DependentUpon>frmTabPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Update_Booking.cs">
+    <Compile Include="BookingForms\BookingUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update_Booking.Designer.cs">
-      <DependentUpon>Update_Booking.cs</DependentUpon>
+    <Compile Include="BookingForms\BookingUpdate.Designer.cs">
+      <DependentUpon>BookingUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="WarehouseLogin.cs">
+    <Compile Include="LoginForms\WarehouseLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WarehouseLogin.Designer.cs">
+    <Compile Include="LoginForms\WarehouseLogin.Designer.cs">
       <DependentUpon>WarehouseLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Warehouse_Restock.cs">
+    <Compile Include="Misc\Warehouse_Restock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Warehouse_Restock.Designer.cs">
+    <Compile Include="Misc\Warehouse_Restock.Designer.cs">
       <DependentUpon>Warehouse_Restock.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Accountant_Reports.resx">
+    <EmbeddedResource Include="Misc\Accountant_Reports.resx">
       <DependentUpon>Accountant_Reports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_form.resx">
-      <DependentUpon>Admin_form.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForms\AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Booking_Management.resx">
-      <DependentUpon>Booking_Management.cs</DependentUpon>
+    <EmbeddedResource Include="BookingForms\BookingAdd.resx">
+      <DependentUpon>BookingAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Delete_Booking.resx">
-      <DependentUpon>Delete_Booking.cs</DependentUpon>
+    <EmbeddedResource Include="BookingForms\BookingDelete.resx">
+      <DependentUpon>BookingDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forgot_password.resx">
+    <EmbeddedResource Include="Misc\Forgot_password.resx">
       <DependentUpon>Forgot_password.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAccountantLogin.resx">
+    <EmbeddedResource Include="LoginForms\frmAccountantLogin.resx">
       <DependentUpon>frmAccountantLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBankAdd.resx">
+    <EmbeddedResource Include="BankForms\frmBankAdd.resx">
       <DependentUpon>frmBankAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBankPage.resx">
+    <EmbeddedResource Include="BankForms\frmBankPage.resx">
       <DependentUpon>frmBankPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBankRemove.resx">
+    <EmbeddedResource Include="BankForms\frmBankRemove.resx">
       <DependentUpon>frmBankRemove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBankSupplier.resx">
+    <EmbeddedResource Include="BankForms\frmBankSupplier.resx">
       <DependentUpon>frmBankSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBankUpdate.resx">
+    <EmbeddedResource Include="BankForms\frmBankUpdate.resx">
       <DependentUpon>frmBankUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBarpersonLogin.resx">
+    <EmbeddedResource Include="LoginForms\frmBarpersonLogin.resx">
       <DependentUpon>frmBarpersonLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCEO.resx">
-      <DependentUpon>frmCEO.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForms\frmCEOLogin.resx">
+      <DependentUpon>frmCEOLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClientLogin.resx">
+    <EmbeddedResource Include="LoginForms\frmClientLogin.resx">
       <DependentUpon>frmClientLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClientRecoverPass.resx">
+    <EmbeddedResource Include="Misc\frmClientRecoverPass.resx">
       <DependentUpon>frmClientRecoverPass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHRAdmin.resx">
-      <DependentUpon>frmHRAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForms\frmHRAdminLogin.resx">
+      <DependentUpon>frmHRAdminLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmImageManager.resx">
+    <EmbeddedResource Include="Misc\frmImageManager.resx">
       <DependentUpon>frmImageManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocationAdd.resx">
+    <EmbeddedResource Include="LocationForms\frmLocationAdd.resx">
       <DependentUpon>frmLocationAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocationPage.resx">
+    <EmbeddedResource Include="LocationForms\frmLocationPage.resx">
       <DependentUpon>frmLocationPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocationRemove.resx">
+    <EmbeddedResource Include="LocationForms\frmLocationRemove.resx">
       <DependentUpon>frmLocationRemove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocationUpdate.resx">
+    <EmbeddedResource Include="LocationForms\frmLocationUpdate.resx">
       <DependentUpon>frmLocationUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMaintaince.resx">
+    <EmbeddedResource Include="Misc\frmMaintaince.resx">
       <DependentUpon>frmMaintaince.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsoleSettings.resx">
+    <EmbeddedResource Include="Misc\frmConsoleSettings.resx">
       <DependentUpon>frmConsoleSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Misc\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRequestStock.resx">
+    <EmbeddedResource Include="Misc\frmRequestStock.resx">
       <DependentUpon>frmRequestStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSecretaryLogin.resx">
+    <EmbeddedResource Include="LoginForms\frmSecretaryLogin.resx">
       <DependentUpon>frmSecretaryLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSplash.resx">
+    <EmbeddedResource Include="Misc\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSQLConsole.resx">
+    <EmbeddedResource Include="StaffForms\frmSQLConsole.resx">
       <DependentUpon>frmSQLConsole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaffBankManagement.resx">
+    <EmbeddedResource Include="StaffForms\frmStaffBankManagement.resx">
       <DependentUpon>frmStaffBankManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaffLogin.resx">
+    <EmbeddedResource Include="LoginForms\frmStaffLogin.resx">
       <DependentUpon>frmStaffLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaffManagement.resx">
+    <EmbeddedResource Include="StaffForms\frmStaffManagement.resx">
       <DependentUpon>frmStaffManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockAdd.resx">
+    <EmbeddedResource Include="StockForms\frmStockAdd.resx">
       <DependentUpon>frmStockAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockPurchase.resx">
+    <EmbeddedResource Include="StockForms\frmStockPurchase.resx">
       <DependentUpon>frmStockPurchase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockPage.resx">
+    <EmbeddedResource Include="StockForms\frmStockPage.resx">
       <DependentUpon>frmStockPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockRemove.resx">
+    <EmbeddedResource Include="StockForms\frmStockRemove.resx">
       <DependentUpon>frmStockRemove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockReport.resx">
+    <EmbeddedResource Include="StockForms\frmStockReport.resx">
       <DependentUpon>frmStockReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockUpdate.resx">
+    <EmbeddedResource Include="StockForms\frmStockUpdate.resx">
       <DependentUpon>frmStockUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplierOrder.resx">
+    <EmbeddedResource Include="SupplierForms\frmSupplierOrder.resx">
       <DependentUpon>frmSupplierOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplierPage.resx">
+    <EmbeddedResource Include="SupplierForms\frmSupplierPage.resx">
       <DependentUpon>frmSupplierPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplierRegister.resx">
+    <EmbeddedResource Include="SupplierForms\frmSupplierRegister.resx">
       <DependentUpon>frmSupplierRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplierRemove.resx">
+    <EmbeddedResource Include="SupplierForms\frmSupplierRemove.resx">
       <DependentUpon>frmSupplierRemove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplierUpdate.resx">
+    <EmbeddedResource Include="SupplierForms\frmSupplierUpdate.resx">
       <DependentUpon>frmSupplierUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTableSelect.resx">
+    <EmbeddedResource Include="Misc\frmTableSelect.resx">
       <DependentUpon>frmTableSelect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDataManagement.resx">
+    <EmbeddedResource Include="Misc\frmDataManagement.resx">
       <DependentUpon>frmDataManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTabRegister.resx">
+    <EmbeddedResource Include="Misc\frmTabRegister.resx">
       <DependentUpon>frmTabRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -587,31 +587,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Secratary_Booking_Management.resx">
-      <DependentUpon>Secratary_Booking_Management.cs</DependentUpon>
+    <EmbeddedResource Include="BookingForms\Booking_Management.resx">
+      <DependentUpon>Booking_Management.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Secretary_delete.resx">
+    <EmbeddedResource Include="StaffForms\Secretary_delete.resx">
       <DependentUpon>Secretary_delete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Secretary_form.resx">
-      <DependentUpon>Secretary_form.cs</DependentUpon>
+    <EmbeddedResource Include="BookingForms\BookingPage.resx">
+      <DependentUpon>BookingPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Secretary_insert.resx">
+    <EmbeddedResource Include="StaffForms\Secretary_insert.resx">
       <DependentUpon>Secretary_insert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Secretary_update.resx">
+    <EmbeddedResource Include="StaffForms\Secretary_update.resx">
       <DependentUpon>Secretary_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTabPayment.resx">
+    <EmbeddedResource Include="Misc\frmTabPayment.resx">
       <DependentUpon>frmTabPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update_Booking.resx">
-      <DependentUpon>Update_Booking.cs</DependentUpon>
+    <EmbeddedResource Include="BookingForms\BookingUpdate.resx">
+      <DependentUpon>BookingUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WarehouseLogin.resx">
+    <EmbeddedResource Include="LoginForms\WarehouseLogin.resx">
       <DependentUpon>WarehouseLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Warehouse_Restock.resx">
+    <EmbeddedResource Include="Misc\Warehouse_Restock.resx">
       <DependentUpon>Warehouse_Restock.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -5,13 +5,13 @@ using NSDataModule;
 
 namespace LnLBackEndSystem
 {
-    public partial class Booking_Management : Form
+    public partial class BookingAdd : Form
     {
         public static Form Creator;
 
         public string[] LocationID;
         public string[] EventTypes;
-        public Booking_Management()
+        public BookingAdd()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class frmCEO
+    partial class frmCEOLogin
     {
         /// <summary>
         /// Required designer variable.

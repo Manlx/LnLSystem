@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class frmHRAdmin
+    partial class frmHRAdminLogin
     {
         /// <summary>
         /// Required designer variable.

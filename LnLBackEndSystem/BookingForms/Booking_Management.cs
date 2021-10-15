@@ -7,10 +7,10 @@ using BookingUtil;
 
 namespace LnLBackEndSystem
 {
-    public partial class Secratary_Booking_Management : Form
+    public partial class Booking_Management : Form
     {
         public static Form booking;
-        public Secratary_Booking_Management()
+        public Booking_Management()
         {
             InitializeComponent();
         }
@@ -52,16 +52,16 @@ namespace LnLBackEndSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Update_Booking.update_booking = this;
-            Update_Booking frmUpdate = new Update_Booking();
+            BookingUpdate.update_booking = this;
+            BookingUpdate frmUpdate = new BookingUpdate();
             frmUpdate.Show();
             this.Hide();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Delete_Booking.delete_booking = this;
-            Delete_Booking frmDelete = new Delete_Booking();
+            BookingDelete.delete_booking = this;
+            BookingDelete frmDelete = new BookingDelete();
             frmDelete.Show();
             this.Hide();
         }

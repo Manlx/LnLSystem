@@ -4,18 +4,18 @@ using System.Windows.Forms;
 
 namespace LnLBackEndSystem
 {
-    public partial class frmCEO : Form
+    public partial class frmCEOLogin : Form
     {
         public static Form Creator;
-        public frmCEO()
+        public frmCEOLogin()
         {
             InitializeComponent();
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            Admin_form.Creator = this;
-            Admin_form Admin = new Admin_form();
+            AdminLogin.Creator = this;
+            AdminLogin Admin = new AdminLogin();
             Admin.Show();
             this.Hide();
         }

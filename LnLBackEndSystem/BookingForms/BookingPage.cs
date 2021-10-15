@@ -31,8 +31,8 @@ namespace LnLBackEndSystem
 
         private void btnBooking_Click(object sender, EventArgs e)
         {
-            Secratary_Booking_Management.booking = this;
-            Secratary_Booking_Management frmBooking = new Secratary_Booking_Management();
+            Booking_Management.booking = this;
+            Booking_Management frmBooking = new Booking_Management();
             frmBooking.Show();
             this.Hide();
 
@@ -49,8 +49,8 @@ namespace LnLBackEndSystem
 
         private void btnAddBooking_Click(object sender, EventArgs e)
         {
-            Booking_Management.Creator = this;
-            Booking_Management frmBookMan = new Booking_Management();
+            BookingAdd.Creator = this;
+            BookingAdd frmBookMan = new BookingAdd();
             frmBookMan.Show();
             this.Hide();
         }

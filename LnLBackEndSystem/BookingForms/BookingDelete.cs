@@ -7,10 +7,10 @@ using System.Collections.Generic;
 
 namespace LnLBackEndSystem
 {
-    public partial class Delete_Booking : Form
+    public partial class BookingDelete : Form
     {
         public static Form delete_booking;
-        public Delete_Booking()
+        public BookingDelete()
         {
             InitializeComponent();
         }

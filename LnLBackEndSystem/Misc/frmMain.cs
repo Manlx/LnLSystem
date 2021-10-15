@@ -48,8 +48,8 @@ namespace LnLBackEndSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Admin_form.Creator = this;
-            Admin_form frmAdmin = new Admin_form();           
+            AdminLogin.Creator = this;
+            AdminLogin frmAdmin = new AdminLogin();           
             frmAdmin.Show();
             this.Hide();
         }
@@ -125,8 +125,8 @@ namespace LnLBackEndSystem
                     BarLogin.Show();
                     break;
                 case 2:
-                    frmHRAdmin.Creator = this;
-                    frmHRAdmin Temp = new frmHRAdmin();
+                    frmHRAdminLogin.Creator = this;
+                    frmHRAdminLogin Temp = new frmHRAdminLogin();
                     Temp.Show();
                     break;
                 case 6:
@@ -149,8 +149,8 @@ namespace LnLBackEndSystem
                     break;
 
                 case 11:
-                    frmCEO.Creator = this;
-                    frmCEO CEO = new frmCEO();
+                    frmCEOLogin.Creator = this;
+                    frmCEOLogin CEO = new frmCEOLogin();
                     CEO.Show();
                     break;
                 default:
@@ -163,8 +163,8 @@ namespace LnLBackEndSystem
 
         private void btnCEO_Click(object sender, EventArgs e)
         {
-            frmCEO.Creator = this;
-            frmCEO CEO = new frmCEO();
+            frmCEOLogin.Creator = this;
+            frmCEOLogin CEO = new frmCEOLogin();
             this.Hide();
             CEO.Show();
         }
