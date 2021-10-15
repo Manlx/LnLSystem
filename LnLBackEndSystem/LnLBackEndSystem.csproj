@@ -218,6 +218,30 @@
     <Compile Include="frmImageManager.Designer.cs">
       <DependentUpon>frmImageManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLocationAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocationAdd.Designer.cs">
+      <DependentUpon>frmLocationAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocationPage.Designer.cs">
+      <DependentUpon>frmLocationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocationRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocationRemove.Designer.cs">
+      <DependentUpon>frmLocationRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocationUpdate.Designer.cs">
+      <DependentUpon>frmLocationUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMaintaince.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -450,6 +474,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmImageManager.resx">
       <DependentUpon>frmImageManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocationAdd.resx">
+      <DependentUpon>frmLocationAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocationPage.resx">
+      <DependentUpon>frmLocationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocationRemove.resx">
+      <DependentUpon>frmLocationRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocationUpdate.resx">
+      <DependentUpon>frmLocationUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMaintaince.resx">
       <DependentUpon>frmMaintaince.cs</DependentUpon>

@@ -75,7 +75,7 @@ namespace LnLBackEndSystem
             this.btnUploadBank.Name = "btnUploadBank";
             this.btnUploadBank.Size = new System.Drawing.Size(182, 82);
             this.btnUploadBank.TabIndex = 3;
-            this.btnUploadBank.Text = "$Update Bank";
+            this.btnUploadBank.Text = "&Update Bank";
             this.btnUploadBank.UseVisualStyleBackColor = false;
             this.btnUploadBank.Click += new System.EventHandler(this.btnUploadBank_Click);
             // 

@@ -48,5 +48,13 @@ namespace LnLBackEndSystem
             this.Hide();
             Temp.Show();
         }
+
+        private void btnLocationManagement_Click(object sender, EventArgs e)
+        {
+            frmLocationPage.Creator = this;
+            frmLocationPage Temp = new frmLocationPage();
+            this.Hide();
+            Temp.Show();
+        }
     }
 }
