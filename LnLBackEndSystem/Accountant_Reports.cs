@@ -5,10 +5,10 @@ using NSDataModule;
 
 namespace LnLBackEndSystem
 {
-    public partial class Accountant_Login : Form
+    public partial class Accountant_Reports : Form
     {
         public static Form Creator;
-        public Accountant_Login()
+        public Accountant_Reports()
         {
             InitializeComponent();
         }

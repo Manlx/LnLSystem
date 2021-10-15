@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class Accountant_Login
+    partial class Accountant_Reports
     {
         /// <summary>
         /// Required designer variable.

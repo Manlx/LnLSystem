@@ -94,6 +94,7 @@ namespace LnLBackEndSystem
             this.BtnBankManagement.TabIndex = 3;
             this.BtnBankManagement.Text = "&Bank Management";
             this.BtnBankManagement.UseVisualStyleBackColor = false;
+            this.BtnBankManagement.Click += new System.EventHandler(this.BtnBankManagement_Click);
             // 
             // btnStaffBank
             // 

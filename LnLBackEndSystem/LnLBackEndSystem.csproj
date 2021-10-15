@@ -116,11 +116,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accountant_Login.cs">
+    <Compile Include="Accountant_Reports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Accountant_Login.Designer.cs">
-      <DependentUpon>Accountant_Login.cs</DependentUpon>
+    <Compile Include="Accountant_Reports.Designer.cs">
+      <DependentUpon>Accountant_Reports.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_form.cs">
       <SubType>Form</SubType>
@@ -146,11 +146,41 @@
     <Compile Include="Forgot_password.Designer.cs">
       <DependentUpon>Forgot_password.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAccountantLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountantLogin.Designer.cs">
+      <DependentUpon>frmAccountantLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankAdd.Designer.cs">
+      <DependentUpon>frmBankAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankPage.Designer.cs">
+      <DependentUpon>frmBankPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankRemove.Designer.cs">
+      <DependentUpon>frmBankRemove.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBankSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBankSupplier.Designer.cs">
       <DependentUpon>frmBankSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankUpdate.Designer.cs">
+      <DependentUpon>frmBankUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBarpersonLogin.cs">
       <SubType>Form</SubType>
@@ -370,8 +400,8 @@
     <Compile Include="Warehouse_Restock.Designer.cs">
       <DependentUpon>Warehouse_Restock.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Accountant_Login.resx">
-      <DependentUpon>Accountant_Login.cs</DependentUpon>
+    <EmbeddedResource Include="Accountant_Reports.resx">
+      <DependentUpon>Accountant_Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_form.resx">
       <DependentUpon>Admin_form.cs</DependentUpon>
@@ -385,8 +415,23 @@
     <EmbeddedResource Include="Forgot_password.resx">
       <DependentUpon>Forgot_password.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountantLogin.resx">
+      <DependentUpon>frmAccountantLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankAdd.resx">
+      <DependentUpon>frmBankAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankPage.resx">
+      <DependentUpon>frmBankPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankRemove.resx">
+      <DependentUpon>frmBankRemove.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBankSupplier.resx">
       <DependentUpon>frmBankSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankUpdate.resx">
+      <DependentUpon>frmBankUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBarpersonLogin.resx">
       <DependentUpon>frmBarpersonLogin.cs</DependentUpon>

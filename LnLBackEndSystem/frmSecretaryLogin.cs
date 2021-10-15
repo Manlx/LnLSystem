@@ -40,5 +40,13 @@ namespace LnLBackEndSystem
         {
             Creator.Show();
         }
+
+        private void BtnBankManagement_Click(object sender, EventArgs e)
+        {
+            frmBankPage.Creator = this;
+            frmBankPage Temp = new frmBankPage();
+            this.Hide();
+            Temp.Show();
+        }
     }
 }

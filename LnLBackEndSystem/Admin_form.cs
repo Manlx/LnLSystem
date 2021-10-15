@@ -33,8 +33,8 @@ namespace LnLBackEndSystem
         }
         private void btnReports_Click(object sender, EventArgs e)
         {
-            Accountant_Login.Creator = this;
-            Accountant_Login AccountantLogin = new Accountant_Login();
+            Accountant_Reports.Creator = this;
+            Accountant_Reports AccountantLogin = new Accountant_Reports();
             AccountantLogin.Show();
             this.Hide();
         }

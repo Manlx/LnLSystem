@@ -22,8 +22,8 @@ namespace LnLBackEndSystem
 
         private void NavigateToAccountant_Click(object sender, EventArgs e)
         {
-            Accountant_Login.Creator = this;
-            Accountant_Login AccLog = new Accountant_Login();
+            frmAccountantLogin.Creator = this;
+            frmAccountantLogin AccLog = new frmAccountantLogin();
             AccLog.Show();
             this.Hide();
         }

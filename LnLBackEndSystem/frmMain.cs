@@ -95,8 +95,8 @@ namespace LnLBackEndSystem
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Accountant_Login.Creator = this;
-            Accountant_Login frmAccountant = new Accountant_Login();
+            Accountant_Reports.Creator = this;
+            Accountant_Reports frmAccountant = new Accountant_Reports();
             frmAccountant.Show();
             this.Hide();
         }
@@ -137,8 +137,8 @@ namespace LnLBackEndSystem
                     break;
                 case 4:
                 case 3:
-                    Accountant_Login.Creator = this;
-                    Accountant_Login AccountLog = new Accountant_Login();
+                    frmAccountantLogin.Creator = this;
+                    frmAccountantLogin AccountLog = new frmAccountantLogin();
                     AccountLog.Show();
                     break;
                 case 8:
