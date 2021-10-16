@@ -26,6 +26,18 @@ namespace BankObjAndUtil
                 throw;
             }
         }
+        public bool DeleteSelf()
+        {
+            try
+            {
+                return DataModule.ExecuteSQL($"DELETE FROM tblBank WHERE BankID = {BankID}") > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
         public bool UpdateSelf()
         {
             try

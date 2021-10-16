@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using NSDataModule;
 using CypherLib;
 using StaffObjAndUtils;
+using System.Net;
 
 namespace LnLBackEndSystem
 {
@@ -175,6 +176,24 @@ namespace LnLBackEndSystem
             frmClientRecoverPass Temp = new frmClientRecoverPass();
             Temp.Show();
             this.Hide();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            panel2.Visible = !CheckForInternetConnection();
+        }
+        private static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (client.OpenRead("http://google.com/generate_204"))
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
