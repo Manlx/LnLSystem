@@ -183,6 +183,8 @@ namespace LnLBackEndSystem
             // 
             // DTPDate
             // 
+            this.DTPDate.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.DTPDate.CalendarTrailingForeColor = System.Drawing.Color.White;
             this.DTPDate.CustomFormat = "yyyy - MM - dd ";
             this.DTPDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTPDate.Location = new System.Drawing.Point(31, 147);
@@ -194,6 +196,8 @@ namespace LnLBackEndSystem
             // 
             // DTPTime
             // 
+            this.DTPTime.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.DTPTime.CalendarTrailingForeColor = System.Drawing.Color.White;
             this.DTPTime.CustomFormat = "HH:mm";
             this.DTPTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTPTime.Location = new System.Drawing.Point(183, 147);
@@ -203,7 +207,7 @@ namespace LnLBackEndSystem
             this.DTPTime.TabIndex = 2;
             this.toolTip1.SetToolTip(this.DTPTime, "Time of Booking");
             // 
-            // Booking_Management
+            // BookingAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +232,7 @@ namespace LnLBackEndSystem
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Booking_Management";
+            this.Name = "BookingAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Booking_Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Booking_Management_FormClosing);

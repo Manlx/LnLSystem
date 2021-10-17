@@ -36,7 +36,7 @@ namespace LnLBackEndSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(595, 335);
+            this.ClientSize = new System.Drawing.Size(503, 335);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -45,7 +45,7 @@ namespace LnLBackEndSystem
             this.MinimizeBox = false;
             this.Name = "frmStockAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmStockAdd";
+            this.Text = "Stock Register";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStockAdd_FormClosed);
             this.ResumeLayout(false);
 
