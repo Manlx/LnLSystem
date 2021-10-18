@@ -36,12 +36,25 @@ namespace StockAndUtils
                 throw;
             }
         }
+        public bool DeleteSelf()
+        {
+            try
+            {
+                return DataModule.ExecuteSQL($"DELETE FROM `tblStock` WHERE StockID = {StockID}") > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
         public bool UpdateSelf()
         {
             try
             {
                 return DataModule.ExecuteSQL($"Update tblStock SET StockName ='{StockName}'," +
-                    $"DateAcquired = '{DateAcquired:yyyy-MM-dd}', CostPrice = {CostPrice}, ProfitMargin = {ProfitMargin},CountInBar = {CountInBar}, CountInWarehouse = {CountInWareHouse}") > 0;
+                    $"DateAcquired = '{DateTime.Parse(DateAcquired):yyyy-MM-dd}', CostPrice = {CostPrice}, ProfitMargin = {ProfitMargin},CountInBar = {CountInBar}," +
+                    $" CountInWarehouse = {CountInWareHouse} WHERE StockID = '{StockID}'") > 0;
             }
             catch (Exception)
             {

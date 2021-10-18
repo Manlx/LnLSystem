@@ -62,6 +62,7 @@ namespace LnLBackEndSystem
             this.btnBankManagement.TabIndex = 4;
             this.btnBankManagement.Text = "&Bank Management";
             this.btnBankManagement.UseVisualStyleBackColor = false;
+            this.btnBankManagement.Click += new System.EventHandler(this.btnBankManagement_Click);
             // 
             // btnSuppliers
             // 
@@ -76,6 +77,7 @@ namespace LnLBackEndSystem
             this.btnSuppliers.TabIndex = 5;
             this.btnSuppliers.Text = "&Supplier Management";
             this.btnSuppliers.UseVisualStyleBackColor = false;
+            this.btnSuppliers.Click += new System.EventHandler(this.btnSuppliers_Click);
             // 
             // frmAccountantLogin
             // 
