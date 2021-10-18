@@ -36,6 +36,7 @@ namespace LnLBackEndSystem
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnWarehouse = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.BtnHRlogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNavigateBartender
@@ -44,7 +45,7 @@ namespace LnLBackEndSystem
             this.btnNavigateBartender.FlatAppearance.BorderSize = 0;
             this.btnNavigateBartender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavigateBartender.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnNavigateBartender.Location = new System.Drawing.Point(17, 407);
+            this.btnNavigateBartender.Location = new System.Drawing.Point(17, 411);
             this.btnNavigateBartender.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnNavigateBartender.Name = "btnNavigateBartender";
             this.btnNavigateBartender.Size = new System.Drawing.Size(208, 92);
@@ -60,7 +61,7 @@ namespace LnLBackEndSystem
             this.btnNavidateToSecretary.FlatAppearance.BorderSize = 0;
             this.btnNavidateToSecretary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavidateToSecretary.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnNavidateToSecretary.Location = new System.Drawing.Point(17, 207);
+            this.btnNavidateToSecretary.Location = new System.Drawing.Point(17, 211);
             this.btnNavidateToSecretary.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnNavidateToSecretary.Name = "btnNavidateToSecretary";
             this.btnNavidateToSecretary.Size = new System.Drawing.Size(208, 92);
@@ -76,7 +77,7 @@ namespace LnLBackEndSystem
             this.NavigateToAccountant.FlatAppearance.BorderSize = 0;
             this.NavigateToAccountant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NavigateToAccountant.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.NavigateToAccountant.Location = new System.Drawing.Point(17, 107);
+            this.NavigateToAccountant.Location = new System.Drawing.Point(17, 111);
             this.NavigateToAccountant.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.NavigateToAccountant.Name = "NavigateToAccountant";
             this.NavigateToAccountant.Size = new System.Drawing.Size(208, 92);
@@ -92,7 +93,7 @@ namespace LnLBackEndSystem
             this.btnAdmin.FlatAppearance.BorderSize = 0;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnAdmin.Location = new System.Drawing.Point(17, 7);
+            this.btnAdmin.Location = new System.Drawing.Point(17, 11);
             this.btnAdmin.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(208, 92);
@@ -108,7 +109,7 @@ namespace LnLBackEndSystem
             this.btnWarehouse.FlatAppearance.BorderSize = 0;
             this.btnWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWarehouse.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnWarehouse.Location = new System.Drawing.Point(17, 307);
+            this.btnWarehouse.Location = new System.Drawing.Point(17, 311);
             this.btnWarehouse.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnWarehouse.Name = "btnWarehouse";
             this.btnWarehouse.Size = new System.Drawing.Size(208, 92);
@@ -118,12 +119,29 @@ namespace LnLBackEndSystem
             this.btnWarehouse.UseVisualStyleBackColor = false;
             this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
             // 
-            // frmCEO
+            // BtnHRlogin
+            // 
+            this.BtnHRlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.BtnHRlogin.FlatAppearance.BorderSize = 0;
+            this.BtnHRlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHRlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.BtnHRlogin.Location = new System.Drawing.Point(17, 511);
+            this.BtnHRlogin.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.BtnHRlogin.Name = "BtnHRlogin";
+            this.BtnHRlogin.Size = new System.Drawing.Size(208, 92);
+            this.BtnHRlogin.TabIndex = 5;
+            this.BtnHRlogin.Text = "Navigate To &HR";
+            this.toolTip1.SetToolTip(this.BtnHRlogin, "Go To Bartender Page");
+            this.BtnHRlogin.UseVisualStyleBackColor = false;
+            this.BtnHRlogin.Click += new System.EventHandler(this.BtnHRlogin_Click);
+            // 
+            // frmCEOLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(242, 507);
+            this.ClientSize = new System.Drawing.Size(242, 615);
+            this.Controls.Add(this.BtnHRlogin);
             this.Controls.Add(this.btnWarehouse);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.NavigateToAccountant);
@@ -135,7 +153,7 @@ namespace LnLBackEndSystem
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCEO";
+            this.Name = "frmCEOLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CEO ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmCEO_FormClosed);
@@ -150,5 +168,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnWarehouse;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button BtnHRlogin;
     }
 }

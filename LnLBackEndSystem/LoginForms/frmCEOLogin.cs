@@ -57,5 +57,13 @@ namespace LnLBackEndSystem
             WarLog.Show();
             
         }
+
+        private void BtnHRlogin_Click(object sender, EventArgs e)
+        {
+            frmHRAdminLogin.Creator = this;
+            frmHRAdminLogin WarLog = new frmHRAdminLogin();
+            this.Hide();
+            WarLog.Show();
+        }
     }
 }
