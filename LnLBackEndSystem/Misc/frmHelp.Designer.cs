@@ -1,7 +1,7 @@
 ﻿
-namespace LnLBackEndSystem
+namespace LnLBackEndSystem.Misc
 {
-    partial class frmStaffBankManagement
+    partial class frmHelp
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,41 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // frmStaffBankManagement
+            // textBox1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.textBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(742, 406);
+            this.textBox1.TabIndex = 0;
+            // 
+            // frmHelp
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(418, 377);
-            this.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(742, 406);
+            this.Controls.Add(this.textBox1);
+            this.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmStaffBankManagement";
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.Name = "frmHelp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Staff Bank Management";
+            this.Text = "Help";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmHelp_FormClosed);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

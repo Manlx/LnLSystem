@@ -1,7 +1,7 @@
 ﻿
 namespace LnLBackEndSystem
 {
-    partial class frmBankSupplier
+    partial class frmStaffBank
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace LnLBackEndSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.pnlBankingInfo = new System.Windows.Forms.Panel();
             this.cbbSupplier = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,10 +42,22 @@ namespace LnLBackEndSystem
             this.cbbBanks = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lstBankInfo = new System.Windows.Forms.ListBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlBankingInfo.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Location = new System.Drawing.Point(12, 361);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(571, 46);
+            this.btnSubmit.TabIndex = 3;
+            this.btnSubmit.Text = "&Commit Changes";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // pnlBankingInfo
             // 
@@ -61,10 +73,10 @@ namespace LnLBackEndSystem
             this.pnlBankingInfo.Controls.Add(this.cbbBanks);
             this.pnlBankingInfo.Controls.Add(this.label5);
             this.pnlBankingInfo.Controls.Add(this.lstBankInfo);
-            this.pnlBankingInfo.Location = new System.Drawing.Point(11, 12);
+            this.pnlBankingInfo.Location = new System.Drawing.Point(12, 10);
             this.pnlBankingInfo.Name = "pnlBankingInfo";
             this.pnlBankingInfo.Size = new System.Drawing.Size(571, 343);
-            this.pnlBankingInfo.TabIndex = 0;
+            this.pnlBankingInfo.TabIndex = 2;
             // 
             // cbbSupplier
             // 
@@ -72,11 +84,10 @@ namespace LnLBackEndSystem
             this.cbbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbSupplier.ForeColor = System.Drawing.Color.White;
             this.cbbSupplier.FormattingEnabled = true;
-            this.cbbSupplier.Location = new System.Drawing.Point(119, 13);
+            this.cbbSupplier.Location = new System.Drawing.Point(90, 13);
             this.cbbSupplier.Name = "cbbSupplier";
-            this.cbbSupplier.Size = new System.Drawing.Size(433, 38);
+            this.cbbSupplier.Size = new System.Drawing.Size(462, 38);
             this.cbbSupplier.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.cbbSupplier, "Select Supplier to add bank");
             this.cbbSupplier.SelectedIndexChanged += new System.EventHandler(this.cbbSupplier_SelectedIndexChanged);
             // 
             // label1
@@ -84,9 +95,9 @@ namespace LnLBackEndSystem
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 30);
+            this.label1.Size = new System.Drawing.Size(62, 30);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Supplier:";
+            this.label1.Text = "Staff:";
             // 
             // btnAddInfo
             // 
@@ -97,9 +108,8 @@ namespace LnLBackEndSystem
             this.btnAddInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddInfo.Name = "btnAddInfo";
             this.btnAddInfo.Size = new System.Drawing.Size(160, 46);
-            this.btnAddInfo.TabIndex = 5;
+            this.btnAddInfo.TabIndex = 4;
             this.btnAddInfo.Text = "&Add Info";
-            this.toolTip1.SetToolTip(this.btnAddInfo, "Adds Banking information");
             this.btnAddInfo.UseVisualStyleBackColor = false;
             this.btnAddInfo.Click += new System.EventHandler(this.btnAddInfo_Click);
             // 
@@ -112,16 +122,15 @@ namespace LnLBackEndSystem
             this.btnRemoveInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRemoveInfo.Name = "btnRemoveInfo";
             this.btnRemoveInfo.Size = new System.Drawing.Size(160, 46);
-            this.btnRemoveInfo.TabIndex = 4;
+            this.btnRemoveInfo.TabIndex = 5;
             this.btnRemoveInfo.Text = "&Remove Info";
-            this.toolTip1.SetToolTip(this.btnRemoveInfo, "Removes Selected banking information");
             this.btnRemoveInfo.UseVisualStyleBackColor = false;
             this.btnRemoveInfo.Click += new System.EventHandler(this.btnRemoveInfo_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(289, 99);
+            this.label7.Location = new System.Drawing.Point(294, 99);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(137, 30);
             this.label7.TabIndex = 15;
@@ -146,7 +155,6 @@ namespace LnLBackEndSystem
             this.edtBankNumber.Name = "edtBankNumber";
             this.edtBankNumber.Size = new System.Drawing.Size(256, 35);
             this.edtBankNumber.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.edtBankNumber, "Bank Account Number");
             // 
             // EdtBankBranch
             // 
@@ -158,7 +166,6 @@ namespace LnLBackEndSystem
             this.EdtBankBranch.Name = "EdtBankBranch";
             this.EdtBankBranch.Size = new System.Drawing.Size(256, 35);
             this.EdtBankBranch.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.EdtBankBranch, "Bank Branch");
             // 
             // cbbBanks
             // 
@@ -166,11 +173,10 @@ namespace LnLBackEndSystem
             this.cbbBanks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbBanks.ForeColor = System.Drawing.Color.White;
             this.cbbBanks.FormattingEnabled = true;
-            this.cbbBanks.Location = new System.Drawing.Point(119, 60);
+            this.cbbBanks.Location = new System.Drawing.Point(90, 60);
             this.cbbBanks.Name = "cbbBanks";
-            this.cbbBanks.Size = new System.Drawing.Size(433, 38);
+            this.cbbBanks.Size = new System.Drawing.Size(462, 38);
             this.cbbBanks.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.cbbBanks, "Select From Supported Banks");
             // 
             // label5
             // 
@@ -192,24 +198,8 @@ namespace LnLBackEndSystem
             this.lstBankInfo.Name = "lstBankInfo";
             this.lstBankInfo.Size = new System.Drawing.Size(532, 94);
             this.lstBankInfo.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.lstBankInfo, "List of Banking Information");
             // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Location = new System.Drawing.Point(11, 363);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(571, 46);
-            this.btnSubmit.TabIndex = 1;
-            this.btnSubmit.Text = "&Commit Changes";
-            this.toolTip1.SetToolTip(this.btnSubmit, "Commit all information Entered");
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // frmBankSupplier
+            // frmStaffBank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -220,14 +210,14 @@ namespace LnLBackEndSystem
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmBankSupplier";
+            this.Name = "frmStaffBank";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bank Supplier";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBankSupplier_FormClosed);
-            this.Load += new System.EventHandler(this.frmBankSupplier_Load);
+            this.Text = "Staff Bank Management";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStaffBank_FormClosed);
+            this.Load += new System.EventHandler(this.frmStaffBankManagement_Load);
             this.pnlBankingInfo.ResumeLayout(false);
             this.pnlBankingInfo.PerformLayout();
             this.ResumeLayout(false);
@@ -236,7 +226,10 @@ namespace LnLBackEndSystem
 
         #endregion
 
+        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Panel pnlBankingInfo;
+        private System.Windows.Forms.ComboBox cbbSupplier;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddInfo;
         private System.Windows.Forms.Button btnRemoveInfo;
         private System.Windows.Forms.Label label7;
@@ -246,9 +239,5 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.ComboBox cbbBanks;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox lstBankInfo;
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbbSupplier;
-        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

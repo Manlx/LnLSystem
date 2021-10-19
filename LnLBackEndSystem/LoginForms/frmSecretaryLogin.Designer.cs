@@ -111,6 +111,7 @@ namespace LnLBackEndSystem
             this.btnStaffBank.TabIndex = 4;
             this.btnStaffBank.Text = "S&taff Bank Management";
             this.btnStaffBank.UseVisualStyleBackColor = false;
+            this.btnStaffBank.Click += new System.EventHandler(this.btnStaffBank_Click);
             // 
             // btnLocationManagement
             // 

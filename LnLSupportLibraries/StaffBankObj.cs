@@ -13,9 +13,7 @@ namespace StaffBankObjUtil
         public BankObj Bank;
         public string BranchNumber, AccountNumber;
 
-        public StaffBankObj()
-        {
-        }
+        public StaffBankObj(){}
 
         public StaffBankObj(StaffObj staff, BankObj bank, string branchNumber, string accountNumber)
         {
@@ -32,7 +30,7 @@ namespace StaffBankObjUtil
         {
             try
             {
-                string[] Row = DataModule.GetValues($"SELECT StaffID, BankID, BranchNumber, AccountNumber FROM tblStaffBank WHERE (StaffID = {StaffID})AND (BankID = {BankID})",new int[] { 0,1,2,3})[0];
+                string[] Row = DataModule.GetValues($"SELECT StaffID, BankID, BranchNumber, AccountNumber FROM tblStaffBank WHERE (StaffID = {StaffID} ) AND (BankID = {BankID})",new int[] { 0,1,2,3})[0];
                 Staff = new StaffObj();
                 Staff.LoadFromDB(Row[0]);
                 this.Bank = new BankObj();
@@ -44,6 +42,23 @@ namespace StaffBankObjUtil
             catch (Exception E)
             {
                 return false;   
+                throw E;
+            }
+        }
+        public bool LoadFromDB(StaffObj Staff, BankObj Bank)
+        {
+            try
+            {
+                string[] Row = DataModule.GetValues($"SELECT StaffID, BankID, BranchNumber, AccountNumber FROM tblStaffBank WHERE (StaffID = {Staff.StaffID})AND (BankID = {Bank.BankID})", new int[] { 0, 1, 2, 3 })[0];
+                this.Staff = Staff;
+                this.Bank = Bank;
+                this.BranchNumber = Row[2];
+                this.AccountNumber = Row[3];
+                return isFilled();
+            }
+            catch (Exception E)
+            {
+                return false;
                 throw E;
             }
         }

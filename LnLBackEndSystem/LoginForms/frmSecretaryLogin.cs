@@ -64,5 +64,13 @@ namespace LnLBackEndSystem
             this.Hide();
             Temp.Show();
         }
+
+        private void btnStaffBank_Click(object sender, EventArgs e)
+        {
+            frmStaffBank.Creator = this;
+            frmStaffBank Temp = new frmStaffBank();
+            this.Hide();
+            Temp.Show();
+        }
     }
 }
