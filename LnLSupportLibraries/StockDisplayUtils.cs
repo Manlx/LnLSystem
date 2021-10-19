@@ -92,6 +92,13 @@ namespace StockDisplayAUtils
             arrItems = new List<StockDisplay>();
             arrCount = new List<int>();
         }
+        public double CalcCartCost()
+        {
+            double Value = 0;
+            for (int x = 0; x < arrItems.Count;x++)
+                Value = arrItems[x].CalcCost() * arrCount[x];
+            return Value;
+        }
         public void AddToCart(StockDisplay Value)
         {
             bool Looking = true;

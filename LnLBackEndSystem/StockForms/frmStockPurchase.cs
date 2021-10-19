@@ -93,6 +93,8 @@ namespace LnLBackEndSystem
             frmStaffLogin.Creator = this;
             frmStaffLogin MakePayMent = new frmStaffLogin();
             MakePayMent.ShowDialog();
+            if (MessageBox.Show($"Current Selected Value is: {UserCart.CalcCartCost().ToString("C")}") != DialogResult.Yes)
+                return;
             if (frmStaffLogin.isValid)
             {
                 string[] SQLs = UserCart.CreateUpdateCashPurchaseSQL();
@@ -169,6 +171,53 @@ namespace LnLBackEndSystem
                 else
                     MessageBox.Show("Error encounted 000-000-005");
             }
+        }
+        private frmHelp HelpForm = new frmHelp();
+        private void btnMoreHelp_Click(object sender, EventArgs e)
+        {
+            frmHelp.Creator = this;
+            HelpForm = new frmHelp();
+            HelpForm.Show();
+        }
+
+        private void btnAddToTab_MouseEnter(object sender, EventArgs e)
+        {
+            HelpForm.LoadText($"Addes Currently Selected Items to Selected Tab");
+        }
+
+        private void btnPayCash_MouseEnter(object sender, EventArgs e)
+        {
+            HelpForm.LoadText($"Pays Selected items with cash");
+        }
+
+        private void btnRegisterTab_MouseEnter(object sender, EventArgs e)
+        {
+            HelpForm.LoadText($"Allows the cashier to register a client with a tab");
+        }
+
+        private void btnPayOffTab_MouseEnter(object sender, EventArgs e)
+        {
+            HelpForm.LoadText($"Allows clients to settle their the Tabs");
+        }
+
+        private void btnRemoveItem_MouseEnter(object sender, EventArgs e)
+        {
+            HelpForm.LoadText($"Remove selected item form list");
+        }
+
+        private void btnDecrease_MouseEnter(object sender, EventArgs e)
+        {
+            HelpForm.LoadText($"Decrease the selected item's count and if it is zero removes the item");
+        }
+
+        private void lstOrder_MouseEnter(object sender, EventArgs e)
+        {
+            HelpForm.LoadText($"List of selected items to buy from the bar");
+        }
+
+        private void pnlStockBox_MouseEnter(object sender, EventArgs e)
+        {
+            HelpForm.LoadText($"Shows available stock to purchase");
         }
     }
 }

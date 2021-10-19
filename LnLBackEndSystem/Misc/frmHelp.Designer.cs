@@ -1,5 +1,5 @@
 ﻿
-namespace LnLBackEndSystem.Misc
+namespace LnLBackEndSystem
 {
     partial class frmHelp
     {
@@ -29,19 +29,21 @@ namespace LnLBackEndSystem.Misc
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.memOutput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // memOutput
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(742, 406);
-            this.textBox1.TabIndex = 0;
+            this.memOutput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.memOutput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memOutput.ForeColor = System.Drawing.Color.White;
+            this.memOutput.Location = new System.Drawing.Point(0, 0);
+            this.memOutput.Multiline = true;
+            this.memOutput.Name = "memOutput";
+            this.memOutput.ReadOnly = true;
+            this.memOutput.Size = new System.Drawing.Size(742, 406);
+            this.memOutput.TabIndex = 0;
+            this.memOutput.TabStop = false;
             // 
             // frmHelp
             // 
@@ -49,7 +51,7 @@ namespace LnLBackEndSystem.Misc
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(742, 406);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.memOutput);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
@@ -64,6 +66,6 @@ namespace LnLBackEndSystem.Misc
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox memOutput;
     }
 }

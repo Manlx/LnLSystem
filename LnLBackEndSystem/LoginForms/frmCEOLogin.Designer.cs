@@ -45,7 +45,7 @@ namespace LnLBackEndSystem
             this.btnNavigateBartender.FlatAppearance.BorderSize = 0;
             this.btnNavigateBartender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavigateBartender.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnNavigateBartender.Location = new System.Drawing.Point(17, 411);
+            this.btnNavigateBartender.Location = new System.Drawing.Point(17, 511);
             this.btnNavigateBartender.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnNavigateBartender.Name = "btnNavigateBartender";
             this.btnNavigateBartender.Size = new System.Drawing.Size(208, 92);
@@ -61,7 +61,7 @@ namespace LnLBackEndSystem
             this.btnNavidateToSecretary.FlatAppearance.BorderSize = 0;
             this.btnNavidateToSecretary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavidateToSecretary.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnNavidateToSecretary.Location = new System.Drawing.Point(17, 211);
+            this.btnNavidateToSecretary.Location = new System.Drawing.Point(17, 311);
             this.btnNavidateToSecretary.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnNavidateToSecretary.Name = "btnNavidateToSecretary";
             this.btnNavidateToSecretary.Size = new System.Drawing.Size(208, 92);
@@ -77,7 +77,7 @@ namespace LnLBackEndSystem
             this.NavigateToAccountant.FlatAppearance.BorderSize = 0;
             this.NavigateToAccountant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NavigateToAccountant.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.NavigateToAccountant.Location = new System.Drawing.Point(17, 111);
+            this.NavigateToAccountant.Location = new System.Drawing.Point(17, 211);
             this.NavigateToAccountant.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.NavigateToAccountant.Name = "NavigateToAccountant";
             this.NavigateToAccountant.Size = new System.Drawing.Size(208, 92);
@@ -109,7 +109,7 @@ namespace LnLBackEndSystem
             this.btnWarehouse.FlatAppearance.BorderSize = 0;
             this.btnWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWarehouse.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnWarehouse.Location = new System.Drawing.Point(17, 311);
+            this.btnWarehouse.Location = new System.Drawing.Point(17, 411);
             this.btnWarehouse.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnWarehouse.Name = "btnWarehouse";
             this.btnWarehouse.Size = new System.Drawing.Size(208, 92);
@@ -125,7 +125,7 @@ namespace LnLBackEndSystem
             this.BtnHRlogin.FlatAppearance.BorderSize = 0;
             this.BtnHRlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnHRlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.BtnHRlogin.Location = new System.Drawing.Point(17, 511);
+            this.BtnHRlogin.Location = new System.Drawing.Point(17, 111);
             this.BtnHRlogin.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.BtnHRlogin.Name = "BtnHRlogin";
             this.BtnHRlogin.Size = new System.Drawing.Size(208, 92);

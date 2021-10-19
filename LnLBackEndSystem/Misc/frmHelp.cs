@@ -1,15 +1,7 @@
 ﻿//Manuel A Nunes 34551875
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LnLBackEndSystem.Misc
+namespace LnLBackEndSystem
 {
     public partial class frmHelp : Form
     {
@@ -25,7 +17,7 @@ namespace LnLBackEndSystem.Misc
         }
         public void LoadText(string Text)
         {
-            textBox1.Text = Text;
+            memOutput.Text = Text;
         }
     }
 }

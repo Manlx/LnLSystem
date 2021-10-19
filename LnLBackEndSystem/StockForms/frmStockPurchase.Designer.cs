@@ -39,6 +39,7 @@ namespace LnLBackEndSystem
             this.btnDecrease = new System.Windows.Forms.Button();
             this.btnPayOffTab = new System.Windows.Forms.Button();
             this.btnRegisterTab = new System.Windows.Forms.Button();
+            this.btnMoreHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgBackUp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@ namespace LnLBackEndSystem
             this.lstOrder.Name = "lstOrder";
             this.lstOrder.Size = new System.Drawing.Size(1285, 234);
             this.lstOrder.TabIndex = 1;
+            this.lstOrder.MouseEnter += new System.EventHandler(this.lstOrder_MouseEnter);
             // 
             // btnRemoveItem
             // 
@@ -67,6 +69,7 @@ namespace LnLBackEndSystem
             this.btnRemoveItem.Text = "Remove";
             this.btnRemoveItem.UseVisualStyleBackColor = false;
             this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            this.btnRemoveItem.MouseEnter += new System.EventHandler(this.btnRemoveItem_MouseEnter);
             // 
             // btnAddToTab
             // 
@@ -81,6 +84,7 @@ namespace LnLBackEndSystem
             this.btnAddToTab.Text = "Add To Tab";
             this.btnAddToTab.UseVisualStyleBackColor = false;
             this.btnAddToTab.Click += new System.EventHandler(this.btnAddToTab_Click);
+            this.btnAddToTab.MouseEnter += new System.EventHandler(this.btnAddToTab_MouseEnter);
             // 
             // btnPayCash
             // 
@@ -95,6 +99,7 @@ namespace LnLBackEndSystem
             this.btnPayCash.Text = "Cash Payment";
             this.btnPayCash.UseVisualStyleBackColor = false;
             this.btnPayCash.Click += new System.EventHandler(this.btnPayCash_Click);
+            this.btnPayCash.MouseEnter += new System.EventHandler(this.btnPayCash_MouseEnter);
             // 
             // imgBackUp
             // 
@@ -112,6 +117,7 @@ namespace LnLBackEndSystem
             this.pnlStockBox.Name = "pnlStockBox";
             this.pnlStockBox.Size = new System.Drawing.Size(1285, 439);
             this.pnlStockBox.TabIndex = 0;
+            this.pnlStockBox.MouseEnter += new System.EventHandler(this.pnlStockBox_MouseEnter);
             // 
             // btnDecrease
             // 
@@ -126,6 +132,7 @@ namespace LnLBackEndSystem
             this.btnDecrease.Text = "Decrease";
             this.btnDecrease.UseVisualStyleBackColor = false;
             this.btnDecrease.Click += new System.EventHandler(this.btnDecrease_Click);
+            this.btnDecrease.MouseEnter += new System.EventHandler(this.btnDecrease_MouseEnter);
             // 
             // btnPayOffTab
             // 
@@ -140,6 +147,7 @@ namespace LnLBackEndSystem
             this.btnPayOffTab.Text = "Pay Tab";
             this.btnPayOffTab.UseVisualStyleBackColor = false;
             this.btnPayOffTab.Click += new System.EventHandler(this.btnPayOffTab_Click);
+            this.btnPayOffTab.MouseEnter += new System.EventHandler(this.btnPayOffTab_MouseEnter);
             // 
             // btnRegisterTab
             // 
@@ -155,6 +163,21 @@ namespace LnLBackEndSystem
             this.btnRegisterTab.Text = "Register Tab";
             this.btnRegisterTab.UseVisualStyleBackColor = false;
             this.btnRegisterTab.Click += new System.EventHandler(this.btnRegisterTab_Click);
+            this.btnRegisterTab.MouseEnter += new System.EventHandler(this.btnRegisterTab_MouseEnter);
+            // 
+            // btnMoreHelp
+            // 
+            this.btnMoreHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnMoreHelp.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnMoreHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMoreHelp.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoreHelp.Location = new System.Drawing.Point(1238, 466);
+            this.btnMoreHelp.Name = "btnMoreHelp";
+            this.btnMoreHelp.Size = new System.Drawing.Size(50, 50);
+            this.btnMoreHelp.TabIndex = 8;
+            this.btnMoreHelp.Text = "?";
+            this.btnMoreHelp.UseVisualStyleBackColor = false;
+            this.btnMoreHelp.Click += new System.EventHandler(this.btnMoreHelp_Click);
             // 
             // frmStockPurchase
             // 
@@ -162,6 +185,7 @@ namespace LnLBackEndSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1309, 903);
+            this.Controls.Add(this.btnMoreHelp);
             this.Controls.Add(this.btnRegisterTab);
             this.Controls.Add(this.btnPayOffTab);
             this.Controls.Add(this.btnDecrease);
@@ -197,5 +221,6 @@ namespace LnLBackEndSystem
         private System.Windows.Forms.Button btnDecrease;
         private System.Windows.Forms.Button btnPayOffTab;
         private System.Windows.Forms.Button btnRegisterTab;
+        private System.Windows.Forms.Button btnMoreHelp;
     }
 }
