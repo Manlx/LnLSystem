@@ -22,7 +22,10 @@ namespace LnLBackEndSystem
 
         private void btnStaffBank_Click(object sender, EventArgs e)
         {
-
+            frmStaffBank.Creator = this;
+            frmStaffBank Temp = new frmStaffBank();
+            this.Hide();
+            Temp.Show();
         }
 
         private void frmHRAdmin_FormClosed(object sender, FormClosedEventArgs e)

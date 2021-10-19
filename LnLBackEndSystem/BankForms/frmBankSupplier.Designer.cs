@@ -49,7 +49,7 @@ namespace LnLBackEndSystem
             // 
             // pnlBankingInfo
             // 
-            this.pnlBankingInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.pnlBankingInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlBankingInfo.Controls.Add(this.cbbSupplier);
             this.pnlBankingInfo.Controls.Add(this.label1);
             this.pnlBankingInfo.Controls.Add(this.btnAddInfo);
