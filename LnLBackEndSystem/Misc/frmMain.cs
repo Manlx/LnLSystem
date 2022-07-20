@@ -148,7 +148,16 @@ namespace LnLBackEndSystem
                     Warehouse_Restock WareLog = new Warehouse_Restock();
                     WareLog.Show();
                     break;
-
+                case 9:
+                    frmCEOLogin.Creator = this;
+                    frmCEOLogin CEOLog = new frmCEOLogin();
+                    CEOLog.Show();
+                    break;
+                case 10:
+                    AdminLogin.Creator = this;
+                    AdminLogin AdLog = new AdminLogin();
+                    AdLog.Show();
+                    break;
                 case 11:
                     frmCEOLogin.Creator = this;
                     frmCEOLogin CEO = new frmCEOLogin();
