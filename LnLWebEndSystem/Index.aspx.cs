@@ -12,13 +12,9 @@ namespace LnLWebEndSystem
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-
-        public SqlConnection conn;
-        public SqlCommand comm;
-        public string constr = @"";
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            int x = 7;
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)

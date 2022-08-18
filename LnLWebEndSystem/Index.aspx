@@ -17,7 +17,7 @@
 				rel="stylesheet"
 			/>
 		 <link href="Styles/general.css" rel="stylesheet" />
-        <link href="Styles/style.css" rel="stylesheet" />
+        <link href="Styles/style.css" rel="stylesheet" />-->
 	</head>
 	<body runat="server">
 		<header class="header">
